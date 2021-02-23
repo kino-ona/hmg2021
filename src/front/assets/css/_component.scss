@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import "mixins";
+
+/** common/component **/
+.btn_wrap {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+	min-width:100px;
+	padding:0 10px;
+	height: 65px;
+	line-height: 65px;
+	font-size:1.375rem;
+	font-weight: 600;
+	&._default {
+		background-color: #0E306C;
+		color:#fff;
+	}
+	&._cancel {
+		background-color: #CCCCCC;
+		color:#fff;
+	}
+	&._line {
+		border:1px solid #D9D9D9;
+	}
+}
+[class*='ic_'] {
+	display: inline-block;
+	margin-right:5px;
+	vertical-align: middle;
+}
+.ic_loca {
+	width:16px;
+	height:16px;
+	background: {
+		image: url(../images/ico/icon_location.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_compare {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_compare.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_outlink {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_outlink.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_refresh {
+	width:15px;
+	height:15px;
+	background: {
+		image: url(../images/ico/icon_refresh.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_search {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_search.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_info {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_info.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_info-select {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_info-select.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_check {
+	width:20px;
+	height:20px;
+	background: {
+		image: url(../images/ico/icon_check.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}

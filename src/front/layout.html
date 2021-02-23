@@ -17,7 +17,86 @@
 			<div class="select_wrap">
 
 			</div>
-			<div class="section_wrap">
+			<div class="stage_wrap">
+
+<!-- guides -->				
+<style>
+.guides {padding:15px;margin:30px 0;font-size:16px;}
+.guides div:after {content: '';display: block;clear: both;}
+.guides h1 {padding-bottom:30px;font-size: 20px;font-weight: bold;}
+.guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
+.guides pre * {color:#fff}
+.guides .half {float:left;width:calc(100%/2 - 30px);margin-right:30px;}
+.guides .half.right {width:calc(100%/2);margin-right:0;}
+.guides p.ti {padding-bottom:15px;font-weight: bold;font-size:18px;}
+.guides .btn_wrap {text-align: left;}
+</style>
+<div class="guides">
+<h1>Guide</h1>
+
+<p class="ti">1. Button</p>
+
+<div class="btn_wrap">
+	<button class="btn _default">btn default</button>
+	<button class="btn _cancel">btn cancel</button>
+	<button class="btn _line">btn line</button>
+	<button class="btn _line"><i class="ic_compare"></i>btn +icon</button>
+	<br><br>
+
+	<a href="#" class="btn _default">btn default</a>
+	<a href="#" class="btn _cancel">btn cancel</a>
+	<a href="#" class="btn _line">btn line</a>
+	<a href="#" class="btn _line"><i class="ic_compare"></i>btn +icon</a>
+</div>
+<br><br>
+<pre>
+assets/css/_component.scss
+
+&lt;div class="btn_wrap"&gt;
+	&lt;button class="btn _default"&gt;btn default&lt;/button&gt;
+	&lt;button class="btn _cancel"&gt;btn cancel&lt;/button&gt;
+	&lt;button class="btn _line"&gt;btn line&lt;/button&gt;
+	&lt;button class="btn _line"&gt;&lt;i class="ic_compare"&gt;&lt;/i&gt;btn line&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn_wrap"&gt;
+	&lt;a href="#" class="btn _default"&gt;btn default&lt;/a&gt;
+	&lt;a href="#" class="btn _cancel"&gt;btn cancel&lt;/a&gt;
+	&lt;a href="#" class="btn _line"&gt;btn line&lt;/a&gt;
+	&lt;a href="#" class="btn _line"&gt;&lt;i class="ic_compare"&gt;btn line&lt;/a&gt;
+&lt;/div&gt;	
+</pre>
+
+<br><br>
+<p class="ti">2. Icon</p>
+<div>
+	<i class="ic_compare"></i>
+	<i class="ic_loca"></i>
+	<i class="ic_outlink"></i>
+	<i class="ic_refresh"></i>
+	<i class="ic_search"></i>
+	<i class="ic_info"></i>
+	<i class="ic_info-select"></i>
+	<i class="ic_check"></i>
+</div>
+<br><br>
+<pre>
+assets/css/_component.scss
+
+&lt;i class="ic_compare"&gt;&lt;/i&gt;  
+&lt;i class="ic_loca"&gt;&lt;/i&gt;   
+&lt;i class="ic_outlink"&gt;&lt;/i&gt;  
+&lt;i class="ic_refresh"&gt;&lt;/i&gt;
+&lt;i class="ic_search"&gt;&lt;/i&gt;
+&lt;i class="ic_info"&gt;&lt;/i&gt;
+&lt;i class="ic_info-select"&gt;&lt;/i&gt;
+&lt;i class="ic_check"&gt;&lt;/i&gt;
+</pre>
+
+
+
+</div>
+<!--// guides -->
 
 			</div>
 		</div>
