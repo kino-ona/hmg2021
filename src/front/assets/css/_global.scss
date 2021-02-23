@@ -12,7 +12,6 @@
 	font-weight:100;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansHead';
 	src:url('../fonts/HyundaiSansHead-Regular.eot');
@@ -23,7 +22,6 @@
 	font-weight:normal;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansHead';
 	src:url('../fonts/HyundaiSansHead-Medium.eot');
@@ -34,7 +32,6 @@
 	font-weight:600;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansHead';
 	src:url('../fonts/HyundaiSansHead-Bold.eot');
@@ -45,7 +42,6 @@
 	font-weight:900;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansText';
 	src:url('../fonts/HyundaiSansText-Regular.eot');
@@ -56,7 +52,6 @@
 	font-weight:normal;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansText';
 	src:url('../fonts/HyundaiSansText-Medium.eot');
@@ -67,7 +62,6 @@
 	font-weight:600;
 	font-style:normal;
 }
-
 @font-face {
 	font-family:'HyundaiSansText';
 	src:url('../fonts/HyundaiSansText-Bold.eot');
@@ -295,4 +289,148 @@ button {
 	html {
 		font-size: 14px;
 	}
+}
+
+/** layout **/
+html {width:100%;height:100%;}
+body {
+	width:100%;
+	height:100%;
+	background-color:#F4F4F4;
+}
+.wrap {
+	height:100%;
+	min-height:100%;
+}
+.header_wrap {
+	position:relative;
+	width:100%;
+	height:60px;
+	padding-left:30px;
+	padding-right:30px;
+	background-color: #fff;
+	.row {
+		position:relative;
+		padding:17px 0 0;
+	}
+	.logo {
+		display: inline-block;
+		width:302px;
+		height:26px;
+		background: {
+			image: url(../images/common/header_logo.png);
+			size:cover;
+			position: 0 center;
+			repeat:no-repeat;
+		}
+	}
+	.head_util {
+		position: absolute;
+		right:0;
+		top:23px;
+	}
+	.location {
+		display: inline-block;
+		a {
+			display: block;
+			width:100%;
+			height:100%;
+			font-size:0.9375rem;
+		}
+		.ic_loca {
+			display: inline-block;
+			width:16px;
+			height:16px;
+			margin-right:3px;
+			background: {
+				image: url(../images/ico/icon_location.png);
+				size:cover;
+				position: 0 center;
+				repeat:no-repeat;
+			}
+		}
+	}
+	.menu {
+		display: inline-block;
+		width:16px;
+		height:16px;
+		background: {
+			image: url(../images/ico/icon_menu.png);
+			size:cover;
+			position: 0 center;
+			repeat:no-repeat;
+		}
+	}
+}
+.container {
+	position:relative;
+	width:100%;
+	height:calc(100% - 60px);
+	// min-height:calc(100% - 60px);
+	.page_back {
+		position:relative;
+		height:60px;
+		border-top:1px solid #D9D9D9;
+		border-bottom:1px solid #D9D9D9;
+		background-color: #F4F4F4;
+		color:#999999;
+		a {
+			position:absolute;
+			left:30px;
+			top: 50%;
+			@include transform(translate(0, -50%));
+			display: inline-block;
+			color:inherit;
+			line-height:1.0;
+		}
+		i {
+			display: inline-block;
+			width:5px;
+			height:10px;
+			margin-right:10px;
+			margin-top:-2px;
+			background: {
+				image: url(../images/ico/icon_pageback.png);
+				size:cover;
+				position: 0 center;
+				repeat:no-repeat;
+			}
+			vertical-align: middle;
+		}
+	}
+}
+.select_wrap {
+	position: absolute;
+	left:0;
+	top:0;
+	width:calc(23.49% - 1px);
+	height:100%;
+	background-color: #fff;
+	border-right:1px solid #D9D9D9;
+}
+.stage_wrap {
+	position:relative;
+	width:76.51%;
+	height:100%;
+	min-height:100%;
+	margin-left:23.49%;
+	overflow-y: auto;
+}
+.click-to-buy {
+	position:relative;
+	width:100%;
+	height:calc(100% - 60px);
+	overflow: hidden;
+	.stage_wrap {
+		min-height:calc(100% - 60px);
+		padding-bottom:90px;
+	}
+}
+.fixed_bottom {
+	position:absolute;
+	left:23.49%;
+	bottom:0;
+	width:100%;
+	height:90px;
+	background-color: #fff;
 }

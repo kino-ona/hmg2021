@@ -1,0 +1,58 @@
+@@include('./inc/pagehead.inc',{
+	"pagetitle":"Layout | HYUNDAI",
+	"webroot":"./"
+})
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#container">skip to container</a></div>
+
+	<div class="wrap">
+		<!-- header -->
+		@@include('./inc/header.inc',{
+			"webroot":""
+		})
+		<!-- //header -->
+
+		<!-- 
+			intro : container
+			select stage: container select_stage
+		-->
+		<div id="container" class="container">
+			<!-- select stage back -->
+			<div class="page_back">
+				<a href="#"><i></i>Select Vehicle</a>
+			</div>
+			<!--// select stage back -->
+
+			<div class="click-to-buy">
+				<!-- left select -->
+				<div class="select_wrap">
+				</div>
+				<!--// left select -->
+	
+				<!-- section stage -->
+				<div class="stage_wrap">
+					
+					<div style="width:100px;height:2000px;background:red">영역스크롤샘플</div>
+					
+				</div>
+				<!--// section stage -->
+
+				<div class="fixed_bottom">
+						next 
+				</div>
+			</div>
+
+		</div>
+		<!--// container -->
+
+		<!-- footer -->
+		@@include('./inc/footer.inc',{
+			"webroot":""
+		})
+		<!-- //footer -->
+	</div>
+
+
+</body>
+</html>

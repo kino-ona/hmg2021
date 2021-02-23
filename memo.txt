@@ -1,12 +1,16 @@
-
-
-현재 사이트 참고
+참고 url
 https://clicktobuy.hyundai.co.in/#/
+
+https://www.hyundaiusa.com/us/en/build
+
+https://www.hyundai.com/kr/ko/e/vehicles/estimation/model?model=QX02
 
 
 프로세스 일부 참고
 pc https://x53kq3.axshare.com/#id=d8ea3g&p=vehicle
 mo https://6f4aoh.axshare.com/#id=d8ea3g&p=vehicle
+
+http://studioohna.cafe24.com/hyundai/hos-in/0826/path/path-front.html
 
 
 작업자 
@@ -21,4 +25,16 @@ mo https://6f4aoh.axshare.com/#id=d8ea3g&p=vehicle
 
 기획
 김형태 수석 외 2
+
+
+==================
+이미지 폴더 및 이름
+
+공통 : images/common/ 
+아이콘 : images/ico/icon_아이콘이름
+임시 : images/dummy/
+
+
+
+
 
