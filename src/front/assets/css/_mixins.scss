@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+// transform
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+@mixin rotate($deg) {// Rotate
+	@include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {// Scale
+	@include transform(scale($scale));
+}
+@mixin translate ($x, $y) {// Translate
+	@include transform(translate($x, $y));
+}
+@mixin pushEasing($speed) {
+	transition-duration: #{$speed}ms;
+	-webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+	-moz-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+	-o-transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+	transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+	transition-delay: 0ms;
+}
+@mixin transition($sec, $motion) {
+	-webkit-transition: all $sec $motion;
+	-moz-transition: all $sec $motion;
+	-o-transition: all $sec $motion;
+	transition: all $sec $motion;
+}
+%easing {
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+@mixin easing_mixin {
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+// clear floating
+%clearer {
+	content: "";
+	display: block;
+	clear: both;
+}
+@mixin clearer_mixin {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+//ellipse
+@mixin ellipse($line) {
+	@if ($line > 1) {
+		white-space:normal;
+		word-wrap:break-word;
+		display:-webkit-box;
+		-webkit-line-clamp:$line;
+		-webkit-box-orient:vertical;
+	} @else {
+		// white-space:nowrap;
+		white-space:normal;
+		word-wrap:break-word;
+		display:-webkit-box;
+		-webkit-line-clamp:$line;
+		-webkit-box-orient:vertical;
+	}
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+// font set
+@mixin FontDefault {
+	font-family: 'futura-pt', 'Noto Sans KR', 'Malgun Gothic', 'AppleSDGothicNeo', sans-serif !important;
+}
+@mixin NotoFont {
+	font-family: 'Noto Sans KR', 'Malgun Gothic', 'AppleSDGothicNeo', sans-serif !important;
+}

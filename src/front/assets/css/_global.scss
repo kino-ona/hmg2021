@@ -1,0 +1,298 @@
+@charset "utf-8";
+@import "mixins";
+
+/* WEBFONT */
+@font-face {
+	font-family:'HyundaiSansHead';
+	src:url('../fonts/HyundaiSansHead-Light.eot');
+	src:url('../fonts/HyundaiSansHead-Light.woff') format('woff'),
+		 url('../fonts/HyundaiSansHead-Light.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansHead-Light.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansHead-Light.eot?#iefix') format('embedded-opentype');
+	font-weight:100;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansHead';
+	src:url('../fonts/HyundaiSansHead-Regular.eot');
+	src:url('../fonts/HyundaiSansHead-Regular.woff') format('woff'),
+		 url('../fonts/HyundaiSansHead-Regular.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansHead-Regular.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansHead-Regular.eot?#iefix') format('embedded-opentype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansHead';
+	src:url('../fonts/HyundaiSansHead-Medium.eot');
+	src:url('../fonts/HyundaiSansHead-Medium.woff') format('woff'),
+		 url('../fonts/HyundaiSansHead-Medium.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansHead-Medium.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansHead-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansHead';
+	src:url('../fonts/HyundaiSansHead-Bold.eot');
+	src:url('../fonts/HyundaiSansHead-Bold.woff') format('woff'),
+		 url('../fonts/HyundaiSansHead-Bold.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansHead-Bold.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansHead-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight:900;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansText';
+	src:url('../fonts/HyundaiSansText-Regular.eot');
+	src:url('../fonts/HyundaiSansText-Regular.woff') format('woff'),
+		 url('../fonts/HyundaiSansText-Regular.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansText-Regular.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansText-Regular.eot?#iefix') format('embedded-opentype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansText';
+	src:url('../fonts/HyundaiSansText-Medium.eot');
+	src:url('../fonts/HyundaiSansText-Medium.woff') format('woff'),
+		 url('../fonts/HyundaiSansText-Medium.woff2') format('woff2'),
+		 url('../fonts/HyundaiSansText-Medium.ttf') format('truetype'),
+		 url('../fonts/HyundaiSansText-Medium.eot?#iefix') format('embedded-opentype');
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'HyundaiSansText';
+	src:url('../fonts/HyundaiSansText-Bold.eot');
+	src:url('../fonts/HyundaiSansText-Bold.woff') format('woff'),
+			url('../fonts/HyundaiSansText-Bold.woff2') format('woff2'),
+			url('../fonts/HyundaiSansText-Bold.ttf') format('truetype'),
+			url('../fonts/HyundaiSansText-Bold.eot?#iefix') format('embedded-opentype');
+	font-weight:900;
+	font-style:normal;
+}
+
+/** RESET **/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, 
+big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center, 
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, 
+ruby, section, summary,time, mark, audio, video {
+	margin: 0;padding: 0; vertical-align: top; letter-spacing: 0; word-break:keep-all;
+}
+fieldset,img, textarea {border: 0;outline: 0;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+img {max-width:100%;}
+button,input { border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; padding: 0; margin: 0; outline: none;border:0; }
+html, body {
+	-webkit-text-size-adjust:none;
+	// -webkit-text-size-adjust: 100%;
+	font-family: 'HyundaiRegular','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	-ms-word-wrap:break-word;word-wrap:break-word;
+	line-height:1;
+}
+ol, ul {list-style: none;}
+address,em {font-style: normal}
+h1,h2,h3,h4,h5,h6 {font-weight: 400;}
+div {word-break: keep-all;}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width:100%;
+}
+iframe {overflow: hidden; border: 0;}
+input[type=text], input[type=password], input[type=number], input[type=tel], input[type=email] {
+	width:100%;
+	height:40px;
+	padding:9px 10px;
+	background-color:#ffffff;
+	border:1px solid #e0e0e0;
+	line-height:20px;
+	-webkit-appearance: none;
+	color:#000;
+	font-size:16px;
+	&:not([readonly]) {
+		&:focus {
+			background-color:#fff;
+			border-color:#00a8e2;
+		}
+	}
+	&:read-only {
+		color:#666;
+		&.fc_bk {
+			color:#000;
+		}
+	}
+	&.datepicker {
+		&:read-only {
+			color:#000;
+		}
+	}
+}
+textarea {
+	width:100%;
+	padding:10px;
+	min-height:120px;
+	background-color:#ffffff;
+	border:1px solid #e0e0e0;
+	-webkit-appearance: none;
+	font-size:16px;
+	&:not([readonly]) {
+		&:focus {
+			background-color:#fff;
+			border-color:#00a8e2;
+		}
+	}
+	&:read-only {
+		color:#666;
+	}
+	::-webkit-input-placeholder {
+		font-size:16px;
+		color:#999;
+	}
+	::-moz-placeholder {
+		font-size:16px;
+		color:#999;
+	}
+	::-moz-placeholder {
+		font-size:16px;
+		color:#999;
+	}
+}
+input::-ms-clear {
+  display: none;
+}
+::-webkit-input-placeholder {
+	font-size:16px;
+	font-weight:300;
+  color:#999;
+}
+::-moz-placeholder {
+	font-size:16px;
+	font-weight:300;
+  color:#999;
+}
+::-moz-placeholder {
+	font-size:16px;
+	font-weight:300;
+  color:#999;
+}
+.clearfix:after {content: ''; display: block; clear: both;}
+button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(255,255,255, 0);outline:none;}
+input,button,select {vertical-align:middle;}
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-decoration:none; -webkit-tap-highlight-color:transparent;
+	font-family: 'HyundaiRegular','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	color: #000000;
+  font-size: 16px;
+}
+select{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	width:100%;
+	margin:0;
+	padding:0 15px ;
+  border:1px solid #000000;
+	border-radius: 0;
+	background: {
+		image: url(../images/icon/icon_down.png);
+		repeat:no-repeat;
+		size:9px;
+		position: right 10px center;
+	}
+	outline: none;
+	background-color:transparent;
+	font-size:14px;
+	line-height: 38px;
+}
+select::-ms-expand{
+	display:none;
+}
+button {
+	text-align: center;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/****** Accessibility ******/
+.a11y {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.skipnavigation {
+	position: relative;
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		z-index: 1;
+		display: block;
+		font-size: 0;
+		background-color: #FFF;
+		text-align: center;
+		&:focus {
+			height: 30px;
+			padding: 4px 0;
+			visibility: visible;
+			font-size: 1em;
+		}
+	}
+}
+.noscroll {
+  overflow: hidden !important;
+	height: 100%;
+	.wrap {
+    overflow:hidden;
+	}
+}
+
+@media all and (min-width:1024px) {
+	html {
+		font-size: 16px;
+	}
+}
+@media all and (max-width:1024px) {
+	html {
+		font-size: 14px;
+	}
+}
