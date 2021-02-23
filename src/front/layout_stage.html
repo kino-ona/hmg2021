@@ -1,23 +1,20 @@
 @@include('./inc/pagehead.inc',{
 	"pagetitle":"Layout | HYUNDAI",
-	"webroot":"./"
+	"webroot":"."
 })
 </head>
 <body> 
-	<div class="skipnavigation"><a href="#container">skip to container</a></div>
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
 
-	<div class="wrap">
+	<div class="h-wrap">
 		<!-- header -->
 		@@include('./inc/header.inc',{
 			"webroot":""
 		})
 		<!-- //header -->
 
-		<!-- 
-			intro : container
-			select stage: container select_stage
-		-->
-		<div id="container" class="container">
+		<!-- container -->
+		<div id="h-contents" class="h-contents">
 			<!-- select stage back -->
 			<div class="page_back">
 				<a href="#"><i></i>Select Vehicle</a>
@@ -32,7 +29,6 @@
 	
 				<!-- section stage -->
 				<div class="stage_wrap">
-					
 					<div style="width:100px;height:2000px;background:red">영역스크롤샘플</div>
 					
 				</div>
@@ -48,7 +44,7 @@
 
 		<!-- footer -->
 		@@include('./inc/footer.inc',{
-			"webroot":""
+			"webroot":"."
 		})
 		<!-- //footer -->
 	</div>

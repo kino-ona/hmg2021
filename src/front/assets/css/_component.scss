@@ -104,7 +104,7 @@
 .tablist {
 	display: table;
 	width: 100%;
-	table-layout: fixed;
+	// table-layout: fixed;
 	li {
 		display: table-cell;
 		line-height:50px;
@@ -173,29 +173,32 @@
 }
 
 /** button **/
-.btn_wrap {
+.btn-type_wrap {
 	display: block;
 	width: 100%;
 	text-align: center;
 }
-.btn {
-	display: inline-block;
-	min-width:100px;
-	padding:0 10px;
-	height: 65px;
-	line-height: 65px;
-	font-size:1.375rem;
-	font-weight: 600;
-	&._default {
-		background-color: #0E306C;
-		color:#fff;
-	}
-	&._cancel {
-		background-color: #CCCCCC;
-		color:#fff;
-	}
-	&._line {
-		border:1px solid #D9D9D9;
+a, button {
+	&.btn-type {
+		display: inline-block;
+		width:auto;
+		min-width:100px;
+		padding:0 10px;
+		height: 65px;
+		line-height: 64px;
+		font-size:1.375rem;
+		font-weight: 600;
+		&._default {
+			background-color: #0E306C;
+			color:#fff;
+		}
+		&._cancel {
+			background-color: #CCCCCC;
+			color:#fff;
+		}
+		&._line {
+			border:1px solid #D9D9D9;
+		}
 	}
 }
 [class*='ic_'] {

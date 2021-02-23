@@ -276,7 +276,7 @@ button {
 .noscroll {
   overflow: hidden !important;
 	height: 100%;
-	.wrap {
+	.h-wrap {
     overflow:hidden;
 	}
 }
@@ -299,7 +299,7 @@ body {
 	height:100%;
 	background-color:#F4F4F4;
 }
-.wrap {
+.h-wrap {
 	height:100%;
 	min-height:100%;
 }
@@ -352,7 +352,7 @@ body {
 		}
 	}
 }
-.container {
+.h-contents {
 	position:relative;
 	width:100%;
 	height:calc(100% - 60px);
@@ -387,23 +387,31 @@ body {
 			vertical-align: middle;
 		}
 	}
-}
-.select_wrap {
-	position: absolute;
-	left:0;
-	top:0;
-	width:calc(23.49% - 1px);
-	height:100%;
-	background-color: #fff;
-	border-right:1px solid #D9D9D9;
-}
-.stage_wrap {
-	position:relative;
-	width:76.51%;
-	height:100%;
-	min-height:100%;
-	margin-left:23.49%;
-	overflow-y: auto;
+	.select_wrap {
+		position: absolute;
+		left:0;
+		top:0;
+		width:calc(23.49% - 1px);
+		height:100%;
+		background-color: #fff;
+		border-right:1px solid #D9D9D9;
+	}
+	.stage_wrap {
+		position:relative;
+		width:76.51%;
+		height:100%;
+		min-height:100%;
+		margin-left:23.49%;
+		overflow-y: auto;
+	}
+	.fixed_bottom {
+		position:absolute;
+		left:23.49%;
+		bottom:0;
+		width:100%;
+		height:90px;
+		background-color: #fff;
+	}
 }
 .click-to-buy {
 	position:relative;
@@ -414,13 +422,5 @@ body {
 		min-height:calc(100% - 60px);
 		padding-bottom:90px;
 	}
-}
-.fixed_bottom {
-	position:absolute;
-	left:23.49%;
-	bottom:0;
-	width:100%;
-	height:90px;
-	background-color: #fff;
 }
 

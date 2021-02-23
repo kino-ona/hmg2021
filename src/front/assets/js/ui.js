@@ -26,24 +26,28 @@ var layoutSize = function(){
 	var scrollSize = winWidth - $window.width();
 	var breakpoint;
 
-	if (isModels) {
+	if (isMobile) {
 		breakpoint = 768;
 	} else {
 		breakpoint = 1024;
 	}
 
 	if (winWidth < breakpoint) {
-		layout = 'mobile';
+		$('.h-wrap').removeClass('pg-tablet');	
+		$('.h-wrap').removeClass('pg-desktop');	
+		$('.h-wrap').addClass('pg-mobile');	
 	} else if (winWidth >= breakpoint && winWidth <= 1240) {
-		layout = 'tablet';
+		$('.h-wrap').removeClass('pg-mobile');	
+		$('.h-wrap').removeClass('pg-desktop');	
+		$('.h-wrap').addClass('pg-tablet');	
 	} else if (winWidth >= 1240) {
-		layout = 'desktop';
+		$('.h-wrap').removeClass('pg-mobile');	
+		$('.h-wrap').removeClass('pg-tablet');	
+		$('.h-wrap').addClass('pg-desktop');	
 	}
-
 	return {
 		width: winWidth,
 		scrollSize: scrollSize,
-		layout: layout
 	};
 };
 function layoutSizeInit() {
@@ -59,7 +63,6 @@ function layoutSizeInit() {
 		isResizeW = true;
 		isResizeM = false;
 		isResizeT = false;
-			
 	}
 }
 
@@ -74,6 +77,17 @@ $(function () {
 			$('html').addClass('is-web');
 		}
 	})();   
+
+
+	$window
+	.on('resize',function(){    //WINDOW RESIZE
+		winW = $(this).outerWidth();
+		winH = $(this).outerHeight();    
+
+
+			layoutSizeInit();
+
+	});
 });
 
 
