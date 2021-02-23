@@ -1,6 +1,6 @@
 @@include('./inc/pagehead.inc',{
 	"pagetitle":"Layout | HYUNDAI",
-	"webroot":"./"
+	"webroot":"."
 })
 </head>
 <body> 
@@ -15,13 +15,18 @@
 
 		<div id="container" class="container">
 			<div class="select_wrap">
-
+				<div class="guidelist" style="padding:30px;">
+					<strong style="display:block;font-weight: 900;">Guide List</strong><br><br>
+					<p class="ti" data-pos-top="guides01">1. Button</p><br>
+					<p class="ti" data-pos-top="guides02">2. Icon</p><br>
+					<p class="ti" data-pos-top="guides03">3. Tab</p><br>
+					<p class="ti" data-pos-top="guides04">4. Checkbox/Radiobox</p><br>
+				</div>
 			</div>
-			<div class="stage_wrap">
-
+			<div class="stage_wrap" id="guides">
 <!-- guides -->				
 <style>
-.guides {padding:15px;margin:30px 0;font-size:16px;}
+.guides {padding:15px;margin:30px 0 100px;font-size:16px;}
 .guides div:after {content: '';display: block;clear: both;}
 .guides h1 {padding-bottom:30px;font-size: 20px;font-weight: bold;}
 .guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
@@ -32,9 +37,7 @@
 .guides .btn_wrap {text-align: left;}
 </style>
 <div class="guides">
-<h1>Guide</h1>
-
-<p class="ti">1. Button</p>
+<p class="ti" id="guides01">1. Button</p>
 
 <div class="btn_wrap">
 	<button class="btn _default">btn default</button>
@@ -68,8 +71,9 @@ assets/css/_component.scss
 </pre>
 
 <br><br>
-<p class="ti">2. Icon</p>
+<p class="ti" id="guides02">2. Icon</p>
 <div>
+	<i class="ic_error"></i>
 	<i class="ic_compare"></i>
 	<i class="ic_loca"></i>
 	<i class="ic_outlink"></i>
@@ -78,11 +82,14 @@ assets/css/_component.scss
 	<i class="ic_info"></i>
 	<i class="ic_info-select"></i>
 	<i class="ic_check"></i>
+	<i class="ic_hide"></i>
+	<i class="ic_show"></i>
 </div>
 <br><br>
 <pre>
 assets/css/_component.scss
 
+&lt;i class="ic_error"&gt;&lt;/i&gt;  
 &lt;i class="ic_compare"&gt;&lt;/i&gt;  
 &lt;i class="ic_loca"&gt;&lt;/i&gt;   
 &lt;i class="ic_outlink"&gt;&lt;/i&gt;  
@@ -91,9 +98,124 @@ assets/css/_component.scss
 &lt;i class="ic_info"&gt;&lt;/i&gt;
 &lt;i class="ic_info-select"&gt;&lt;/i&gt;
 &lt;i class="ic_check"&gt;&lt;/i&gt;
+&lt;i class="ic_hide"&gt;&lt;/i&gt;
+&lt;i class="ic_show"&gt;&lt;/i&gt;
 </pre>
 
+<br><br>
+<p class="ti" id="guides03">3. Tab</p>
+<div class="tab_wrap" id="tabcase01">
+	<ul class="tablist" role="tablist" aria-label="tabname">
+		<li><button class="tab">tab index00</button></li>
+		<li><button class="tab">tab index01</button></li>
+		<li><button class="tab">tab index02</button></li>
+	</ul>
+	<div class="tab_contents">
+		<section class="tab_panel" role="tabpanel">
+			tab00 contents
+		</section>
+		<section class="tab_panel" role="tabpanel">
+			tab01 contents
+		</section>
+		<section class="tab_panel" role="tabpanel">
+			tab02 contents
+		</section>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	actvTabList('tabcase01', 0);
+});
+</script>
+<br>
+<pre>
+assets/css/_component.scss
+assets/js/ui.js
 
+&lt;div class="tab_wrap" id="tabcase01"&gt;
+	&lt;ul class="tablist" role="tablist" aria-label="tabname"&gt;
+		&lt;li&gt;&lt;button class="tab">tab index00&lt;/button&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;button class="tab">tab index01&lt;/button&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;button class="tab">tab index02&lt;/button&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab_contents"&gt;
+		&lt;section class="tab_panel" role="tabpanel"&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+
+$(document).ready(function(){
+	actvTabList('tabcase01', 0);
+});
+</pre>
+<br><br>
+
+<div class="tab_wrap" id="tabcase02">
+	<ul class="tablist tab_line" role="tablist" aria-label="tabname">
+		<li><button class="tab">tab index00</button></li>
+		<li><button class="tab">tab index01</button></li>
+		<li><button class="tab">tab index02</button></li>
+	</ul>
+	<div class="tab_contents">
+		<section class="tab_panel" role="tabpanel">
+			tab00 contents
+		</section>
+		<section class="tab_panel" role="tabpanel">
+			tab01 contents
+		</section>
+		<section class="tab_panel" role="tabpanel">
+			tab02 contents
+		</section>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	actvTabList('tabcase02', 1);
+});
+</script>
+<br>
+<pre>
+assets/css/_component.scss
+assets/js/ui.js
+
+&lt;div class="tab_wrap" id="tabcase02"&gt;
+	&lt;ul class="tablist _line" role="tablist" aria-label="tabname"&gt;
+		&lt;li&gt;&lt;button class="tab">tab index00&lt;/button&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;button class="tab">tab index01&lt;/button&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;button class="tab">tab index02&lt;/button&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab_contents"&gt;
+		&lt;section class="tab_panel" role="tabpanel"&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+
+$(document).ready(function(){
+	actvTabList('tabcase02', 1);
+});
+</pre>
+
+<br><br>
+<p class="ti" id="guides04">4. Checkbox/Radiobox</p>
+<p class="chkwrap"><label><input type="checkbox"><span>Sample text1</span></label></p>
+<p class="chkwrap"><label><input type="checkbox" checked><span>Sample text2</span></label></p>
+<p class="chkwrap"><label><input type="checkbox" disabled><span>Sample text2</span></label></p>
+<br>
+<pre>
+&lt;p class="chkwrap"&gt;&lt;label&gt;&lt;input type="checkbox"&gt;&lt;span&gt;Sample text1&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p class="chkwrap"&gt;&lt;label&gt;&lt;input type="checkbox" checked&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p class="chkwrap"&gt;&lt;label&gt;&lt;input type="checkbox" disabled&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;	
+</pre>
+<br>
+<p class="radiowrap"><label><input type="radio" name="radio"><span>Sample text1</span></label></p>
+<p class="radiowrap"><label><input type="radio" name="radio"><span>Sample text2</span></label></p>
+<p class="radiowrap"><label><input type="radio" name="radio" disabled><span>Sample text2</span></label></p>
+<br>
+<pre>
+&lt;p class="radiowrap"&gt;&lt;label&gt;&lt;input type="radio" name="radio""&gt;&lt;span&gt;Sample text1&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p class="radiowrap"&gt;&lt;label&gt;&lt;input type="radio" name="radio"&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p class="radiowrap"&gt;&lt;label&gt;&lt;input type="radio" name="radio" disabled&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;	
+</pre>
 
 </div>
 <!--// guides -->
@@ -104,11 +226,25 @@ assets/css/_component.scss
 
 		<!-- footer -->
 		@@include('./inc/footer.inc',{
-			"webroot":""
+			"webroot":"."
 		})
 		<!-- //footer -->
 	</div>
 
+	<script>
+	$(document).ready(function(){
+		$('.guidelist p').each(function () {
+			var posValue = $(this).attr('data-pos-top');
+			$(this).click(function(e){
+				var posTop = $('#' + posValue).offset().top - 100;
+				if(posValue){
+					$("#guides").animate({scrollTop: posTop}, 600);
+				}
+				e.preventDefault();
+			});
+		});
+	});
+	</script>
 
 </body>
 </html>

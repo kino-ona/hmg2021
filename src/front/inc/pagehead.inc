@@ -11,4 +11,4 @@
   <link rel="canonical" href="javascript:;">
   <link rel="stylesheet" href="@@webroot/assets/css/ui.css" />
   <script type="text/javascript" src="@@webroot/assets/js/jquery-1.11.3.min.js"></script>
-  <!-- <script type="text/javascript" src="@@webroot/assets/js/ui-plugin.js"></script> -->
+  <script type="text/javascript" src="@@webroot/assets/js/ui-plugin.js"></script>

@@ -2,6 +2,177 @@
 @import "mixins";
 
 /** common/component **/
+/** checkbox/radio **/
+.chkwrap {
+	display: inline-block;
+	min-height:30px;
+	margin-right:40px;
+	label {
+		height:30px;
+		line-height: 30px;
+		cursor: pointer;
+		font-size:1.125rem;
+		input[type=checkbox] {
+			position: relative;
+			margin-right:20px;
+			&:before {
+				content: '';
+				position: absolute;
+				left:0;
+				top:-5px;
+				display: block;
+				width:20px;
+				height:20px;
+				background: {
+					image: url('../images/common/btn_check.png');
+					repeat: no-repeat;
+					size:20px;
+					position: left center;
+				}
+			}
+			vertical-align: middle;
+			+ span {
+				color:inherit;
+				font-size: inherit;
+			}
+			&:checked{
+				&:before {
+					background-image: url('../images/common/btn_check-on.png');
+				}
+			}
+			&:disabled{
+				&:before {
+					background-image: url('../images/common/btn_check-disable.png');
+				}
+				+ span {
+					color:#999999;
+				}
+			}
+		}
+	}
+}
+.radiowrap {
+	display: inline-block;
+	min-height:30px;
+	margin-right:40px;
+	label {
+		height:30px;
+		line-height: 30px;
+		cursor: pointer;
+		font-size:1.125rem;
+		input[type=radio] {
+			position: relative;
+			margin-right:20px;
+			&:before {
+				content: '';
+				position: absolute;
+				left:0;
+				top:-5px;
+				display: block;
+				width:20px;
+				height:20px;
+				background: {
+					image: url('../images/common/btn_radio.png');
+					repeat: no-repeat;
+					size:20px;
+					position: left center;
+				}
+			}
+			vertical-align: middle;
+			+ span {
+				color:inherit;
+				font-size: inherit;
+			}
+			&:checked{
+				&:before {
+					background-image: url('../images/common/btn_radio-on.png');
+				}
+			}
+			&:disabled{
+				&:before {
+					background-image: url('../images/common/btn_radio-disable.png');
+				}
+				+ span {
+					color:#999999;
+				}
+			}
+		}
+	}
+}
+
+/** tab **/
+.tablist {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	li {
+		display: table-cell;
+		line-height:50px;
+		text-align: center;
+		.tab, input[type="radio"]+label {
+			display: block;
+			min-width: 100%;
+			height:50px;
+			border: 1px solid #D9D9D9;
+			background-color:#fff;
+			color: #000;
+			cursor: pointer;
+			&:after {
+				display: none;
+			}
+			&[aria-selected="true"], input[type="radio"]:checked+label,
+			&:hover {
+				border-color:#0E306C;
+				background-color: #0E306C;
+				color:#fff;
+				font-weight:900;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	&.tab_line {
+		display: block;
+		li {
+			display: inline-block;
+			line-height:60px;
+			.tab, input[type="radio"]+label {
+				min-width: 140px;
+				height:60px;
+				padding:0 25px;
+				background-color: transparent;
+				border:0;
+				border-bottom:4px solid #D9D9D9;
+				color:#999999;
+				font-size:1.375rem;
+				&[aria-selected="true"], input[type="radio"]:checked+label {
+					border-color:#0E306C;
+					color:#0E306C;
+					&:hover {
+						font-weight: 900;
+					}
+				}
+				&:hover {
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
+.tab_contents {
+	clear: both;
+	outline: none;
+	border: 0;
+	.tab_panel {
+		&[aria-hidden="true"] {
+			display: none;
+		}
+		outline: none;
+	}
+}
+
+/** button **/
 .btn_wrap {
 	display: block;
 	width: 100%;
@@ -37,6 +208,36 @@
 	height:16px;
 	background: {
 		image: url(../images/ico/icon_location.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_hide {
+	width:18px;
+	height:18px;
+	background: {
+		image: url(../images/ico/icon_hide.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_show {
+	width:18px;
+	height:18px;
+	background: {
+		image: url(../images/ico/icon_show.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_error {
+	width:18px;
+	height:18px;
+	background: {
+		image: url(../images/ico/icon_error.png);
 		size:cover;
 		position: 0 center;
 		repeat:no-repeat;
