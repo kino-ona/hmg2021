@@ -95,7 +95,7 @@ $(function () {
 
 
 /*** accordion fn  ***/
-$('.accord_wrap').each(function () { // default
+$('.accordion_wrap').each(function () { // default
 	if (!$(this).hasClass('manualfn')) {
 		if ($(this).hasClass('multiple')) {
 			defaultAcc = new Accordion($(this), {
@@ -116,7 +116,7 @@ $('.accord_wrap').each(function () { // default
 });
 function accoSet(setId, multiTF, setFocus) {
 	if (!setId) {
-		setId = '.accord_wrap';
+		setId = '.accordion_wrap';
 	} else {
 		var setId = $('#' + setId);
 	}
@@ -143,30 +143,32 @@ $('.tab_wrap').each(function(){  // default
 
 // tab pagination
 $(document).ready(function() {
-	if($('.tab-pagination .row p').length > 0) tabposSet();
+	if($('.tab-pagination .tab-row p').length > 0) tabposSet();
 });
 var tabposSet = function(){
 	$('.tab-pagination').each(function() {
-		var $tablist = $(this).find('.row');
+		var $tablist = $(this).find('.tab-row');
 		
-		$(this).find('.row p').each(function() {
-			$(this).on('click', function(e){
-				if(!$(this).hasClass('active')){
+		$(this).find('.tab-row p').each(function() {
+			$(this).find('button').on('click', function(e){
+				$tablist.find('button').attr('aria-selected', false);
+				if(!$(this).attr('aria-selected', true)){
 					var $element = $(this);
-					$tablist.find('p').removeClass('active');
-					$element.addClass('active');
+					$element.log($(this))
+					$element.attr('aria-selected', true);
 
-					var hashOffset = $element.offset().left;
-					var hashWidth = $element.outerWidth(true);
-					var menuScrollLeft = $tablist.scrollLeft();
-					var menuWidth = $tablist.width();
-
-					var myScrollPos = hashOffset + (hashWidth / 2) + menuScrollLeft - (menuWidth / 2);
-					$tablist.stop().animate({
-						scrollLeft: myScrollPos - (menuWidth / 9)
-					}, 300);
+					if(winW < 1024) {
+						var hashOffset = $element.offset().left;
+						var hashWidth = $element.outerWidth(true);
+						var menuScrollLeft = $tablist.scrollLeft();
+						var menuWidth = $tablist.width();
+	
+						var myScrollPos = hashOffset + (hashWidth / 2) + menuScrollLeft - (menuWidth / 2);
+						$tablist.stop().animate({
+							scrollLeft: myScrollPos - (menuWidth / 9)
+						}, 300);
+					}
 				}
-		
 			});
 		});
 	});

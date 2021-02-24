@@ -172,6 +172,51 @@
 	}
 }
 
+/** accordion **/
+.accordion_wrap {
+	.item {
+		box-sizing: content-box;
+		overflow: hidden;
+	}
+	.acco_head {
+		display: block;
+		border-bottom:1px solid #000;
+		color: #000;
+		text-decoration: none;
+		outline: 0;
+		cursor: pointer;
+		.acco_target {
+			display:block;
+			position:relative;
+			padding: 20px 0;
+			font-size:2rem;
+			line-height:3.2rem;
+			i {
+				top:50%;
+				right:0;
+				margin-top:-6px;
+			}
+		}
+		&[aria-expanded="true"] {
+			.acco_target i {@include rotate(180);}
+		}
+	}
+	[data-status="disabled"] .acco_panel{
+		display: none;
+	}
+	.acco_panel {
+		outline: 0;
+		&[aria-hidden="true"] {
+			display: none;
+		}
+		.tbl_default {
+			border-top-width:1px;
+			padding-bottom:40px;
+			margin:0;
+		}
+	}
+}
+
 /** button **/
 .btn-type_wrap {
 	display: block;

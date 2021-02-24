@@ -22,7 +22,8 @@
 					<p class="ti" data-pos-top="guides02">2. Icon</p><br>
 					<p class="ti" data-pos-top="guides03">3. Tab</p><br>
 					<p class="ti" data-pos-top="guides04">4. Checkbox/Radiobox</p><br>
-					<p class="ti" data-pos-top="guides05">5. Name</p><br>
+					<p class="ti" data-pos-top="guides05">5. Accordion</p><br>
+					<!-- <p class="ti" data-pos-top="guides05">5. Name</p><br> -->
 				</div>
 			</div>
 
@@ -40,6 +41,8 @@
 .guides .btn-type_wrap {text-align: left;}
 </style>
 <div class="guides">
+
+
 <p class="ti" id="guides00">0. Breakpoint</p>
 
 <pre>
@@ -231,6 +234,28 @@ $(document).ready(function(){
 &lt;p class="radiowrap"&gt;&lt;label&gt;&lt;input type="radio" name="radio"&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p class="radiowrap"&gt;&lt;label&gt;&lt;input type="radio" name="radio" disabled&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;	
 </pre>
+
+
+<br><br>
+<p class="ti" id="guides05">5. Accordion</p>
+<div class="accordion_wrap" id="acco01" role="presentation">
+	<div class="item" data-status="expanded">
+		<div class="acco_head">
+			<a href="#" class="acco_target" tabindex="0">Accordion01 <i></i></a>
+		</div>
+		<div class="acco_panel">
+			Accordion01 panel
+		</div>
+	</div>
+	<div class="item" data-status="disabled">
+		<div class="acco_head">
+			<a href="#" class="acco_target" tabindex="0">Accordion02 <i></i></a>
+		</div>
+		<div class="acco_panel">
+			Accordion02 panel
+		</div>
+	</div>
+</div>
 
 </div>
 <!--// guides -->
