@@ -1,0 +1,84 @@
+@@include('../inc/pagehead.inc',{
+	"pagetitle":"Build | Option | HYUNDAI",
+	"webroot":"../"
+})
+<link rel="stylesheet" href="../assets/css/clicktobuy.css"></link>
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
+
+	<div class="h-wrap">
+		<!-- header -->
+		@@include('../inc/header.inc',{
+			"webroot":""
+		})
+		<!-- //header -->
+
+		<!-- h-contents -->
+		<div id="h-contents" class="h-contents">
+			<!-- select stage back -->
+			<div class="page_back">
+				<a href="#"><i></i>Select Vehicle</a>
+			</div>
+			<!--// select stage back -->
+
+			<div class="click-to-buy">
+				<!-- left select -->
+				<div class="select_wrap">
+				</div>
+				<!--// left select -->
+	
+				<!-- section stage -->
+				<div class="stage_wrap">
+					<div class="build_container">
+						<div class="content_wrap">
+							<div class="tab_wrap" id="tabcase01">
+								<ul class="tablist tab_line" role="tablist" aria-label="select option">
+									<li><button class="tab">Option</button></li>
+									<li><button class="tab">Accessories</button></li>
+								</ul>
+								<div class="tab_contents">
+									<section class="tab_panel" role="tabpanel">
+									</section>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<!--// section stage -->
+
+				<div class="fixed_bottom">
+					<div class="result">
+						<em class="product_name">Venue</em>
+						<div class="total_price">
+							<span class="total">Total Amount</span>
+							<em class="price">USD 25,000</em>
+							<span class="pm">USD 1,256 pm</span>
+						</div>
+					</div>
+					<button type="button" class="review"><span>Review</span></button>
+					<a href="#" class="btn btn_next">
+						<span>Select Colors</span>
+						<i></i>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<!--// h-contents -->
+
+		<!-- footer -->
+		@@include('../inc/footer.inc',{
+			"webroot":".."
+		})
+		<!-- //footer -->
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			actvTabList('tabcase01', 1);
+		});
+	</script>
+
+</body>
+</html>
