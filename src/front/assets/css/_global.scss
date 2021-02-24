@@ -80,6 +80,11 @@ dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoo
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, 
 ruby, section, summary,time, mark, audio, video {
 	margin: 0;padding: 0; vertical-align: top; letter-spacing: 0; word-break:keep-all;
+	text-decoration:none; -webkit-tap-highlight-color:transparent;
+	font-family: 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	color: #000000;
+	font-size: 16px;
+	font-weight: normal;
 }
 fieldset,img, textarea {border: 0;outline: 0;}
 /* HTML5 display-role reset for older browsers */
@@ -89,7 +94,7 @@ button,input { border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0
 html, body {
 	-webkit-text-size-adjust:none;
 	// -webkit-text-size-adjust: 100%;
-	font-family: 'HyundaiSansText', 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family: 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	-ms-word-wrap:break-word;word-wrap:break-word;
 	line-height:1;
 }
@@ -162,35 +167,30 @@ textarea {
 	}
 }
 input::-ms-clear {
-  display: none;
+	display: none;
 }
 ::-webkit-input-placeholder {
 	font-size:16px;
 	font-weight:300;
-  color:#999;
+	color:#999;
 }
 ::-moz-placeholder {
 	font-size:16px;
 	font-weight:300;
-  color:#999;
+	color:#999;
 }
 ::-moz-placeholder {
 	font-size:16px;
 	font-weight:300;
-  color:#999;
+	color:#999;
 }
 .clearfix:after {content: ''; display: block; clear: both;}
 button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(255,255,255, 0);outline:none;}
 input,button,select {vertical-align:middle;}
 * {
 	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	text-decoration:none; -webkit-tap-highlight-color:transparent;
-	font-family: 'HyundaiSansText', 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
-	color: #000000;
-  font-size: 16px;
-	font-weight: normal;
+		 -moz-box-sizing: border-box;
+					box-sizing: border-box;
 }
 select{
 	-webkit-appearance:none;
@@ -199,7 +199,7 @@ select{
 	width:100%;
 	margin:0;
 	padding:0 15px ;
-  border:1px solid #000000;
+	border:1px solid #000000;
 	border-radius: 0;
 	background: {
 		image: url(../images/icon/icon_down.png);
@@ -217,28 +217,28 @@ select::-ms-expand{
 }
 button {
 	text-align: center;
-  cursor: pointer;
-  border: none;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  background: transparent;
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	background: transparent;
+	line-height: normal;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+	-webkit-appearance: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 /****** Accessibility ******/
@@ -274,10 +274,10 @@ button {
 	}
 }
 .noscroll {
-  overflow: hidden !important;
+	overflow: hidden !important;
 	height: 100%;
 	.h-wrap {
-    overflow:hidden;
+		overflow:hidden;
 	}
 }
 
@@ -333,6 +333,7 @@ body {
 	}
 	.location {
 		display: inline-block;
+		margin-right:20px;
 		a {
 			display: block;
 			width:100%;
@@ -424,3 +425,49 @@ body {
 	}
 }
 
+
+
+@media screen and (max-width:1024px){
+}
+.pg-mobile {
+	.header_wrap {
+		border-bottom:0;
+		.logo {
+			width:12.21rem;
+			height:1.571rem;
+			background-image: url(../images/common/m-header_logo.png)
+		}
+		.location {
+			margin-right:10px;
+			a {
+				font-size:0;
+				color:transparent;
+			}
+		}
+	}
+
+	.h-contents {
+		min-height:100%;
+		height:auto;
+		.page_back {
+			display: none;
+		}
+
+		.select_wrap {
+			position:relative;
+			width:100%;
+		}
+		.stage_wrap {
+			width:100%;
+			margin-left:0;
+		}
+		.fixed_bottom {
+			position:fixed;
+			bottom:0;
+			left:0;
+			right:0;
+			width:100%;
+			border-top:1px solid #999999;
+		}
+	}
+}

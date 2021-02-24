@@ -23,7 +23,8 @@
 					<p class="ti" data-pos-top="guides03">3. Tab</p><br>
 					<p class="ti" data-pos-top="guides04">4. Checkbox/Radiobox</p><br>
 					<p class="ti" data-pos-top="guides05">5. Accordion</p><br>
-					<!-- <p class="ti" data-pos-top="guides05">5. Name</p><br> -->
+					<p class="ti" data-pos-top="guides06">6. Font Style</p><br>
+					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
 
@@ -37,13 +38,13 @@
 .guides pre * {color:#fff}
 .guides .half {float:left;width:calc(100%/2 - 30px);margin-right:30px;}
 .guides .half.right {width:calc(100%/2);margin-right:0;}
-.guides p.ti {padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
+.guides p.ti {margin-top:40px;padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
 .guides .btn-type_wrap {text-align: left;}
 </style>
 <div class="guides">
 
 
-<p class="ti" id="guides00">0. Breakpoint</p>
+<p class="ti" id="guides00" style="margin-top:0;">0. Breakpoint</p>
 
 <pre>
 Mobile = ~ 1024; 
@@ -58,33 +59,33 @@ Desktop = 1240 ~;
 <p class="ti" id="guides01">1. Button</p>
 
 <div class="btn-type_wrap">
-	<button class="btn-type _default">btn default</button>
-	<button class="btn-type _cancel">btn cancel</button>
-	<button class="btn-type _line">btn line</button>
-	<button class="btn-type _line"><i class="ic_compare"></i>btn +icon</button>
+	<button role="button" class="btn-type _default">btn default</button>
+	<button role="button" class="btn-type _cancel">btn cancel</button>
+	<button role="button" class="btn-type _line">btn line</button>
+	<button role="button" class="btn-type _line"><i class="ic_compare"></i>btn +icon</button>
 	<br><br>
 
-	<a href="#" class="btn-type _default">btn default</a>
-	<a href="#" class="btn-type _cancel">btn cancel</a>
-	<a href="#" class="btn-type _line">btn line</a>
-	<a href="#" class="btn-type _line"><i class="ic_compare"></i>btn +icon</a>
+	<a href="#" role="button" class="btn-type _default">btn default</a>
+	<a href="#" role="button" class="btn-type _cancel">btn cancel</a>
+	<a href="#" role="button" class="btn-type _line">btn line</a>
+	<a href="#" role="button" class="btn-type _line"><i class="ic_compare"></i>btn +icon</a>
 </div>
 <br><br>
 <pre>
 assets/css/_component.scss
 
 &lt;div class="btn-type_wrap"&gt;
-	&lt;button class="btn-type _default"&gt;btn-type default&lt;/button&gt;
-	&lt;button class="btn-type _cancel"&gt;btn-type cancel&lt;/button&gt;
-	&lt;button class="btn-type _line"&gt;btn-type line&lt;/button&gt;
-	&lt;button class="btn-type _line"&gt;&lt;i class="ic_compare"&gt;&lt;/i&gt;btn-type line&lt;/button&gt;
+	&lt;button role="button" class="btn-type _default"&gt;btn-type default&lt;/button&gt;
+	&lt;button role="button" class="btn-type _cancel"&gt;btn-type cancel&lt;/button&gt;
+	&lt;button role="button" class="btn-type _line"&gt;btn-type line&lt;/button&gt;
+	&lt;button role="button" class="btn-type _line"&gt;&lt;i class="ic_compare"&gt;&lt;/i&gt;btn-type line&lt;/button&gt;
 &lt;/div&gt;
 
 &lt;div class="btn-type_wrap"&gt;
-	&lt;a href="#" class="btn-type _default"&gt;btn-type default&lt;/a&gt;
-	&lt;a href="#" class="btn-type _cancel"&gt;btn-type cancel&lt;/a&gt;
-	&lt;a href="#" class="btn-type _line"&gt;btn-type line&lt;/a&gt;
-	&lt;a href="#" class="btn-type _line"&gt;&lt;i class="ic_compare"&gt;btn line&lt;/a&gt;
+	&lt;a href="#" role="button" class="btn-type _default"&gt;btn-type default&lt;/a&gt;
+	&lt;a href="#" role="button" class="btn-type _cancel"&gt;btn-type cancel&lt;/a&gt;
+	&lt;a href="#" role="button" class="btn-type _line"&gt;btn-type line&lt;/a&gt;
+	&lt;a href="#" role="button" class="btn-type _line"&gt;&lt;i class="ic_compare"&gt;btn line&lt;/a&gt;
 &lt;/div&gt;	
 </pre>
 
@@ -140,16 +141,12 @@ assets/css/_component.scss
 		</section>
 	</div>
 </div>
-<script>
-$(document).ready(function(){
-	actvTabList('tabcase01', 0);
-});
-</script>
 <br>
 <pre>
 assets/css/_component.scss
 assets/js/ui.js
 
+- auto tab
 &lt;div class="tab_wrap" id="tabcase01"&gt;
 	&lt;ul class="tablist" role="tablist" aria-label="tabname"&gt;
 		&lt;li&gt;&lt;button class="tab">tab index00&lt;/button&gt;&lt;/li&gt;
@@ -161,15 +158,11 @@ assets/js/ui.js
 		&lt;/section&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-
-$(document).ready(function(){
-	actvTabList('tabcase01', 0);
-});
 </pre>
 <br><br>
 
-<div class="tab_wrap" id="tabcase02">
-	<ul class="tablist tab_line" role="tablist" aria-label="tabname">
+<div class="tab_wrap manualfn" id="tabcase02">
+	<ul class="tablist _line" role="tablist" aria-label="tabname">
 		<li><button class="tab">tab index00</button></li>
 		<li><button class="tab">tab index01</button></li>
 		<li><button class="tab">tab index02</button></li>
@@ -196,7 +189,8 @@ $(document).ready(function(){
 assets/css/_component.scss
 assets/js/ui.js
 
-&lt;div class="tab_wrap" id="tabcase02"&gt;
+- function tab
+&lt;div class="tab_wrap manualfn"  id="tabcase02"&gt;
 	&lt;ul class="tablist _line" role="tablist" aria-label="tabname"&gt;
 		&lt;li&gt;&lt;button class="tab">tab index00&lt;/button&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;button class="tab">tab index01&lt;/button&gt;&lt;/li&gt;
@@ -212,6 +206,38 @@ $(document).ready(function(){
 	actvTabList('tabcase02', 1);
 });
 </pre>
+<br>
+<div class="tab_wrap" id="tabcase03">
+	<ul class="radio_tablist" role="radio_tablist" aria-label="tabname">
+		<li><p class="radiowrap" aria-selected="true"><label><input type="radio" name="tabradio" checked>radio tab1</label></p></li>
+		<li><p class="radiowrap" aria-selected="false"><label><input type="radio" name="tabradio">radio tab2 <span>small text</span></label></p></li>
+	</ul>
+	<div class="radio-tab_contents">
+		<section class="tab_panel" aria-hidden="false" role="tabpanel">
+			tab00 contents
+		</section>
+		<section class="tab_panel" aria-hidden="true"  role="tabpanel">
+			tab01 contents
+		</section>
+	</div>
+</div>
+<pre>
+assets/css/_component.scss
+assets/js/ui.js
+
+- radio tab
+&lt;div class="tab_wrap"  id="tabcase03"&gt;
+	&lt;ul class="radio_tablist" role="radio_tablist" aria-label="tabname"&gt;
+		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="true"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio" checked&gt; radio tab1 &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="false"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio"&gt; radio tab2 &lt;span&gt;small text&lt;/span&gt; &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="tab_contents"&gt;
+		&lt;section class="tab_panel" role="tabpanel"&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+
 
 <br><br>
 <p class="ti" id="guides04">4. Checkbox/Radiobox</p>
@@ -293,7 +319,7 @@ $(document).ready(function(){
 	</div>
 	<script>
 		$(document).ready(function(){
-		accoSet('accotype02')
+			accoSet('accotype02')
 		});
 	</script>
 <pre>
@@ -310,14 +336,24 @@ $(document).ready(function(){
 
 &lt;script&gt;
 	$(document).ready(function(){
-	accoSet('accotype02')
+		accoSet('accotype02')
 	// sample : accoSet('아코디언 아이디', 'multiple', 'acco_panel')
 	});
 &lt;/script&gt;
 </pre>
 </div>
 
+<br><br>
+<p class="ti" id="guides06">6. Font Style</p>
+<div style="width:50%;">
+<pre>
+기본 : font-family: 'HyundaiSansHead'
 
+특정폰트 : 
+@include FontText(); //font-family: 'HyundaiSansText'
+@include FontHead(); //font-family: 'HyundaiSansHead'
+</pre>
+</div>
 
 
 </div>

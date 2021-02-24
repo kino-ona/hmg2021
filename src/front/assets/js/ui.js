@@ -94,12 +94,13 @@ $(function () {
 
 
 
-/*** accordion fn  ***/
+// accordion fn
 $('.accordion_wrap').each(function () { // default
 	if (!$(this).hasClass('manualfn')) {
 		if ($(this).hasClass('multiple')) {
 			defaultAcc = new Accordion($(this), {
 				allowMultiple: true,
+				panel: '.acco_panel',
 				transition: 'height .0s',
 				transitionSupport: true,
 				setFocus: 'first'
@@ -107,14 +108,18 @@ $('.accordion_wrap').each(function () { // default
 		} else {
 			defaultAcc = new Accordion($(this), {
 				allowMultiple: false,
+				panel: '.acco_panel',
 				transition: 'height .0s',
 				transitionSupport: true,
 				setFocus: 'first'
 			});
 		}
 	}
+	if(winW < 1024) {
+		defaultAcc.destroy();
+	}
 });
-function accoSet(setId, multiTF, setFocus) {
+var accoSet = function(setId, multiTF, setFocus){
 	if (!setId) {
 		setId = '.accordion_wrap';
 	} else {
@@ -125,11 +130,13 @@ function accoSet(setId, multiTF, setFocus) {
 
 	defaultAcc = new Accordion(setId, {
 		allowMultiple: multiTF,
-		setFocus: setFocus
+		setFocus: setFocus,
+		transition: 'height .0s',
+		transitionSupport: true,
 	});
 }
 // tab control
-function actvTabList(tabid, actNum){
+var actvTabList = function(tabid, actNum){
 	var basicTabs = new Tabs('#' + tabid);
 	if(!actNum) actNum = 0;
 
@@ -138,8 +145,33 @@ function actvTabList(tabid, actNum){
 $('.tab_wrap').each(function(){  // default
 	if(!$(this).hasClass('manualfn')){
 		var basicTabs = new Tabs($(this));
-	}
+	}	
 });
+
+// radio tab
+var radioTanfnc = function(){
+	$('.radio_tablist').each(function(){  
+		var radioContent = $(".radio-tab_contents .tab_panel");
+	
+		$(this).find('li').each(function(){
+			$(this).find("input[type='radio']").click(function(){
+				$(".radio_tablist p").attr('aria-selected', false)
+				if(!$(this).parents('.radiowrap').attr('aria-selected', true)) {
+					$(this).parents('.radiowrap').attr('aria-selected', true)
+				}
+				
+				radioContent.attr('aria-hidden', true)
+				radioContent.eq($("input[type='radio']").index(this)).attr('aria-hidden', false)
+			});
+		});
+	});
+}
+$(document).ready(function() {
+	$('.radio_tablist').each(function(){  // default
+		radioTanfnc();
+	});
+});
+
 
 // tab pagination
 $(document).ready(function() {
@@ -151,11 +183,19 @@ var tabposSet = function(){
 		
 		$(this).find('.tab-row p').each(function() {
 			$(this).find('button').on('click', function(e){
+
 				$tablist.find('button').attr('aria-selected', false);
 				if(!$(this).attr('aria-selected', true)){
 					var $element = $(this);
-					$element.log($(this))
 					$element.attr('aria-selected', true);
+				}
+				
+				
+				$tablist.find('button').removeClass('active');
+				if(!$(this).hasClass('active')){
+					var $element = $(this);
+					$tablist.find('p').removeClass('active');
+					$element.addClass('active');
 
 					if(winW < 1024) {
 						var hashOffset = $element.offset().left;
@@ -169,6 +209,7 @@ var tabposSet = function(){
 						}, 300);
 					}
 				}
+
 			});
 		});
 	});
