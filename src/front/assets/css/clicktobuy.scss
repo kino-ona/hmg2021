@@ -187,3 +187,16 @@
 		}
 	}
 }
+.build_container {
+	overflow-y: auto;
+	height: 100%;
+	padding-top: 54px;
+	background-color: #fff;
+	.content_title {
+		color: #000;
+		font-weight: 900;
+		font-size: 2.5rem;
+		line-height: 3.125rem;
+	}
+	
+}

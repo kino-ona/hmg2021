@@ -1,0 +1,9 @@
+node_modules
+dist/hmg/path
+dist/hmg/front/assets/css
+dist/hmg/front/assets/js
+dist/hmg/front/assets/fonts
+dist/hmg/front/*.html
+dist/hmg/front/click-to-buy/select_trims.html
+dist/hmg/front/click-to-buy/select_vehicle.html
+dist/hmg/path.html
