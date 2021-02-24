@@ -75,10 +75,84 @@
 	text-overflow:ellipsis;
 }
 
-// font set
-@mixin FontDefault {
-	font-family: 'futura-pt', 'Noto Sans KR', 'Malgun Gothic', 'AppleSDGothicNeo', sans-serif !important;
+// icons
+// Mixin Icons via http://wit.nts-corp.com/2017/10/31/4972
+$sqrt_2: 1.41421356237;
+// bullet icon SCSS mixin
+@mixin iconAngle($direction: 'up', $width: 50px, $height: 25px, $thick: 1px, $color: #fff, $display: inline-block, $position: relative){
+	position: $position;
+	display: $display;
+	width: $width;
+	height: $height;
+	overflow: hidden;
+
+	@if ($direction == 'up' or $direction == 'down') {
+		$size: floor($width/$sqrt_2 - 2*$thick);
+		$rate: 2*$height/$width;
+		$margin-top : round($rate*$size/(2*$sqrt_2));
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: $size;
+			height: $size;
+			@if ($rate == 1) {
+				@include transform(translate(-50%, -50%) rotate(45deg));
+			} @else {
+				@include transform(translate(-50%, -50%) scale(1, $rate) rotate(45deg));
+			}
+
+			@if ($direction == 'up') {
+				margin-top: $margin-top;
+				border-top: $thick solid $color;
+				border-left: $thick solid $color;
+				border-right: 0;
+				border-bottom: 0;
+			} @else if ($direction == 'down') {
+				margin-top: - $margin-top;
+				border-right: $thick solid $color;
+				border-bottom: $thick solid $color;
+			}
+		}
+	}  @else if ($direction == 'left' or $direction == 'right') {
+		$size: floor($height/$sqrt_2 - 2*$thick);
+		$rate: 2*$width/$height;
+		$margin-left : round($rate*$size/(2*$sqrt_2));
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: $size;
+			height: $size;
+
+			@if ($rate == 1) {
+				@include transform(translate(-50%, -50%) rotate(45deg));
+			} @else {
+				@include transform(translate(-50%, -50%) scale($rate, 1) rotate(45deg));
+			}
+
+			@if ($direction == 'left') {
+				margin-left: $margin-left;
+				border-left: $thick solid $color;
+				border-bottom: $thick solid $color;
+			}  @else if ($direction == 'right') {
+				margin-left: - $margin-left;
+				border-top: $thick solid $color;
+				border-right: $thick solid $color;
+			}
+		}
+	}
 }
-@mixin NotoFont {
-	font-family: 'Noto Sans KR', 'Malgun Gothic', 'AppleSDGothicNeo', sans-serif !important;
+
+
+// font set
+@mixin FontText {
+	font-family: 'HyundaiSansText','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
+}
+@mixin FontHead {
+	font-family: 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif !important;
 }

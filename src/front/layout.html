@@ -37,7 +37,7 @@
 .guides pre * {color:#fff}
 .guides .half {float:left;width:calc(100%/2 - 30px);margin-right:30px;}
 .guides .half.right {width:calc(100%/2);margin-right:0;}
-.guides p.ti {padding-bottom:15px;font-weight: bold;font-size:18px;}
+.guides p.ti {padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
 .guides .btn-type_wrap {text-align: left;}
 </style>
 <div class="guides">
@@ -238,24 +238,87 @@ $(document).ready(function(){
 
 <br><br>
 <p class="ti" id="guides05">5. Accordion</p>
-<div class="accordion_wrap" id="acco01" role="presentation">
-	<div class="item" data-status="expanded">
-		<div class="acco_head">
-			<a href="#" class="acco_target" tabindex="0">Accordion01 <i></i></a>
+<div style="width:50%;">
+	<p>- Autoset Type</p>
+	<div class="accordion_wrap" id="accotype01" role="presentation">
+		<div class="item" data-status="expanded">
+			<div class="acco_head">
+				<a href="#" class="acco_target" tabindex="0">Accordion01 <i></i></a>
+			</div>
+			<div class="acco_panel">
+				Accordion01 panel
+			</div>
 		</div>
-		<div class="acco_panel">
-			Accordion01 panel
+		<div class="item" data-status="disabled">
+			<div class="acco_head">
+				<a href="#" class="acco_target" tabindex="0">Accordion02 <i></i></a>
+			</div>
+			<div class="acco_panel">
+				Accordion02 panel
+			</div>
 		</div>
 	</div>
-	<div class="item" data-status="disabled">
-		<div class="acco_head">
-			<a href="#" class="acco_target" tabindex="0">Accordion02 <i></i></a>
-		</div>
-		<div class="acco_panel">
-			Accordion02 panel
-		</div>
-	</div>
+<pre>
+- Autoset Type
+&lt;div class="accordion_wrap" id="accotype01" role="presentation"&gt;
+	&lt;div class="item" data-status="expanded"&gt;
+		&lt;div class="acco_head"&gt;
+		&lt;a href="#" class="acco_target" tabindex="0"&gt;Accordion01 &lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="acco_panel"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 </div>
+<div style="width:50%;margin-top:50px;">
+	<p>- Function Type</p>
+	<div class="accordion_wrap manualfn" id="accotype02" role="presentation">
+		<div class="item" data-status="expanded">
+			<div class="acco_head">
+				<a href="#" class="acco_target" tabindex="0">Accordion01 <i></i></a>
+			</div>
+			<div class="acco_panel">
+				Accordion01 panel
+			</div>
+		</div>
+		<div class="item" data-status="disabled">
+			<div class="acco_head">
+				<a href="#" class="acco_target" tabindex="0">Accordion02 <i></i></a>
+			</div>
+			<div class="acco_panel">
+				Accordion02 panel
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+		accoSet('accotype02')
+		});
+	</script>
+<pre>
+- Function Type
+&lt;div class="accordion_wrap manualfn" id="accotype02" role="presentation"&gt;
+	&lt;div class="item" data-status="disabled"&gt;
+		&lt;div class="acco_head"&gt;
+		&lt;a href="#" class="acco_target" tabindex="0"&gt;Accordion01 &lt;i&gt;&lt;/i&gt;&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="acco_panel"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	$(document).ready(function(){
+	accoSet('accotype02')
+	// sample : accoSet('아코디언 아이디', 'multiple', 'acco_panel')
+	});
+&lt;/script&gt;
+</pre>
+</div>
+
+
+
 
 </div>
 <!--// guides -->

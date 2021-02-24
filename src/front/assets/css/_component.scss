@@ -180,8 +180,6 @@
 	}
 	.acco_head {
 		display: block;
-		border-bottom:1px solid #000;
-		color: #000;
 		text-decoration: none;
 		outline: 0;
 		cursor: pointer;
@@ -189,12 +187,11 @@
 			display:block;
 			position:relative;
 			padding: 20px 0;
-			font-size:2rem;
-			line-height:3.2rem;
 			i {
 				top:50%;
 				right:0;
 				margin-top:-6px;
+				@include iconAngle($direction: 'down', $width: 26px, $height: 12px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
 			}
 		}
 		&[aria-expanded="true"] {
