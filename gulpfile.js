@@ -28,7 +28,7 @@ var scssOptions = { // Sass compile option
 	sourceComments: false // map 처리. Default : false
 };
 var src = 'src';
-var dist = 'dist';
+var dist = 'dist/hmg/';
 var paths = {
 	js: '/js/', // js 소스 경로
 	css: '/css/', // css 경로
