@@ -41,6 +41,167 @@
 	}
 }
 
-.build_trim {
-	
+.build_option {
+	.item {
+		border-bottom:1px solid #D9D9D9;
+	}
+	.trim_item {
+		&[data-status="expanded"] {
+			padding-top:50px;
+		}
+	}
+	.acco_head {
+		position:relative;
+		min-height:111px;
+		.acco_target {	
+			position:absolute;
+			top:50%;
+			@include transform(translate(0, -50%));
+			padding:0 3.75rem;
+			width:100%;
+			i {
+				right:3.75rem;
+			}
+		}
+		
+		&[aria-expanded="true"] {
+			.acco_target {
+				i {display: none;}
+				.trim_cnt {display: block;}
+			}
+			.opt_title {
+				font-size:2.5rem;
+				font-weight: 900;
+				color:#000;
+			}
+			.opt_summary {
+				display: none;
+			}
+		}
+	}
+	.opt_title {
+		font-size:1.625rem;
+		color:#999999;
+	}
+	.opt_summary {
+		display: block;
+		margin-top:5px;
+		@include FontText();
+		font-size: 0.875rem;
+		font-weight: 600;
+		span {
+			font-size: inherit;
+			font-weight: inherit;
+			font-family: inherit;
+		}
+	}
+	.trim_cnt {
+		display: none;
+		margin-top:25px;
+		@include FontText();
+		color:rgba(0,0,0, .5);
+		em {
+			color:#000;
+			font-weight: 600;
+			font-size:inherit;
+		}
+	}
+	.acco_panel {
+		padding:15px 3.75rem 3.75rem;
+	}
 }
+
+
+@media screen and (max-width:1024px){
+}
+.pg-mobile {
+	.build_vehicles {
+		padding:0;
+		border-bottom:1px solid #D9D9D9;
+		.vehicles-head {
+			max-width:100%;
+			padding:10px 20px;
+			margin-bottom:0;
+			h2 {
+				font-size: 1.429rem;
+			}
+		}
+		.vehicles-model {
+			margin-left:5px;
+			.v_item {
+				border:0;
+				button {
+					padding:13px 15px;
+					font-weight: normal;
+					&[aria-selected="true"] {
+						background-color:#fff;
+						color:#0E306C;
+						&:after {
+							content:'';
+							position:absolute;
+							bottom:0;
+							left:0;
+							display: block;
+							width:100%;
+							height:4px;
+							background-color: #0E306C;
+						}
+					}
+				}
+			}
+		}
+	}
+	//.build_vehicles
+
+	.build_option {
+		.item {
+			padding-top:0;
+			&[data-status="disabled"] {
+				display: none;
+			}
+		}
+		.acco_head {
+			min-height:62px;
+			&[aria-expanded="true"] {
+				.opt_title {
+					font-size:1.857rem;
+				}
+			}
+			.acco_target {
+				position:relative;
+				top:inherit;
+				@include transform(translate(0, 0));
+				padding: 10px 20px 20px;
+				.trim_cnt {
+					position:absolute;
+					right:20px;
+					top:18px;
+					margin-top:0;
+					font-size: 1rem;
+				}
+			}
+			.opt_title {
+				&:before {
+					content: '';
+					display: inline-block;
+					width:15px;
+					height:24px;
+					margin-right:8px;
+					background: {
+						image: url(../images/ico/m-icon_pageback.png);
+						size: cover;
+						repeat:no-repeat;
+						position:center center;
+					}
+					vertical-align: middle;
+				}
+			}
+		}
+		.acco_panel {
+			padding:0;
+		}
+	}
+	//.build_option
+}
+//.pg-mobile 
+

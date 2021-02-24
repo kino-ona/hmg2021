@@ -109,19 +109,19 @@
 		display: table-cell;
 		line-height:50px;
 		text-align: center;
-		.tab, input[type="radio"]+label {
+		.tab {
 			display: block;
 			min-width: 100%;
 			height:50px;
 			border: 1px solid #D9D9D9;
 			background-color:#fff;
 			color: #000;
+			@include FontText();
 			cursor: pointer;
 			&:after {
 				display: none;
 			}
-			&[aria-selected="true"], input[type="radio"]:checked+label,
-			&:hover {
+			&[aria-selected="true"] {
 				border-color:#0E306C;
 				background-color: #0E306C;
 				color:#fff;
@@ -132,12 +132,12 @@
 			}
 		}
 	}
-	&.tab_line {
+	&._line {
 		display: block;
 		li {
 			display: inline-block;
 			line-height:60px;
-			.tab, input[type="radio"]+label {
+			.tab {
 				min-width: 140px;
 				height:60px;
 				padding:0 25px;
@@ -146,7 +146,7 @@
 				border-bottom:4px solid #D9D9D9;
 				color:#999999;
 				font-size:1.375rem;
-				&[aria-selected="true"], input[type="radio"]:checked+label {
+				&[aria-selected="true"] {
 					border-color:#0E306C;
 					color:#0E306C;
 					&:hover {
@@ -165,6 +165,66 @@
 	outline: none;
 	border: 0;
 	.tab_panel {
+		&[aria-hidden="true"] {
+			display: none;
+		}
+		outline: none;
+	}
+}
+.radio_tablist {
+	display: flex;
+	li {
+		flex:1;
+		margin-right:15px;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+	.radiowrap {
+		min-width:100%;
+		height:78px;
+		padding:0 25px;
+		margin-right:0;
+		border:2px solid #D9D9D9;
+		line-height:1;
+		text-align:left;
+		&[aria-selected="true"] {
+			background-color:#fff;
+			border-color: #285BEE;
+		}
+		input[type=radio] {
+			margin-right:30px;
+			font-size:1.571rem;
+			color:#999999;
+			&:before {
+				left:-2px;
+				top:-9px;
+				width:30px;
+				height:30px;
+				background-size:30px;
+			}
+			& + span {
+				font-size:1rem;
+			}
+		}
+		label {
+			width:100%;
+			height:78px;
+			line-height:78px;
+			font-size:1.571rem;
+			color:#999999;
+			span {
+				font-size:1rem;
+			}
+		}
+	}
+}
+.radio-tab_contents {
+	clear: both;
+	outline: none;
+	border: 0;
+	.tab_panel {
+		display: block;
 		&[aria-hidden="true"] {
 			display: none;
 		}
@@ -191,7 +251,7 @@
 				top:50%;
 				right:0;
 				margin-top:-6px;
-				@include iconAngle($direction: 'down', $width: 26px, $height: 12px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+				@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 1px, $color: #999999, $display: inline-block, $position: absolute);
 			}
 		}
 		&[aria-expanded="true"] {
@@ -243,6 +303,8 @@ a, button {
 		}
 	}
 }
+
+/** icon **/
 [class*='ic_'] {
 	display: inline-block;
 	margin-right:5px;
@@ -253,8 +315,8 @@ a, button {
 	height:16px;
 	background: {
 		image: url(../images/ico/icon_location.png);
-		size:cover;
-		position: 0 center;
+		size:10px;
+		position: center center;
 		repeat:no-repeat;
 	}
 }
@@ -356,5 +418,68 @@ a, button {
 		size:cover;
 		position: 0 center;
 		repeat:no-repeat;
+	}
+}
+
+
+@media screen and (max-width:1024px){
+}
+.pg-mobile {
+	.ic_loca {
+		background-size: cover;
+	}
+	/** tab pagination **/
+	.tab-pagination {
+		position: relative;
+		width: 100%;
+		max-height: 45px;
+		overflow: hidden;
+
+		.tab-row {
+			display: flex;
+			padding-bottom: 20px;
+			padding-left: 0;
+			overflow-x: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+		p {
+			flex: none;
+			float: left;
+			width: auto;
+			height: auto;
+			margin: 0 20px 0 0 !important;
+			// padding-top: 15px;
+			border-radius: 0;
+			background-color: #fff;
+			opacity: 1;
+			white-space: nowrap;
+			cursor: pointer;
+			outline: none;
+			span {
+				display: block;
+				padding-bottom: 10px;
+				font-size: 1rem;
+				font-weight: 350;
+				line-height: 1;
+				color: #999999;
+				text-transform: uppercase;
+			}
+			&.active {
+				span {
+					margin-top: -2px;
+					&:after {
+						content: '';
+						margin-top: 4px;
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: rgba(21, 144, 224, 0.89);
+					}
+				}
+			}
+		}
+		a {
+			display: inline-block;
+		}
 	}
 }
