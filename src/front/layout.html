@@ -25,6 +25,7 @@
 					<p class="ti" data-pos-top="guides05">5. Accordion</p><br>
 					<p class="ti" data-pos-top="guides06">6. Font Style</p><br>
 					<p class="ti" data-pos-top="guides07">7. Layer Popup</p><br>
+					<p class="ti" data-pos-top="guides08">8. Form</p><br>
 					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
@@ -41,6 +42,7 @@
 .guides .half.right {width:calc(100%/2);margin-right:0;}
 .guides p.ti {margin-top:40px;padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
 .guides .btn-type_wrap {text-align: left;}
+.guidelist p {cursor: pointer;}
 </style>
 <div class="guides">
 
@@ -228,7 +230,7 @@ assets/js/ui.js
 
 - radio tab
 &lt;div class="tab_wrap"  id="tabcase03"&gt;
-	&lt;ul class="radio_tablist" role="radio_tablist" aria-label="tabname"&gt;
+	&lt;ul class="radio-tab_contents" role="radio_tablist" aria-label="tabname"&gt;
 		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="true"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio" checked&gt; radio tab1 &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="false"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio"&gt; radio tab2 &lt;span&gt;small text&lt;/span&gt; &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
 	&lt;/ul&gt;
@@ -457,6 +459,26 @@ hlayerClose('팝업아이디')
 	<button onclick="hlayerOpen('popup3')" class="btn-type _default">타이틀 있는 팝업 - 와이드사이즈 (950px)</button>
 </div>
 
+
+<br><br>
+<p class="ti" id="guides08">8. Form</p>
+
+<div>
+	<div class="frm_field">
+		<dl>
+			<dt><label for="frm0">Normal <span class="required"><span class="a11y">required</span></span></label></dt>
+			<dd>
+				<input type="text" id="frm0">
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="frm1">Error</label></dt>
+			<dd>
+				<input type="text" id="frm1" class="errtx">
+			</dd>
+		</dl>
+	</div>
+</div>
 
 
 <br><br>

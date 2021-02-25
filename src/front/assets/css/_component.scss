@@ -426,7 +426,6 @@ a, button {
 	}
 }
 
-
 /* layer popup */
 .h-layer_body {
 	position: fixed;
@@ -589,6 +588,30 @@ a, button {
 	}
 }
 
+/* form field(input) */
+.required {
+	&::before {
+		content:'*';
+		display:inline-block;
+		color:#0559F7;
+		line-height:1;
+		vertical-align:middle;
+	}
+}
+.frm_field {
+	dt {
+		font-weight: 900;
+		@include FontText();
+		label {
+			font-weight: inherit;
+			font-family: inherit;
+		}
+	}
+	dd {
+		margin-top:10px;
+	}
+}
+
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
@@ -615,7 +638,6 @@ a, button {
 			width: auto;
 			height: auto;
 			margin: 0 20px 0 0 !important;
-			// padding-top: 15px;
 			border-radius: 0;
 			background-color: #fff;
 			opacity: 1;

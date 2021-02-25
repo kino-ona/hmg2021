@@ -113,19 +113,21 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 	height:40px;
 	padding:9px 10px;
 	background-color:#ffffff;
-	border:1px solid #e0e0e0;
+	border:1px solid #D9D9D9;
 	line-height:20px;
 	-webkit-appearance: none;
 	color:#000;
 	font-size:16px;
+	@include FontText();
 	&:not([readonly]) {
 		&:focus {
 			background-color:#fff;
-			border-color:#00a8e2;
+			border-color:#000000;
 		}
 	}
 	&:read-only {
-		color:#666;
+		background-color: #F4F4F4;
+		color:#999999;
 		&.fc_bk {
 			color:#000;
 		}
@@ -135,23 +137,27 @@ input[type=text], input[type=password], input[type=number], input[type=tel], inp
 			color:#000;
 		}
 	}
+	&.errtx {
+	}
 }
 textarea {
 	width:100%;
 	padding:10px;
 	min-height:120px;
 	background-color:#ffffff;
-	border:1px solid #e0e0e0;
+	border:1px solid #D9D9D9;
 	-webkit-appearance: none;
 	font-size:16px;
+	@include FontText();
 	&:not([readonly]) {
 		&:focus {
 			background-color:#fff;
-			border-color:#00a8e2;
+			border-color:#000000;
 		}
 	}
 	&:read-only {
-		color:#666;
+		background-color: #F4F4F4;
+		color:#999999;
 	}
 	::-webkit-input-placeholder {
 		font-size:16px;
@@ -396,6 +402,7 @@ body {
 		height:100%;
 		background-color: #fff;
 		border-right:1px solid #D9D9D9;
+		overflow-y: auto;
 	}
 	.stage_wrap {
 		position:relative;
