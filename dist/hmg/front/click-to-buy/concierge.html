@@ -10,16 +10,6 @@
   <link rel="icon" href="..//assets/ico/favicon.ico">
   <link rel="canonical" href="javascript:;">
 
-  <!-- COMM -->
-  <link rel="stylesheet" href="https://www.hyundai.com/etc/designs/hyundai/in/en/dependencies.css" type="text/css">
-  <link rel="stylesheet" href="https://www.hyundai.com/etc/designs/hyundai/in/en/global.css" type="text/css">
-  <link rel="stylesheet" href="https://www.hyundai.com/etc/designs/hyundai/in/en/components/common/header.css" type="text/css">
-  <link rel="stylesheet" href="https://www.hyundai.com/etc/designs/hyundai/in/en/components/pip/text-headline.css" type="text/css">
-
-  <!-- <script type="text/javascript" src="https://www.hyundai.com/etc/designs/hyundai/in/en/dependencies.js"></script> -->
-  <!-- <script type="text/javascript" src="https://www.hyundai.com/etc/designs/hyundai/in/en/components/common/header.js"></script> -->
-  <!--// COMM -->
-
   <link rel="stylesheet" href="..//assets/css/ui.css" />
   <script type="text/javascript" src="..//assets/js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="..//assets/js/ui-plugin.js"></script>
@@ -132,6 +122,39 @@
 							<div class="group">
 								<h3 class="content_title">Delivery</h3>
 								<p class="content_desc">Please select the way to receive the car. You can pick it up at the dealer’s branch in advance, or you can get it delivered to the place you want by consignment.</p>
+								<div class="delivery_container">
+									<div class="tab_wrap" id="tabcase03">
+										<ul class="radio_tablist" role="radio_tablist" aria-label="tabname">
+											<li><p class="radiowrap"  aria-selected="true"><label><input type="radio" name="tabradio" checked>Pick up at Dealer</label></p></li>
+											<li><p class="radiowrap"  aria-selected="false"><label><input type="radio" name="tabradio"> Preferred location <span>(+ USD 00,000)</span> </label></p></li>
+										</ul>
+										<div class="radio-tab_contents">
+											<section class="tab_panel" role="tabpanel" style="display:none">
+												<div class="contact">
+													<div class="map">
+														지도
+													</div>
+													<div class="location">
+														<p class="store_name">Barkeley Hyundai motors</p>
+														<dl class="store_info">
+															<dt>Address</dt>
+															<dd>Mairwa Road, Near Sutta Factory, Mairwaroad - Station road, Siwan, Bihar - 841226</dd>
+															<dt>Telephone</dt>
+															<dd>7541914572</dd>
+															<dt>Operation hour</dt>
+															<dd>Mon - Fri : 08:30~18:30  /  Sat : 08:30~15:30 Sun : Closed  /  Public Holidays : 08:30~15:30</dd>
+														</dl>
+														<div class="store_change">
+															<button type="button">Change dealership</button>
+														</div>
+													</div>
+												</div>
+											</section>
+											<section class="tab_panel" role="tabpanel" style="display:block !important">
+											</section>
+										</div>
+									</div>
+								</div>
 								<div class="content_info">
 									<ul class="bullet_square">
 										<li>Based on the options you have chosen, the estimated shipping date is 12-JUNE-2021.</li>
@@ -140,48 +163,48 @@
 								</div>
 							</div>
 							<!-- // Delivery -->
-							<!-- Promotions -->
+							<!-- Promotion -->
 							<div class="group">
 								<h3 class="content_title">Promotions</h3>
-								<p class="content_desc">These are applicable promotional items. Select the promotion item you want and enter the appropriate information.</p>
-								<div class="promotion_container">
-									<article class="promotion_item">
+								<p class="content_desc">These are applicable evental items. Select the event item you want and enter the appropriate information.</p>
+								<div class="event_container">
+									<article class="event_item">
 										<div class="group">
-											<div class="promotion_info">
-												<em class="promotion_title">Exchange special promotion</em>
+											<div class="event_info">
+												<em class="event_title">Exchange special event</em>
 												<p class="msg_info">Please enter the discount coupon code issued.</p>
 											</div>
-											<div class="promotion_date">
+											<div class="event_date">
 												<span class="expiry">Expiry date </span>
 												<em class="day">31-Oct-19</em>
 											</div>
-											<div class="promotion_button">
+											<div class="event_button">
 												<button type="button" class="btn_applied">Insert Coupon</button>
 											</div>
 										</div>
 									</article>
-									<article class="promotion_item" role="checkbox" aria-selected="true">
+									<article class="event_item">
 										<div class="group">
-											<div class="promotion_info">
-												<em class="promotion_title">Family Sale Special Promotion</em>
+											<div class="event_info">
+												<em class="event_title">Family Sale Special event</em>
 												<p class="msg_info">Please upload company information and supporting documents.</p>
 											</div>
-											<div class="promotion_date">
+											<div class="event_date">
 												<span class="expiry">Expiry date </span>
 												<em class="day">31-Oct-19</em>
 											</div>
-											<div class="promotion_button">
+											<div class="event_button">
 												<button type="button" class="btn_applied">Upload Documents</button>
-											</div>
+		 									</div>
 										</div>
 									</article>
-									<article class="promotion_item" role="checkbox" aria-selected="false">
+									<article class="event_item" role="checkbox" aria-selected="false">
 										<div class="group">
-											<div class="promotion_info">
-												<em class="promotion_title">Free Insurance Special Promotion</em>
-												<p class="msg_info">Please send the insurance contract to the dealer if promotion has been applied.</p>
+											<div class="event_info">
+												<em class="event_title">Free Insurance Special event</em>
+												<p class="msg_info">Please send the insurance contract to the dealer if event has been applied.</p>
 											</div>
-											<div class="promotion_date">
+											<div class="event_date">
 												<span class="expiry">Expiry date </span>
 												<em class="day">31-Oct-19</em>
 											</div>
@@ -189,7 +212,43 @@
 									</article>
 								</div>
 							</div>
-							<!-- // Promotions -->
+							<!-- // Promotion -->
+							<!-- Trade-in -->
+							<div class="group">
+								<h3 class="content_title">Trade-in</h3>
+								<p class="content_desc">You can check the selling price right away by entering the license plate number.</p>
+								<div class="event_container">
+									<article class="event_item">
+										<div class="group">
+											<div class="event_info">
+												<em class="event_title">Trade–in Estimation</em>
+											</div>
+											<div class="event_button">
+												<button type="button" class="btn_applied">Add Estimation</button>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+							<!-- // Trade-in -->
+							<!-- Purchasing condition -->
+							<div class="group">
+								<h3 class="content_title">Purchasing condition</h3>
+								<p class="content_desc">The default purchase condition is Private. Press Edit to purchase with VAT Owner or Protected Category.</p>
+								<div class="event_container">
+									<article class="event_item">
+										<div class="group">
+											<div class="event_info">
+												<em class="event_title">Purchasing condition</em>
+											</div>
+											<div class="event_button">
+												<button type="button" class="btn_applied">Edit</button>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+							<!-- // Purchasing condition -->
 						</div>
 					</div>
 				</div>
@@ -206,7 +265,7 @@
 					</div>
 					<button type="button" class="review"><span>Review</span></button>
 					<a href="#" class="btn btn_next">
-						<span>Select Colors</span>
+						<span>Complete</span>
 						<i></i>
 					</a>
 				</div>

@@ -195,13 +195,11 @@
 	.content_wrap {
 		max-width: 1200px;
 		margin: 0 auto;
-		.tab_wrap {
+		> .tab_wrap {
 			text-align: center;
 		}
 		> .group {
-			&:not(:first-child) {
-				margin-top: 114px;
-			}
+			padding-bottom: 114px;
 		}
 	}
 	.content_title {
@@ -440,35 +438,217 @@
 		}
 	}
 }
-.promotion_container {
-	.promotion_item {
+.delivery_container {
+	.radio_tablist {
+		margin-bottom: 40px;
+	}
+	.contact {
+		&:after {
+			@extend %clearer;
+		}
+		.map,
+		.location {
+			float: left;
+			width: 50%;
+		}
+		.location {
+			padding: 46px 0 0 90px;
+			.store_name {
+				margin-bottom: 40px;
+				font-size: 1.375rem;
+				line-height: 1.5rem;
+			}
+			.store_info {
+				&:after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+				dt,
+				dd {
+					float: left;
+					font-size: 1rem;
+					line-height: 1.5rem;
+				}
+				dt {
+					width: 27.401%;
+					color: #999;
+					&:not(:first-of-type) {
+						clear: left;
+						margin-top:40px;
+					}
+				}
+				dd {
+					width: calc(100% - 27.401%);
+					color: #000;
+					&:not(:first-of-type) {
+						margin-top: 40px;
+					}
+				}
+			}
+			.store_change {
+				margin-top: 70px;
+				text-align: center;
+				button {
+					width: 350px;
+					height: 65px;
+					border: 2px solid #0E306C;
+					color: 0E306C;
+					font-weight: 600;
+					font-size: 1.375rem;
+					line-height: 1.625rem;
+				}
+			}
+		}
+	}
+}
+.event_container {
+	.event_item {
 		position: relative;
 		padding: 31px 50px 35px;
 		border: 1px solid #d9d9d9;
 		&:not(:first-child) {
 			margin-top: 13px;
 		}
+		&[role="checkbox"] {
+			cursor:pointer;
+		}
+		&[role="checkbox"]:before,
+		&[role="checkbox"]:after {
+			content: '';
+			display: block;
+			position: absolute;
+		}
+		&[role="checkbox"]:before {
+			left: -1px;
+			top: -1px;
+			width: 31px;
+			height: 31px;
+			background-color: #fff;
+			border: 1px solid #d9d9d9;
+		}
+		&[role="checkbox"]:after {
+			left: 10px;
+			top: 8px;
+			width: 10px;
+			height: 10px;
+			border-left: 3px solid #d9d9d9;
+			border-top: 3px solid #d9d9d9;
+			@include rotate(225);
+		}
+		&[role="checkbox"][aria-selected="true"] {
+			&:before {
+				background-color: #FF8D34;
+				border-color: #FF8D34;
+			}
+			&:after {
+				border-color: #fff;
+			}
+		}
+		&.applied {
+			.event_date {
+				align-self: self-start;
+			}
+		}
 		> .group {
 			display: flex;
 			align-items: center;
 		}
-		.promotion_info {
+		.event_info {
 			margin-right: auto;
-			.promotion_title {
-				display: block;
-				margin-bottom: 9px;
+			.event_title {
 				color: #000;
 				font-weight: 900;
 				font-size: 1.375rem;
 				line-height: 1.875rem;
 			}
+			.event_applied {
+				display: inline-flex;
+				align-items: center;
+				margin-left: 10px;
+				padding: 2px 13px 4px 8px;
+				border-radius: 15px;
+				background-color: #FF8D34;
+				i {
+					@include iconAngle($direction: 'down', $width: 17px, $height: 8px, $thick: 2px, $color: #fff, $display: inline-block);
+				}
+				span {
+					margin-left: 3px;
+					color: #fff;
+					font-weight: 600;
+					font-size: .875rem;
+					line-height: 1.5rem;
+				}
+
+			}
+			.event_discount {
+				display: flex;
+				margin-top: 9px;
+				span,
+				em {
+					font-size: 1rem;
+					line-height: 1.5rem;
+				}
+				em {
+					margin-left: 11px;
+					color: #FF8D34;
+					font-weight: 600;
+				}
+			}
 			.msg_info {
+				display: block;
+				margin-top: 5px;
 				color: #999;
 				font-size: .875rem;
 				line-height: 1.375rem;
 			}
 		}
-		.promotion_date {
+		.applied_result {
+			margin-top: 29px;
+			color: #000;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			&.back {
+				margin-top: 21px;
+				padding: 13px 20px;
+				background: #f4f4f4;
+				font-size: .875rem;
+				line-height: 1.375rem;
+			}
+			* {
+				color: inherit;
+				font-size: inherit;
+				line-height: inherit;
+			}
+			.bullet_square {
+				> li {
+					&:before {
+						top: 8px;
+					}
+				}
+			}
+			.bullet_square:not(ul):not(ol) {
+				&:before {
+					top: 8px;
+				}
+			}
+			.separated {
+				display: flex;
+				align-items: center;
+				.price {
+					margin-left: 12px;
+					color: #FF8D34;
+					font-weight: 900;
+				}
+				.etc {
+					margin-left: 27px;
+					color: #999;
+					font-size: .875rem;
+					line-height: 1.375rem;
+				}
+			}
+		}
+		.event_date {
 			display: flex;
 			font-size: 1rem;
 			line-height: 1.625rem;
@@ -481,7 +661,7 @@
 				font-weight: 900;
 			}
 		}
-		.promotion_button {
+		.event_button {
 			margin-left: 20px;
 			.btn_applied {
 				width: 180px;
@@ -617,7 +797,7 @@
 }
 .bullet_square:not(ul):not(ol) {
 	&:before {
-		top: 8px;
+		top: 10px;
 		width: 3px;
 		height: 3px;
 		border-radius: 100%;
