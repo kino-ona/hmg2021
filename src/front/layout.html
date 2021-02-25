@@ -24,6 +24,7 @@
 					<p class="ti" data-pos-top="guides04">4. Checkbox/Radiobox</p><br>
 					<p class="ti" data-pos-top="guides05">5. Accordion</p><br>
 					<p class="ti" data-pos-top="guides06">6. Font Style</p><br>
+					<p class="ti" data-pos-top="guides07">7. Layer Popup</p><br>
 					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
@@ -355,7 +356,70 @@ assets/js/ui.js
 </pre>
 </div>
 
+<br><br>
+<p class="ti" id="guides07">7. Layer Popup</p>
 
+<div class="h-layer_body popup" id="popup1" aria-hidden="true" role="dialog">
+	<div class="h-layer_wrap _alert">
+		<div class="h-layer_head">
+			<button onclick="hlayerClose('popup1')" class="h-layer_close">닫기</button>
+		</div>
+		<div class="h-layer_cont">
+			<p class="in_tit">Confirm</p>
+			<p>We have sent an email with a verification link to your email address. Please complete the verification process within 24 hours. </p>
+
+			<div class="btn-type_wrap">
+				<button onclick="hlayerClose('popup1')" class="btn-type _default">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<pre style="width:50%;">
+- 알럿 팝업
+&lt;div class="h-layer_body popup" id="popup1" aria-hidden="true" role="dialog"&gt;
+	&lt;div class="h-layer_wrap _alert"&gt;
+		&lt;div class="h-layer_head"&gt;&lt;/div&gt;
+		&lt;div class="h-layer_cont"&gt;
+			&lt;div class="btn-type_wrap"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+<button onclick="hlayerOpen('popup1')">알럿 팝업</button>
+<br><br>
+<div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog">
+	<div class="h-layer_wrap">
+		<div class="h-layer_head">
+			<h2 class="h-layer_title">Coupon Registration</h2>
+			<button onclick="hlayerClose('popup2')" class="h-layer_close">닫기</button>
+		</div>
+		<div class="h-layer_cont">
+			<p class="in_tit">Confirm</p>
+			<p>We have sent an email with a verification link to your email address. Please complete the verification process within 24 hours. </p>
+			
+			<div class="btn-type_wrap">
+				<button onclick="hlayerClose('popup2')" class="btn-type _cancel">Cancel</button>
+				<button onclick="hlayerClose('popup2')" class="btn-type _default">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<pre style="width:50%;">
+- 알럿 팝업
+&lt;div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog"&gt;
+	&lt;div class="h-layer_wrap"&gt;
+		&lt;div class="h-layer_head"&gt;&lt;/div&gt;
+		&lt;div class="h-layer_cont"&gt;
+			&lt;div class="btn-type_wrap"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+<button onclick="hlayerOpen('popup2')">타이틀 있는 팝업</button>
+
+
+
+<br><br>
 </div>
 <!--// guides -->
 
