@@ -21,10 +21,10 @@
 	padding-bottom:35px;
 	background-color:#fff;
 	cursor:pointer;
-	&.active {
+	&[aria-selected="true"] {
 		box-shadow:8px 8px 40px rgba(0,0,0,.16);
 		.product_bottom {
-			.btn {
+			.btn-type {
 				border:0;
 				background-color:#0E306C;
 				color:#fff;
@@ -162,11 +162,11 @@
 	.product_bottom {
 		margin-top:15px;
 		padding:0 35px;
-		.btn {
+		.btn-type {
 			display:block;
 			position:relative;
 			height:50px;
-			padding-left:31px;
+			padding: 0 0 0 31px;
 			color:#999;
 			font-weight:normal;
 			font-size:0.875rem;
@@ -175,7 +175,7 @@
 				content:'';
 				display:block;
 				position:absolute;
-				right:31px;
+				right:25px;
 				top:50%;
 				width:10px;
 				height:10px;
@@ -380,7 +380,7 @@
 	}
 	&:after {
 		left: 10px;
-		top: 9px;
+		top: 7px;
 		width: 10px;
 		height: 10px;
 		border-left: 3px solid #d9d9d9;
@@ -528,8 +528,8 @@
 			border: 1px solid #d9d9d9;
 		}
 		&[role="checkbox"]:after {
-			left: 10px;
-			top: 8px;
+			left: 9px;
+			top: 6px;
 			width: 10px;
 			height: 10px;
 			border-left: 3px solid #d9d9d9;
@@ -753,7 +753,7 @@
 			}
 		}
 	}
-	.btn_next {
+	.btn-type {
 		display: flex;
 		justify-content: center;
 		align-items: center;
