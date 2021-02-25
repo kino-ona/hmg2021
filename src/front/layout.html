@@ -463,21 +463,182 @@ hlayerClose('팝업아이디')
 <br><br>
 <p class="ti" id="guides08">8. Form</p>
 
-<div>
+<div style="width:80%;">
+	<p>- form field default type</p><br>
 	<div class="frm_field">
-		<dl>
-			<dt><label for="frm0">Normal <span class="required"><span class="a11y">required</span></span></label></dt>
+		<dl class="frm">
+			<dt><label for="frm00">Normal</label></dt>
+			<dd>
+				<input type="text" id="frm00">
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm0">Required <span class="required"><span class="a11y">required</span></span></label></dt>
 			<dd>
 				<input type="text" id="frm0">
 			</dd>
 		</dl>
-		<dl>
+		<dl class="frm">
 			<dt><label for="frm1">Error</label></dt>
 			<dd>
-				<input type="text" id="frm1" class="errtx">
+				<input type="text" id="frm1" class="warn"><i class="ic_error"></i>
+				<p class="inp_txt warn">비밀번호가 일치하지 않습니다.</p>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm2">Success</label></dt>
+			<dd>
+				<input type="text" id="frm2">
+				<p class="inp_txt succ">비밀번호가 일치하지 않습니다.</p>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm2">Mix</label></dt>
+			<dd class="_mix">
+				<input type="text" id="frm2">
+				<button class="btn-type _default">button</button>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="select">Select</label></dt>
+			<dd>
+				<select>
+					<option>select box</option>
+				</select>
 			</dd>
 		</dl>
 	</div>
+	<br>
+<pre>
+- form field default type	
+
+&lt;div class="frm_field"&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm0"&gt;Normal &lt;span class="required"&gt;&lt;span class="a11y"&gt;required&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm0"&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm1"&gt;Error&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm1" class="warn"&gt;&lt;i class="ic_error"&gt;&lt;/i&gt;
+			&lt;p class="inp_txt warn"&gt;비밀번호가 일치하지 않습니다.&lt;/p&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm2"&gt;Success&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm2"&gt;
+			&lt;p class="inp_txt succ"&gt;비밀번호가 일치하지 않습니다.&lt;/p&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm2"&gt;Mix&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd class="_mix"&gt;
+			&lt;input type="text" id="frm2"&gt;
+			&lt;button class="btn-type _default"&gt;button&lt;/button&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="select"&gt;Select&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;select id="select"&gt;
+				&lt;option&gt;select box&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+&lt;/div&gt;
+</pre>	
+	<br><br>
+	<p>- form field half type</p><br>
+	<div class="frm_field field_half">
+		<dl class="frm">
+			<dt><label for="frm10">Required <span class="required"><span class="a11y">required</span></span></label></dt>
+			<dd>
+				<input type="text" id="frm10">
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm11">Error</label></dt>
+			<dd>
+				<input type="text" id="frm11" class="warn"><i class="ic_error"></i>
+				<p class="inp_txt warn">Error message.</p>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm12">Success</label></dt>
+			<dd>
+				<input type="text" id="frm12">
+				<p class="inp_txt succ">Success message.</p>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm13">Normal</label></dt>
+			<dd>
+				<input type="text" id="frm13">
+				<p class="inp_txt">Normal message.</p>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="frm14">Mix</label></dt>
+			<dd class="_mix">
+				<input type="text" id="frm14">
+				<button class="btn-type _default">button</button>
+			</dd>
+		</dl>
+		<dl class="frm">
+			<dt><label for="">Mix</label></dt>
+			<dd class="_mix">
+				<select>
+					<option>option</option>
+				</select>
+				<button class="btn-type _default">button</button>
+			</dd>
+		</dl>
+	</div>
+<br>
+<pre>
+- form field half type
+
+&lt;div class="frm_field field_half"&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm10"&gt;Required &lt;span class="required"&gt;&lt;span class="a11y"&gt;required&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm10"&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm11"&gt;Error&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm11" class="warn"&gt;&lt;i class="ic_error"&gt;&lt;/i&gt;
+			&lt;p class="inp_txt warn"&gt;Error message.&lt;/p&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm12"&gt;Success&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm12"&gt;
+			&lt;p class="inp_txt succ"&gt;Success message.&lt;/p&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm13"&gt;Success&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd&gt;
+			&lt;input type="text" id="frm13"&gt;
+			&lt;p class="inp_txt"&gt;Normal message.&lt;/p&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;dl class="frm"&gt;
+		&lt;dt&gt;&lt;label for="frm14"&gt;Mix&lt;/label&gt;&lt;/dt&gt;
+		&lt;dd class="_mix"&gt;
+			&lt;input type="text" id="frm14"&gt;
+			&lt;button class="btn-type _default"&gt;button&lt;/button&gt;
+		&lt;/dd&gt;
+	&lt;/dl&gt;
+&lt;/div&gt;	
+</pre>
+
 </div>
 
 

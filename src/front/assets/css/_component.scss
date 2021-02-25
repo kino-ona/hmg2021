@@ -599,16 +599,66 @@ a, button {
 	}
 }
 .frm_field {
+	&:after {
+		@extend %clearer;
+	}
+	@include FontText();
 	dt {
 		font-weight: 900;
-		@include FontText();
+		font-family: inherit;
 		label {
 			font-weight: inherit;
 			font-family: inherit;
 		}
 	}
 	dd {
+		position:relative;
 		margin-top:10px;
+		font-family: inherit;
+	}
+	.warn + [class*='ic_']{
+		position:absolute;
+		right:20px;
+		top:22%;
+	}
+	.inp_txt {
+		margin-top:10px;
+		font-size:0.875rem;
+		font-family: inherit;
+		&.warn {
+			color:#E80710;
+		}
+		&.succ {
+			color:#0559F7;
+		}
+	}
+	.btn-type {
+		height: 50px;
+		line-height:50px;
+		font-weight: 600;
+		font-size:1rem;
+	}
+	.frm {
+		._mix {
+			display:flex;
+			input {
+				flex: .6;
+			}
+			button {
+				flex: .4;
+				margin-left:10px;
+			}
+		}
+	}
+	&.field_half {
+		.frm {
+			float:left;
+			width:calc((100% / 2) - 5px);
+			margin-right:10px;
+			&:nth-child(2n) {
+				margin-right:0;
+			}
+		}
 	}
 }
 
