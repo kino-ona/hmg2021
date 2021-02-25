@@ -10,7 +10,7 @@
 	<div class="h-wrap">
 		<!-- header -->
 		@@include('../inc/header.inc',{
-			"webroot":""
+			"webroot":"../"
 		})
 		<!-- //header -->
 
@@ -25,14 +25,30 @@
 			<div class="click-to-buy">
 				<!-- left select -->
 				<div class="select_wrap">
+					<!-- build_vehicles -->
+					<div class="build_vehicles">
+						<div class="vehicles-head">
+							<h2>VEICLES TO BUILD</h2>
+						</div>
+
+						<div class="tab-pagination">
+							<div class="vehicles-model tab-row">
+								<p class="v_item"><button role="tab" aria-label="All" aria-selected="false">All</button></p>
+								<p class="v_item"><button role="tab" aria-label="SUV" aria-selected="false">SUV</button></p>
+								<p class="v_item"><button role="tab" aria-label="hatchback" aria-selected="false">hatchback</button></p>
+								<p class="v_item"><button role="tab" aria-label="Electric" aria-selected="false">Electric</button></p>
+								<p class="v_item"><button role="tab" aria-label="Sedan" aria-selected="false">Sedan</button></p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!--// left select -->
 	
 				<!-- section stage -->
 				<div class="stage_wrap">
 					<div class="product_container">
-						<div class="product_mask">
-							<article class="product active" role="button">
+						<div class="product_mask" role="radiogroup">
+							<article class="product" role="radio" aria-selected="true">
 								<div class="product_head">
 									<span class="product_tag new">new</span>
 									<span class="product_tag popular">Popular</span>
@@ -59,10 +75,10 @@
 									</div>
 								</div>
 								<div class="product_bottom">
-									<a href="#" class="btn _line">BUILD</a>
+									<a href="#" class="btn-type _line">BUILD</a>
 								</div>
 							</article>
-							<article class="product" role="button">
+							<article class="product" role="radio" aria-selected="false">
 								<div class="product_head">
 									<span class="product_tag new">new</span>
 									<span class="product_tag popular">Popular</span>
@@ -88,10 +104,10 @@
 									</div>
 								</div>
 								<div class="product_bottom">
-									<a href="#" class="btn _line">BUILD</a>
+									<a href="#" class="btn-type _line">BUILD</a>
 								</div>
 							</article>
-							<article class="product" role="button">
+							<article class="product" role="radio" aria-selected="false">
 								<div class="product_head">
 									<span class="product_tag new">new</span>
 									<span class="product_tag popular">Popular</span>
@@ -117,10 +133,10 @@
 									</div>
 								</div>
 								<div class="product_bottom">
-									<a href="#" class="btn _line">BUILD</a>
+									<a href="#" class="btn-type _line">BUILD</a>
 								</div>
 							</article>
-							<article class="product" role="button">
+							<article class="product" role="radio" aria-selected="false">
 								<div class="product_head">
 									<span class="product_tag new">new</span>
 									<span class="product_tag popular">Popular</span>
@@ -146,7 +162,7 @@
 									</div>
 								</div>
 								<div class="product_bottom">
-									<a href="#" class="btn _line">BUILD</a>
+									<a href="#" class="btn-type _line">BUILD</a>
 								</div>
 							</article>
 						</div>
@@ -164,7 +180,7 @@
 
 		<!-- footer -->
 		@@include('../inc/footer.inc',{
-			"webroot":""
+			"webroot":"../"
 		})
 		<!-- //footer -->
 	</div>

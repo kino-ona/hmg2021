@@ -10,7 +10,7 @@
 	<div class="h-wrap">
 		<!-- header -->
 		@@include('../inc/header.inc',{
-			"webroot":""
+			"webroot":"../"
 		})
 		<!-- //header -->
 
@@ -25,6 +25,103 @@
 			<div class="click-to-buy">
 				<!-- left select -->
 				<div class="select_wrap">
+					<!-- build_option -->
+					<div class="build_option">
+						<div class="accordion_wrap" id="bulidopt" role="presentation">
+							<div class="item trim_item" data-status="expanded">
+								<div class="acco_head">
+									<a href="#" class="acco_target" tabindex="0">
+										<p class="opt_title">1. Trims</p>
+										<p class="opt_summary">KONA Limited</p>
+										<p class="trim_cnt">Showing <em>5</em> of 6 Trims</p>
+									<i></i></a>
+								</div>
+								<div class="acco_panel">
+									<div class="trims_control">
+										<button type="button">
+											<i class="ic_search"></i>
+											<span>Trim Finder</span>
+										</button>
+										<button type="button">
+											<i class="ic_compare"></i>
+											<span>Compare Trims</span>
+										</button>
+									</div>
+									<ul class="trims_list" role="radiogroup">
+										<li class="trims_item" role="radio" aria-selected="false">
+											<div class="group">
+												<em class="name">Ultimate</em>
+												<span class="price">USD 28,150</span>
+												<span class="tag new">New</span>
+											</div>
+										</li>
+										<li class="trims_item" role="radio" aria-selected="true">
+											<div class="group">
+												<em class="name">Limited</em>
+												<span class="price">USD 25,000</span>
+												<span class="flag promotion">Promotion</span>
+											</div>
+										</li>
+										<li class="trims_item" role="radio" aria-selected="false">
+											<div class="group">
+												<em class="name">Night</em>
+												<span class="price">USD 25,350</span>
+												<span class="tag popular">Popular</span>
+											</div>
+										</li>
+										<li class="trims_item" role="radio" aria-selected="false">
+											<div class="group">
+												<em class="name">SEL Plus</em>
+												<span class="price">USD 20,500</span>
+												<span class="tag best">Best</span>
+											</div>
+										</li>
+										<li class="trims_item" role="radio" aria-selected="false">
+											<div class="group">
+												<em class="name">SEL Plus</em>
+												<span class="price">USD 27,000</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="item color_item" data-status="disabled">
+								<div class="acco_head">
+									<a href="#" class="acco_target" tabindex="0">
+										<p class="opt_title">2. Color</p>
+										<p class="opt_summary">
+											<span>Exterior : Denim</span>
+											<span>Interior : Sand Leather</span>
+										</p>
+									<i></i></a>
+								</div>
+								<div class="acco_panel">
+									Color panel
+								</div>
+							</div>
+							<div class="item options_item" data-status="disabled">
+								<div class="acco_head">
+									<a href="#" class="acco_target" tabindex="0">
+										<p class="opt_title">3. Options</p>
+										<p class="opt_summary">Fabric Rear Bumper Protector 외 3개</p>
+									<i></i></a>
+								</div>
+								<div class="acco_panel">
+									Options panel
+								</div>
+							</div>
+							<div class="item concierge_item" data-status="disabled">
+								<div class="acco_head">
+									<a href="#" class="acco_target" tabindex="0">
+										<p class="opt_title">4. Concierge</p>
+									<i></i></a>
+								</div>
+								<div class="acco_panel">
+									Concierge panel
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!--// left select -->
 	
@@ -94,7 +191,7 @@
 						</div>
 					</div>
 					<button type="button" class="review"><span>Review</span></button>
-					<a href="#" class="btn btn_next">
+					<a href="#" class="btn-type _default">
 						<span>Select Colors</span>
 						<i></i>
 					</a>
@@ -106,7 +203,7 @@
 
 		<!-- footer -->
 		@@include('../inc/footer.inc',{
-			"webroot":""
+			"webroot":"../"
 		})
 		<!-- //footer -->
 	</div>
