@@ -384,18 +384,22 @@ assets/js/ui.js
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
+
+hlayerOpen('팝업아이디')
+hlayerClose('팝업아이디')
 </pre>
-<button onclick="hlayerOpen('popup1')">알럿 팝업</button>
+<div class="btn-type_wrap">
+	<button class="btn-type _default" onclick="hlayerOpen('popup1')">알럿 팝업</button>
+</div>
 <br><br>
 <div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog">
 	<div class="h-layer_wrap">
 		<div class="h-layer_head">
-			<h2 class="h-layer_title">Coupon Registration</h2>
+			<h2 class="h-layer_title">Popup Title</h2>
 			<button onclick="hlayerClose('popup2')" class="h-layer_close">닫기</button>
 		</div>
 		<div class="h-layer_cont">
-			<p class="in_tit">Confirm</p>
-			<p>We have sent an email with a verification link to your email address. Please complete the verification process within 24 hours. </p>
+			<p>기본사이즈 (670px)</p>
 			
 			<div class="btn-type_wrap">
 				<button onclick="hlayerClose('popup2')" class="btn-type _cancel">Cancel</button>
@@ -405,7 +409,7 @@ assets/js/ui.js
 	</div>
 </div>
 <pre style="width:50%;">
-- 알럿 팝업
+- 타이틀 있는 팝업 - 기본사이즈 (670px)
 &lt;div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog"&gt;
 	&lt;div class="h-layer_wrap"&gt;
 		&lt;div class="h-layer_head"&gt;&lt;/div&gt;
@@ -415,7 +419,43 @@ assets/js/ui.js
 	&lt;/div&gt;
 &lt;/div&gt;	
 </pre>
-<button onclick="hlayerOpen('popup2')">타이틀 있는 팝업</button>
+<div class="btn-type_wrap">
+	<button class="btn-type _default" onclick="hlayerOpen('popup2')">타이틀 있는 팝업 - 기본사이즈 (670px)</button>
+</div>
+
+<br><br>
+<div class="h-layer_body popup" id="popup3" aria-hidden="true" role="dialog">
+	<div class="h-layer_wrap _wide">
+		<div class="h-layer_head">
+			<h2 class="h-layer_title">Purchasing Condition </h2>
+			<button onclick="hlayerClose('popup3')" class="h-layer_close">닫기</button>
+		</div>
+		<div class="h-layer_cont">
+			<p>You can enter VAT Owner or Protected Category information and try applying it to Offer in advance. 
+				After review by the sales consultant, the offer is finally reflected. 
+				(Once logged in, you can select the sales consultant you want to contact)</p>
+			<div style="width:100px;height:700px;border:1px solid red;"></div>
+			<div class="btn-type_wrap">
+				<button onclick="hlayerClose('popup3')" class="btn-type _cancel">Cancel</button>
+				<button onclick="hlayerClose('popup3')" class="btn-type _default">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<pre style="width:50%;">
+- 타이틀 있는 팝업 - 기본사이즈 (950px)
+&lt;div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog"&gt;
+	&lt;div class="h-layer_wrap"&gt;
+		&lt;div class="h-layer_head"&gt;&lt;/div&gt;
+		&lt;div class="h-layer_cont"&gt;
+			&lt;div class="btn-type_wrap"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+<div class="btn-type_wrap">
+	<button onclick="hlayerOpen('popup3')" class="btn-type _default">타이틀 있는 팝업 - 와이드사이즈 (950px)</button>
+</div>
 
 
 
