@@ -432,17 +432,67 @@
 			font-size: 1rem;
 			line-height: 1.5rem;
 		}
-		.option_tooltip {
+		.ic_info {
 			overflow: hidden;
-			width: 20px;
-			height: 20px;
-			background: {
-				image: url("../images/ico/icon_info.png");
-				size: cover;
-				repeat: no-repeat;
-			};
+			margin-right: 0;
 			text-indent: 100%;
 			white-space: nowrap;
+		}
+	}
+}
+.promotion_container {
+	.promotion_item {
+		position: relative;
+		padding: 31px 50px 35px;
+		border: 1px solid #d9d9d9;
+		&:not(:first-child) {
+			margin-top: 13px;
+		}
+		> .group {
+			display: flex;
+			align-items: center;
+		}
+		.promotion_info {
+			margin-right: auto;
+			.promotion_title {
+				display: block;
+				margin-bottom: 9px;
+				color: #000;
+				font-weight: 900;
+				font-size: 1.375rem;
+				line-height: 1.875rem;
+			}
+			.msg_info {
+				color: #999;
+				font-size: .875rem;
+				line-height: 1.375rem;
+			}
+		}
+		.promotion_date {
+			display: flex;
+			font-size: 1rem;
+			line-height: 1.625rem;
+			.expiry {
+				color: #999;	
+			}
+			.day {
+				margin-left: 8px;
+				color: #000;
+				font-weight: 900;
+			}
+		}
+		.promotion_button {
+			margin-left: 20px;
+			.btn_applied {
+				width: 180px;
+				height: 50px;
+				border: 1px solid #d9d9d9;
+				background-color: #f4f4f4;
+				color: #000;
+				font-weight: 600;
+				font-size: 1rem;
+				line-height: 1.625rem;
+			}
 		}
 	}
 }
