@@ -286,6 +286,13 @@
 		}
 	}
 }
+
+
+@media screen and (max-width:1024px){
+}
+.pg-table {
+}
+
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
@@ -297,7 +304,8 @@
 			padding:10px 20px;
 			margin-bottom:0;
 			h2 {
-				font-size: 1.429rem;
+				// font-size: 1.429rem;
+				font-size:1.857rem;
 			}
 		}
 		.vehicles-model {
