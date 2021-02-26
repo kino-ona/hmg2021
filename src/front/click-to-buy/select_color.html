@@ -1,5 +1,5 @@
 @@include('../inc/pagehead.inc',{
-	"pagetitle":"Build | Option | HYUNDAI",
+	"pagetitle":"Build | Color | HYUNDAI",
 	"webroot":"../"
 })
 <link rel="stylesheet" href="../assets/css/clicktobuy.css"></link>
@@ -85,7 +85,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="item color_item" data-status="disabled">
+							<div class="item color_item" data-status="expanded">
 								<div class="acco_head">
 									<a href="#" class="acco_target" tabindex="0">
 										<p class="opt_title">2. Color</p>
@@ -181,7 +181,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="item options_item" data-status="expanded">
+							<div class="item options_item" data-status="disabled">
 								<div class="acco_head">
 									<a href="#" class="acco_target" tabindex="0">
 										<p class="opt_title">3. Options</p>
@@ -189,24 +189,7 @@
 									<i></i></a>
 								</div>
 								<div class="acco_panel">
-									<div class="options_panel">
-										<div class="options_control">
-											<p class="selected_sum">
-												<em class="currunt">3</em>
-												<span>Items are Selected</span>
-											</p>
-											<button type="button" class="btn_clear">
-												<i></i>
-												<span>Clear All</span>
-											</button>
-										</div>
-										<dl class="total_result">
-											<dt class="total_desc">Total Upgrades</dt>
-											<dd class="total_price">+ USD 1,301</dd>
-											<dt>Base Price</dt>
-											<dd>+ USD 1,005</dd>
-										</dl>
-									</div>
+									Options panel
 								</div>
 							</div>
 							<div class="item concierge_item" data-status="disabled">
@@ -216,26 +199,7 @@
 									<i></i></a>
 								</div>
 								<div class="acco_panel">
-									<div class="concierge_panel">
-										<p class="title">Checklist</p>
-										<ul class="applied_list">
-											<li class="applied">
-												<div class="group">Purchasing condition <span class="check"><span class="a11y">applied</span></span></div>
-											</li>
-											<li class="applied">
-												<div class="group">Promotions <span class="check"><span class="a11y">applied</span></span></div>
-											</li>
-											<li>
-												<div class="group">Trade-in</div>
-											</li>
-											<li>
-												<div class="group">Warranty</div>
-											</li>
-											<li>
-												<div class="group">Delivery</div>
-											</li>
-										</ul>
-									</div>
+									Concierge panel
 								</div>
 							</div>
 						</div>
@@ -246,18 +210,7 @@
 				<!-- section stage -->
 				<div class="stage_wrap">
 					<div class="build_container">
-						<div class="content_wrap">
-							<div class="tab_wrap" id="tabcase01">
-								<ul class="tablist tab_line" role="tablist" aria-label="select option">
-									<li><button class="tab">Option</button></li>
-									<li><button class="tab">Accessories</button></li>
-								</ul>
-								<div class="tab_contents">
-									<section class="tab_panel" role="tabpanel">
-									</section>
-								</div>
-							</div>	
-						</div>
+						
 					</div>
 				</div>
 				<!--// section stage -->
@@ -272,8 +225,8 @@
 						</div>
 					</div>
 					<button type="button" class="review"><span>Review</span></button>
-					<a href="concierge.html" class="btn-type _default">
-						<span>Select Concierge</span>
+					<a href="select_option.html" class="btn-type _default">
+						<span>Select Option</span>
 						<i></i>
 					</a>
 				</div>
@@ -287,7 +240,9 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+		<script src="../assets/js/colorchips.js"></script>
 	</div>
+
 
 </body>
 </html>
