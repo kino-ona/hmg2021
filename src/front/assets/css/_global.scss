@@ -417,8 +417,8 @@ body {
 	.stage_wrap {
 		position:relative;
 		width:76.51%;
-		height:100%;
-		min-height:100%;
+		height:calc(100% - 90px);
+		// min-height:100%;
 		margin-left:23.49%;
 		overflow-y: auto;
 	}
@@ -438,8 +438,8 @@ body {
 	height:calc(100% - 60px);
 	overflow: hidden;
 	.stage_wrap {
-		min-height:calc(100% - 60px);
-		padding-bottom:90px;
+		// min-height:calc(100% - 60px);
+		// padding-bottom:90px;
 	}
 }
 

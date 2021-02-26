@@ -214,6 +214,61 @@
 			}
 		}
 	}
+	.concierge_panel {
+		> .title {
+			padding-bottom: 11px;
+			color: #000;
+			font-size: 1rem;
+			line-height: 1.4375rem;
+			@include FontText;
+		}
+		.applied_list {
+			padding-top: 18px;
+			border-top: 3px solid #000;
+			> li {
+				color: #999;
+				font-size: .875rem;
+				line-height: 1.4375rem;
+				&:not(:first-child) {
+					margin-top: 18px;
+				}
+				&.applied {
+					color: #000;
+					font-weight: 600;
+					.check {
+						display: block;
+					}
+				}
+				> .group {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					color: inherit;
+					font-size: inherit;
+					font-weight: inherit;
+				}
+				.check {
+					display: none;
+					position: relative;
+					width: 18px;
+					height: 18px;
+					background-color: #000;
+					border-radius: 100%;
+					&:before {
+						content: '';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						width: 4px;
+						height: 4px;
+						border-left: 1.5px solid #fff;
+						border-top: 1.5px solid #fff;
+						transform: translate(-50%, -50%) rotate(225deg);
+					}
+				}
+			}
+		}
+	}
 }
 
 .color_chips {

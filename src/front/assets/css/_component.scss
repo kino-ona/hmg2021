@@ -640,6 +640,7 @@ a, button {
 		font-size:1rem;
 	}
 	.frm {
+		&:not(:first-child) {margin-top: 18px;}
 		._mix {
 			display:flex;
 			input {
@@ -656,8 +657,12 @@ a, button {
 			float:left;
 			width:calc((100% / 2) - 5px);
 			margin-right:10px;
+			&:nth-child(2) {margin-top: 0;}
 			&:nth-child(2n) {
-				margin-right:0;
+				margin-right: 0;
+			}
+			&:nth-child(2n+1) {
+				clear: left;
 			}
 		}
 	}
