@@ -278,7 +278,7 @@ button {
 		font-size: 0;
 		background-color: #FFF;
 		text-align: center;
-		&:focus {
+		&:focus {	
 			height: 30px;
 			padding: 4px 0;
 			visibility: visible;
@@ -294,16 +294,17 @@ button {
 	}
 }
 
-@media all and (min-width:1024px) {
-	html {
-		font-size: 16px;
-	}
-}
 @media all and (max-width:1024px) {
 	html {
 		font-size: 14px;
 	}
 }
+@media all and (min-width:1025px) {
+	html {
+		font-size: 16px;
+	}
+}
+
 
 /** layout **/
 html {width:100%;height:100%;}
@@ -330,8 +331,10 @@ body {
 	}
 	.logo {
 		display: inline-block;
-		width:302px;
-		height:26px;
+		// width:302px;
+		width:18.88rem;
+		// height:26px;
+		height:1.625rem;
 		background: {
 			image: url(../images/common/header_logo.png);
 			size:cover;
@@ -446,11 +449,15 @@ body {
 }
 .pg-mobile {
 	.header_wrap {
+		padding-left:20px;
+		padding-right:20px;
 		border-bottom:0;
 		.logo {
 			width:12.21rem;
 			height:1.571rem;
-			background-image: url(../images/common/m-header_logo.png)
+			background-image: url(../images/common/m-header_logo.png);
+			background-size:cover;
+			margin-top:3px;
 		}
 		.location {
 			margin-right:10px;
