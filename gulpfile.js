@@ -36,7 +36,7 @@ var paths = {
 	scss: '/**/*.scss', // scss 경로 - 컴파일 결과는 같은 경로의 dist로 떨어짐
 	html: '/**/*.html'
 };
-
+  
 // 웹서버 실행
 gulp.task('server', function() {
 	return gulp.src(dist)
