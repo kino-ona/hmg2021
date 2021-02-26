@@ -83,9 +83,7 @@ $(function () {
 	.on('resize',function(){    //WINDOW RESIZE
 		winW = $(this).outerWidth();
 		winH = $(this).outerHeight();    
-
-
-			layoutSizeInit();
+		layoutSizeInit();
 
 	});
 });
@@ -117,8 +115,21 @@ $('.accordion_wrap').each(function () { // default
 	}
 	if(winW < 1024) {
 		defaultAcc.destroy();
+	} else{
+		// defaultAcc.expand(0);
 	}
+	
+	$window
+	.on('resize',function(){    //WINDOW RESIZE
+		if(winW < 1024) {
+			// defaultAcc.expand();
+			// defaultAcc.destroy();
+		} else{
+			// defaultAcc.expand(0);
+		}
+	});
 });
+
 var accoSet = function(setId, multiTF, setFocus){
 	if (!setId) {
 		setId = '.accordion_wrap';

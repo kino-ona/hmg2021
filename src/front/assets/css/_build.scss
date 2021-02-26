@@ -393,9 +393,12 @@
 	.build_option {
 		.item {
 			padding-top:0;
-			&[data-status="disabled"] {
+			&[aria-selected="false"] {
 				display: none;
 			}
+			// &[data-status="disabled"] {
+			// 	display: none;
+			// }
 		}
 		.acco_head {
 			min-height:62px;
@@ -436,6 +439,21 @@
 		}
 		.acco_panel {
 			padding:0;
+		}
+
+		.trims_control {
+			margin-bottom:0;
+			button {
+				border-left:0;
+				border-right:0;
+				&:not(:first-child) {
+					margin-left:0;
+					border-left:1px solid #d9d9d9;
+				}
+			}
+		}
+		.trims_list {
+			padding:20px;
 		}
 	}
 	//.build_option
