@@ -216,7 +216,76 @@
 	}
 }
 
-
+.color_chips {
+	.color_list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		li {
+			position: relative;
+			display: block;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			margin-right:14px;
+			&:last-child {
+				margin-right:0;
+			}
+		}
+		.color_select {
+			position:relative;
+			width:35px;
+			height:35px;
+			border-radius: 100%;
+			background: {
+				size:cover;
+				position:center center;
+				repeat: no-repeat;
+			}
+			overflow: hidden;
+			&[aria-selected='true'] {
+				&:after {
+					content: '';
+					display: block;
+					position:absolute;
+					left:0;
+					top:0;
+					display: block;
+					width:100%;
+					height:100%;
+					background: {
+						image: url(../images/ico/icon_color_selected.png);
+						size:20px;
+						position:center center;
+						repeat: no-repeat;
+					}
+					z-index: 1;
+				}
+			}
+			&.unable {
+				&:after {
+					content: '';
+					display: block;
+					position:absolute;
+					left:0;
+					top:0;
+					display: block;
+					width:100%;
+					height:100%;
+					background: {
+						image: url(../images/ico/icon_unable_selection.png);
+						size:cover;
+						position:center center;
+						repeat: no-repeat;
+					}
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
