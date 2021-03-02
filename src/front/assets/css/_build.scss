@@ -214,6 +214,137 @@
 			}
 		}
 	}
+	.options_panel {
+		.options_control {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.selected_sum {
+				font-size: 1rem;
+				line-height: 1.125rem;
+				@include FontText;
+				.currunt,
+				span {
+					font-family: inherit;
+					font-size: inherit;
+				}
+				.currunt {
+					color: #000;
+					font-weight: 600;
+				}
+				span {
+					color: #999;
+				}
+			}
+			.btn_clear {
+				display: flex;
+				align-items: center;
+				span {
+					color: #000;
+					font-size: 1rem;
+					line-height: 1.5rem;
+					@include FontText;
+				}
+			}
+		}
+		.selected_options {
+			margin-top: 13px;
+			padding-top: 19px;
+			border-top: 3px solid #000;
+			> li {
+				&:not(:first-child) {
+					margin-top: 12px;
+				}
+				> .group {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: .875rem;
+					@include FontText;
+				}
+			}
+			// .ellipsis {
+			// 	overflow: hidden;
+			// 	text-overflow: ellipsis;
+			// 	white-space: nowrap;
+			// }
+			.name {
+				overflow: hidden;
+				margin-right: 13px;
+				color: #000;
+				font-family: inherit;
+				font-weight: 600;
+				font-size: inherit;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.btn_delete {
+				flex: 0 0 auto;
+				position: relative;
+				width: 14px;
+				height: 14px;
+				margin-right: auto;
+				background-color: #d8d8d8;
+				&:before,
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					background-color: #fff;
+				}
+				&:before {
+					width: 7.5px;
+					height: 1.5px;
+					@include transform(translate(-50%, -50%) rotate(45deg));
+				}
+				&:after {
+					width: 1.5px;
+					height: 7.5px;
+					@include transform(translate(-50%, -50%) rotate(45deg));
+				}
+			}
+			.price {
+				flex: 0 0 auto;
+				margin-left: 13px;
+				color: #EA9000;
+				font-family: inherit;
+				font-size: inherit;
+			}
+		}
+		.total_result {
+			margin-top: 21px;
+			padding-top: 16px;
+			border-top: 1px solid #d9d9d9;
+			> .group {
+				display: flex;
+				justify-content: space-between;
+				&:not(:first-child) {
+					margin-top: 5px;
+				}
+			}
+			em,
+			span {
+				color: #000;
+				font-size: .875rem;
+				@include FontText;
+			}
+			span {
+				flex-shrink: 0;
+				text-align: right;
+			}
+			.total_desc {
+				font-weight: 900;
+				font-size: 1.125rem;
+			}
+			.total_price {
+				color: #EA9000;
+				font-weight: 900;
+				font-size: 1.25rem;
+			}
+		}
+	}
 	.concierge_panel {
 		> .title {
 			padding-bottom: 11px;
