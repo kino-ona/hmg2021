@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content=""/>
-  <meta name="description" content=""/>
-  <title>Build | Concierge | HYUNDAI</title>
-  <link rel="icon" href="..//assets/ico/favicon.ico">
-  <link rel="canonical" href="javascript:;">
-
-  <link rel="stylesheet" href="..//assets/css/ui.css" />
-  <script type="text/javascript" src="..//assets/js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="..//assets/js/ui-plugin.js"></script>
-
-
+@@include('../inc/pagehead.inc',{
+	"pagetitle":"Build | Concierge | HYUNDAI",
+	"webroot":"../"
+})
 <link rel="stylesheet" href="../assets/css/clicktobuy.css"></link>
 </head>
 <body> 
@@ -22,17 +9,9 @@
 
 	<div class="h-wrap">
 		<!-- header -->
-		<header class="header_wrap">
-  <div class="row">
-    <div class="logo"><a href="#"><span class="a11y">Hyundai Click to Buy</span></a></div>
-
-    <div class="head_util">
-      <p class="location"><a href="#"><i class="ic_loca"></i>Braccia, 07340</a></p>
-
-      <p class="menu"><a href="#"><span class="a11y">Menu</span></a></p>
-    </div>
-  </div>
-</header>
+		@@include('../inc/header.inc',{
+			"webroot":"../"
+		})
 		<!-- //header -->
 
 		<!-- h-contents -->
@@ -203,7 +182,7 @@
 												<em class="day">31-Oct-19</em>
 											</div>
 											<div class="event_button">
-												<button type="button" class="btn_applied">Insert Coupon</button>
+												<button type="button" class="btn_applied" onclick="hlayerOpen('CouponRegistration')">Insert Coupon</button>
 											</div>
 										</div>
 									</article>
@@ -331,87 +310,8 @@
 											<li><p class="radiowrap"  aria-selected="false"><label><input type="radio" name="tabradio"> Preferred location <span>(+ USD 00,000)</span> </label></p></li>
 										</ul>
 										<div class="radio-tab_contents">
-											<section class="tab_panel" aria-hidden="false" role="tabpanel">
-												<div class="contact">
-													<div class="map">
-														지도
-													</div>
-													<div class="location">
-														<p class="store_name">Barkeley Hyundai motors</p>
-														<dl class="store_info">
-															<dt>Address</dt>
-															<dd>Mairwa Road, Near Sutta Factory, Mairwaroad - Station road, Siwan, Bihar - 841226</dd>
-															<dt>Telephone</dt>
-															<dd>7541914572</dd>
-															<dt>Operation hour</dt>
-															<dd>Mon - Fri : 08:30~18:30  /  Sat : 08:30~15:30 Sun : Closed  /  Public Holidays : 08:30~15:30</dd>
-														</dl>
-														<div class="store_change">
-															<button type="button">Change dealership</button>
-														</div>
-													</div>
-												</div>
-											</section>
-											<section class="tab_panel" aria-hidden="true" role="tabpanel">
-												<div class="referred_location">
-													<div class="bring">
-														<p class="chkwrap"><label><input type="checkbox"><span>Buyer info is the same as member info.</span></label></p>
-													</div>
-													<div class="frm_field field_half">
-														<dl class="frm">
-															<dt><label for="SearchAddress">Search Address</label></dt>
-															<dd>
-																<div class="feild_search">
-																	<input type="text" id="SearchAddress" readonly>
-																	<i class="ic_search"></i>
-																</div>
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="ZipCode">Zip code <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="ZipCode">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="Address">Address <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="Address">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="RestAddress">Rest of Address <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="RestAddress">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="StreetNumber">Street Number <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="StreetNumber">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="City">City <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="City">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="Region">Region <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="Region">
-															</dd>
-														</dl>
-														<dl class="frm">
-															<dt><label for="Country">Country <span class="required"><span class="a11y">required</span></span></label></dt>
-															<dd>
-																<input type="text" id="Country">
-															</dd>
-														</dl>
-													</div>
-												</div>
-											</section>
+											<section class="tab_panel" aria-hidden="false" role="tabpanel"></section>
+											<section class="tab_panel" aria-hidden="true" role="tabpanel"></section>
 										</div>
 									</div>
 								</div>
@@ -449,10 +349,160 @@
 		<!--// h-contents -->
 
 		<!-- footer -->
-		
-  <script type="text/javascript" src="..//assets/js/ui.js"></script>
+		@@include('../inc/footer.inc',{
+			"webroot":"../"
+		})
 		<!-- //footer -->
 
+		<div class="h-layer_body popup edit_estimation" id="TradeIn" aria-hidden="true" role="dialog" style="display:block !important">
+			<div class="h-layer_wrap _wide" style="opacity: 1 !important">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Trade-in</h2>
+					<button onclick="hlayerClose('TradeIn')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="vehicle_number">
+						<p class="desc">Please enter the vehicle number.</p>
+						<div class="input_container">
+							<label for="VehicleNumber" class="a11y">Enter Vehicle Number</label>
+							<input type="text" id="VehicleNumber" placeholder="ex.: FP226DR">
+							<button type="button" class="btn_search">Search</button>
+							<input type="checkbox" id="NotRemember" class="a11y" checked>
+							<label for="NotRemember" class="btn_denined">I don&rsquo;t remember the plate number</label>
+						</div>
+					</div>
+					<div class="frm_field field_half">
+						<dl class="frm">
+							<dt><label for="MyVehicle">Your vehicle</label></dt>
+							<dd>
+								<input type="text" id="MyVehicle" placeholder="Hyundai KONA 1.0 t-gdi Comfort">
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="ProductionYear">Production Year</label></dt>
+							<dd>
+								<input type="text" id="ProductionYear" placeholder="10/2017-04/2018">
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Brand">Brand</label></dt>
+							<dd><input type="text" id="Brand" placeholder="Hyundai"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Plate">Plate</label></dt>
+							<dd><input type="text" id="Plate" placeholder="FP226DR"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Model">Model</label></dt>
+							<dd><input type="text" id="Model" value="SONATA ACTIVE LF"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="FuelType">Fuel Type</label></dt>
+							<dd><input type="text" id="FuelType" value="Petrol"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="RegistrationDate">Registration date</label></dt>
+							<dd><input type="text" id="RegistrationDate" value="02/2016"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Km">Please enter the Km <span class="required"><span class="a11y">required</span></span></label></dt>
+							<dd class="_mix">
+								<input type="text" id="Km" placeholder=" 50.000">
+								<button type="button" class="btn-type _default">Submit</button>
+								<p class="inp_txt"> Enter the mileage and click &ldquo;Submit&rdquo; to see the estimated amount.</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="frm_field field_half">
+						<dl class="frm">
+							<dt>Please select date of registration</dt>
+							<dd class="_mix">
+								<select>
+									<option>MM</option>
+									<option>MM</option>
+									<option>MM</option>
+								</select>
+								<select>
+									<option>YY</option>
+									<option>YY</option>
+									<option>YY</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="SelectBrand">Select the brand <span class="required"><span class="a11y">required</span></span></label></dt>
+							<dd>
+								<select id="SelectBrand">
+									<option>HYUNDAI</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Selectmodel">Select the model <span class="required"><span class="a11y">required</span></span></label></dt>
+							<dd>
+								<select id="Selectmodel">
+									<option>IX35</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Selectrange">Select the range <span class="required"><span class="a11y">required</span></span></label></dt>
+							<dd>
+								<select id="Selectrange">
+									<option>1.7</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Selectfeul">Select the type of fuel</label></dt>
+							<dd>
+								<select id="Selectfeul">
+									<option>BENZINA</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="SelectVersion">Select the version</label></dt>
+							<dd>
+								<select id="Selectrange">
+									<option>CLASSIC</option>
+								</select>
+							</dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="RegistrationDate">Registration date</label></dt>
+							<dd><input type="text" id="RegistrationDate" value="02/2016"></dd>
+						</dl>
+						<dl class="frm">
+							<dt><label for="Km">Please enter the Km <span class="required"><span class="a11y">required</span></span></label></dt>
+							<dd class="_mix">
+								<input type="text" id="Km" placeholder=" 50.000">
+								<button type="button" class="btn-type _default">Submit</button>
+								<p class="inp_txt"> Enter the mileage and click &ldquo;Submit&rdquo; to see the estimated amount.</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="total_result">
+						<p class="desc">Trade-in Estimation Price</p>
+						<em class="price">USD 5.300,00</em>
+					</div>
+					<div class="info">
+						<p class="desc">* Prices may be different depending on the vehicle condition, km/s and other model features.</p>
+						<p class="desc">* Additional Discount information will be available after you apply the trade-in result to the quotation.</p>
+					</div>
+					<div class="btn-type_wrap">
+						<button onclick="hlayerClose('TradeIn')" class="btn-type _cancel">Cancel</button>
+						<button onclick="hlayerClose('TradeIn')" class="btn-type _default">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				actvTabList('tabcase02', 1);
+			});
+		</script>
 	</div>
 </body>
 </html>

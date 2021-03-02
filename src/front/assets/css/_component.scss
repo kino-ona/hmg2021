@@ -643,12 +643,18 @@ a, button {
 		&:not(:first-child) {margin-top: 18px;}
 		._mix {
 			display:flex;
-			input {
+			flex-wrap:wrap;
+			input,
+			select {
 				flex: .6;
 			}
 			button {
 				flex: .4;
 				margin-left:10px;
+			}
+			input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not(:first-child),
+			select:not(:first-child) {
+				margin-left: 10px;
 			}
 		}
 	}

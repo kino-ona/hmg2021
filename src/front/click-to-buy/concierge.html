@@ -304,13 +304,13 @@
 								<h3 class="content_title">Delivery</h3>
 								<p class="content_desc">Please select the way to receive the car. You can pick it up at the dealer’s branch in advance, or you can get it delivered to the place you want by consignment.</p>
 								<div class="delivery_container">
-									<div class="tab_wrap" id="tabcase03">
+									<div class="tab_wrap" id="DeliveryTab">
 										<ul class="radio_tablist" role="radio_tablist" aria-label="tabname">
 											<li><p class="radiowrap"  aria-selected="true"><label><input type="radio" name="tabradio" checked>Pick up at Dealer</label></p></li>
 											<li><p class="radiowrap"  aria-selected="false"><label><input type="radio" name="tabradio"> Preferred location <span>(+ USD 00,000)</span> </label></p></li>
 										</ul>
 										<div class="radio-tab_contents">
-											<section class="tab_panel" role="tabpanel">
+											<section class="tab_panel" aria-hidden="false" role="tabpanel">
 												<div class="contact">
 													<div class="map">
 														지도
@@ -331,7 +331,7 @@
 													</div>
 												</div>
 											</section>
-											<section class="tab_panel" role="tabpanel">
+											<section class="tab_panel" aria-hidden="true" role="tabpanel">
 												<div class="referred_location">
 													<div class="bring">
 														<p class="chkwrap"><label><input type="checkbox"><span>Buyer info is the same as member info.</span></label></p>
@@ -432,6 +432,7 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+
 	</div>
 </body>
 </html>
