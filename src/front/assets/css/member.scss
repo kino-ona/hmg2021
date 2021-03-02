@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@import "global";
+@import "mixins";
+
+.member {
+  min-height:100%;
+  background-color:#fff;
+}
+.member_wrap {
+  max-width:560px;
+  margin:0 auto;
+  padding-top:66px;
+  &._large {
+    max-width:850px;
+    .member_bottom {
+      margin-top:60px;
+      padding-top:15px;
+      border-top:3px solid #000;
+    }
+    .btn_wrap {
+      text-align:center;
+      .btn-type {
+        min-width:350px;
+      }
+    }
+  }
+}
+
+.member_head {
+  position:relative;
+  .req_txt {
+    position:absolute;
+    bottom:0;
+    right:0;
+    @include FontText;
+    font-weight:900;
+  }
+  .content_title {
+    margin-bottom: 47px;
+    color: #000;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+}
+
+.sns_wrap {
+  max-width:560px;
+  margin:0 auto;
+  text-align:center;
+  .txt {
+    position:relative;
+    font-size:0.875em;
+    color:#999;
+    &:before,
+    &:after {
+      content:'';
+      position:absolute;
+      top:50%;
+      width:165px;
+      height:2px;
+      margin-top:-1px;
+      background-color:#D9D9D9;
+    }
+    &:before {
+      left:0;
+    }
+    &:after {
+      right:0;
+    }
+  }
+  .sns {
+    margin-top:20px;
+    font-size:0;
+  }
+  .ic_sns {
+    width:60px;
+    height:60px;
+    margin:0 10px;
+    border:1px solid #D9D9D9;
+    border-radius:50%;
+    background: {
+      size:cover;
+      position: 0 center;
+      repeat:no-repeat;
+    }
+    &._tw {
+      background: {
+        image: url(../images/ico/icon_sns1.png);
+      }
+    }
+    &._fb {
+      background: {
+        image: url(../images/ico/icon_sns2.png);
+      }
+    }
+  }
+}

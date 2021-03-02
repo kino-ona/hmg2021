@@ -1,0 +1,182 @@
+@@include('../inc/pagehead.inc',{
+	"pagetitle":"Edit Profile | My Account | HYUNDAI",
+	"webroot":"../"
+})
+<link rel="stylesheet" href="../assets/css/member.css">
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
+
+	<div class="h-wrap">
+		<!-- header -->
+		@@include('../inc/header.inc',{
+			"webroot":"../"
+		})
+		<!-- //header -->
+
+		<!-- h-contents -->
+		<div id="h-contents" class="h-contents">
+
+			<div class="member">
+
+				<!-- section member -->
+				<section class="member_wrap _large">
+
+					<!-- member header -->
+					<div class="member_head">
+						<h2 class="content_title">Sign Up</h2>
+						<p class="req_txt">Required Fields <span class="required"><span class="a11y">required</span></span></p>
+					</div>
+					<!--// member header -->
+
+					<!-- member container -->
+					<div class="member_container">
+						<div class="frm_field">
+							<dl class="frm">
+								<dt><label for="frm10">Salutation <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<p class="radiowrap"><label><input type="radio" name="radio" checked><span>Mr.</span></label></p>
+									<p class="radiowrap"><label><input type="radio" name="radio"><span>Ms.</span></label></p>
+									<p class="radiowrap"><label><input type="radio" name="radio"><span>Mrs.</span></label></p>
+								</dd>
+							</dl>
+						</div>
+	
+						<div class="frm_field field_half">
+							<dl class="frm">
+								<dt><label for="frm00">First Name <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm00" placeholder="Enter your First name">
+								</dd>
+								<!-- 유효성 체크 에러일 경우 -->
+								<!-- <dd>
+									<input type="text" id="frm00" class="warn" placeholder="Enter your First name"><i class="ic_error"></i>
+									<p class="inp_txt warn">This field is required.</p>
+								</dd> -->
+								<!--// 유효성 체크 에러일 경우 -->
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm0">Last Name <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm0" placeholder="Enter your Last name">
+								</dd>
+							</dl>
+						</div>
+	
+						<div class="frm_field">
+							<dl class="frm">
+								<dt><label for="frm1">ID (Email) <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd class="_mix">
+									<input type="text" id="frm1" placeholder="e.g. abc@hyundai.com">
+									<button class="btn-type _default">Check Availability</button>
+								</dd>
+								<dd>
+									<p class="inp_txt warn">There is already an account. Please log in or find password.</p>
+								</dd>
+								<dd>
+									<p>※ Please enter a valid email address. To activate your account, you must complete the email verification process.</p>
+									<p>※ Please enter ID and click ‘Check Availability button’.</p>
+								</dd>
+							</dl>
+						</div>
+	
+						<div class="frm_field field_half">
+							<dl class="frm">
+								<dt><label for="frm2">Password <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm2" placeholder="Enter 8 + characters with a letter and a number">
+									<p class="inp_txt warn">This field is required.</p>
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm3">Confirm Password <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm3" placeholder="Enter password again">
+									<p class="inp_txt warn">Caps Lock is on</p>
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm4">Mobile Phone <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm4" placeholder="e.g. 0412345678">
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm5">Office or Home Phone <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm5" placeholder="e.g. 0412345678">
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm6">Zip Code <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="frm6" placeholder="e.g. 0412345678">
+								</dd>
+							</dl>
+						</div>
+	
+						<div class="frm_field field_half">
+							<dl class="frm">
+								<dt><label for="frm7">State <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<select>
+										<option>Select State</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm8">City <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<select>
+										<option>Select City</option>
+									</select>
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="frm9">Pin Code <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<select>
+										<option>Select Pin Code</option>
+									</select>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--// member container -->
+
+					<!-- member bottom -->
+					<div class="member_bottom">
+						<div>
+							<p class="chkwrap"><label><input type="checkbox"><span>I wish to receive communication on Hyundai products & services.</span></label></p>
+							<p class="chkwrap"><label><input type="checkbox"><span>I accept the Terms & Conditions and Privacy Policy.</span></label></p>
+						</div>
+
+						<div class="btn_wrap">
+							<a href="" class="btn-type _default">Sign Up</a>
+						</div>
+
+						<div class="sns_wrap">
+							<p class="txt">Connect to your SNS account</p>
+							<div class="sns">
+								<a href="#" class="ic_sns _tw"><span class="a11y">twitter</span></a>
+								<a href="#" class="ic_sns _fb"><span class="a11y">facebook</span></a>
+							</div>
+						</div>
+					</div>
+					<!--// member bottom -->
+
+				</section>
+			</div>
+			<!--// section member -->
+
+		</div>
+		<!--// h-contents -->
+
+		<!-- footer -->
+		@@include('../inc/footer.inc',{
+			"webroot":"../"
+		})
+		<!-- //footer -->
+	</div>
+</body>
+</html>
