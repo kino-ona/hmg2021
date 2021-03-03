@@ -305,6 +305,47 @@
 	}
 	.acco_panel {
 		outline: 0;
+		// &[aria-hidden="true"] {
+		// 	display: none;
+		// }
+		.tbl_default {
+			border-top-width:1px;
+			padding-bottom:40px;
+			margin:0;
+		}
+	}
+}
+
+.build_menu {
+	.item {
+		box-sizing: content-box;
+		overflow: hidden;
+	}
+	.menu_head {
+		display: block;
+		text-decoration: none;
+		outline: 0;
+		cursor: pointer;
+		.heading {
+			display:block;
+			position:relative;
+			padding: 20px 0;
+			i {
+				top:50%;
+				right:0;
+				margin-top:-6px;
+				@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 1px, $color: #999999, $display: inline-block, $position: absolute);
+			}
+		}
+		&[aria-expanded="true"] {
+			.heading i {@include rotate(180);}
+		}
+	}
+	[data-status="disabled"] .menu_panel{
+		display: none;
+	}
+	.menu_panel {
+		outline: 0;
 		&[aria-hidden="true"] {
 			display: none;
 		}
