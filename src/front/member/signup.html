@@ -1,5 +1,5 @@
 @@include('../inc/pagehead.inc',{
-	"pagetitle":"Edit Profile | My Account | HYUNDAI",
+	"pagetitle":"Sign Up | HYUNDAI",
 	"webroot":"../"
 })
 <link rel="stylesheet" href="../assets/css/member.css">
@@ -22,18 +22,18 @@
 				<!-- section member -->
 				<section class="member_wrap _large">
 
-					<!-- member header -->
-					<div class="member_head">
+					<!-- title wrap -->
+					<div class="title_wrap">
 						<h2 class="content_title">Sign Up</h2>
 						<p class="req_txt">Required Fields <span class="required"><span class="a11y">required</span></span></p>
 					</div>
-					<!--// member header -->
+					<!--// title wrap -->
 
 					<!-- member container -->
 					<div class="member_container">
 						<div class="frm_field">
 							<dl class="frm">
-								<dt><label for="frm10">Salutation <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt>Salutation <span class="required"><span class="a11y">required</span></span></dt>
 								<dd>
 									<p class="radiowrap"><label><input type="radio" name="radio" checked><span>Mr.</span></label></p>
 									<p class="radiowrap"><label><input type="radio" name="radio"><span>Ms.</span></label></p>
@@ -44,98 +44,100 @@
 	
 						<div class="frm_field field_half">
 							<dl class="frm">
-								<dt><label for="frm00">First Name <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="FirstName">First Name <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm00" placeholder="Enter your First name">
+									<input type="text" id="FirstName" placeholder="Enter your First name">
+									<!-- <input type="text" id="FirstName" class="warn" placeholder="Enter your First name"><i class="ic_error"></i> --> <!-- Alert Case -->
+									<p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
 								</dd>
-								<!-- 유효성 체크 에러일 경우 -->
-								<!-- <dd>
-									<input type="text" id="frm00" class="warn" placeholder="Enter your First name"><i class="ic_error"></i>
-									<p class="inp_txt warn">This field is required.</p>
-								</dd> -->
-								<!--// 유효성 체크 에러일 경우 -->
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm0">Last Name <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="LastName">Last Name <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm0" placeholder="Enter your Last name">
+									<input type="text" id="LastName" placeholder="Enter your Last name">
 								</dd>
 							</dl>
 						</div>
 	
 						<div class="frm_field">
 							<dl class="frm">
-								<dt><label for="frm1">ID (Email) <span class="required"><span class="a11y">required</span></span></label></dt>
-								<dd class="_mix">
-									<input type="text" id="frm1" placeholder="e.g. abc@hyundai.com">
-									<button class="btn-type _default">Check Availability</button>
-								</dd>
-								<dd>
+								<dt><label for="IdEmail">ID (Email) <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd class="_mix _fix">
+									<input type="text" id="IdEmail" placeholder="e.g. abc@hyundai.com">
+									<button class="btn_check">Check Availability</button>
 									<p class="inp_txt warn">There is already an account. Please log in or find password.</p>
 								</dd>
-								<dd>
-									<p>※ Please enter a valid email address. To activate your account, you must complete the email verification process.</p>
-									<p>※ Please enter ID and click ‘Check Availability button’.</p>
+								<dd class="noti_txt">
+									<p>&#8251; Please enter a valid email address. To activate your account, you must complete the email verification process.</p>
+									<p>&#8251; Please enter ID and click &lsquo;Check Availability button&rsquo;.</p>
 								</dd>
 							</dl>
 						</div>
 	
 						<div class="frm_field field_half">
 							<dl class="frm">
-								<dt><label for="frm2">Password <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="Password">Password <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm2" placeholder="Enter 8 + characters with a letter and a number">
+									<div class="pw_field">
+										<input type="password" id="Password" class="pw" placeholder="Enter 8 + characters with a letter and a number">
+										<input type="checkbox" class="pw_chk" id="ShowPw1">
+										<label for="ShowPw1"><i class="ic_hide"></i><span class="a11y">Show Password</span></label>
+									</div>
 									<p class="inp_txt warn">This field is required.</p>
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm3">Confirm Password <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="ConfirmPassword">Confirm Password <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm3" placeholder="Enter password again">
+									<div class="pw_field">
+										<input type="password" id="ConfirmPassword" class="pw" placeholder="Enter password again">
+										<input type="checkbox" class="pw_chk" id="ShowPw2">
+										<label for="ShowPw2"><i class="ic_show"></i><span class="a11y">Show Password</span></label>
+									</div>
 									<p class="inp_txt warn">Caps Lock is on</p>
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm4">Mobile Phone <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="MobilePhone">Mobile Phone <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm4" placeholder="e.g. 0412345678">
+									<input type="text" id="MobilePhone" placeholder="e.g. 0412345678">
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm5">Office or Home Phone <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="HomePhone">Office or Home Phone <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm5" placeholder="e.g. 0412345678">
+									<input type="text" id="HomePhone" placeholder="e.g. 0412345678">
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm6">Zip Code <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="ZipCode">Zip Code <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="frm6" placeholder="e.g. 0412345678">
+									<input type="text" id="ZipCode" placeholder="e.g. 0412345678">
 								</dd>
 							</dl>
 						</div>
 	
 						<div class="frm_field field_half">
 							<dl class="frm">
-								<dt><label for="frm7">State <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="State">State <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<select>
+									<select id="State">
 										<option>Select State</option>
 									</select>
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm8">City <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="City">City <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<select>
+									<select id="City">
 										<option>Select City</option>
 									</select>
 								</dd>
 							</dl>
 							<dl class="frm">
-								<dt><label for="frm9">Pin Code <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dt><label for="PinCode">Pin Code <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<select>
+									<select id="PinCode">
 										<option>Select Pin Code</option>
 									</select>
 								</dd>
@@ -148,11 +150,11 @@
 					<div class="member_bottom">
 						<div>
 							<p class="chkwrap"><label><input type="checkbox"><span>I wish to receive communication on Hyundai products & services.</span></label></p>
-							<p class="chkwrap"><label><input type="checkbox"><span>I accept the Terms & Conditions and Privacy Policy.</span></label></p>
+							<p class="chkwrap"><label><input type="checkbox"><span>I accept the Terms &amp; Conditions and Privacy Policy.</span></label></p>
 						</div>
 
-						<div class="btn_wrap">
-							<a href="" class="btn-type _default">Sign Up</a>
+						<div class="btn-type_wrap">
+							<a href="#" class="btn-type _default">Sign Up</a>
 						</div>
 
 						<div class="sns_wrap">

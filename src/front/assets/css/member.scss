@@ -18,8 +18,7 @@
       padding-top:15px;
       border-top:3px solid #000;
     }
-    .btn_wrap {
-      text-align:center;
+    .btn-type_wrap {
       .btn-type {
         min-width:350px;
       }
@@ -27,7 +26,7 @@
   }
 }
 
-.member_head {
+.title_wrap {
   position:relative;
   .req_txt {
     position:absolute;
@@ -44,6 +43,43 @@
     line-height: 3.125rem;
   }
 }
+.frm_field {
+  ._mix._fix {
+    .inp_txt {
+      width:100%;
+    }
+    input {
+      min-width:calc(100% - 180px);
+    }
+    button.btn_check {
+      max-width:180px;
+      height: 50px;
+      border: 1px solid #d9d9d9;
+      background-color: #f4f4f4;
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+  }
+  & + .frm_field,
+  .frm:not(:first-child) {
+    margin-top:40px;
+  }
+	.pw ~ label {
+		position:absolute;
+		right:20px;
+		top:22%;
+	}
+  .pw + input[type="checkbox"] {
+    position:absolute;
+    width:1px;
+    opacity:0;
+  }
+  .noti_txt {
+    line-height:1.375rem;
+  }
+}
 
 .sns_wrap {
   max-width:560px;
@@ -51,7 +87,7 @@
   text-align:center;
   .txt {
     position:relative;
-    font-size:0.875em;
+    font-size:0.875rem;
     color:#999;
     &:before,
     &:after {
