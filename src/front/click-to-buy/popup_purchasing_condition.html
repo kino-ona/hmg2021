@@ -159,7 +159,7 @@
 												<em class="event_title">Purchasing condition</em>
 											</div>
 											<div class="event_button">
-												<button type="button" class="btn_applied">Edit</button>
+												<button type="button" class="btn_applied" onclick="hlayerOpen('PurchasingCondition')">Edit</button>
 											</div>
 										</div>
 									</article>
@@ -227,7 +227,7 @@
 												<em class="event_title">Trade–in Estimation</em>
 											</div>
 											<div class="event_button">
-												<button type="button" class="btn_applied" onclick="hlayerOpen('TradeIn')">Add Estimation</button>
+												<button type="button" class="btn_applied">Add Estimation</button>
 											</div>
 										</div>
 									</article>
@@ -354,155 +354,127 @@
 		})
 		<!-- //footer -->
 
-		<div class="h-layer_body popup edit_estimation" id="TradeIn" aria-hidden="true" role="dialog">
-			<div class="h-layer_wrap _wide">
+		<div class="h-layer_body popup edit_condition" id="PurchasingCondition" aria-hidden="true" role="dialog" style="display:block !important;">
+			<div class="h-layer_wrap _wide" style="opacity: 1 !important;">
 				<div class="h-layer_head">
-					<h2 class="h-layer_title">Trade-in</h2>
-					<button onclick="hlayerClose('TradeIn')" class="h-layer_close">close</button>
+					<h2 class="h-layer_title">Purchasing Condition</h2>
+					<button onclick="hlayerClose('PurchasingCondition')" class="h-layer_close">close</button>
 				</div>
 				<div class="h-layer_cont">
-					<div class="vehicle_number">
-						<p class="desc">Please enter the vehicle number.</p>
-						<div class="input_container">
-							<label for="VehicleNumber" class="a11y">Enter Vehicle Number</label>
-							<input type="text" id="VehicleNumber" placeholder="ex.: FP226DR">
-							<button type="button" class="btn_search">Search</button>
-							<input type="checkbox" id="NotRemember" class="a11y" checked>
-							<label for="NotRemember" class="btn_denined">I don&rsquo;t remember the plate number</label>
+					<p class="desc">
+						You can enter VAT Owner or Protected Category information and try applying it to Offer in advance.<br>
+						After review by the sales consultant, the offer is finally reflected.<br>
+						(Once logged in, you can select the sales consultant you want to contact)
+					</p>
+					<div class="tab_wrap" id="PurchasingTab">
+						<ul class="radio_tablist _type02" role="radio_tablist" aria-label="tabname">
+							<li><p class="radiowrap" aria-selected="true"><label><input type="radio" name="tabradio2" checked>VAT Owner</label></p></li>
+							<li><p class="radiowrap" aria-selected="false"><label><input type="radio" name="tabradio2">Protected Category</label></p></li>
+						</ul>
+						<div class="radio-tab_contents">
+							<section class="tab_panel" aria-hidden="false" role="tabpanel">
+								<em class="required_field">Required Fields<span class="required"><span class="a11y">required</span></span></em>
+								<div class="frm_field field_half">
+									<dl class="frm">
+										<dt><label for="VatNum">VAT No. <span class="required"><span class="a11y">required</span></span></label></dt>
+										<dd>
+											<input type="text" id="VatNum"><i class="ic_error"></i>
+											<p class="inp_txt warn">Please upload the document.</p>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="CompanyName">Company Name</label></dt>
+										<dd>
+											<input type="text" id="CompanyName" class="warn"><i class="ic_error"></i>
+											<p class="inp_txt warn">Please upload the document.</p>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="PecAddress">PEC Address <span class="required"><span class="a11y">required</span></span></label></dt>
+										<dd>
+											<input type="text" id="PecAddress" class="warn"><i class="ic_error"></i>
+											<p class="inp_txt warn">Please upload the document.</p>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="CodiceDestinatario">Codice Destinatario <span class="required"><span class="a11y">required</span></span></label></dt>
+										<dd>
+											<input type="text" id="CodiceDestinatario" class="warn"><i class="ic_error"></i>
+											<p class="inp_txt warn">Please upload the document.</p>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="SearchAddress">Codice Destinatario</label></dt>
+										<dd>
+											<input type="text" id="SearchAddress">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="CompanyAddress">Company Address</label></dt>
+										<dd>
+											<input type="text" id="CompanyAddress">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="CompanyRestAddress">Company Rest of Address</label></dt>
+										<dd>
+											<input type="text" id="CompanyRestAddress">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="StreetNumber">Street Number</label></dt>
+										<dd>
+											<input type="text" id="StreetNumber">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="Post Code">Postcode</label></dt>
+										<dd>
+											<input type="text" id="Post Code">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="City">City</label></dt>
+										<dd>
+											<input type="text" id="City">
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="Region">Region</label></dt>
+										<dd>
+											<select id="Region">
+												<option>Region</option>
+											</select>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt><label for="Country">Country</label></dt>
+										<dd>
+											<select id="Country">
+												<option>Country</option>
+											</select>
+										</dd>
+									</dl>
+								</div>
+								<div class="reset">
+									<button type="button">
+										<i class="ic_refresh"></i>
+										<span>Reset</span>
+									</button>
+								</div>
+							</section>
+							<section class="tab_panel" aria-hidden="true"  role="tabpanel">
+								tab01 contents
+							</section>
 						</div>
 					</div>
-					<div class="frm_field field_half">
-						<dl class="frm">
-							<dt><label for="MyVehicle">Your vehicle</label></dt>
-							<dd>
-								<input type="text" id="MyVehicle" placeholder="Hyundai KONA 1.0 t-gdi Comfort">
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="ProductionYear">Production Year</label></dt>
-							<dd>
-								<input type="text" id="ProductionYear" placeholder="10/2017-04/2018">
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Brand">Brand</label></dt>
-							<dd><input type="text" id="Brand" placeholder="Hyundai"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Plate">Plate</label></dt>
-							<dd><input type="text" id="Plate" placeholder="FP226DR"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Model">Model</label></dt>
-							<dd><input type="text" id="Model" value="SONATA ACTIVE LF"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="FuelType">Fuel Type</label></dt>
-							<dd><input type="text" id="FuelType" value="Petrol"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="RegistrationDate">Registration date</label></dt>
-							<dd><input type="text" id="RegistrationDate" value="02/2016"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Km">Please enter the Km <span class="required"><span class="a11y">required</span></span></label></dt>
-							<dd class="_mix">
-								<input type="text" id="Km" placeholder=" 50.000">
-								<button type="button" class="btn-type _default">Submit</button>
-								<p class="inp_txt"> Enter the mileage and click &ldquo;Submit&rdquo; to see the estimated amount.</p>
-							</dd>
-						</dl>
-					</div>
-					<div class="frm_field field_half">
-						<dl class="frm">
-							<dt>Please select date of registration</dt>
-							<dd class="_mix">
-								<select>
-									<option>MM</option>
-									<option>MM</option>
-									<option>MM</option>
-								</select>
-								<select>
-									<option>YY</option>
-									<option>YY</option>
-									<option>YY</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="SelectBrand">Select the brand <span class="required"><span class="a11y">required</span></span></label></dt>
-							<dd>
-								<select id="SelectBrand">
-									<option>HYUNDAI</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Selectmodel">Select the model <span class="required"><span class="a11y">required</span></span></label></dt>
-							<dd>
-								<select id="Selectmodel">
-									<option>IX35</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Selectrange">Select the range <span class="required"><span class="a11y">required</span></span></label></dt>
-							<dd>
-								<select id="Selectrange">
-									<option>1.7</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Selectfeul">Select the type of fuel</label></dt>
-							<dd>
-								<select id="Selectfeul">
-									<option>BENZINA</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="SelectVersion">Select the version</label></dt>
-							<dd>
-								<select id="Selectrange">
-									<option>CLASSIC</option>
-								</select>
-							</dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="RegistrationDate">Registration date</label></dt>
-							<dd><input type="text" id="RegistrationDate" value="02/2016"></dd>
-						</dl>
-						<dl class="frm">
-							<dt><label for="Km">Please enter the Km <span class="required"><span class="a11y">required</span></span></label></dt>
-							<dd class="_mix">
-								<input type="text" id="Km" placeholder=" 50.000">
-								<button type="button" class="btn-type _default">Submit</button>
-								<p class="inp_txt"> Enter the mileage and click &ldquo;Submit&rdquo; to see the estimated amount.</p>
-							</dd>
-						</dl>
-					</div>
-					<div class="total_result">
-						<p class="desc">Trade-in Estimation Price</p>
-						<em class="price">USD 5.300,00</em>
-					</div>
-					<div class="info">
-						<p class="desc">* Prices may be different depending on the vehicle condition, km/s and other model features.</p>
-						<p class="desc">* Additional Discount information will be available after you apply the trade-in result to the quotation.</p>
-					</div>
 					<div class="btn-type_wrap">
-						<button onclick="hlayerClose('TradeIn')" class="btn-type _cancel">Cancel</button>
-						<button onclick="hlayerClose('TradeIn')" class="btn-type _default">Apply</button>
+						<button onclick="hlayerClose('PurchasingCondition')" class="btn-type _cancel">Cancel</button>
+						<button onclick="hlayerClose('PurchasingCondition')" class="btn-type _default">Apply</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<script>
-			$(document).ready(function(){
-				actvTabList('tabcase02', 1);
-			});
-		</script>
 	</div>
 </body>
 </html>
