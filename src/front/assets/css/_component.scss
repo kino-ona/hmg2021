@@ -433,7 +433,7 @@ a, button {
 	z-index: 1000;
 	top: 0;
 	left: 0;
-  display: none;
+	display: none;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0, .9);
@@ -606,10 +606,10 @@ a, button {
 	@include FontText();
 	dt {
 		font-weight: 900;
-		font-family: inherit;
+		@include FontText();
 		label {
 			font-weight: inherit;
-			font-family: inherit;
+			@include FontText();
 		}
 	}
 	dd {
@@ -672,6 +672,127 @@ a, button {
 			}
 		}
 	}
+}
+
+/* dropdown */
+.dropdown_list {
+	display: inline-block;
+	position: relative;
+	min-width:100%;
+	input[type="checkbox"], input[type="radio"] {
+		position: absolute;
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+		border-radius: 0;
+		background: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		cursor: pointer;
+		opacity: 0;
+		color:#000;
+	}
+	.dropdown_value {
+		position: relative;
+		input[type="text"] {
+			width: 100%;
+			background-color: #fff;
+			color:#000;
+		}
+		.btn_opener {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border: 0;
+			background-color: rgba(255, 255, 255, 0);
+			cursor: pointer;
+			i {
+				top:50%;
+				right:20px;
+				margin-top:-2px;
+				@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+			}
+			&[aria-expanded="true"] i {
+				@include iconAngle($direction: 'up', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+			}
+		}
+	}
+	.item_box {
+		display: none;
+		position: absolute;
+		top: 49px;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		border: 1px solid #D9D9D9;
+		background-color: #fff;
+		padding:20px 50px 50px;
+	}
+	.search_box {
+		position:relative;
+		input[type=text] {
+			padding-right:40px;
+			border:0;
+			border-bottom:2px solid #000;
+		}
+		.btn_search {
+			position:absolute;
+			right:0;
+			top:50%;
+			width:50px;
+			@include transform(translate(0, -50%));
+			
+		}
+	}
+	.item_list {
+		display: none;
+		position: absolute;
+		top: 49px;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		border: 1px solid #D9D9D9;
+		background-color: #fff;
+		a, button, input[type="radio"]+label {
+			display: block;
+			width: 100%;
+			height: 50px;
+    	padding: 9px 10px;
+			line-height:32px;
+			border: 0;
+			background: transparent;
+			text-align: left;
+			cursor: pointer;
+		}
+		a:not(.btn_search), button:not(.btn_search), input[type="radio"]+label {
+			&:hover, &:active, &:focus {
+				background-color: #000;
+				color:#fff;
+			}
+		}
+	}
+}
+.dropdown_list .item_list input[type="radio"]:focus+label {
+	background: #aaa
+}
+.dropdown_list .item_list input[type="radio"]+label:before {
+	display: none
+}
+.dropdown_list .item_list input[type="radio"]:disabled+label {
+	background: #FAFAFA;
+	color: #999
+}
+.dropdown_list.active .item_list {
+	display: block
 }
 
 @media screen and (max-width:1024px){

@@ -26,7 +26,8 @@
 					<p class="ti" data-pos-top="guides06">6. Font Style</p><br>
 					<p class="ti" data-pos-top="guides07">7. Layer Popup</p><br>
 					<p class="ti" data-pos-top="guides08">8. Form</p><br>
-					<p class="ti" data-pos-top="guides08">9. ColorChip</p><br>
+					<p class="ti" data-pos-top="guides09">9. ColorChip</p><br>
+					<p class="ti" data-pos-top="guides10">10. Design Pulldown</p><br>
 					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
@@ -719,6 +720,89 @@ hlayerClose('팝업아이디')
 &lt;/div&gt;	
 &lt;script src="./assets/js/colorchips.js"&gt;&lt;/script&gt;
 </pre>
+
+
+<br><br>
+<p class="ti" id="guides10">10. Design Pulldown</p>
+<div>
+	<div class="selectbox">
+		<div class="dropdown_list" aria-expanded="false">
+			<div class="dropdown_value">
+				<input type="text" role="combobox" value="Select list Type" aria-expanded="false" tabindex="-1" readonly="">
+				<button type="button" aria-label="열기" class="btn_opener" aria-expanded="false"><i></i></button>
+			</div>
+			<ul class="item_list" role="listbox">
+				<li role="option" class="tnow">
+					<input type="radio" name="opt" id="opt1">
+					<label for="opt1">opt1</label>
+				</li>
+				<li role="option">
+					<input type="radio" name="opt" id="opt2">
+					<label for="opt2">opt2</label>
+				</li>
+				<li role="option">
+					<input type="radio" name="opt" id="opt3">
+					<label for="opt3">opt3</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+<pre>
+&lt;div class="selectbox"&gt;
+	&lt;div class="dropdown_list" aria-expanded="false"&gt;
+		&lt;div class="dropdown_value"&gt;
+			&lt;input type="text" role="combobox" value="Select list Type" aria-expanded="false" tabindex="-1" readonly=""&gt;
+			&lt;button type="button" aria-label="열기" class="btn_opener" aria-expanded="false"&gt;&lt;i&gt;&lt;/i&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;ul class="item_list" role="listbox"&gt;
+			&lt;li role="option" class="tnow"&gt;
+				&lt;input type="radio" name="opt" id="opt1"&gt;
+				&lt;label for="opt1"&gt;opt1&lt;/label&gt;
+			&lt;/li&gt;
+			&lt;li role="option"&gt;
+				&lt;input type="radio" name="opt" id="opt2"&gt;
+				&lt;label for="opt2"&gt;opt2&lt;/label&gt;
+			&lt;/li&gt;
+			&lt;li role="option"&gt;
+				&lt;input type="radio" name="opt" id="opt3"&gt;
+				&lt;label for="opt3"&gt;opt3&lt;/label&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+<br><br>
+	<div class="selectbox">
+		<div class="dropdown_list" aria-expanded="false">
+			<div class="dropdown_value">
+				<input type="text" role="combobox" value="down box" aria-expanded="false" tabindex="-1" readonly="">
+				<button type="button" aria-label="열기" class="btn_opener" aria-expanded="false"><i></i></button>
+			</div>
+			<div class="item_list item_box" role="itembox">
+				<div class="search_box">
+					<input type="text">
+					<a href="#" class="btn_search"><i class="ic_search"></i><span class="a11y">search</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<pre>
+&lt;div class="selectbox"&gt;
+	&lt;div class="dropdown_list" aria-expanded="false"&gt;
+		&lt;div class="dropdown_value"&gt;
+			&lt;input type="text" role="combobox" value="down box" aria-expanded="false" tabindex="-1" readonly=""&gt;
+			&lt;button type="button" aria-label="열기" class="btn_opener" aria-expanded="false"&gt;&lt;i&gt;&lt;/i&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class="item_box" role="itembox"&gt;
+			&lt;div class="search_box"&gt;
+				&lt;input type="text"&gt;
+				&lt;a href="#" class="btn_search"&gt;&lt;i class="ic_search"&gt;&lt;/i&gt;&lt;span class="a11y"&gt;search&lt;/span&gt;&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>	
+</div>
 
 
 

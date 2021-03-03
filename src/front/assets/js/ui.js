@@ -1,3 +1,9 @@
+$(document).ready(function() {
+	if( $('.dropdown_list').length > 0 ) { dropdownControl(); }
+});
+$(window).resize( function() {
+});
+
 var $window = $(window);
 var winW = $(window).outerWidth();
 var winH = $(window).outerHeight();
@@ -87,10 +93,6 @@ $(function () {
 
 	});
 });
-
-
-
-
 
 // accordion fn
 $('.accordion_wrap').each(function () { // default
