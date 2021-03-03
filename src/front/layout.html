@@ -230,18 +230,50 @@ $(document).ready(function(){
 assets/css/_component.scss
 assets/js/ui.js
 
-- radio tab
+- radio tab type01
 &lt;div class="tab_wrap"  id="tabcase03"&gt;
 	&lt;ul class="radio-tab_contents" role="radio_tablist" aria-label="tabname"&gt;
 		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="true"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio" checked&gt; radio tab1 &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;p class="radiowrap"  aria-selected="false"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio"&gt; radio tab2 &lt;span&gt;small text&lt;/span&gt; &lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
 	&lt;/ul&gt;
-	&lt;div class="tab_contents"&gt;
+	&lt;div class="radio-tab_contents"&gt;
 		&lt;section class="tab_panel" role="tabpanel"&gt;
 		&lt;/section&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
 </pre>
+<br><br>
+<div class="tab_wrap" id="tabcase04">
+	<ul class="radio_tablist _type02" role="radio_tablist" aria-label="tabname">
+		<li><p class="radiowrap" aria-selected="true"><label><input type="radio" name="tabradio2" checked>radio tab1</label></p></li>
+		<li><p class="radiowrap" aria-selected="false"><label><input type="radio" name="tabradio2">radio tab2</label></p></li>
+	</ul>
+	<div class="radio-tab_contents">
+		<section class="tab_panel" aria-hidden="false" role="tabpanel">
+			tab00 contents
+		</section>
+		<section class="tab_panel" aria-hidden="true"  role="tabpanel">
+			tab01 contents
+		</section>
+	</div>
+</div>
+<pre>
+&lt;div class="tab_wrap" id="tabcase04"&gt;
+	&lt;ul class="radio_tablist _type02" role="radio_tablist" aria-label="tabname"&gt;
+		&lt;li&gt;&lt;p class="radiowrap" aria-selected="true"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio2" checked&gt;radio tab1&lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;p class="radiowrap" aria-selected="false"&gt;&lt;label&gt;&lt;input type="radio" name="tabradio2"&gt;radio tab2&lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class="radio-tab_contents"&gt;
+		&lt;section class="tab_panel" aria-hidden="false" role="tabpanel"&gt;
+			tab00 contents
+		&lt;/section&gt;
+		&lt;section class="tab_panel" aria-hidden="true"  role="tabpanel"&gt;
+			tab01 contents
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+</pre>
+
 
 
 <br><br>

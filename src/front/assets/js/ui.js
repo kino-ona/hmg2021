@@ -164,17 +164,17 @@ $('.tab_wrap').each(function(){  // default
 // radio tab
 var radioTanfnc = function(){
 	$('.radio_tablist').each(function(){  
-		var radioContent = $(".radio-tab_contents .tab_panel");
+		var parentId = $(this).parents('.tab_wrap').attr('id');
+		var radioContent = $('#' + parentId).find(".radio-tab_contents .tab_panel");
 	
 		$(this).find('li').each(function(){
 			$(this).find("input[type='radio']").click(function(){
-				$(".radio_tablist p").attr('aria-selected', false)
+				$(this).parents().find(".radio_tablist p").attr('aria-selected', false)
 				if(!$(this).parents('.radiowrap').attr('aria-selected', true)) {
 					$(this).parents('.radiowrap').attr('aria-selected', true)
 				}
-				
 				radioContent.attr('aria-hidden', true)
-				radioContent.eq($("input[type='radio']").index(this)).attr('aria-hidden', false)
+				radioContent.eq($('#' + parentId).find("input[type='radio']").index(this)).attr('aria-hidden', false)
 			});
 		});
 	});

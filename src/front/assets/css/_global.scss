@@ -81,7 +81,7 @@ article, aside, canvas, details, embed, figure, figcaption, footer, header, hgro
 ruby, section, summary,time, mark, audio, video {
 	margin: 0;padding: 0; vertical-align: top; letter-spacing: 0; word-break:keep-all;
 	text-decoration:none; -webkit-tap-highlight-color:transparent;
-	font-family: 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family: 'HyundaiSansText','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	color: #000000;
 	font-size: 16px;
 	font-weight: normal;
@@ -94,7 +94,7 @@ button,input { border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0
 html, body {
 	-webkit-text-size-adjust:none;
 	// -webkit-text-size-adjust: 100%;
-	font-family: 'HyundaiSansHead','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
+	font-family: 'HyundaiSansText','Malgun Gothic',Dotum,'돋움',AppleGothicNeoSD,'Apple SD 산돌고딕 Neo','굴림',arial,sans-serif;
 	-ms-word-wrap:break-word;word-wrap:break-word;
 	line-height:1;
 }
