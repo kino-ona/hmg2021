@@ -432,6 +432,7 @@ a, button {
 	width:18px;
 	height:18px;
 	background: {
+		color:#fff;
 		image: url(../images/ico/icon_error.png);
 		size:cover;
 		position: 0 center;
@@ -705,6 +706,7 @@ a, button {
 		position:absolute;
 		right:20px;
 		top:22%;
+		z-index:1;
 	}
 	.inp_txt {
 		margin-top:10px;
