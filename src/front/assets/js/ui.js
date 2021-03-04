@@ -228,6 +228,18 @@ var tabposSet = function(){
 	});
 }
 
+$('.masking .btn_masking').on('click', function() {
+	if ($(this).parent('.masking').hasClass('_not')) {
+			$(this).parent('.masking').removeClass('_not');
+			$(this).parent('.masking').find('input').attr('type', 'password');
+			$(this).children('i').attr('class','ic_show');
+	} else {
+			$(this).parent('.masking').addClass('_not');
+			$(this).parent('.masking').find('input').attr('type', 'text');
+			$(this).children('i').attr('class','ic_hide');
+	}
+});
+
 $(document).ready(function() {
 	if( $('.trims_list .trims_item').length > 0 ) { trimItemSel(); }
 });

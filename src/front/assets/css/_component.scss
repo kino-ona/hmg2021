@@ -387,6 +387,11 @@ a, button {
 		&._line {
 			border:1px solid #D9D9D9;
 		}
+		&._highlight {
+			border:2px solid #0E306C;
+			color: #0E306C;			
+			line-height: 3.938rem; //63px;
+		}
 	}
 }
 
@@ -430,6 +435,7 @@ a, button {
 	width:18px;
 	height:18px;
 	background: {
+		color:#fff;
 		image: url(../images/ico/icon_error.png);
 		size:cover;
 		position: 0 center;
@@ -703,6 +709,7 @@ a, button {
 		position:absolute;
 		right:20px;
 		top:22%;
+		z-index:1;
 	}
 	.inp_txt {
 		margin-top:10px;

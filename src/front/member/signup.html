@@ -17,7 +17,7 @@
 		<!-- h-contents -->
 		<div id="h-contents" class="h-contents">
 
-			<div class="member">
+			<div class="membership">
 
 				<!-- section member -->
 				<section class="member_wrap _large">
@@ -46,8 +46,7 @@
 							<dl class="frm">
 								<dt><label for="FirstName">First Name <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<input type="text" id="FirstName" placeholder="Enter your First name">
-									<!-- <input type="text" id="FirstName" class="warn" placeholder="Enter your First name"><i class="ic_error"></i> --> <!-- Alert Case -->
+									<input type="text" id="FirstName" class="warn" placeholder="Enter your First name"><i class="ic_error"></i> <!-- Error Case -->
 									<p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
 								</dd>
 							</dl>
@@ -63,9 +62,9 @@
 							<dl class="frm">
 								<dt><label for="IdEmail">ID (Email) <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd class="_mix _fix">
-									<input type="text" id="IdEmail" placeholder="e.g. abc@hyundai.com">
+									<input type="text" id="IdEmail" class="warn" placeholder="e.g. abc@hyundai.com"><i class="ic_error"></i> <!-- Error Case -->
 									<button class="btn_check">Check Availability</button>
-									<p class="inp_txt warn">There is already an account. Please log in or find password.</p>
+									<p class="inp_txt warn">There is already an account. Please log in or find password.</p> <!-- Alert Message -->
 								</dd>
 								<dd class="noti_txt">
 									<p>&#8251; Please enter a valid email address. To activate your account, you must complete the email verification process.</p>
@@ -78,27 +77,24 @@
 							<dl class="frm">
 								<dt><label for="Password">Password <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<!-- password show case -->
-									<div class="pw_field">
-										<input type="text" id="Password" class="pw" placeholder="Enter 8 + characters with a letter and a number">
-										<input type="checkbox" id="ShowPw1">
-										<label for="ShowPw1"><i class="ic_hide"></i><span class="a11y">Show Password</span></label>
+									<!-- password masking-->
+									<div class="masking">
+										<input type="password" id="Password" class="warn" placeholder="Enter 8 + characters with a letter and a number"><i class="ic_error"></i> <!-- Error Case -->
+										<button class="btn_masking"><i class="ic_show"></i></button>
 									</div>
-									<!--// password show case -->
-									<p class="inp_txt warn">This field is required.</p>
+									<!--// password masking-->
+									<p class="inp_txt warn">Please enter a password of at least 7 characters, including letters, numbers, and special symbols.</p> <!-- Alert Message -->
 								</dd>
 							</dl>
 							<dl class="frm">
 								<dt><label for="ConfirmPassword">Confirm Password <span class="required"><span class="a11y">required</span></span></label></dt>
 								<dd>
-									<!-- password masking case -->
-									<div class="pw_field">
-										<input type="password" id="ConfirmPassword" class="pw" placeholder="Enter password again">
-										<input type="checkbox" id="ShowPw2">
-										<label for="ShowPw2"><i class="ic_show"></i><span class="a11y">Show Password</span></label>
+									<!-- password masking -->
+									<div class="masking">
+										<input type="password" id="ConfirmPassword" placeholder="Enter password again">
+										<button class="btn_masking"><i class="ic_show"></i></button>
 									</div>
-									<!--// password masking case -->
-									<p class="inp_txt warn">Caps Lock is on</p>
+									<!--// password masking -->
 								</dd>
 							</dl>
 							<dl class="frm">

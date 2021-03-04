@@ -68,6 +68,7 @@
 			font-weight:600;
 			font-size:12px;
 			line-height:20px;
+			@include FontHead;
 			&:before {
 				content:'';
 				display:inline-block;
@@ -101,6 +102,7 @@
 			color:#000;
 			font-weight:900;
 			font-size:1.75rem;
+			@include FontHead;
 			span {
 				display:block;
 				color:#888;
@@ -168,9 +170,9 @@
 			height:50px;
 			padding: 0 0 0 31px;
 			color:#999;
-			font-weight:normal;
 			font-size:0.875rem;
 			line-height:50px;
+			@include FontHead;
 			&:before {
 				content:'';
 				display:block;
@@ -207,6 +209,7 @@
 		font-weight: 900;
 		font-size: 2.5rem;
 		line-height: 3.125rem;
+		@include FontHead;
 	}
 	.content_desc {
 		margin-bottom: 40px;
@@ -297,6 +300,11 @@
 					height: 35px;
 					margin-right: 10px;
 				}
+				span {
+					color: inherit;
+					font-weight: inherit;
+					font-size: inherit;
+				}
 			}
 		}
 	}
@@ -317,6 +325,7 @@
 			color: #000;
 			font-weight: 900;
 			font-size: 1.875rem;
+			@include FontHead;
 		}
 		.promotion {
 			display: flex;
@@ -455,7 +464,9 @@
 		.location {
 			padding: 46px 0 0 90px;
 			.store_name {
+				color: #000;
 				margin-bottom: 40px;
+				font-weight: 900;
 				font-size: 1.375rem;
 				line-height: 1.5rem;
 			}
@@ -494,10 +505,11 @@
 					width: 350px;
 					height: 65px;
 					border: 2px solid #0E306C;
-					color: 0E306C;
+					color: #0E306C;
 					font-weight: 600;
 					font-size: 1.375rem;
 					line-height: 1.625rem;
+					@include FontHead;
 				}
 			}
 		}
@@ -680,11 +692,13 @@
 			font-size: 1rem;
 			line-height: 1.625rem;
 			.expiry {
-				color: #999;	
+				color: #999;
+				font-size: inherit;
 			}
 			.day {
 				margin-left: 8px;
 				color: #000;
+				font-size: inherit;
 				font-weight: 900;
 			}
 		}
@@ -699,6 +713,7 @@
 				font-weight: 600;
 				font-size: 1rem;
 				line-height: 1.625rem;
+				@include FontHead;
 			}
 		}
 	}
@@ -716,6 +731,7 @@
 			font-weight: 600;
 			font-size: 2.625rem;
 			line-height: 4.125rem;
+			@include FontHead;
 		}
 		.total_price {
 			position: relative;
@@ -734,21 +750,24 @@
 			}
 			.total {
 				display: block;
-				color: 999;
+				color: #999;
 				font-size: 11px;
 				line-height: 23px;
+				@include FontHead;
 			}
 			.price {
 				color: #FF8D34;
 				font-weight: 900;
 				font-size: 1.375rem;
 				vertical-align: baseline;
+				@include FontHead;
 			}
 			.pm {
 				color: #000;
 				font-size: 0.875rem;
 				line-height: 1.438rem;
 				vertical-align: baseline;
+				@include FontHead;
 			}
 		}
 	}
@@ -790,6 +809,7 @@
 			color: #fff;
 			font-weight: 600;
 			font-size: 1.5rem;
+			@include FontHead;
 		}
 		i {
 			margin-left: 16px;
@@ -904,6 +924,43 @@
 		}
 	}
 
+}
+.edit_coupon {
+	.desc {
+		margin-bottom: 20px;
+		color: #000;
+		font-size: 1rem;
+	}
+	.frm_field {
+		.frm {
+			input[type="text"] {
+				flex: 1;
+			}
+			.btn_check {
+				flex: .3;
+				border: 1px solid #d9d9d9;
+				background: #f4f4f4;
+				color: #000;
+				font-size: 16px;
+				font-weight: 600;
+				@include FontHead;
+			}
+			.alliped_coupon {
+				width: 100%;
+				margin-top: 10px;
+				color: #000;
+				font-size: 1rem;
+				.highlight {
+					color: #E80710;
+				}
+			}
+		}
+	}
+	.msg_info {
+		color: #000;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
 }
 
 [class^="bullet_"]:not(ul):not(ol),
