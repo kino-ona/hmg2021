@@ -354,8 +354,8 @@
 		})
 		<!-- //footer -->
 
-		<div class="h-layer_body popup edit_condition" id="PurchasingCondition" aria-hidden="true" role="dialog" style="display:block !important;">
-			<div class="h-layer_wrap _wide" style="opacity: 1 !important;">
+		<div class="h-layer_body popup edit_condition" id="PurchasingCondition" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap _wide">
 				<div class="h-layer_head">
 					<h2 class="h-layer_title">Purchasing Condition</h2>
 					<button onclick="hlayerClose('PurchasingCondition')" class="h-layer_close">close</button>
@@ -373,7 +373,7 @@
 						</ul>
 						<div class="radio-tab_contents">
 							<section class="tab_panel" aria-hidden="false" role="tabpanel">
-								<em class="required_field">Required Fields<span class="required"><span class="a11y">required</span></span></em>
+								<em class="required_field">Required Fields <span class="required"><span class="a11y">required</span></span></em>
 								<div class="frm_field field_half">
 									<dl class="frm">
 										<dt><label for="VatNum">VAT No. <span class="required"><span class="a11y">required</span></span></label></dt>
@@ -464,13 +464,29 @@
 								</div>
 							</section>
 							<section class="tab_panel" aria-hidden="true"  role="tabpanel">
-								tab01 contents
+								<em class="required_field">Required Fields<span class="required"><span class="a11y">required</span></span></em>
+								<div class="frm_field">
+									<dl class="frm length_limit">
+										<dt><label for="Comments">Comments <span class="required"><span class="a11y">required</span></span></label></dt>
+										<dd>
+											<textarea id="Comments"></textarea>
+											<span class="counting"><span class="current">1</span>/1000 Byte</span>
+											<p class="inp_txt warn">Please upload the document.</p>
+										</dd>
+									</dl>
+								</div>
+								<div class="reset">
+									<button type="button">
+										<i class="ic_refresh"></i>
+										<span>Reset</span>
+									</button>
+								</div>
 							</section>
 						</div>
 					</div>
 					<div class="btn-type_wrap">
 						<button onclick="hlayerClose('PurchasingCondition')" class="btn-type _cancel">Cancel</button>
-						<button onclick="hlayerClose('PurchasingCondition')" class="btn-type _default">Apply</button>
+						<button onclick="hlayerClose('PurchasingCondition')" class="btn-type _default">Save</button>
 					</div>
 				</div>
 			</div>

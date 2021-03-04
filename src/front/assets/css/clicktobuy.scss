@@ -871,12 +871,39 @@
 }
 .edit_condition {
 	.desc {
-		// margin-bottom: ;
+		margin-bottom: 30px;
 		color: #000;
 		font-size: 1rem;
 		line-height: 1.5rem;
-		@include FontText;
 	}
+	.radio-tab_contents {
+		position: relative;
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px dashed #999;
+	}
+	.required_field {
+		position: absolute;
+		right: 0;
+		top: -60px;
+		color: #000;
+		font-weight: 900;
+		font-size: 1rem;
+	}
+	.reset {
+		display: flex;
+		justify-content: flex-end;
+		margin: 40px 0 -60px;
+		button {
+			display: flex;
+			align-items: center;
+			span {
+				color: #000;
+				font-size: 1rem;
+			}
+		}
+	}
+
 }
 
 [class^="bullet_"]:not(ul):not(ol),
