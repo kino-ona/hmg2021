@@ -297,7 +297,7 @@ button {
 	}
 }
 
-@media all and (max-width:1024px) {
+@media all and (max-width:1240px) {
 	html {
 		font-size: 14px;
 	}
@@ -440,13 +440,11 @@ body {
 	width:100%;
 	height:calc(100% - 60px);
 	overflow: hidden;
-	.stage_wrap {
-		// min-height:calc(100% - 60px);
-		// padding-bottom:90px;
-	}
+	// .stage_wrap {
+	// 	min-height:calc(100% - 60px);
+	// 	padding-bottom:90px;
+	// }
 }
-
-
 
 @media screen and (max-width:1024px){
 }

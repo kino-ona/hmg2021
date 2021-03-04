@@ -305,9 +305,9 @@
 	}
 	.acco_panel {
 		outline: 0;
-		// &[aria-hidden="true"] {
-		// 	display: none;
-		// }
+		&[aria-hidden="true"] {
+			display: none;
+		}
 		.tbl_default { 
 			border-top-width:1px;
 			padding-bottom:40px;
@@ -318,18 +318,25 @@
 
 .build_menu {
 	.item {
+		position:relative;
 		box-sizing: content-box;
 		overflow: hidden;
+		&._active {
+			.menu_panel{
+				display: block;
+			}
+		}
 	}
 	.menu_head {
 		display: block;
+		min-height:60px;
+		padding: 6.69% 13.36%;
 		text-decoration: none;
 		outline: 0;
 		cursor: pointer;
 		.heading {
 			display:block;
 			position:relative;
-			padding: 6.69% 13.36%;
 			i {
 				top:50%;
 				right:13.36%;
@@ -341,14 +348,10 @@
 			.heading i {@include rotate(180);}
 		}
 	}
-	[data-status="disabled"] .menu_panel{
-		display: none;
-	}
 	.menu_panel {
 		outline: 0;
-		&[aria-hidden="true"] {
-			display: none;
-		}
+		// padding: 0 13.36% 12%;
+		padding: 0 12% 12%;
 		.tbl_default {
 			border-top-width:1px;
 			padding-bottom:40px;

@@ -45,9 +45,12 @@
 					<!-- build_option -->
 					<div class="build_option">
 						<div class="build_menu">
-							<div class="item trim_item _active" aria-selected="true" data-status="disabled">
+							<!-- 
+								bulid menu 활성화 : _active
+							//-->
+							<div class="item trim_item _active">
 								<div class="menu_head">
-									<a href="#" class="heading" tabindex="0">
+									<a href="select_trims.html" class="heading" tabindex="0">
 										<p class="opt_title">1. Trims</p>
 										<p class="opt_summary">KONA Limited</p>
 										<p class="trim_cnt">Showing <em>5</em> of 6 Trims</p>
@@ -64,45 +67,54 @@
 											<span>Compare Trims</span>
 										</button>
 									</div>
-									<ul class="trims_list" role="radiogroup">
-										<li class="trims_item" role="radio" aria-selected="false">
-											<div class="group">
+									<ul class="trims_list">
+										<!-- 
+											trim item 활성화 : _active
+										//-->
+										<li class="trims_item">
+											<button class="group">
 												<em class="name">Ultimate</em>
-												<span class="price">USD 28,150</span>
+												<span class="price">USD 280,150</span>
 												<span class="tag new">New</span>
-											</div>
+												<span class="tag popular">Popular</span>
+												<i class="arrow"></i>
+											</button>
 										</li>
-										<li class="trims_item" role="radio" aria-selected="true">
-											<div class="group">
+										<li class="trims_item">
+											<button class="group">
 												<em class="name">Limited</em>
 												<span class="price">USD 25,000</span>
 												<span class="flag promotion">Promotion</span>
-											</div>
+												<i class="arrow"></i>
+											</button>
 										</li>
-										<li class="trims_item" role="radio" aria-selected="false">
-											<div class="group">
+										<li class="trims_item">
+											<button class="group">
 												<em class="name">Night</em>
 												<span class="price">USD 25,350</span>
 												<span class="tag popular">Popular</span>
-											</div>
+												<i class="arrow"></i>
+											</button>
 										</li>
-										<li class="trims_item" role="radio" aria-selected="false">
-											<div class="group">
+										<li class="trims_item">
+											<button class="group">
 												<em class="name">SEL Plus</em>
 												<span class="price">USD 20,500</span>
 												<span class="tag best">Best</span>
-											</div>
+												<i class="arrow"></i>
+											</button>
 										</li>
-										<li class="trims_item" role="radio" aria-selected="false">
-											<div class="group">
+										<li class="trims_item">
+											<button class="group">
 												<em class="name">SEL Plus</em>
 												<span class="price">USD 27,000</span>
-											</div>
+												<i class="arrow"></i>
+											</button>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<div class="item color_item" aria-selected="false" data-status="disabled">
+							<div class="item color_item">
 								<div class="menu_head">
 									<a href="#" class="heading" tabindex="0">
 										<p class="opt_title">2. Color</p>
@@ -113,28 +125,173 @@
 									<i></i></a>
 								</div>
 								<div class="menu_panel">
-									Color panel
+									<div class="color_panel">
+										<div class="select_color">
+											<div class="group">
+												<div class="option">
+													<span class="part">Exterior</span>
+													<span class="selected" aria-label="selected color">Denim</span>
+													<span class="price">+ USD 595</span>
+												</div>
+												<div class="color_chips">
+													<ul class="color_list">
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/NKA.png)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="group">
+												<div class="option">
+													<span class="part">Interior</span>
+													<span class="selected" aria-label="selected color">Denim</span>
+													<span class="price">+ USD 595</span>
+												</div>
+												<div class="color_chips">
+													<ul class="color_list">
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/NKA.png)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+														<li>
+															<button class="color_select" aria-selected="false" style="background-image: url(../assets/images/colorchip/Model/PR2.jpeg)">
+																<span class="a11y">Color Name</span>
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="estimated_date">
+											<p class="msg">The estimated delivery date</p>
+											<p class="day">mid-June-2021</p>
+										</div>
+										<div class="popular_color">
+											<div class="bar"></div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="item options_item" aria-selected="false" data-status="disabled">
+							<div class="item options_item">
 								<div class="menu_head">
-									<a href="#" class="heading" tabindex="0">
+									<a href="select_option.html" class="heading" tabindex="0">
 										<p class="opt_title">3. Options</p>
 										<p class="opt_summary">Fabric Rear Bumper Protector 외 3개</p>
 									<i></i></a>
 								</div>
 								<div class="menu_panel">
-									Options panel
+									<div class="options_panel">
+										<div class="options_control">
+											<p class="selected_sum">
+												<em class="currunt">3</em>
+												<span>Items are Selected</span>
+											</p>
+											<button type="button" class="btn_clear">
+												<i class="ic_refresh"></i>
+												<span>Clear All</span>
+											</button>
+										</div>
+										<ul class="selected_options">
+											<li>
+												<div class="group">
+													<em class="name">Fabric Rear Bumper Protector</em>
+													<button type="button" class="btn_delete"><span class="a11y">delete</span></button>
+													<span class="price">+ USD 595</span>
+												</div>
+											</li>
+											<li>
+												<div class="group">
+													<em class="name">Rear Parcel Tray</em>
+													<button type="button" class="btn_delete"><span class="a11y">delete</span></button>
+													<span class="price">+ USD 482</span>
+												</div>
+											</li>
+											<li>
+												<div class="group">
+													<em class="name">Tilt Steering</em>
+													<button type="button" class="btn_delete"><span class="a11y">delete</span></button>
+													<span class="price">+ USD 224</span>
+												</div>
+											</li>
+										</ul>
+										<div class="total_result">
+											<div class="group">
+												<em class="total_desc">Total Upgrades</em>
+												<span class="total_price">+ USD 1,301</span>
+											</div>
+											<div class="group">
+												<em>Base Price</em>
+												<span>+ USD 1,005</sapn>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="item concierge_item" aria-selected="false" data-status="disabled">
+							<div class="item concierge_item">
 								<div class="menu_head">
 									<a href="#" class="heading" tabindex="0">
 										<p class="opt_title">4. Concierge</p>
 									<i></i></a>
 								</div>
 								<div class="menu_panel">
-									Concierge panel
+									<div class="concierge_panel">
+										<p class="title">Checklist</p>
+										<ul class="applied_list">
+											<li class="applied">
+												<div class="group">Purchasing condition <span class="check"><span class="a11y">applied</span></span></div>
+											</li>
+											<li class="applied">
+												<div class="group">Promotions <span class="check"><span class="a11y">applied</span></span></div>
+											</li>
+											<li>
+												<div class="group">Trade-in</div>
+											</li>
+											<li>
+												<div class="group">Warranty</div>
+											</li>
+											<li>
+												<div class="group">Delivery</div>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -165,6 +322,8 @@
 			"webroot":"."
 		})
 		<!-- //footer -->
+		<script src="./assets/js/colorchips.js"></script>
+		<script src="./assets/js/build.js"></script>
 	</div>
 
 </body>

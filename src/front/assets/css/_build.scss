@@ -44,28 +44,16 @@
 .build_option {
 	.item {
 		border-bottom:1px solid #D9D9D9;
-	}
-	.trim_item {
-		&[data-status="expanded"] {
-			padding-top:50px;
+		&:last-child {
+			border-bottom:0;
 		}
-	}
-	.acco_head {
-		position:relative;
-		min-height:111px;
-		.acco_target {	
-			position:absolute;
-			top:50%;
-			@include transform(translate(0, -50%));
-			padding:0 3.75rem;
-			width:100%;
-			i {
-				right:3.75rem;
+		&._active {
+			.menu_head { 
+				position:relative;
+				top:0;
+				@include transform(translate(0, 0));
 			}
-		}
-		
-		&[aria-expanded="true"] {
-			.acco_target {
+			.heading {
 				i {display: none;}
 				.trim_cnt {display: block;}
 			}
@@ -76,6 +64,23 @@
 			}
 			.opt_summary {
 				display: none;
+			}
+		}
+	}
+	.trim_item {
+		&._active {
+			padding-top:50px;
+			.menu_head {
+				padding-top:0;
+			}
+		}
+	}
+	.menu_head {
+		position:relative;
+		.heading {	
+			width:100%;
+			i {
+				right:0;
 			}
 		}
 	}
@@ -106,8 +111,10 @@
 			font-size:inherit;
 		}
 	}
-	.acco_panel {
-		padding:0 3.75rem 3.75rem;
+	.menu_panel {
+		display: none;
+		max-height:32rem;
+		overflow-y: auto;
 	}
 	.trims_control {
 		display: flex;
@@ -137,7 +144,7 @@
 		&:not(:first-child) {
 			margin-top: 10px;
 		}
-		&[aria-selected="true"] {
+		&._active {
 			border: 0;
 			background-color: #0E306C;
 			box-shadow: 8px 8px 40px rgba(0,0,0,.2);
@@ -158,9 +165,12 @@
 			}
 		}
 		> .group {
+			position:relative;
 			display: flex;
 			align-items: center;
-			padding: 22px 20px 24px 30px;
+			width:100%;
+			min-height:68px;
+			padding: 7.335% 32% 6.725% 9.17%;
 		}
 		.name {
 			color: #000;
@@ -173,6 +183,10 @@
 			font-size: .875rem;
 		}
 		.tag {
+			position:absolute;
+			top:50%;
+			right:20px;
+			@include transform(translate(0, -50%));
 			margin-left: auto;
 			padding: 1px 8px 3px;
 			font-size: 12px;
@@ -192,8 +206,10 @@
 			}
 		}
 		.flag {
-			position: relative;
-			margin: 0 -20px 0 auto;
+			position:absolute;
+			right:0;
+			top:50%;
+			@include transform(translate(0, -50%));
 			padding:3px 12px 6px 17px;
 			font-weight:600;
 			font-size:12px;
@@ -212,6 +228,11 @@
 				background-color:#FF8D34;
 				color:#fff;
 			}
+		}
+		.arrow {
+			right:20px;
+			@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+			display: none;
 		}
 	}
 	.options_panel {
@@ -545,11 +566,52 @@
 	}
 }
 
+@media screen and (min-width:1024px) and (max-width:1600px){
+	.build_menu {
+		.menu_panel {
+			padding: 0 10.425% 13.1%;
+		}
+	}
+	.build_option  {
+		.trims_control {
+			button {
+				&:not(:first-child) {
+					margin-left:8px;
+				}
+				span {
+					font-size: 0.75rem;
+				}
+			}
+		}
+		.trims_item {
+			.name {
+				font-size:0.875rem;
+			}
+			.price {
+				margin-left:10px;
+			}
+			> .group {
+				display: block;
+				text-align: left;
+			}
+			.price {
+				display: block;
+				margin-left:0;
+			}	
+		}
+	}
+}
+@media screen and (min-width:1024px) and (max-width:1440px){
+	.build_option {
+		.trims_item {
+			> .group {
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+}
 
-@media screen and (max-width:1024px){
-}
-.pg-table {
-}
 
 @media screen and (max-width:1024px){
 }
@@ -562,7 +624,6 @@
 			padding:10px 20px;
 			margin-bottom:0;
 			h2 {
-				// font-size: 1.429rem;
 				font-size:1.857rem;
 			}
 		}
@@ -571,6 +632,7 @@
 			.v_item {
 				border:0;
 				button {
+					position:relative;
 					padding:13px 15px;
 					font-weight: normal;
 					&[aria-selected="true"] {
@@ -579,7 +641,7 @@
 						&:after {
 							content:'';
 							position:absolute;
-							bottom:0;
+							bottom:-1px;
 							left:0;
 							display: block;
 							width:100%;
@@ -595,30 +657,29 @@
 
 	.build_option {
 		.item {
+			display: none;
 			padding-top:0;
-			&[aria-selected="false"] {
-				display: none;
-			}
-			// &[data-status="disabled"] {
-			// 	display: none;
-			// }
-		}
-		.acco_head {
-			min-height:62px;
-			&[aria-expanded="true"] {
-				.opt_title {
-					font-size:1.857rem;
+			&._active {
+				display: block;
+				.menu_head {
+					padding-top:10px;
+					.opt_title {
+						font-size:1.857rem;
+					}
 				}
 			}
-			.acco_target {
+		}
+		.menu_head {
+			padding: 10px 20px 20px;
+			min-height:auto;
+			.heading {
 				position:relative;
 				top:inherit;
 				@include transform(translate(0, 0));
-				padding: 10px 20px 20px;
 				.trim_cnt {
 					position:absolute;
-					right:20px;
-					top:18px;
+					right:0;
+					top:6px;
 					margin-top:0;
 					font-size: 1rem;
 				}
@@ -640,10 +701,10 @@
 				}
 			}
 		}
-		.acco_panel {
+		.menu_panel {
 			padding:0;
+			max-height:inherit;
 		}
-
 		.trims_control {
 			margin-bottom:0;
 			button {
@@ -657,6 +718,54 @@
 		}
 		.trims_list {
 			padding:20px;
+			.trims_item {
+				&._active {
+					display: block;
+				}
+				> .group {
+					padding:24px 100px 22px 30px;
+				}
+			}
+			&._pulldown {
+				padding:0;
+				.trims_item {
+					display: none;
+					&:not(:first-child) {
+						margin-top:0;
+					}
+					&._active {
+						display: block;
+						background-color: #fff;
+						.name, .price {
+							color:#000;
+						}
+						.group {
+							min-height:inherit;
+							padding:19px 20px;
+						}
+						.tag {
+							position:relative;
+							right:inherit;
+							top:inherit;
+							margin-left:10px;
+							@include transform(translate(0, 0));
+						}
+						.arrow {
+							display: block;
+						}
+						.flag {
+							position:relative;
+							right:inherit;
+							top:inherit;
+							margin-left:10px;
+							@include transform(translate(0, 0));
+							&:before {
+								border-bottom-color: #fff;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	//.build_option

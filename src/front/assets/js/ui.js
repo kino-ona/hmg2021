@@ -43,8 +43,8 @@ var layoutSize = function(){
 		$('.h-wrap').removeClass('pg-desktop');	
 		$('.h-wrap').addClass('pg-mobile');	
 	} else if (winWidth >= breakpoint && winWidth <= 1240) {
-		$('.h-wrap').removeClass('pg-mobile');	
 		$('.h-wrap').removeClass('pg-desktop');	
+		$('.h-wrap').addClass('pg-mobile');	
 		$('.h-wrap').addClass('pg-tablet');	
 	} else if (winWidth >= 1240) {
 		$('.h-wrap').removeClass('pg-mobile');	
@@ -224,6 +224,30 @@ var tabposSet = function(){
 				}
 
 			});
+		});
+	});
+}
+
+$(document).ready(function() {
+	if( $('.trims_list .trims_item').length > 0 ) { trimItemSel(); }
+});
+
+var trimItemSel = function(){
+	$('.trims_list .trims_item').each(function(){  
+		var selbtn = $(this).find('.group');
+		selbtn.click(function(){
+			$('.trims_list .trims_item').removeClass('_active');
+			if(!selbtn.hasClass('_active')) {
+				if ($('html').hasClass('is-mobile')) {
+					if(!selbtn.parents('.trims_list').hasClass('_pulldown')) {
+						selbtn.parents('.trims_list').addClass('_pulldown')
+					}else{
+						selbtn.parents('.trims_list').removeClass('_pulldown')
+					}
+					
+				}
+				selbtn.parents('.trims_item').addClass('_active');
+			}
 		});
 	});
 }
