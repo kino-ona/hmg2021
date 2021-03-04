@@ -3,7 +3,7 @@
 @import "global";
 @import "mixins";
 
-.member {
+.membership {
 	min-height:100%;
 	background-color:#fff;
 }
@@ -80,23 +80,14 @@
 	.frm:not(:first-child) {
 		margin-top:40px;
 	}
-	.pw_field {
-		input:not([type="checkbox"]) {
+	.masking {
+		input {
 			padding-right:60px;
 		}
-		.pw ~ label {
+		.btn_masking {
 			position:absolute;
-			top:22%;
+			// top:22%;  // error icon 확인 후 수정예정
 			right:20px;
-			cursor:pointer;
-			[class*='ic_'] {
-				margin:0;
-			}
-		}
-		.pw + input[type="checkbox"] {
-			position:absolute;
-			width:1px;
-			opacity:0;
 		}
 	}
 	.noti_txt p {
@@ -194,14 +185,10 @@
 			repeat:no-repeat;
 		}
 		&._tw {
-			background: {
-				image: url(../images/ico/icon_sns1.png);
-			}
+			background-image: url(../images/ico/icon_sns1.png);
 		}
 		&._fb {
-			background: {
-				image: url(../images/ico/icon_sns2.png);
-			}
+			background-image: url(../images/ico/icon_sns2.png);
 		}
 	}
 }
