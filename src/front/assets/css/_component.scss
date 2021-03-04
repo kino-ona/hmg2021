@@ -308,7 +308,7 @@
 		// &[aria-hidden="true"] {
 		// 	display: none;
 		// }
-		.tbl_default {
+		.tbl_default { 
 			border-top-width:1px;
 			padding-bottom:40px;
 			margin:0;
@@ -329,10 +329,10 @@
 		.heading {
 			display:block;
 			position:relative;
-			padding: 20px 0;
+			padding: 6.69% 13.36%;
 			i {
 				top:50%;
-				right:0;
+				right:13.36%;
 				margin-top:-6px;
 				@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 1px, $color: #999999, $display: inline-block, $position: absolute);
 			}
