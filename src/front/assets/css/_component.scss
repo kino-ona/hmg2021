@@ -623,8 +623,10 @@ a, button {
 	}
 
 	.btn-type_wrap {
-		width: 100%;
-		margin-top:40px;
+		// width: 100%;
+		// margin-top:40px;
+		width: 510px;
+		margin: 40px auto 0;
 		display: flex;
 		.btn-type {
 			flex: 1;
@@ -732,6 +734,15 @@ a, button {
 			input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not(:first-child),
 			select:not(:first-child) {
 				margin-left: 10px;
+			}
+		}
+		&.length_limit {
+			.counting {
+				position: absolute;
+				right: 0;
+				top: -30px;
+				color: #000;
+				font-size: 1rem;
 			}
 		}
 	}

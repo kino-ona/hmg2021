@@ -115,11 +115,11 @@ $('.accordion_wrap').each(function () { // default
 			});
 		}
 	}
-	if(winW < 1024) {
-		defaultAcc.destroy();
-	} else{
-		// defaultAcc.expand(0);
-	}
+	// if(winW < 1024) {
+	// 	defaultAcc.destroy();
+	// } else{
+	// 	defaultAcc.expand(0);
+	// }
 	
 	$window
 	.on('resize',function(){    //WINDOW RESIZE
