@@ -17,6 +17,7 @@
 			<div class="select_wrap">
 				<div class="guidelist" style="padding:30px;">
 					<strong style="display:block;font-weight: 900;">Guide List</strong><br><br>
+					<p class="ti" data-pos-top="guides000">0. Font 단위 규칙</p><br>
 					<p class="ti" data-pos-top="guides00">0. Breakpoint</p><br>
 					<p class="ti" data-pos-top="guides01">1. Button</p><br>
 					<p class="ti" data-pos-top="guides02">2. Icon</p><br>
@@ -48,6 +49,12 @@
 </style>
 <div class="guides">
 
+<p class="ti" id="guides000" style="margin-top:0;">0. Font 단위 규칙</p>
+<pre>
+font 단위 : rem
+line-height 단위 : rem
+</pre>
+
 
 <p class="ti" id="guides00" style="margin-top:0;">0. Breakpoint</p>
 
@@ -56,6 +63,7 @@ Mobile = ~ 1024;
 Tablet = 1024 ~ 1240; 
 Desktop = 1240 ~; 
 
+이하 리사이즈 시 자동(별도 지정하지 않음).
 &lt;div class="h-wrap pg-mobile"&gt;&lt;/div&gt;
 &lt;div class="h-wrap pg-tablet"&gt;&lt;/div&gt;
 &lt;div class="h-wrap pg-desktop"&gt;&lt;/div&gt;
@@ -393,7 +401,7 @@ assets/js/ui.js
 <p class="ti" id="guides06">6. Font Style</p>
 <div style="width:50%;">
 <pre>
-기본 : font-family: 'HyundaiSansHead'
+기본 : font-family: 'HyundaiSansText'
 
 특정폰트 : 
 @include FontText(); //font-family: 'HyundaiSansText'

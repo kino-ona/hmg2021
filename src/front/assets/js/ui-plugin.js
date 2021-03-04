@@ -67,39 +67,45 @@ function hlayerClose(layerId){
 */
 var dropdownControl = function(){
 	$(".dropdown_list .btn_opener").off('click.dropdown').on('click.dropdown', function() {
-		var $dropdown = $(this).closest('.dropdown_list'),
-				$allDropdown = $('.dropdown_list[aria-expanded="true"]').not($dropdown);
-				$allDropdown.find('.btn_opener').attr('aria-expanded','false');
+		var $dropdown = $(this).closest('.dropdown_value'),
+				$allDropdown = $('.dropdown_value[aria-expanded="true"]').not($dropdown);
+				$dropdown.find('.btn_opener').removeClass('show');
 				$allDropdown.removeClass('active');
+				$dropdown.siblings('.item_list').removeClass('active');
 				$allDropdown.attr('aria-expanded','false');
 
 		if ($dropdown.attr('aria-expanded') == 'true') {
 			$dropdown.attr('aria-expanded', 'false');
-			$dropdown.removeClass('active');
+			$dropdown.siblings('.item_list').removeClass('active');
+			$dropdown.siblings('.item_box').removeClass('active');
 		} else {
 			$dropdown.attr('aria-expanded', 'true');
-			$dropdown.addClass('active');
+			$dropdown.siblings('.item_list').addClass('active');
+			$dropdown.siblings('.item_box').addClass('active');
+			$dropdown.find('.btn_opener').addClass('show');
 		}
 
 		return false;
 	});
 	$('.dropdown_list .item_list').off('click.dropSelect').on('click.dropSelect', 'a, button:not(.option_util) , input[type="radio"]+label', function(e) {
 		var $this = $(this),
-				$listWrap = $this.closest('.dropdown_list');
+				$itemList = $this.parents('.item_list'),
+				$listWrap = $this.parents('.dropdown_list').find('.dropdown_value');
 		var selectedItem = $listWrap.hasClass('valcnt') ? $this.html() : $this.text();
 
 		if (!$this.parent().hasClass('disable')) {
-			$listWrap.removeClass('active');
+			$this.parent().removeClass('active');
 			$listWrap.attr('aria-expanded', 'false');
-			$listWrap.find('btn_opener').attr("aria-expanded", "false");
 
-			$listWrap.find('li').removeClass('tnow');
+			$itemList.removeClass('active');
+			$itemList.find('li').removeClass('tnow');
 			$this.parent('li').addClass('tnow');
+			$listWrap.find('.btn_opener').removeClass('show');
 
 			if ($listWrap.hasClass('valcnt')) {
-				$listWrap.find('[role="combobox"]').html(selectedItem);
+				$listWrap.find('input[type=text]').html(selectedItem);
 			} else {
-				$listWrap.find('[role="combobox"]').val(selectedItem);
+				$listWrap.find('input[type=text]').val(selectedItem);
 			}
 		}
 	});
@@ -107,27 +113,29 @@ var dropdownControl = function(){
 		if (!($('.dropdown_list').has(e.target).length || $('.dropdown_list').is($(e.target)))) {
 			$('.dropdown_list').removeClass('active');
 			$('.dropdown_list').attr('aria-expanded','false');
-			$('.dropdown_list .btn_opener').attr('aria-expanded','false');
+			$('.dropdown_list .btn_opener').removeClass('show');
 		}
 	});
 	$('.dropdown_list .btn_opener').on('keydown', function(e) {
 		if (e.keyCode == 9 && e.shiftKey) {
 			$(".dropdown_list").removeClass('active');
 			$('.dropdown_list').attr('aria-expanded','false');
-			$('.dropdown_list .btn_opener').attr('aria-expanded','false');
+			$('.dropdown_list .btn_opener').removeClass('show');
 		}
 	});
 	$('.dropdown_list .item_list [role="option"]').on('keydown', function(e){
 		if (e.keyCode == 9 && !e.shiftKey) {
 			$(".dropdown_list").removeClass('active');
 			$('.dropdown_list').attr('aria-expanded','false');
-			$('.dropdown_list .btn_opener').attr('aria-expanded','false');
+			$('.dropdown_list .btn_opener').removeClass('show');
 		}
 	});
 
 	$('.dropdown_list .item_box').off('click.dropSelect').on('click.dropSelect', 'a, button:not(.option_util) , input[type="radio"]+label', function(e) {
 		var $this = $(this),
+				$itemBox = $this.parents('.item_box'),
 				$listWrap = $this.closest('.dropdown_list');
+				console.log('test')
 		var selectedItem = $listWrap.hasClass('valcnt') ? $this.html() : $this.text();
 
 		if (!$this.parent().hasClass('disable')) {
@@ -145,5 +153,4 @@ var dropdownControl = function(){
 			}
 		}
 	});
-
 }

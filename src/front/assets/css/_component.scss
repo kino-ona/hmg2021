@@ -819,7 +819,7 @@ a, button {
 				margin-top:-2px;
 				@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
 			}
-			&[aria-expanded="true"] i {
+			&.show i {
 				@include iconAngle($direction: 'up', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
 			}
 		}
@@ -834,6 +834,9 @@ a, button {
 		border: 1px solid #D9D9D9;
 		background-color: #fff;
 		padding:20px 50px 50px;
+		&.active {
+			display: block;
+		} 
 	}
 	.search_box {
 		position:relative;
@@ -860,6 +863,9 @@ a, button {
 		width: 100%;
 		border: 1px solid #D9D9D9;
 		background-color: #fff;
+		&.active {
+			display: block;
+		}
 		a, button, input[type="radio"]+label {
 			display: block;
 			width: 100%;
