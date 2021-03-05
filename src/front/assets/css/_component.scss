@@ -620,11 +620,11 @@ a, button {
 		&._center {
 			text-align: center;
 		}
-		p, strong {
-			font-family: inherit;
-			font-size:inherit;
-			line-height:inherit;
-		}
+		// p, strong {
+		// 	font-family: inherit;
+		// 	font-size:inherit;
+		// 	line-height:inherit;
+		// }
 		.in_tit {
 			margin-bottom:15px;
 			font-size:1.875rem;
@@ -896,6 +896,16 @@ a, button {
 			}
 		}
 	}
+	.list_box {
+		overflow-y: auto;
+		max-height: 190px;
+		margin-top: 30px;
+		[role="option"] {
+			font-size: 1rem;
+			line-height: 2.125rem;
+			@include ellipse(1);
+		}
+	}
 }
 .dropdown_list .item_list input[type="radio"]:focus+label {
 	background: #aaa
@@ -970,4 +980,16 @@ a, button {
 			display: inline-block;
 		}
 	}
+
+	.frm_field {
+		&.field_half {
+			
+			.frm {
+				float:none;
+				width:100%;
+				margin-right:0;
+			}
+		}
+	}
+
 }
