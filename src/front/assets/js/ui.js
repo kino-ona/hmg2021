@@ -263,3 +263,25 @@ var trimItemSel = function(){
 		});
 	});
 }
+
+// forgot id
+$('.forgot_id ._find').on('click', function() {
+	var isOtp = false;
+	if (!isOtp) {
+			isOtp = true;
+			$('.forgot_id ._mobile').hide();
+			$('.forgot_id ._otp').show();
+			return false;
+	}
+});
+
+// forgot pw
+$('.forgot_pw ._find').on('click', function() {
+	var isOtp = false;
+	if ($('.radio_tablist._type02 li:eq(0) input[type="radio"]').prop('checked') && !isOtp) {
+			isOtp = true;
+			$('.forgot_pw ._mobile, .forgot_pw ._email').hide();
+			$('.forgot_pw ._otp').show();
+			return false;
+	}
+});
