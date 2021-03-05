@@ -991,6 +991,126 @@
 		line-height: 1.5rem;
 	}
 }
+.documnet_upload {
+	.desc {
+		margin-bottom: 30px;
+		color: #000;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.select_company {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px dashed #999;
+	}
+	.selectbox {
+		margin-top: 30px;
+	}
+	.title {
+		margin-bottom: 10px;
+		color: #000;
+		font-weight: 900;
+		font-size: 1.375rem;
+	}
+	.upload_container {
+		margin-top: 30px;
+		> .group {
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+		}
+		.upload_item {
+			margin-bottom: 10px;
+			font-weight: 900;
+			font-size: 1rem;
+		}
+	}
+	.agree_container {
+		margin-top: 40px;
+		.chkwrap {
+			margin-right: 0;
+			label {
+				display: flex;
+				height: auto;
+				input[type="checkbox"]:before {
+					top: 0;
+				}
+				span {
+					color: #000;
+					font-weight: 600;
+					font-size: 1rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+		.msg_error {
+			margin: 10px 0 0 33px;
+			color: #E80710;
+			font-size: 1rem;
+		}
+	}
+}
+
+.upload_file {
+	> .group {
+		display: flex;
+	}
+	input[type="text"] {
+		width: calc(75.5% - 10px);
+	}
+	input[type="file"] + label {
+		width: 24.5%;
+		margin-left: 10px;
+		height: 50px;
+		background-color: #f4f4f4;
+		border: 1px solid #d9d9d9;
+		color: #000;
+		font-weight: 600;
+		text-align: center;
+		line-height: 48px;
+		@include FontHead;
+	}
+	.uploaded_file {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		.file {
+			color: #0559F7;
+			font-size: 1rem;
+		}
+		.delete {
+			position: relative;
+			width: 14px;
+			height: 14px;
+			margin-left: 6px;
+			background-color: #d8d8d8;
+			&:before,
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				background-color: #fff;
+			}
+			&:before {
+				width: 7.5px;
+				height: 1.5px;
+				@include transform(translate(-50%, -50%) rotate(45deg));
+			}
+			&:after {
+				width: 1.5px;
+				height: 7.5px;
+				@include transform(translate(-50%, -50%) rotate(45deg));
+			}
+		}
+	}
+	[class^="msg_"] {
+		margin-top: 10px;
+		font-size: 1rem;
+	}
+	.msg_error {color: #E80710;}
+}
 
 [class^="bullet_"]:not(ul):not(ol),
 [class^="bullet_"] > li {
