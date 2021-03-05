@@ -300,31 +300,31 @@
 		padding-bottom:60px;
 		border-bottom:3px solid #000;
 	}
-	.user_area {
-		display:flex;
-		align-items:center;
-		height:59px;
-		padding:0 78px;
-		border-bottom:1px solid #d9d9d9;
-		.user_name {
-			font-size:14px; // pc, mo 고정크기
-			@include FontHead;
-		}
-		.user_icon {
-			position:absolute;
-			top:-1px;
-			left:0;
-			width:60px;
-			height:60px;
-			background-color:#0559F7;
-			color:#fff;
-			@include FontHead;
-			font-size:24px; // pc, mo 고정크기
-			line-height: 2.5; // pc, mo 고정크기
-			font-weight:900;
-			text-align:center;
-			z-index:1;
-		}
+}
+.user_area {
+	display:flex;
+	align-items:center;
+	height:59px;
+	padding:0 78px;
+	border-bottom:1px solid #d9d9d9;
+	.user_name {
+		font-size:14px; // pc, mo 고정크기
+		@include FontHead;
+	}
+	.user_icon {
+		position:absolute;
+		top:-1px;
+		left:0;
+		width:60px;
+		height:60px;
+		background-color:#0559F7;
+		color:#fff;
+		@include FontHead;
+		font-size:24px; // pc, mo 고정크기
+		line-height: 2.5; // pc, mo 고정크기
+		font-weight:900;
+		text-align:center;
+		z-index:1;
 	}
 }
 .lnb_wrap {
