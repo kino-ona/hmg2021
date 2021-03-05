@@ -2,6 +2,8 @@
 	"pagetitle":"Layout | HYUNDAI",
 	"webroot":"."
 })
+
+<link rel="stylesheet" href="./assets/css/member.css">
 </head>
 <body> 
 	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
@@ -634,8 +636,13 @@ hlayerClose('팝업아이디')
 		<dl class="frm">
 			<dt><label for="frm14">Mix</label></dt>
 			<dd class="_mix">
-				<input type="text" id="frm14">
-				<button class="btn-type _default">button</button>
+				<div class="masking">
+					<input type="text" id="frm14" class="warn">
+					<i class="ic_error"></i>
+					<button class="btn-type _default">button</button>
+					<button class="btn_masking"><i class="ic_show"></i></button>
+				</div>
+				<p class="inp_txt warn">Error message.</p>
 			</dd>
 		</dl>
 		<dl class="frm">

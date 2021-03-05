@@ -708,7 +708,7 @@ a, button {
 	.warn + [class*='ic_']{
 		position:absolute;
 		right:20px;
-		top:22%;
+		top:16px;
 		z-index:1;
 	}
 	.inp_txt {
@@ -744,6 +744,20 @@ a, button {
 			input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not(:first-child),
 			select:not(:first-child) {
 				margin-left: 10px;
+			}
+			.warn + [class*='ic_']{
+				right:calc(20% + 20px);
+			}
+			.masking {
+				display: inherit;
+				width:100%;
+
+				.warn + [class*='ic_']{
+					right:calc(40% + 10px);
+				}
+				.btn_masking {
+					right:calc(40% + 10px);
+				}
 			}
 		}
 		&.length_limit {
