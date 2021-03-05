@@ -1,5 +1,5 @@
 @@include('../inc/pagehead.inc',{
-	"pagetitle":"Sign Up | HYUNDAI",
+	"pagetitle":"Edit Profile | HYUNDAI",
 	"webroot":".."
 })
 <link rel="stylesheet" href="../assets/css/member.css">
@@ -16,18 +16,53 @@
 
 		<!-- h-contents -->
 		<div id="h-contents" class="h-contents">
+			<!-- user area -->
+			<div class="user_area">
+				<span class="user_icon">M</span> <!-- user id의 맨 앞 영문 노출 -->
+				<p class="user_name">moon@hyundai.com</p>
+			</div>
+			<!--// user area -->
 
-			<div class="membership">
-				<!-- section member -->
-				<section class="member_wrap _large">
-					<div class="member_container">
+			<div class="mypage">
+				<!-- lnb -->
+				<nav class="lnb_wrap">
+					<h2>My page</h2>
+					<ul class="lnb">
+						<li>
+							<span class="depth1">My Click to Buy</span>
+							<ul class="depth2">
+								<li><a href="#">On Configuring</a></li>
+								<li><a href="#">My Quotations</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="depth1">My Garage</span>
+							<ul class="depth2">
+								<li><a href="#">My Vehicle</a></li>
+								<li><a href="#">Service History</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="depth1">My Account</span>
+							<ul class="depth2">
+								<li class="_active"><a href="#">My Profile</a></li> <!-- lnb menu 활성화 : _active -->
+								<li><a href="#">Change Password</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<!--// lnb-->
+
+				<!-- section mypage -->
+				<section class="mypage_wrap">
+					<div class="mypage_container">
 						<!-- title wrap -->
 						<div class="title_wrap">
-							<h3 class="content_title">Sign Up</h3>
+							<h3 class="content_title">Edit Profile</h3>
 							<p class="req_txt">Required Fields <span class="required"><span class="a11y">required</span></span></p>
 						</div>
 						<!--// title wrap -->
-						<!-- member contents -->
+						<!-- mypage contents -->
 						<div class="content_wrap">
 							<div class="frm_field">
 								<dl class="frm">
@@ -58,43 +93,14 @@
 		
 							<div class="frm_field">
 								<dl class="frm">
-									<dt><label for="IdEmail">ID (Email) <span class="required"><span class="a11y">required</span></span></label></dt>
-									<dd class="_mix _fix">
-										<input type="text" id="IdEmail" class="warn" placeholder="e.g. abc@hyundai.com"><i class="ic_error"></i> <!-- Error Case -->
-										<button class="btn_check">Check Availability</button>
-										<p class="inp_txt warn">There is already an account. Please log in or find password.</p> <!-- Alert Message -->
-									</dd>
-									<dd class="noti_txt">
-										<p>Please enter a valid email address. To activate your account, you must complete the email verification process.</p>
-										<p>Please enter ID and click &lsquo;Check Availability button&rsquo;.</p>
+									<dt><label for="IdEmail">ID (Email)</label></dt>
+									<dd>
+										<input type="text" id="IdEmail" placeholder="e.g. abc@hyundai.com" value="abc@hyundai.com" readonly>
 									</dd>
 								</dl>
 							</div>
 		
 							<div class="frm_field field_half">
-								<dl class="frm">
-									<dt><label for="Password">Password <span class="required"><span class="a11y">required</span></span></label></dt>
-									<dd>
-										<!-- password masking-->
-										<div class="masking">
-											<input type="password" id="Password" class="warn" placeholder="Enter 8 + characters with a letter and a number"><i class="ic_error"></i> <!-- Error Case -->
-											<button class="btn_masking"><i class="ic_show"></i></button>
-										</div>
-										<!--// password masking-->
-										<p class="inp_txt warn">Please enter a password of at least 7 characters, including letters, numbers, and special symbols.</p> <!-- Alert Message -->
-									</dd>
-								</dl>
-								<dl class="frm">
-									<dt><label for="ConfirmPassword">Confirm Password <span class="required"><span class="a11y">required</span></span></label></dt>
-									<dd>
-										<!-- password masking -->
-										<div class="masking">
-											<input type="password" id="ConfirmPassword" placeholder="Enter password again">
-											<button class="btn_masking"><i class="ic_show"></i></button>
-										</div>
-										<!--// password masking -->
-									</dd>
-								</dl>
 								<dl class="frm">
 									<dt><label for="MobilePhone">Mobile Phone <span class="required"><span class="a11y">required</span></span></label></dt>
 									<dd>
@@ -142,25 +148,19 @@
 								</dl>
 							</div>
 						</div>
-						<!--// member contents -->
-						<div class="chk_terms">
-							<p class="chkwrap"><label><input type="checkbox"><span>I wish to receive communication on Hyundai products & services.</span></label></p>
-							<p class="chkwrap"><label><input type="checkbox"><span>I accept the Terms &amp; Conditions and Privacy Policy.</span></label></p>
+						<!--// mypage contents -->
+						<div class="btn-type_wrap">
+							<button class="btn-type _cancel">Cancel</button>
+							<button class="btn-type _default">Save</button>
 						</div>
 						<div class="btn-type_wrap">
-							<a href="#" class="btn-type _default">Sign Up</a>
-						</div>
-						<div class="sns_wrap">
-							<p class="txt">Connect to your SNS account</p>
-							<div class="sns">
-								<a href="#" class="ic_sns _tw"><span class="a11y">twitter</span></a>
-								<a href="#" class="ic_sns _fb"><span class="a11y">facebook</span></a>
-							</div>
+							<a href="#" class="btn-type _link">Membership withdrawal</a>
 						</div>
 					</div>
 				</section>
 			</div>
-			<!--// section member -->
+			<!--// section mypage -->
+
 		</div>
 		<!--// h-contents -->
 
