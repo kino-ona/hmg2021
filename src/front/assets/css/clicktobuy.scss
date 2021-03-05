@@ -170,6 +170,7 @@
 			height:50px;
 			padding: 0 0 0 31px;
 			color:#999;
+			font-weight: normal;
 			font-size:0.875rem;
 			line-height:50px;
 			@include FontHead;
@@ -365,6 +366,21 @@
 			@extend %clearer;
 		}
 	}
+	&._concierge {
+		.option_thumnail {
+			&[aria-selected="true"] {
+				padding: 0;
+				box-shadow: none;
+				@include scale(1);
+				&:before {
+					left: 0;
+				}
+				&:after {
+					left: 11px;
+				}
+			}
+		}
+	}
 }
 .option_thumnail {
 	float: left;
@@ -372,7 +388,6 @@
 	margin: 32px 0 0 32px;
 	position: relative;
 	cursor: pointer;
-	@include transition(.5s, ease);
 	&:before,
 	&:after {
 		content: '';
@@ -388,23 +403,34 @@
 		border: 1px solid #d9d9d9;
 	}
 	&:after {
-		left: 10px;
-		top: 7px;
-		width: 10px;
-		height: 10px;
+		left: 11px;
+		top: 9px;
+		width: 7px;
+		height: 7px;
 		border-left: 3px solid #d9d9d9;
 		border-top: 3px solid #d9d9d9;
 		@include rotate(225);
 	}
 	&[aria-selected="true"] {
+		padding: 0 15px 20px;
 		box-shadow:12px 8px 40px rgba(0,0,0,.16);
-		@include scale(1.05);
+		@include scale(1.12);
 		&:before {
+			left: 15px;
 			background-color: #FF8D34;
 			border-color: #FF8D34;
 		}
 		&:after {
+			left: 26px;
 			border-color: #fff;
+		}
+		.option_bottom {
+			.option_price {
+				color: #EA9000;
+			}
+			.ic_info {
+				background-image: url(../images/ico/icon_info-select.png);
+			}
 		}
 	}
 	.option_head {
@@ -415,12 +441,14 @@
 		}
 	}
 	.option_body {
-		padding: 13px 10px 0;
+		padding: 13px 5px 0;
 		.option_seller {
+			display: block;
 			color: #000;
 			font-weight: 600;
 			font-size: 1.125rem;
 			line-height: 1.625rem;
+			@include ellipse(1);
 		}
 		.option_desc {
 			margin-top: 11px;
@@ -433,7 +461,8 @@
 	.option_bottom {
 		display: flex;
 		justify-content: space-between;
-		padding: 11px 10px 0;
+		align-items: center;
+		padding: 11px 5px 0;
 		.option_price {
 			color: #000;
 			font-weight: 600;
@@ -567,10 +596,10 @@
 			border: 1px solid #d9d9d9;
 		}
 		&[role="checkbox"]:after {
-			left: 9px;
-			top: 6px;
-			width: 10px;
-			height: 10px;
+			left: 11px;
+			top: 9px;
+			width: 7px;
+			height: 7px;
 			border-left: 3px solid #d9d9d9;
 			border-top: 3px solid #d9d9d9;
 			@include rotate(225);
@@ -631,7 +660,7 @@
 				em {
 					margin-left: 11px;
 					color: #FF8D34;
-					font-weight: 600;
+					font-weight: 900;
 				}
 			}
 			.msg_info {
@@ -945,7 +974,7 @@
 				font-weight: 600;
 				@include FontHead;
 			}
-			.alliped_coupon {
+			.applied_coupon {
 				width: 100%;
 				margin-top: 10px;
 				color: #000;

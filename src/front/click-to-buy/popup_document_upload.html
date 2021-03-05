@@ -335,7 +335,7 @@
 												<em class="day">31-Oct-19</em>
 											</div>
 											<div class="event_button">
-												<button type="button" class="btn_applied">Upload Documents</button>
+												<button type="button" class="btn_applied" onclick="hlayerOpen('DocumnetUpload')">Upload Documents</button>
 		 									</div>
 										</div>
 									</article>
@@ -365,7 +365,7 @@
 												<em class="event_title">Trade–in Estimation</em>
 											</div>
 											<div class="event_button">
-												<button type="button" class="btn_applied">Add Estimation</button>
+												<button type="button" class="btn_applied" onclick="hlayerOpen('TradeIn')">Add Estimation</button>
 											</div>
 										</div>
 									</article>
@@ -492,45 +492,26 @@
 		})
 		<!-- //footer -->
 
-		<div class="h-layer_body popup edit_coupon" id="CouponRegistration" aria-hidden="true" role="dialog">
-			<div class="h-layer_wrap">
+		<div class="h-layer_body popup upload_documnet" id="DocumnetUpload" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap _wide">
 				<div class="h-layer_head">
-					<h2 class="h-layer_title">Coupon Registration</h2>
-					<button onclick="hlayerClose('CouponRegistration')" class="h-layer_close">close</button>
+					<h2 class="h-layer_title">Document Upload</h2>
+					<button onclick="hlayerClose('DocumnetUpload')" class="h-layer_close">close</button>
 				</div>
 				<div class="h-layer_cont">
-					<p class="desc">Please enter the discount coupon code issued.</p>
-					<div class="tab_wrap" id="PurchasingTab">
-						<ul class="radio_tablist _type02" role="radio_tablist">
-							<li><p class="radiowrap" aria-selected="true"><label><input type="radio" name="tabradio2" checked>Enter Coupon Code</label></p></li>
-							<li><p class="radiowrap" aria-selected="false"><label><input type="radio" name="tabradio2">Protected Trade-in Scheduled</label></p></li>
-						</ul>
-						<div class="radio-tab_contents">
-							<section class="tab_panel" aria-hidden="false" role="tabpanel">
-								<div class="frm_field">
-									<div class="frm">
-										<dt class="a11y"><label for="CouponCode">Coupon Code </label></dt>
-										<dd class="_mix">
-											<input type="text" id="CouponCode" placeholder="Insert Coupon Code">
-											<button class="btn-type btn_check">Check</button>
-											<p class="applied_coupon">Coupon: October Special Promotion (Discount <span class="highlight">₹10,000</span>)</p>
-											<p class="inp_txt warn">The coupon code is incorrect.</p>
-										</dd>
-									</dl>
-								</div>
-							</section>
-							<section class="tab_panel" aria-hidden="true">
-								<p class="msg_info">If you have traded in your car after the new car purchase, please tell your Sales Consultant the coupon code you received and we will deposit the discount amount into your bank account.</p>
-							</section>
-						</div>
-					</div>
 					<div class="btn-type_wrap">
-						<button onclick="Cancel('CouponRegistration')" class="btn-type _cancel">Cancel</button>
-						<button onclick="hlayerClose('CouponRegistration')" class="btn-type _default">Apply</button>
+						<button onclick="hlayerClose('DocumnetUpload')" class="btn-type _cancel">Cancel</button>
+						<button onclick="hlayerClose('DocumnetUpload')" class="btn-type _default">Apply</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<script>
+			$(document).ready(function(){
+				actvTabList('tabcase02', 1);
+			});
+		</script>
 	</div>
 </body>
 </html>
