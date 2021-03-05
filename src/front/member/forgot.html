@@ -1,0 +1,72 @@
+@@include('../inc/pagehead.inc',{
+	"pagetitle":"Forgot ID | HYUNDAI",
+	"webroot":".."
+})
+<link rel="stylesheet" href="../assets/css/member.css">
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
+
+	<div class="h-wrap">
+		<!-- header -->
+		@@include('../inc/header.inc',{
+			"webroot":".."
+		})
+		<!-- //header -->
+
+		<!-- h-contents -->
+		<div id="h-contents" class="h-contents">
+
+			<div class="membership">
+
+				<!-- section member -->
+				<section class="member_wrap">
+
+					<!-- title wrap -->
+					<div class="title_wrap">
+						<h2 class="content_title">Forgot ID</h2>
+						<p class="req_txt">Required Fields <span class="required"><span class="a11y">required</span></span></p>
+					</div>
+					<!--// title wrap -->
+
+					<!-- member container -->
+					<div class="member_container">
+						<div class="frm_field">
+							<dl class="frm">
+								<dt><label for="Mobile">Mobile Number <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd>
+									<input type="text" id="Mobile" placeholder="Mobile Number">
+									<p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
+								</dd>
+							</dl>
+							<dl class="frm">
+								<dt><label for="OTP">Enter OTP <span class="required"><span class="a11y">required</span></span></label></dt>
+								<dd class="_mix _fix input-timer">
+									<input type="text" id="OTP" placeholder="Enter OTP"><span class="clock">4:59</span>
+									<button class="btn_check">Resend OTP</button>
+									<p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<!--// member container -->
+
+					<div class="btn-type_wrap">
+						<a href="#" class="btn-type _default">Submit</a>
+					</div>
+
+				</section>
+			</div>
+			<!--// section member -->
+
+		</div>
+		<!--// h-contents -->
+
+		<!-- footer -->
+		@@include('../inc/footer.inc',{
+			"webroot":".."
+		})
+		<!-- //footer -->
+	</div>
+</body>
+</html>
