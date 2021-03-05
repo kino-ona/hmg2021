@@ -1,10 +1,18 @@
 node_modules
-dist/hmg/path
+dist/hmg/path/
+dist/hmg/front/*/*.html
+dist/hmg/front/*.html
 dist/hmg/front/assets/css
 dist/hmg/front/assets/js
 dist/hmg/front/assets/fonts
-dist/hmg/front/*/*.html
-dist/hmg/front/*.html
 dist/hmg/front/click-to-buy/select_trims.html
 dist/hmg/front/click-to-buy/select_vehicle.html
-dist/hmg/path.html
+.DS_Store
+DATA/Hyundai_CTB_Guide_PC.xd
+DATA/Hyundai_Motors_CTB_Share.xd
+HMG_setting/node-v10.16.0-x64.msi
+HMG_setting/설치순서.txt
+DATA/WireFrame_CTB_ 회원인증관련_210201_Oscar.pptx
+DATA/WireFrame_CTB_완전판매_210216_Kris_1.pptx
+dist/hmg/front/assets/fonts.zip
+DATA/UI_List(Front)_온라인판매타입_20210218.xlsx

@@ -376,6 +376,7 @@ a, button {
 		line-height: 64px;
 		font-size:1.375rem;
 		font-weight: 600;
+		@include FontHead();
 		&._default {
 			background-color: #0E306C;
 			color:#fff;
@@ -691,13 +692,10 @@ a, button {
 	&:after {
 		@extend %clearer;
 	}
-	@include FontText();
 	dt {
 		font-weight: 900;
-		@include FontText();
 		label {
 			font-weight: inherit;
-			@include FontText();
 		}
 	}
 	dd {
