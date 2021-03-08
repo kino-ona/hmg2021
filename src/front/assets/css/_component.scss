@@ -7,98 +7,79 @@
 	display: inline-block;
 	min-height:30px;
 	margin-right:40px;
-	label {
-		height:30px;
-		line-height: 30px;
-		cursor: pointer;
-		font-size:1.125rem;
-		input[type=checkbox] {
-			position: relative;
-			margin-right:20px;
-			&:before {
-				content: '';
-				position: absolute;
-				left:0;
-				top:-5px;
-				display: block;
-				width:20px;
-				height:20px;
-				background: {
-					image: url('../images/common/btn_check.png');
-					repeat: no-repeat;
-					size:20px;
-					position: left center;
-				}
-			}
-			vertical-align: middle;
+  input[type=checkbox] {
+    display:none;
+    & + label {
+      display: inline-block;
+			position:relative;
+			height:30px;
+			line-height: 30px;
+			padding-left: 30px;
+			cursor: pointer;
+			font-size:1.125rem;
+      background: {
+				image: url('../images/common/btn_check.png');
+				repeat: no-repeat;
+				size:20px;
+				position: left center;
+      }
+      vertical-align: middle;
 			+ span {
 				color:inherit;
 				font-size: inherit;
 			}
-			&:checked{
-				&:before {
-					background-image: url('../images/common/btn_check-on.png');
-				}
-			}
-			&:disabled{
-				&:before {
-					background-image: url('../images/common/btn_check-disable.png');
-				}
-				+ span {
-					color:#999999;
-				}
+    }
+    &:checked + label {
+      background-image: url('../images/common/btn_check-on.png');
+    }
+		&:disabled + label {
+			color:#999999;
+      background-image: url('../images/common/btn_check-disable.png');
+			span {
+				color:#999999;
 			}
 		}
-	}
+  }
 }
 .radiowrap {
 	display: inline-block;
 	min-height:30px;
 	margin-right:40px;
-	label {
-		height:30px;
-		line-height: 30px;
-		cursor: pointer;
-		font-size:1.125rem;
-		input[type=radio] {
-			position: relative;
-			margin-right:20px;
-			&:before {
-				content: '';
-				position: absolute;
-				left:0;
-				top:-5px;
-				display: block;
-				width:20px;
-				height:20px;
-				background: {
-					image: url('../images/common/btn_radio.png');
-					repeat: no-repeat;
-					size:20px;
-					position: left center;
-				}
-			}
-			vertical-align: middle;
+  input[type=radio] {
+    display:none;
+    & + label {
+      display: inline-block;
+			position:relative;
+			// height:30px;
+			// line-height: 30px;
+			padding: 5px 0 5px 30px;
+			cursor: pointer;
+			font-size:1.125rem;
+      background: {
+				image: url('../images/common/btn_radio.png');
+				repeat: no-repeat;
+				size:20px;
+				position: left center;
+      }
+      vertical-align: middle;
 			+ span {
 				color:inherit;
 				font-size: inherit;
 			}
-			&:checked{
-				&:before {
-					background-image: url('../images/common/btn_radio-on.png');
-				}
-			}
-			&:disabled{
-				&:before {
-					background-image: url('../images/common/btn_radio-disable.png');
-				}
-				+ span {
-					color:#999999;
-				}
+    }
+    &:checked + label {
+      background-image: url('../images/common/btn_radio-on.png');
+    }
+		&:disabled + label {
+			color:#999999;
+			background-image: url('../images/common/btn_radio-disable.png');
+			span {
+				color:#999999;
 			}
 		}
-	}
+  }
 }
+
 
 /** tab **/
 .tablist {
@@ -194,33 +175,27 @@
 			label {
 				color: #0559F7;
 				font-weight: 600;
+				span {
+					font-size:1rem;
+				}
 			}
 		}
 		input[type=radio] {
 			margin-right:30px;
-			font-size:1.571rem;
 			color:#999999;
-			&:before {
-				left:-2px;
-				top:-9px;
-				width:30px;
-				height:30px;
+			& + label {
+				display: inline-block;
+				width:100%;
+				height:78px;
+				line-height:78px;
+				padding:0 0 0 40px;
+				font-family: 'HyundaiSansText';
+				font-size:1.571rem;
+				color:#999999;
 				background-size:30px;
-			}
-			& + span {
-				font-size:1rem;
-			}
-		}
-		label {
-			display: inline-block;
-			width:100%;
-			height:78px;
-			line-height:78px;
-			font-family: 'HyundaiSansText';
-			font-size:1.571rem;
-			color:#999999;
-			span {
-				font-size:1rem;
+				span {
+					font-size:1rem;
+				}
 			}
 		}
 	}
@@ -236,21 +211,17 @@
 			min-height:inherit;
 			border:none;
 			background-color: transparent;
-			label {
-				height:inherit;
-				line-height:inherit;
-				font-size:1rem;
-				font-weight: normal;
-				color:#000000
-			}
+			
 			input[type=radio] {
 				margin-right:15px;
-				&:before {
-					left:-4px;
-					top:-5px;
-					width:20px;
-					height:20px;
-					background-size:cover;
+				+ label {
+					padding:5px 0 5px 30px;
+					height:inherit;
+					line-height:inherit;
+					font-size:1rem;
+					font-weight: normal;
+					color:#000000;
+					background-size:20px;
 				}
 			}
 			&[aria-selected="true"] {
@@ -642,7 +613,6 @@ a, button {
 			flex: 1;
 			margin-right:10px;
 			font-size: 1.375rem;
-			font-weight: 900;
 			line-height: 67px;
 			&:last-child {
 				margin-right:0;

@@ -169,7 +169,7 @@ var radioTanfnc = function(){
 	
 		$(this).find('li').each(function(){
 			$(this).find("input[type='radio']").click(function(){
-				$(this).parents().find(".radio_tablist p").attr('aria-selected', false)
+				$(this).parents('.tab_wrap').find(".radio_tablist p").attr('aria-selected', false)
 				if(!$(this).parents('.radiowrap').attr('aria-selected', true)) {
 					$(this).parents('.radiowrap').attr('aria-selected', true)
 				}
