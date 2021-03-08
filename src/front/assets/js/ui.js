@@ -157,8 +157,14 @@ var actvTabList = function(tabid, actNum){
 	basicTabs.activate(actNum);
 }
 $('.tab_wrap').each(function(){  // default
+	var tabIdx = $(this).attr('id');
+
 	if(!$(this).hasClass('manualfn')){
-		var basicTabs = new Tabs($(this));
+		var basicTabs = new Tabs('#' + tabIdx);
+	}	
+	if($(this).hasClass('_subtab')){
+		var basicTabs = new Tabs('#' + tabIdx);
+		basicTabs.destroy();
 	}	
 });
 
