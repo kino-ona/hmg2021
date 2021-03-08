@@ -293,16 +293,42 @@
 				<div class="stage_wrap">
 					<div class="build_container">
 						<div class="content_wrap">
-							<div class="tab_wrap" id="tabcase01">
-								<ul class="tablist tab_line" role="tablist" aria-label="select option">
-									<li><button class="tab">Option</button></li>
-									<li><button class="tab">Accessories</button></li>
-								</ul>
-								<div class="tab_contents">
-									<section class="tab_panel" role="tabpanel">
-									</section>
+							<div class="buy_options">
+								<div class="tab_wrap" id="ComponentTab">
+									<ul class="tablist _line" role="tablist">
+										<li><button class="tab">Option</button></li>
+										<li><button class="tab">Accessories</button></li>
+									</ul>
+									<div class="tab_contents">
+										<section class="tab_panel">
+											<div class="options_controls">
+												<p class="selected_sum">
+													<em class="currunt">3</em>
+													<span>Items are Selected</span>
+												</p>
+												<button type="button" class="btn_clear">
+													<i class="ic_refresh"></i>
+													<span>Clear All</span>
+												</button>
+											</div>
+											<div class="tab_wrap manualfn" id="DetailTab">
+												<ul class="tablist" role="tablist">
+													<li><button class="tab">All <span class="current">(45)</span></button></li>
+													<li><button class="tab">Package <span class="current">(4)</span></button></li>
+													<li><button class="tab">Exterior <span class="current">(8)</span></button></li>
+													<li><button class="tab">Inaterior <span class="current">(11)</span></button></li>
+													<li><button class="tab">Convenience <span class="current">(16)</span></button></li>
+													<li><button class="tab">Safety <span class="current">(10)</span></button></li>
+												</ul>
+												<div class="tab_contents">
+													<section class="tab_panel">
+													</section>
+												</div>
+											</div>
+										</section>
+									</div>
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
 				</div>
@@ -333,6 +359,12 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+		<!-- <script>
+			$(document).ready(function(){
+				actvTabList('ComponentTab', 0);
+				actvTabList('DetailTab', 0);
+			});
+		</script> -->
 	</div>
 
 </body>

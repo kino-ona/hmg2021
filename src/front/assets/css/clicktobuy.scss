@@ -197,9 +197,6 @@
 	.content_wrap {
 		max-width: 1200px;
 		margin: 0 auto;
-		> .tab_wrap {
-			text-align: center;
-		}
 		> .group {
 			padding-bottom: 114px;
 		}
@@ -355,6 +352,46 @@
 					border-color: #00AF87;
 					color: #00AF87;
 				}
+			}
+		}
+	}
+}
+.buy_options {
+	.tab_wrap {
+		.tablist._line {
+			text-align: center;
+			> li {
+				width: 180px;
+			}
+			button {
+				width: 100%;
+			}
+		}
+	}
+	.options_controls {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 40px 0 15px;
+		.selected_sum {
+			line-height: 1.125rem;
+			.currunt,
+			span {
+				font-size: inherit;
+			}
+			.currunt {
+				font-weight: 600;
+			}
+			span {
+				color: #999;
+			}
+		}
+		.btn_clear {
+			display: flex;
+			align-items: center;
+			margin-left: 40px;
+			span {
+				line-height: 1.5rem;
 			}
 		}
 	}
