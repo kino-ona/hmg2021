@@ -1,0 +1,342 @@
+@@include('./inc/pagehead.inc',{
+	"pagetitle":"Click to buy | HYUNDAI",
+	"webroot":"."
+})
+
+<script src="./assets/js/swiper.min.js"></script>
+<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
+
+	<div class="h-wrap">
+		<!-- header -->
+		@@include('./inc/header.inc',{
+			"webroot":""
+		})
+		<!-- //header -->
+
+		<!-- h-contents -->
+		<div id="h-contents" class="h-contents">
+			<div class="main_ctb">
+				<!-- key visual -->
+				<section class="section keyvisual">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="desc">
+									<div>
+										<em>Welcome Click to Buy</em>
+										<p>Buy your favorite Hyundai online.<br> Simply choose a model to start creating Hyundai  that’s right for you. Simply choose a model to start creating Hyundai  that’s right for you.</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="desc">
+									<div>
+										<em>Welcome Click to Buy</em>
+										<p>Buy your favorite Hyundai online.<br>Simply choose a model to start creating Hyundai  that’s right for you.</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="desc">
+									<div>
+										<em>Welcome Click to Buy</em>
+										<p>Buy your favorite Hyundai online.<br>Simply choose a model to start creating Hyundai  that’s right for you.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</section>
+				<!--// key visual -->
+				<!-- 1. Find a nearby dealer! -->
+				<section class="section nearby">
+					<div class="inner_wrap">
+						<div class="tit_wrap">
+							<h2 class="tit">1. Find a nearby dealer!</h2>
+							<p class="desc">About 300 of dealers are standing by your new car, check them and make a fine deal.</p>
+						</div>
+						<!-- search box -->
+						<div class="search_box">
+							<div class="util_wrap">
+								<button class="location"><i class="ic_loca"></i>Use Your Loaction Infomation</button>
+							</div>
+							<div class="frm_field">
+								<dl class="frm">
+									<dt><label for="Province">Province</label></dt>
+									<dd>
+										<select id="Province">
+											<option>all</option>
+										</select>
+									</dd>
+								</dl>
+								<dl class="frm">
+									<dt><label for="City">City</label></dt>
+									<dd>
+										<select id="City">
+											<option>all</option>
+										</select>
+									</dd>
+								</dl>
+								<dl class="frm">
+									<dt><label for="District">District</label></dt>
+									<dd>
+										<select id="District">
+											<option>all</option>
+										</select>
+									</dd>
+								</dl>
+							</div>
+							<div class="btn-type_wrap">
+								<button class="btn-type _default">Search</button>
+							</div>
+						</div>
+						<!--// search box -->
+						<!-- result box --> <!-- search box의 search 버튼 클릭 후 노출 -->
+						<div class="result_box">
+							<div class="util_wrap">
+								<button class="change"><i class="ic_loca"></i>Dealer Change</button>
+							</div>
+							<article class="dealer_info">
+								<div class="dealer_summary">
+									<h3>HYUNDAI Cirebon</h3>
+									<p>Near by <span>7.40</span> km</p>
+								</div>
+								<ul class="dealer_details">
+									<li><i class="ic_loca"></i>Jl. Brigjen Dharsono No.8, Kota Cirebon, Jawa Barat 45131</li>
+									<li><i class="ic_loca"></i>(0231) 231 030</li>
+									<li><i class="ic_loca"></i>cs@hyundai.com</li>
+								</ul>
+							</article>
+						</div>
+						<!--// result box -->
+					</div>
+				</section>
+				<!--// 1. Find a nearby dealer! -->
+				<!-- 2. Vehicles to build -->
+				<section class="section vehicles">
+					<div class="tit_wrap">
+						<h2 class="tit">2. Vehicles to build</h2>
+						<button class="btn_search"><i class="ic_search"></i>Find My Car?</button>
+					</div>
+					<!-- tab -->
+					<div class="tab_wrap" id="vehiclestab">
+						<p class="cnt"><em>5</em> Items available</p>
+						<ul class="tablist" role="tablist">
+							<li><button class="tab">All</button></li>
+							<li><button class="tab">SUV</button></li>
+							<li><button class="tab">Hatchback</button></li>
+							<li><button class="tab">Electric</button></li>
+							<li><button class="tab">Sedan</button></li>
+						</ul>
+						<div class="tab_contents">
+							<section class="tab_panel">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<article class="product" role="radio" aria-selected="true">
+													<div class="product_head">
+														<span class="product_tag new">new</span>
+														<span class="product_tag popular">Popular</span>
+														<span class="product_flag promotion">Promotion</span>
+													</div>
+													<figure class="product_img">
+														<img src="../assets/images/dummy/@dummy.png" alt="">
+													</figure>
+													<div class="product_name">
+														<h3>
+															VENUE
+															<span>Urban Compact SUV</span>
+														</h3>
+														<a href="#" class="product_more">more</a>
+													</div>
+													<div class="product_price">
+														<div class="group">
+															<span>Co2</span>
+															<em>116g/km</em>
+														</div>
+														<div class="group">
+															<span>Starting at</span>
+															<em>USD 18,750</em>
+														</div>
+													</div>
+													<div class="product_bottom">
+														<a href="#" class="btn-type _line">BUILD</a>
+													</div>
+												</article>
+											</div>
+											<div class="swiper-slide">
+												222222
+											</div>
+											<div class="swiper-slide">
+												3333333
+											</div>
+											<div class="swiper-slide">
+												44444444
+											</div>
+											<div class="swiper-slide">
+												5555555555
+											</div>
+											<div class="swiper-slide">
+												666666666
+											</div>
+											<div class="swiper-slide">
+												777777777
+											</div>
+											<div class="swiper-slide">
+												88888888
+											</div>
+											<div class="swiper-slide">
+												99999999
+											</div>
+											<div class="swiper-slide">
+												10101010101010
+											</div>
+									</div>
+									<div class="swiper-pagination"></div>
+							</div>
+							</section>
+							<section class="tab_panel">
+								SUV
+							</section>
+							<section class="tab_panel">
+								Hatchback
+							</section>
+							<section class="tab_panel">
+								Electric
+							</section>
+							<section class="tab_panel">
+								Sedan
+							</section>
+						</div>
+					</div>
+					<!--// tab -->
+				</section>
+				<!--// 2. Vehicles to build -->
+				<!-- 3. Select Trims & color -->
+				<section class="section trim_color">
+					<div class="tit_wrap">
+						<h2 class="tit">3. Select Trims & color</h2>
+						<button class="btn_compare"><i class="ic_compare"></i>Compare Trims</button>
+					</div>
+				</section>
+				<!--// 3. Select Trims & color -->
+				<!-- 4. Select Option & Accessories -->
+				<section class="section opt_acc">
+					<div class="inner_wrap">
+						<div class="tit_wrap">
+							<h2 class="tit">4. Select Option & Accessories</h2>
+							<button class="btn_check"><i class="ic_check"></i>Check What you Choose</button>
+						</div>
+						<div class="tab_wrap"  id="selecttab">
+							<ul class="tablist _line" role="tablist">
+								<li><button class="tab">Option</button></li>
+								<li><button class="tab">Accessories</button></li>
+							</ul>
+							<div class="tab_contents">
+								<section class="tab_panel">
+									<!-- tab -->
+									<div class="tab_wrap" id="optiontab">
+										<div class="util_wrap">
+											<p class="cnt"><em>5</em> Items available</p>
+											<div>
+												<p class="cnt"><em>3</em> Items are selected</p>
+												<button><i class="ic_refresh"></i>Clear All</button>
+											</div>
+										</div>
+										<ul class="tablist" role="tablist">
+											<li><button class="tab">All <span>(45)</span></button></li>
+											<li><button class="tab">SUV <span>(45)</span></button></li>
+											<li><button class="tab">Hatchback <span>(45)</span></button></li>
+											<li><button class="tab">Electric <span>(45)</span></button></li>
+											<li><button class="tab">Sedan <span>(45)</span></button></li>
+										</ul>
+										<div class="tab_contents">
+											<section class="tab_panel">
+												<div class="swiper-container">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+													</div>
+													<div class="swiper-pagination"></div>
+											</div>
+											</section>
+											<section class="tab_panel">
+												SUV
+											</section>
+											<section class="tab_panel">
+												Hatchback
+											</section>
+											<section class="tab_panel">
+												Electric
+											</section>
+											<section class="tab_panel">
+												Sedan
+											</section>
+										</div>
+									</div>
+									<!--// tab -->
+								</section>
+								<section class="tab_panel">
+								</section>
+							</div>
+						</div>	
+					</div>
+				</section>
+				<!--// 4. Select Option & Accessories -->
+			</div>
+		</div>
+		<!--// h-contents -->
+
+		<!-- footer -->
+		@@include('./inc/footer.inc',{
+			"webroot":"."
+		})
+		<!-- //footer -->
+	</div>
+
+  <script>
+    var keySwiper = new Swiper('.keyvisual .swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+
+		var buildSwiper = new Swiper('.vehicles .swiper-container', {
+				slidesPerView: 5,
+				slidesPerGroup: 5,
+				watchOverflow: true,
+				allowTouchMove: true,
+				simulateTouch: true,
+				pagination: {
+						el: '.swiper-pagination',
+						clickable: true
+				},
+				breakpoints: {
+					1240: {
+							slidesPerView: 2,
+							slidesPerGroup: 2,
+							spaceBetween: 8
+					}
+				}
+			});
+  </script>
+
+</body>
+</html>
