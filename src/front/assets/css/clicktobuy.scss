@@ -747,6 +747,132 @@
 		}
 	}
 }
+.complete {
+	height: 100%;
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.car,
+	.estimate {
+		float: left;
+		width: 50%;
+	}
+	.car {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		width:50%;
+		height: 100%;
+		background: #f4f4f4;
+		.car_img {
+			position: relative;
+			left: 8.7%;
+			width: 100%;
+			img {
+				align-self: center;
+				margin: 0;
+			}
+		}
+		.info_container {
+			margin-top: 15px;
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			> .group {
+				float: left;
+				&:not(:first-child) {
+					margin-left: 67px;
+				}
+			}
+			dt {
+				color: #999;
+				font-size: .875rem;
+			}
+			dd {
+				margin-top: 6px;
+				color: #000;
+				font-weight: 900;
+				font-size: 1.625rem;
+			}
+			.car_number {
+				color: #FF9934;
+			}
+		}
+	}
+	.estimate {
+		overflow-y: auto;
+		max-height: 100%;
+		padding: 120px 10% 0;
+		.estimate_head {
+			position: relative;
+			padding-top: 90px;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 90px;
+				height: 90px;
+				background: {
+					image: url(../images/ico/icon_car.png);
+					repeat: no-repeat;
+					position: 0 0;
+					size: cover;
+				};
+			}
+			.title {
+				font-weight: 900;
+				font-size: 3.4375rem;
+				@include FontHead;
+			}
+			.desc {
+				margin-top: 10px;
+				color: #000;
+				line-height: 1.5rem;
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			height: 120px;
+		}
+		.estimate_body {
+			margin-top: 40px;
+			border-top: 3px solid #000;
+		}
+		.estimate_list {
+			> li {
+				padding-top: 40px;
+				&:not(:first-child) {
+					margin-top: 40px;
+					border-top: 1px dashed #999;
+				}
+			}
+			.parts {
+				font-weight: 900;
+				font-size: 1.625rem;
+			}
+			.detail {
+				margin-top: 15px;
+				> .group {
+					display: flex;
+					justify-content: space-between;
+					line-height: 1.5625rem;
+				}
+				span:last-child {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
 .fixed_bottom {
 	display: flex;
 	.result {
