@@ -309,4 +309,15 @@ var mypageLnb= function(){
 			}
 		});
 	});
+
+	$window
+	.on('resize',function(){    //WINDOW RESIZE
+		if(winW > 1024) {
+			mypageLnbReset();
+		}
+	});
+}
+var mypageLnbReset= function(){
+	$('.lnb_wrap').removeClass('_active');
+	$('.dim').remove();
 }

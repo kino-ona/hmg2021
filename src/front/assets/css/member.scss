@@ -42,17 +42,10 @@
 		}
 	}
 	.tab_wrap {
-		.txt {
-			margin-bottom: 20px;
-			// font-size: 1rem;
-			// line-height: 1.5rem;
-			.tit {
-				margin: 40px 0 10px;
-				display: block;
-				// font-size: inherit;
-				font-weight: 900;
-				// line-height: inherit;
-			}
+		.tit {
+			margin: 40px 0 20px;
+			display: block;
+			font-weight: 900;
 		}
 		.radio_tablist {
 			margin-bottom: 40px;
@@ -115,24 +108,17 @@
 			input {
 				width: 75%;
 				min-width:calc(100% - 140px);
-				position: inherit;
+				padding-right: 60px;
 			}
 			.clock {
 				z-index: 2;
 				display: inline-block;
 				position: absolute;
-				// right: calc(25% + 20px); 
-				right: calc(25% + 1px);
-				// top: 16px;
-				top: 1px;
+				right: calc(25% + 20px);
+				top: 16px;
 				color: #0559F7;
 				font-size: 1rem;
 				font-weight: 900;
-				height: 48px;
-				background-color: #fff;
-				padding-right: 19px;
-				padding-top: 16px;
-				padding-left: 10px;
 			}
 			button {
 				width: 23.214%; //130px;
@@ -313,6 +299,7 @@
 	height:59px;
 	padding:0 78px;
 	border-bottom:1px solid #d9d9d9;
+	background-color: #F4F4F4;
 	.user_name {
 		font-size:14px; // pc, mo 고정크기
 		@include FontHead;
@@ -337,11 +324,15 @@
 	width:301px;
 	padding:56px 60px 0;
 	border-right:1px solid #d9d9d9;
+	background-color: #F4F4F4;
 	h2 {
 		margin-bottom:40px;
 		@include FontHead;
 		font-size:1.875rem;
 		font-weight:900;
+		i {
+			display: none;
+		}
 	}
 }
 .lnb {
@@ -414,6 +405,8 @@
 	.lnb_wrap {
 		position:relative;
 		padding:0;
+		background-color: #fff;
+		z-index: 2;
 		h2 {
 			position:relative;
 			display: block;
@@ -421,6 +414,7 @@
 			margin-bottom:0;
 			font-size:1.143rem;
 			border-bottom:1px solid #D9D9D9;
+			background-color: #fff;
 			i {
 				top:25px;
 				right:20px;
@@ -439,21 +433,19 @@
 			z-index: 2;
 		}
 		&._active {
+			h2 {
+				i {
+					@include iconAngle($direction: 'up', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+				}
+			}
 			.lnb {
 				display: block;
 			}
-			// &:after {
-			// 	content: '';
-			// 	display: block;
-			// 	position:absolute;
-			// 	width:100%;
-			// 	height:100%;
-			// 	background-color: rgba(0,0,0, .2);
-			// }
 		}
 	}
 	.user_area {
 		position:relative;
+		background-color: #fff;
 		z-index: 10;
 		&:before {
 			content:'';
@@ -464,5 +456,10 @@
 			height:1px;
 			background-color:#d9d9d9;
 		}
+	}
+	.member_wrap {
+		padding-top:40px;
+		padding-left:20px;
+		padding-right:20px;
 	}
 }
