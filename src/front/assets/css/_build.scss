@@ -41,6 +41,26 @@
 			}
 		}
 	}
+	.vehicles_util {
+		position:fixed;
+		bottom:0;
+		left:0;
+		width: calc(23.49% - 1px);
+		height:90px;
+		border-top:1px solid #D9D9D9;
+		.btn_find {
+			display: inline-block;
+			width:100%;
+			height:100%;
+			padding:0 3.75rem;
+			font-size:1.25rem;
+			font-weight: 900;
+			line-height:4.5;
+			i {
+				margin-top:-3px;
+			}
+		}	
+	}
 }
 
 .build_option {
@@ -668,7 +688,7 @@
 .pg-mobile {
 	.build_vehicles {
 		padding:0;
-		border-bottom:1px solid #D9D9D9;
+		// border-bottom:1px solid #D9D9D9;
 		.vehicles-head {
 			max-width:100%;
 			padding:10px 20px;
@@ -700,6 +720,19 @@
 						}
 					}
 				}
+			}
+		}
+		.vehicles_util {
+			position:relative;
+			width:100%;
+			height:60px;
+			background-color: #F4F4F5;
+			text-align: right;
+			.btn_find {
+				padding:0 20px;
+				font-size:1.143rem;
+				font-weight: 600;
+				line-height:3.6;
 			}
 		}
 	}
@@ -819,6 +852,16 @@
 		}
 	}
 	//.build_option
+	.product_container {
+		.product_mask {
+			margin-left:0;
+		}
+	}
+	.product {
+		float:none;
+		width:100%;
+		margin-left:0;
+	}
 }
 //.pg-mobile 
 
