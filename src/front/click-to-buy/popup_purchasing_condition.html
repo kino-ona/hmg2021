@@ -190,6 +190,16 @@
 										<div class="popular_color">
 											<div class="bar"></div>
 										</div>
+										<div class="popular_color">
+											<div class="group">
+												<p class="most_color">Which color is most popular?</p>
+												<button type="button" class="btn_more"></button>
+											</div>
+											<div class="bar">
+												<span class="color" style="width:38%; background-color: #0F3076; color: #fff;">Denim</span>
+												<span class="percent">38%</span>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -443,9 +453,9 @@
 								<p class="content_desc">Please select the way to receive the car. You can pick it up at the dealer’s branch in advance, or you can get it delivered to the place you want by consignment.</p>
 								<div class="delivery_container">
 									<div class="tab_wrap" id="DeliveryTab">
-										<ul class="radio_tablist" role="radio_tablist" aria-label="tabname">
-											<li><p class="radiowrap"  aria-selected="true"><label><input type="radio" name="tabradio" checked>Pick up at Dealer</label></p></li>
-											<li><p class="radiowrap"  aria-selected="false"><label><input type="radio" name="tabradio"> Preferred location <span>(+ USD 00,000)</span> </label></p></li>
+										<ul class="radio_tablist" role="radio_tablist">
+											<li><p class="radiowrap" aria-selected="true"><input type="radio" id="Dealer" name="selectDelivery" checked><label for="Dealer">Pick up at Dealer</label></p></li>
+											<li><p class="radiowrap" aria-selected="false"><input type="radio" id="Preferred" name="selectDelivery"><label for="Preferred">Preferred location <span>(+ USD 00,000)</span> </label></p></li>
 										</ul>
 										<div class="radio-tab_contents">
 											<section class="tab_panel" aria-hidden="false" ></section>
@@ -506,8 +516,8 @@
 					</p>
 					<div class="tab_wrap" id="PurchasingTab">
 						<ul class="radio_tablist _type02" role="radio_tablist">
-							<li><p class="radiowrap" aria-selected="true"><label><input type="radio" name="tabradio2" checked>VAT Owner</label></p></li>
-							<li><p class="radiowrap" aria-selected="false"><label><input type="radio" name="tabradio2">Protected Category</label></p></li>
+							<li><p class="radiowrap" aria-selected="true"><input type="radio" id="VatOwner" name="Purchasing" checked><label for="VatOwner">VAT Owner</label></p></li>
+							<li><p class="radiowrap" aria-selected="false"><input type="radio" id="ProtectedCategory" name="Purchasing"><label for="ProtectedCategory">Protected Category</label></p></li>
 						</ul>
 						<div class="radio-tab_contents">
 							<section class="tab_panel" aria-hidden="false" >

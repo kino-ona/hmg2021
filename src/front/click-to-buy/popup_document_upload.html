@@ -188,7 +188,14 @@
 											<p class="day">mid-June-2021</p>
 										</div>
 										<div class="popular_color">
-											<div class="bar"></div>
+											<div class="group">
+												<p class="most_color">Which color is most popular?</p>
+												<button type="button" class="btn_more"></button>
+											</div>
+											<div class="bar">
+												<span class="color" style="width:38%; background-color: #0F3076; color: #fff;">Denim</span>
+												<span class="percent">38%</span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -443,9 +450,9 @@
 								<p class="content_desc">Please select the way to receive the car. You can pick it up at the dealer’s branch in advance, or you can get it delivered to the place you want by consignment.</p>
 								<div class="delivery_container">
 									<div class="tab_wrap" id="DeliveryTab">
-										<ul class="radio_tablist" role="radio_tablist" aria-label="tabname">
-											<li><p class="radiowrap"  aria-selected="true"><label><input type="radio" name="tabradio" checked>Pick up at Dealer</label></p></li>
-											<li><p class="radiowrap"  aria-selected="false"><label><input type="radio" name="tabradio"> Preferred location <span>(+ USD 00,000)</span> </label></p></li>
+										<ul class="radio_tablist" role="radio_tablist">
+											<li><p class="radiowrap" aria-selected="true"><input type="radio" id="Dealer" name="selectDelivery" checked><label for="Dealer">Pick up at Dealer</label></p></li>
+											<li><p class="radiowrap" aria-selected="false"><input type="radio" id="Preferred" name="selectDelivery"><label for="Preferred">Preferred location <span>(+ USD 00,000)</span> </label></p></li>
 										</ul>
 										<div class="radio-tab_contents">
 											<section class="tab_panel" aria-hidden="false" role="tabpanel"></section>
@@ -501,8 +508,8 @@
 				<div class="h-layer_cont">
 					<p class="desc">Please select your company and upload a copy of proof of employment and a copy of employee ID Card.</p>
 					<div class="select_company">
-						<p class="radiowrap"><label><input type="radio" name="Company" checked><span>Government</span></label></p>
-						<p class="radiowrap"><label><input type="radio" name="Company"><span>Corporate</span></label></p>
+						<p class="radiowrap"><input type="radio" name="Company" id="Government" checked><label for="Government"><span>Government</span></label></p>
+						<p class="radiowrap"><input type="radio" name="Company" id="Corporate"><label for="Corporate"><span>Corporate</span></label></p>
 						<div class="selectbox">
 							<div class="dropdown_list">
 								<div class="dropdown_value" role="combobox" aria-expanded="false">
@@ -528,8 +535,8 @@
 					</div>
 					<p class="title">Documnet</p>
 					<p class="desc">Please select the delivery method for the documents.</p>
-					<p class="radiowrap"><label><input type="radio" name="Document" checked><span>Deliver to Sales Consultant Later</span></label></p>
-					<p class="radiowrap"><label><input type="radio" name="Document"><span>Online Upload</span></label></p>
+					<p class="radiowrap"><input type="radio" id="DeliverSales" name="Document" checked><label for="DeliverSales"><span>Deliver to Sales Consultant Later</span></label></p>
+					<p class="radiowrap"><input type="radio" id="OnlineUpload" name="Document"><label for="OnlineUpload"><span>Online Upload</span></label></p>
 					<div class="upload_container">
 						<div class="group">
 							<p class="upload_item">1. Proof of employment</p>
@@ -563,7 +570,7 @@
 						</div>
 					</div>
 					<div class="agree_container">
-						<p class="chkwrap"><label><input type="checkbox"><span>I agree that if the documents are not delivered or found to be false, the discount will expire, and if payment is already completed, the discounted amount will be charged as an additional amount later on.</span></label></p>
+						<p class="chkwrap"><input type="checkbox" id="ChkAgree"><label for="ChkAgree"><span>I agree that if the documents are not delivered or found to be false, the discount will expire, and if payment is already completed, the discounted amount will be charged as an additional amount later on.</span></label></p>
 						<p class="msg_error">Please accept the terms and conditions of service.</p>
 					</div>
 					<div class="btn-type_wrap">
