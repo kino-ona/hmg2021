@@ -703,6 +703,7 @@ a, button {
 		margin-top:10px;
 		font-size:0.875rem;
 		font-family: inherit;
+		text-align: left;
 		&.warn {
 			color:#E80710;
 		}
@@ -914,6 +915,9 @@ a, button {
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
+	[class*='ic_'] {
+		margin-right:0;
+	}
 	.ic_loca {
 		background-size: cover;
 	}
@@ -973,13 +977,35 @@ a, button {
 
 	.frm_field {
 		&.field_half {
-			
 			.frm {
 				float:none;
 				width:100%;
 				margin-right:0;
+				&:nth-child(2) {
+					margin-top:40px;
+				}
+			}
+		}
+		.frm {
+			._mix {
+				display: block;
+				text-align: right;
+				.warn {
+					& + [class*='ic_'] {
+						right:20px;
+					}
+				}
+				input, select {
+					flex: none;
+				}
+				button {
+					flex: none;
+					margin-top:6px;
+					margin-left:0;
+					padding-left:1.643rem;
+					padding-right:1.643rem;
+				}
 			}
 		}
 	}
-
 }
