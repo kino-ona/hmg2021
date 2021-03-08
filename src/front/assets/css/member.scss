@@ -459,8 +459,8 @@
 	}
 	.user_area {
 		position:relative;
-		z-index: 10;
 		background-color: #fff;
+		z-index: 10;
 		&:before {
 			content:'';
 			position:absolute;
