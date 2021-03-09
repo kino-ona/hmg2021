@@ -264,3 +264,157 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 이현우
+.booking_online {
+	height: 100%;
+}
+.find_dealer {
+	.controls {
+		padding:13.365% 13.365%;
+		.controls_head {
+			margin-bottom: 40px;
+			h2 {
+				font-size:2.5rem;
+				font-weight: 900;
+				@include FontHead;
+			}
+			.desc {
+				margin-top: 40px;
+				line-height: 1.5rem;
+			}
+			.my_location {
+				display: flex;
+				align-items: center;
+				margin-top: 40px;
+				i {
+					width: 15px;
+					height: 15px;
+					background: {
+						image: url(../images/ico/icon_location_find.png);
+						repeat: no-repeat;
+						position: 0 0;
+						size: cover;
+					};
+				}
+				span {
+					margin-left: 6px;
+					color: #0559F7;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.result {
+		display: flex;
+		position: relative;
+	    width: 76.51%;
+	    height: 100%;
+	    margin-left: 23.49%;
+	}
+	.contact {
+		overflow-y: auto;
+		position: relative;
+		z-index: 10;
+		width: 38.1%;
+		border-right: 1px solid #D9D9D9;
+		.dealer_info {
+			> .group {
+				padding: 30px 35px;
+				cursor: pointer;
+				&:not(:first-child) {
+					border-top: 1px solid #D9D9D9;
+				}
+				&:hover,
+				&:focus {
+					background-color: #F4F4F4;
+				}
+			}
+			.place {
+				display: block;
+				font-weight: 600;
+				font-size: 1.375rem;
+				line-height: 1.625rem;
+			}
+			.near {
+				margin-top: 2px;
+				color: #FF9934;
+				font-weight: 600;
+				font-size: .875rem;
+			}
+			.address {
+				margin-top: 20px;
+				li {
+					display: flex;
+					&:not(:first-child) {
+						margin-top: 10px;
+					}
+					&.tel {
+						i {background-image: url(../images/ico/icon_call.png);}
+					}
+					&.mail {
+						i {background-image: url(../images/ico/icon_mail.png);}
+					}
+				}
+				i {
+					flex: 0 0 auto;
+					width: 16px;
+					height: 16px;
+					margin: 4px 10px 0 0;
+					background: {
+						repeat: no-repeat;
+						position: 0 0;
+						size: cover;
+					};
+				}
+				span,
+				a {
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
+	.map {
+		flex: 1;
+	}
+	.fixed_bottom {
+		justify-content: flex-end;
+		.btn-type {
+			flex: none;
+			width: 22.1%;
+		}
+	}
+}
+
