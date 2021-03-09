@@ -69,7 +69,7 @@
 						<!-- search box -->
 						<div class="search_box">
 							<div class="util_wrap">
-								<button class="location"><i class="ic_loca"></i>Use Your Loaction Infomation</button>
+								<button class="location"><i class="ic_loca_find"></i>Use Your Loaction Infomation</button>
 							</div>
 							<div class="frm_field">
 								<dl class="frm">
@@ -105,7 +105,7 @@
 						<!-- result box --> <!-- search box의 search 버튼 클릭 후 노출 -->
 						<div class="result_box">
 							<div class="util_wrap">
-								<button class="change"><i class="ic_loca"></i>Dealer Change</button>
+								<button class="change"><i class="ic_refresh_blue"></i>Dealer Change</button>
 							</div>
 							<article class="dealer_info">
 								<div class="dealer_summary">
@@ -114,8 +114,8 @@
 								</div>
 								<ul class="dealer_details">
 									<li><i class="ic_loca"></i>Jl. Brigjen Dharsono No.8, Kota Cirebon, Jawa Barat 45131</li>
-									<li><i class="ic_loca"></i>(0231) 231 030</li>
-									<li><i class="ic_loca"></i>cs@hyundai.com</li>
+									<li><i class="ic_call"></i>(0231) 231 030</li>
+									<li><i class="ic_mail"></i>cs@hyundai.com</li>
 								</ul>
 							</article>
 						</div>
@@ -131,7 +131,9 @@
 					</div>
 					<!-- tab -->
 					<div class="tab_wrap" id="vehiclestab">
-						<p class="cnt"><em>5</em> Items available</p>
+						<div class="util_wrap">
+							<p class="cnt"><em>5</em> Items available</p>
+						</div>
 						<ul class="tablist" role="tablist">
 							<li><button class="tab">All</button></li>
 							<li><button class="tab">SUV</button></li>
@@ -246,7 +248,7 @@
 							<div class="tab_contents">
 								<section class="tab_panel">
 									<!-- tab -->
-									<div class="tab_wrap _subtab" id="optiontab">
+									<div class="tab_wrap _subtab" id="opttab">
 										<div class="util_wrap">
 											<p class="cnt"><em>5</em> Items available</p>
 											<div>
@@ -260,25 +262,11 @@
 											<li><button class="tab">Exterior <span>(45)</span></button></li>
 											<li><button class="tab">Inaterior <span>(45)</span></button></li>
 											<li><button class="tab">Convenience <span>(45)</span></button></li>
+											<li><button class="tab">Safety <span>(45)</span></button></li>
 										</ul>
 										<div class="tab_contents">
 											<section class="tab_panel">
-												<div class="swiper-container">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide">All</div>
-														<div class="swiper-slide">adfadsfasdf</div>
-														<div class="swiper-slide">asdfaewrewrqer</div>
-														<div class="swiper-slide">thethfghfg</div>
-														<div class="swiper-slide">12312</div>
-														<div class="swiper-slide"></div>
-														<div class="swiper-slide"></div>
-														<div class="swiper-slide"></div>
-														<div class="swiper-slide"></div>
-														<div class="swiper-slide"></div>
-														<div class="swiper-slide"></div>
-													</div>
-													<div class="swiper-pagination"></div>
-											</div>
+												All
 											</section>
 											<section class="tab_panel">
 												Package
@@ -291,6 +279,9 @@
 											</section>
 											<section class="tab_panel">
 												Convenience
+											</section>
+											<section class="tab_panel">
+												Safety
 											</section>
 										</div>
 									</div>
@@ -353,6 +344,34 @@
 					</div>
 				</section>
 				<!--// 4. Select Option & Accessories -->
+				<!-- Almost Done, Review Your Selection. -->
+				<section class="section confirm">
+					<div class="inner_wrap">
+						<div class="summary">
+							<div class="tit_wrap">
+								<h2 class="tit">Almost Done,<br>Review Your Selection.</h2>
+							</div>
+							<div class="thumb"><img src="./assets/images/dummy/@dummy_car.png" alt=""></div>
+						</div>
+						<div class="details">
+							<h3>KONA Ultimate 2021</h3>
+							<p class="color">Apple Green / Soylent Green</p>
+							<div class="frm_field">
+								<dl class="frm">
+									<dt>Customer Type</dt>
+									<dd>
+										<p class="radiowrap"><input type="radio" name="radio" id="salutation1" checked><label for="salutation1"><span>Mr.</span></label></p>
+										<p class="radiowrap"><input type="radio" name="radio" id="salutation2"><label for="salutation2"><span>Ms.</span></label></p>
+										<select name="" id="">
+											<option value="">Select</option>
+										</select>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--// Almost Done, Review Your Selection. -->
 			</div>
 		</div>
 		<!--// h-contents -->

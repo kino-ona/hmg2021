@@ -25,5 +25,5 @@ var buildSwiper = new Swiper('.ctb_booking.type_a .vehicles .swiper-container', 
 	});
 
 $(document).ready(function(){
-	actvTabList('optiontab', 0);
+	actvTabList('opttab', 0);
 });
