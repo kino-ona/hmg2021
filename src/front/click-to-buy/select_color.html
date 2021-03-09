@@ -189,7 +189,7 @@
 										<div class="popular_color">
 											<div class="group">
 												<p class="most_color">Which color is most popular?</p>
-												<button type="button" class="btn_more"></button>
+												<button type="button" class="btn_more" onclick="hlayerOpen('MorePopular')"></button>
 											</div>
 											<div class="bar">
 												<span class="color" style="width:38%; background-color: #0F3076; color: #fff;">Denim</span>
@@ -321,6 +321,51 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+		<!-- most popular -->
+		<div class="h-layer_body popup popular_colors" id="MorePopular" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap _alert">
+				<div class="h-layer_head">
+					<button onclick="hlayerClose('MorePopular')" class="h-layer_close">닫기</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="note">
+						<p>The 3 most popular colors consumers choose</p>
+						<p class="highlight">38% of buyers choose Denim.</p>
+					</div>
+					<ul class="popular_list">
+						<li>
+							<div class="group">
+								<em class="color_name">Denim</em>
+								<div class="bar">
+									<span class="color" style="width:38%; background-color: #0F3076;"></span>
+									<span class="percent">38%</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="group">
+								<em class="color_name">Thunder Gray</em>
+								<div class="bar">
+									<span class="color" style="width:17%; background-color: #888;"></span>
+									<span class="percent">17%</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="group">
+								<em class="color_name">Chalk Green</em>
+								<div class="bar">
+									<span class="color" style="width:15%; background-color: #8ECC2A;"></span>
+									<span class="percent">15%</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- // most popular -->
+
 		<script src="../assets/js/colorchips.js"></script>
 	</div>
 
