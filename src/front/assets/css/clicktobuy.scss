@@ -1016,6 +1016,50 @@
 		}
 	}
 }
+.popular_colors {
+	.note {
+		margin-bottom: 30px;
+		font-size: 1rem;
+		.highlight {
+			margin-top: 10px;
+			font-weight: 900;
+		}
+	}
+	.popular_list {
+		> li {
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+			> .group {
+				display: flex;
+				align-items: center;
+			}
+		}
+		.color_name {
+			flex: 1;
+			font-weight: 900;
+			font-size: .875rem;
+			text-align: left;
+		}
+		.bar {
+			display: flex;
+			width: 214px;
+			height: 25px;
+			background-color: #f4f4f4;
+			.color,
+			.percent {
+				height: 100%;
+			}
+			.percent {
+				display: flex;
+				align-items: center;
+				margin: 0 10px 0 auto;
+				font-weight: 600;
+				font-size: .875rem;
+			}
+		}
+	}
+}
 .edit_estimation {
 	.vehicle_number {
 		.desc {
