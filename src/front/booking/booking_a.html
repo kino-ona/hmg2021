@@ -1,17 +1,17 @@
-@@include('./inc/pagehead.inc',{
+@@include('../inc/pagehead.inc',{
 	"pagetitle":"Click to buy | HYUNDAI",
-	"webroot":"."
+	"webroot":".."
 })
 
-<link rel="stylesheet" href="./assets/css/booking.css">
-<script src="./assets/js/swiper.min.js"></script>
+<link rel="stylesheet" href="../assets/css/booking.css">
+<script src="../assets/js/swiper.min.js"></script>
 </head>
 <body> 
 	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
 
 	<div class="h-wrap">
 		<!-- header -->
-		@@include('./inc/header.inc',{
+		@@include('../inc/header.inc',{
 			"webroot":""
 		})
 		<!-- //header -->
@@ -24,8 +24,8 @@
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
-								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -34,8 +34,8 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
-								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -44,8 +44,8 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
-								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="../assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -351,10 +351,10 @@
 							<div class="tit_wrap">
 								<h2 class="tit">Almost Done,<br>Review Your Selection.</h2>
 							</div>
-							<div class="thumb"><img src="./assets/images/dummy/@dummy_car.png" alt=""></div>
+							<div class="thumb"><img src="../assets/images/dummy/@dummy_car.png" alt=""></div>
 						</div>
 						<div class="details">
-							<h3>KONA Ultimate 2021</h3>
+							<h3 class="prd_name">KONA Ultimate 2021</h3>
 							<p class="color">Apple Green / Soylent Green</p>
 							<div class="frm_field">
 								<dl class="frm">
@@ -367,6 +367,17 @@
 										</select>
 									</dd>
 								</dl>
+								<div class="total">
+									<p>Total Amount</p>
+									<div>
+										<em class="price">USD 25,000</em>
+										<span class="pm">USD 1,256 pm</span>
+									</div>
+								</div>
+								<div class="btn-type_wrap">
+									<button class="btn-type _cancel">Summary</button>
+									<button class="btn-type _default">Book Now</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -377,13 +388,13 @@
 		<!--// h-contents -->
 
 		<!-- footer -->
-		@@include('./inc/footer.inc',{
-			"webroot":"."
+		@@include('../inc/footer.inc',{
+			"webroot":".."
 		})
 		<!-- //footer -->
 	</div>
 
-<script src="./assets/js/booking.js"></script>
+<script src="../assets/js/booking.js"></script>
 
 </body>
 </html>

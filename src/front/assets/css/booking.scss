@@ -167,7 +167,7 @@
 					}
 				}
 				&_details {
-					border-left:1px dotted #999;
+					border-left:1px dashed #999;
 					li {
 						margin-top:15px;
 						&:first-of-type {
@@ -254,6 +254,12 @@
 				width:100%;
 				height:100%;
 				background-color:#fff;
+			}
+			.prd_name {
+				margin-bottom:5px;
+				@include FontHead;
+				font-size:2.625rem;
+				font-weight:600;
 			}
 		}
 	}
