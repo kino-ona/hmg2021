@@ -3,8 +3,8 @@
 	"webroot":"."
 })
 
+<link rel="stylesheet" href="./assets/css/booking.css">
 <script src="./assets/js/swiper.min.js"></script>
-<link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body> 
 	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
@@ -18,13 +18,14 @@
 
 		<!-- h-contents -->
 		<div id="h-contents" class="h-contents">
-			<div class="main_ctb">
+			<div class="ctb_booking type_a">
 				<!-- key visual -->
 				<section class="section keyvisual">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -33,7 +34,8 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -42,7 +44,8 @@
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="thumb"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _pc"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
+								<div class="thumb _mo"><img src="./assets/images/dummy/@dummy_keyvisual.png" alt=""></div>
 								<div class="desc">
 									<div>
 										<em>Welcome Click to Buy</em>
@@ -243,7 +246,59 @@
 							<div class="tab_contents">
 								<section class="tab_panel">
 									<!-- tab -->
-									<div class="tab_wrap" id="optiontab">
+									<div class="tab_wrap _subtab" id="optiontab">
+										<div class="util_wrap">
+											<p class="cnt"><em>5</em> Items available</p>
+											<div>
+												<p class="cnt"><em>3</em> Items are selected</p>
+												<button><i class="ic_refresh"></i>Clear All</button>
+											</div>
+										</div>
+										<ul class="tablist" role="tablist">
+											<li><button class="tab">All <span>(45)</span></button></li>
+											<li><button class="tab">Package <span>(45)</span></button></li>
+											<li><button class="tab">Exterior <span>(45)</span></button></li>
+											<li><button class="tab">Inaterior <span>(45)</span></button></li>
+											<li><button class="tab">Convenience <span>(45)</span></button></li>
+										</ul>
+										<div class="tab_contents">
+											<section class="tab_panel">
+												<div class="swiper-container">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide">All</div>
+														<div class="swiper-slide">adfadsfasdf</div>
+														<div class="swiper-slide">asdfaewrewrqer</div>
+														<div class="swiper-slide">thethfghfg</div>
+														<div class="swiper-slide">12312</div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+														<div class="swiper-slide"></div>
+													</div>
+													<div class="swiper-pagination"></div>
+											</div>
+											</section>
+											<section class="tab_panel">
+												Package
+											</section>
+											<section class="tab_panel">
+												Exterior
+											</section>
+											<section class="tab_panel">
+												Inaterior
+											</section>
+											<section class="tab_panel">
+												Convenience
+											</section>
+										</div>
+									</div>
+									<!--// tab -->
+								</section>
+								<section class="tab_panel">
+									<!-- tab -->
+									<div class="tab_wrap _subtab" id="acctab">
 										<div class="util_wrap">
 											<p class="cnt"><em>5</em> Items available</p>
 											<div>
@@ -293,8 +348,6 @@
 									</div>
 									<!--// tab -->
 								</section>
-								<section class="tab_panel">
-								</section>
 							</div>
 						</div>	
 					</div>
@@ -311,32 +364,7 @@
 		<!-- //footer -->
 	</div>
 
-  <script>
-    var keySwiper = new Swiper('.keyvisual .swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-
-		var buildSwiper = new Swiper('.vehicles .swiper-container', {
-				slidesPerView: 5,
-				slidesPerGroup: 5,
-				watchOverflow: true,
-				allowTouchMove: true,
-				simulateTouch: true,
-				pagination: {
-						el: '.swiper-pagination',
-						clickable: true
-				},
-				breakpoints: {
-					1240: {
-							slidesPerView: 2,
-							slidesPerGroup: 2,
-							spaceBetween: 8
-					}
-				}
-			});
-  </script>
+<script src="./assets/js/booking.js"></script>
 
 </body>
 </html>
