@@ -162,11 +162,6 @@ $('.tab_wrap').each(function(){  // default
 	if(!$(this).hasClass('manualfn')){
 		var basicTabs = new Tabs('#' + tabIdx);
 	}	
-	if($(this).hasClass('_subtab')){
-		var basicTabs = new Tabs('#' + tabIdx);
-		console.log(basicTabs)
-		basicTabs.destroy();
-	}	
 });
 
 // radio tab
