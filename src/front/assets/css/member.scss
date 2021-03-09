@@ -1,4 +1,6 @@
 @charset "utf-8";
+
+@import "global";
 @import "mixins";
 
 // member
@@ -79,10 +81,11 @@
 		padding-bottom: 20px;
 		border-bottom: 3px solid #000;
 		margin-bottom: 40px;
+		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1.5rem;
 	}
-	}
+}
 .frm_field {
 	._mix._fix {
 		.inp_txt {
@@ -114,12 +117,12 @@
 				right: calc(25% + 20px);
 				top: 16px;
 				color: #0559F7;
-				// font-size: 1rem;
+				font-size: 1rem;
 				font-weight: 900;
 			}
-			// button {
-			// 	width: 23.214%; //130px;
-			// }
+			button {
+				width: 23.214%; //130px;
+			}
 		}
 	}
 	& + .frm_field,
@@ -158,7 +161,7 @@
 	border-top:3px solid #000;
 	.chkwrap {
 		display:block;
-		input[type=checkbox] label + span {
+		label input[type=checkbox] + span {
 			font-size:1rem;
 			font-weight:600;
 		}
@@ -223,7 +226,7 @@
 			width:165px;
 			height:2px;
 			margin-top:-1px;
-			background-color:rgba(217,217,217, .95);
+			background-color:#D9D9D9;
 		}
 		&:before {
 			left:0;
@@ -386,18 +389,6 @@
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
-	.title_wrap {
-		.content_title {
-			width:50%;
-			margin-bottom:40px;
-			font-size:2.143rem;
-			line-height:1.2;
-		}
-		.req_txt {
-			bottom:3px;
-		}
-	}
-
 	.mypage {
 		display:block;
 		.btn-type_wrap {
@@ -454,8 +445,8 @@
 	}
 	.user_area {
 		position:relative;
-		background-color: #fff;
 		z-index: 10;
+		background-color: #fff;
 		&:before {
 			content:'';
 			position:absolute;
@@ -466,32 +457,61 @@
 			background-color:#d9d9d9;
 		}
 	}
-	.member_wrap {
-		padding-top:40px;
-		padding-left:20px;
-		padding-right:20px;
+}
+
+//membership - account
+.account_wrap {
+	padding-top:270px;
+	max-width:560px;
+	margin:0 auto;
+	text-align: center;
+	.title_wrap {
+		margin-bottom: 40px;
 	}
-	.chk_terms {
-		.chkwrap {
-			display:block;
-			margin-top:20px;
-			&:first-child {
-				margin-top:0;
-			}
-			input[type=checkbox] {
-				&	+ label {
-					height:auto;
-					line-height:1.2;
-					background-position:left top 1px;
-				}
+	.content_wrap {
+		margin: 0 auto 40px;
+	}
+	.content_title {
+		margin-bottom: 20px;
+	}
+	.content_txt {
+		max-width: 380px;
+		display: inline-block;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5rem;
+	}
+	.profile_pic {
+		display: inline-block;
+		margin-bottom: 20px;
+		width: 80px;
+		height: 80px;
+		background: {
+			image: url('../images/common/profile_default.jpg');
+			repeat: no-repeat;
+			size: 80px;
+			position: center center;
+		}
+	}
+	.acc_email {
+		font-size: 1.25rem;
+		font-weight: 900;
+		margin-bottom: 20px;
+	}
+	.btn-type_wrap {
+		max-width: 510px;
+		margin: 40px auto 0;
+		display: flex;
+		flex-wrap: wrap;
+		.btn-type {
+			flex: 1;
+			margin-right:10px;
+			&:last-of-type {
+				margin-right:0;
 			}
 		}
-	} 
-	.sns_wrap {
-		.txt {
-			&:before, &:after {
-				width:17%;
-			}
+		&._single {
+			max-width: 350px;
 		}
 	}
 }
