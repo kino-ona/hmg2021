@@ -1,5 +1,5 @@
 @@include('./inc/pagehead.inc',{
-	"pagetitle":"Layout | HYUNDAI",
+	"pagetitle":"Layout | Component | HYUNDAI",
 	"webroot":"."
 })
 </head>
@@ -53,107 +53,180 @@
 <p class="ti" id="guides00" style="margin-top:0;">0. Car Select List</p>
 <div>
 	<link rel="stylesheet" href="./assets/css/clicktobuy.css"></link>
-	<div class="product_container">
-		<div class="product_mask" role="radiogroup">
-			<article class="product" role="radio" aria-selected="true">
-				<div class="product_head">
-					<span class="product_tag new">new</span>
-					<span class="product_tag popular">Popular</span>
-					<span class="product_flag promotion">Promotion</span>
+
+	<!-- <div class="product_mask" role="radiogroup"> -->
+	<div>
+		<article class="product" role="radio" aria-selected="true">
+			<div class="product_head">
+				<span class="product_tag new">new</span>
+				<span class="product_tag popular">Popular</span>
+				<span class="product_flag promotion">Promotion</span>
+			</div>
+			<figure class="product_img">
+				<img src="./assets/images/dummy/@dummy.png" alt="">
+			</figure>
+			<div class="product_name">
+				<h3>
+					VENUE
+					<span>Urban Compact SUV</span>
+				</h3>
+				<a href="#" class="product_more">more</a>
+			</div>
+			<div class="product_price">
+				<div class="group">
+					<span>Co2</span>
+					<em>116g/km</em>
 				</div>
-				<figure class="product_img">
-					<img src="./assets/images/dummy/@dummy.png" alt="">
-				</figure>
-				<div class="product_name">
-					<h3>
-						VENUE
-						<span>Urban Compact SUV</span>
-					</h3>
-					<a href="#" class="product_more">more</a>
+				<div class="group">
+					<span>Starting at</span>
+					<em>USD 18,750</em>
 				</div>
-				<div class="product_price">
-					<div class="group">
-						<span>Co2</span>
-						<em>116g/km</em>
-					</div>
-					<div class="group">
-						<span>Starting at</span>
-						<em>USD 18,750</em>
-					</div>
+			</div>
+			<div class="product_bottom">
+				<a href="#" class="btn-type _line">BUILD</a>
+			</div>
+		</article>
+		<article class="product" role="radio" aria-selected="false">
+			<div class="product_head">
+				<span class="product_tag new">new</span>
+				<span class="product_tag popular">Popular</span>
+			</div>
+			<figure class="product_img">
+				<img src="./assets/images/dummy/@dummy.png" alt="">
+			</figure>
+			<div class="product_name">
+				<h3>
+					VENUE
+					<span>Urban Compact SUV</span>
+				</h3>
+				<a href="#" class="product_more">more</a>
+			</div>
+			<div class="product_price">
+				<div class="group">
+					<span>Co2</span>
+					<em>116g/km</em>
 				</div>
-				<div class="product_bottom">
-					<a href="#" class="btn-type _line">BUILD</a>
+				<div class="group">
+					<span>Starting at</span>
+					<em>USD 18,750</em>
 				</div>
-			</article>
-			<article class="product" role="radio" aria-selected="false">
-				<div class="product_head">
-					<span class="product_tag new">new</span>
-					<span class="product_tag popular">Popular</span>
-				</div>
-				<figure class="product_img">
-					<img src="./assets/images/dummy/@dummy.png" alt="">
-				</figure>
-				<div class="product_name">
-					<h3>
-						VENUE
-						<span>Urban Compact SUV</span>
-					</h3>
-					<a href="#" class="product_more">more</a>
-				</div>
-				<div class="product_price">
-					<div class="group">
-						<span>Co2</span>
-						<em>116g/km</em>
-					</div>
-					<div class="group">
-						<span>Starting at</span>
-						<em>USD 18,750</em>
-					</div>
-				</div>
-				<div class="product_bottom">
-					<a href="#" class="btn-type _line">BUILD</a>
-				</div>
-			</article>
-		</div>
+			</div>
+			<div class="product_bottom">
+				<a href="#" class="btn-type _line">BUILD</a>
+			</div>
+		</article>
 	</div>
+<br>
 <pre>
 	&lt;link rel="stylesheet" href="./assets/css/clicktobuy.css"&gt;&lt;/link&gt;
-	&lt;div class="product_container"&gt;
-		&lt;div class="product_mask" role="radiogroup"&gt;
-			&lt;article class="product" role="radio" aria-selected="true"&gt;
-				&lt;div class="product_head"&gt;
-					&lt;span class="product_tag new"&gt;new&lt;/span&gt;
-					&lt;span class="product_tag popular"&gt;Popular&lt;/span&gt;
-					&lt;span class="product_flag promotion"&gt;Promotion&lt;/span&gt;
+
+	&lt;div class="product_mask" role="radiogroup"&gt;
+		&lt;article class="product" role="radio" aria-selected="true"&gt;
+			&lt;div class="product_head"&gt;
+				&lt;span class="product_tag new"&gt;new&lt;/span&gt;
+				&lt;span class="product_tag popular"&gt;Popular&lt;/span&gt;
+				&lt;span class="product_flag promotion"&gt;Promotion&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;figure class="product_img"&gt;
+				&lt;img src="./assets/images/dummy/@dummy.png" alt=""&gt;
+			&lt;/figure&gt;
+			&lt;div class="product_name"&gt;
+				&lt;h3&gt;
+					VENUE
+					&lt;span&gt;Urban Compact SUV&lt;/span&gt;
+				&lt;/h3&gt;
+				&lt;a href="#" class="product_more"&gt;more&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class="product_price"&gt;
+				&lt;div class="group"&gt;
+					&lt;span&gt;Co2&lt;/span&gt;
+					&lt;em&gt;116g/km&lt;/em&gt;
 				&lt;/div&gt;
-				&lt;figure class="product_img"&gt;
-					&lt;img src="./assets/images/dummy/@dummy.png" alt=""&gt;
-				&lt;/figure&gt;
-				&lt;div class="product_name"&gt;
-					&lt;h3&gt;
-						VENUE
-						&lt;span&gt;Urban Compact SUV&lt;/span&gt;
-					&lt;/h3&gt;
-					&lt;a href="#" class="product_more"&gt;more&lt;/a&gt;
+				&lt;div class="group"&gt;
+					&lt;span&gt;Starting at&lt;/span&gt;
+					&lt;em&gt;USD 18,750&lt;/em&gt;
 				&lt;/div&gt;
-				&lt;div class="product_price"&gt;
-					&lt;div class="group"&gt;
-						&lt;span&gt;Co2&lt;/span&gt;
-						&lt;em&gt;116g/km&lt;/em&gt;
-					&lt;/div&gt;
-					&lt;div class="group"&gt;
-						&lt;span&gt;Starting at&lt;/span&gt;
-						&lt;em&gt;USD 18,750&lt;/em&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;div class="product_bottom"&gt;
-					&lt;a href="#" class="btn-type _line"&gt;BUILD&lt;/a&gt;
-				&lt;/div&gt;
-			&lt;/article&gt;
-			...
-		&lt;/div&gt;
-	&lt;/div&gt;	
+			&lt;/div&gt;
+			&lt;div class="product_bottom"&gt;
+				&lt;a href="#" class="btn-type _line"&gt;BUILD&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/article&gt;
+		...
+	&lt;/div&gt;
 </pre>
+<br><br>
+<div class="option_mask">
+	<div class="option_thumnail" role="checkbox" aria-selected="false">
+		<div class="option_head">
+			<input type="checkbox" id="opt01">
+			<label for="opt01"><figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure></label>
+		</div>
+		<div class="option_body">
+			<em class="option_seller">60:40 Split Rear Seat</em>
+			<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+		</div>
+		<div class="option_bottom">
+			<em class="option_price">+ USD 500</em>
+			<button type="button" class="ic_info">tooltip</button>
+		</div>
+	</div>
+	<div class="option_thumnail" role="checkbox" aria-selected="false">
+		<div class="option_head">
+			<input type="checkbox" id="opt02">
+			<label for="opt02"><figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure></label>
+		</div>
+		<div class="option_body">
+			<em class="option_seller">60:40 Split Rear Seat</em>
+			<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+		</div>
+		<div class="option_bottom">
+			<em class="option_price">+ USD 500</em>
+			<button type="button" class="ic_info">tooltip</button>
+		</div>
+	</div>
+</div>
+<script src="./assets/js/build.js"></script>
+<pre>
+&lt;div class="option_mask"&gt;
+	&lt;div class="option_thumnail" role="checkbox" aria-selected="false"&gt;
+		&lt;div class="option_head"&gt;
+			&lt;input type="checkbox" id="opt01"&gt;
+			&lt;label for="opt01"&gt;&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class="option_body"&gt;
+			&lt;em class="option_seller"&gt;60:40 Split Rear Seat&lt;/em&gt;
+			&lt;p class="option_desc"&gt;60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="option_bottom"&gt;
+			&lt;em class="option_price"&gt;+ USD 500&lt;/em&gt;
+			&lt;button type="button" class="ic_info"&gt;tooltip&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="option_thumnail" role="checkbox" aria-selected="false"&gt;
+		&lt;div class="option_head"&gt;
+			&lt;input type="checkbox" id="opt02"&gt;
+			&lt;label for="opt02"&gt;&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class="option_body"&gt;
+			&lt;em class="option_seller"&gt;60:40 Split Rear Seat&lt;/em&gt;
+			&lt;p class="option_desc"&gt;60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="option_bottom"&gt;
+			&lt;em class="option_price"&gt;+ USD 500&lt;/em&gt;
+			&lt;button type="button" class="ic_info"&gt;tooltip&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+
+&lt;script src="./assets/js/build.js"&gt;&lt;/script&gt;
+</pre>
+
+
+
+
+
+
+
 </div>
 
 
@@ -170,6 +243,9 @@
 			"webroot":"."
 		})
 		<!-- //footer -->
+
+
+		<script src="./assets/js/build.js"></script>
 	</div>
 
 	<script>
