@@ -17,7 +17,7 @@
 		<!-- //header -->
 
 		<!-- h-contents -->
-		<div id="h-contents" class="h-contents">
+		<div id="h-contents" class="h-contents _full">
 			<div class="ctb_booking type_a">
 				<!-- key visual -->
 				<section class="section keyvisual">
@@ -98,7 +98,7 @@
 								</dl>
 							</div>
 							<div class="btn-type_wrap">
-								<button class="btn-type _default">Search</button>
+								<button class="btn-type _default btn_search">Search</button>
 							</div>
 						</div>
 						<!--// search box -->
@@ -118,6 +118,7 @@
 									<li><i class="ic_mail"></i>cs@hyundai.com</li>
 								</ul>
 							</article>
+							<button class="btn_scroll"><span class="a11y">Next</span></button>
 						</div>
 						<!--// result box -->
 					</div>
@@ -127,7 +128,7 @@
 				<section class="section vehicles">
 					<div class="tit_wrap">
 						<h2 class="tit">2. Vehicles to build</h2>
-						<button class="btn_search"><i class="ic_search"></i>Find My Car?</button>
+						<button class="btn_find"><i class="ic_search"></i>Find My Car?</button>
 					</div>
 					<!-- tab -->
 					<div class="tab_wrap" id="vehiclestab">
@@ -231,6 +232,11 @@
 						<h2 class="tit">3. Select Trims & color</h2>
 						<button class="btn_compare"><i class="ic_compare"></i>Compare Trims</button>
 					</div>
+					<!-- layer test button -->
+					<div class="btn-type_wrap">
+						<button class="btn-type _default" onclick="hlayerOpen('pop_color')">Select Color Layer</button>
+					</div>
+					<!--// layer test button -->
 				</section>
 				<!--// 3. Select Trims & color -->
 				<!-- 4. Select Option & Accessories -->
@@ -360,24 +366,26 @@
 								<dl class="frm">
 									<dt>Customer Type</dt>
 									<dd>
-										<p class="radiowrap"><input type="radio" name="radio" id="salutation1" checked><label for="salutation1"><span>Mr.</span></label></p>
-										<p class="radiowrap"><input type="radio" name="radio" id="salutation2"><label for="salutation2"><span>Ms.</span></label></p>
-										<select name="" id="">
-											<option value="">Select</option>
-										</select>
+										<p class="radiowrap"><input type="radio" name="radio" id="CustomerType1" checked><label for="CustomerType1"><span>Personal</span></label></p>
+										<p class="radiowrap">
+											<input type="radio" name="radio" id="CustomerType2" class="select_control"><label for="CustomerType2"><span>Company</span></label>
+											<select class="select_company">
+												<option value="">Select</option>
+											</select>
+										</p>
 									</dd>
 								</dl>
-								<div class="total">
-									<p>Total Amount</p>
-									<div>
-										<em class="price">USD 25,000</em>
-										<span class="pm">USD 1,256 pm</span>
-									</div>
-								</div>
-								<div class="btn-type_wrap">
-									<button class="btn-type _cancel">Summary</button>
-									<button class="btn-type _default">Book Now</button>
-								</div>
+							</div>
+							<dl class="total">
+								<dt>Total Amount</dt>
+								<dd>
+									<em class="price">USD 25,000</em>
+									<span class="pm">USD 1,256 pm</span>
+								</dd>
+							</dl>
+							<div class="btn-type_wrap">
+								<button class="btn-type _cancel">Summary</button>
+								<button class="btn-type _default">Book Now</button>
 							</div>
 						</div>
 					</div>
@@ -388,6 +396,58 @@
 		<!--// h-contents -->
 
 		<!-- footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="logo"><span class="a11y">Hyundai</span></div>
+				<div class="contact_box">
+					<p class="txt">For disability accessibility concerns, <br>please contact us at</p>
+					<a href="tel:1-800-633-5151">1-800-633-5151</a> <br>
+					<a href="mailto:accessibility@hmausa.com">accessibility@hmausa.com</a>
+					<p class="wcag">Hyundai’s accessibility efforts are guided by WCAG 2.0 AA.</p>
+				</div>
+				<div class="social_box">
+					<ul class="social">
+						<li><a href="#" class="sns_mail"><span class="a11y">e-Mail</span></a></li>
+						<li><a href="#" class="sns_yu"><span class="a11y">Youtube</span></a></li>
+						<li><a href="#" class="sns_fb"><span class="a11y">Facebook</span></a></li>
+						<li><a href="#" class="sns_tw"><span class="a11y">Twitter</span></a></li>
+						<li><a href="#" class="sns_in"><span class="a11y">Instargram</span></a></li>
+					</ul>
+					<p class="copyright">Hyundai is a registered trademark of Hyundai Motor Company<br>All rights reserved. ©2021 Hyundai Motor America</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- layer -->
+		<div class="h-layer_body popup" id="pop_color" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Colors</h2>
+					<button onclick="hlayerClose('pop_color')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="tab_wrap" id="color_options">
+						<ul class="tablist _line" role="tablist">
+							<li><button class="tab">Exterior</button></li>
+							<li><button class="tab">Interior</button></li>
+						</ul>
+						<div class="tab_contents">
+							<section class="tab_panel">
+								<h3 class="a11y">Exterior</h3>
+							</section>
+							<section class="tab_panel">
+								<h3 class="a11y">Interior</h3>
+							</section>
+						</div>
+					</div>
+					<div class="btn-type_wrap">
+						<button onclick="hlayerClose('pop_color')" class="btn-type _default">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--// layer -->
+
 		@@include('../inc/footer.inc',{
 			"webroot":".."
 		})
