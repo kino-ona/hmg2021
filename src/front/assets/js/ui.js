@@ -164,6 +164,7 @@ $('.tab_wrap').each(function(){  // default
 	}	
 	if($(this).hasClass('_subtab')){
 		var basicTabs = new Tabs('#' + tabIdx);
+		console.log(basicTabs)
 		basicTabs.destroy();
 	}	
 });
@@ -270,7 +271,6 @@ var trimItemSel = function(){
 		});
 	});
 }
-
 
 // Memeber Function
 // forgot id

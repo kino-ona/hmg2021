@@ -280,6 +280,24 @@
 		outline: none;
 	}
 }
+.sub_tablist {
+	.sub-tab {
+		width:100%;
+		height:100%;
+		font-size:1rem;
+		&._active {
+			background-color: #0E306C;
+			color:#fff;
+			font-weight: 900;
+		}
+	}
+	.sub-tab_panel {
+		display: none;
+		&._active {
+			display: block;
+		}
+	}
+}
 
 /** accordion **/
 .accordion_wrap {
@@ -667,7 +685,7 @@ a, button {
 		padding: 40px 50px 0;
 		font-size:1.125rem;
 		line-height:1.4;
-		overflow-y: scroll;
+		overflow-y: auto;
 		z-index: 11;
 		@include FontText();
 		> *:first-child {
@@ -709,7 +727,6 @@ a, button {
 	.btn-type_wrap {
 		// width: 100%;
 		// margin-top:40px;
-		width: 510px;
 		margin: 40px auto 0;
 		display: flex;
 		.btn-type {
@@ -734,6 +751,11 @@ a, button {
 	}
 	&._wide {
 		width:950px;
+	}
+	&:not(._alert) {
+		.btn-type_wrap {
+			width: 510px;
+		}
 	}
 }
 .h-layer_body.is-visible {
