@@ -431,6 +431,16 @@ a, button {
 		repeat:no-repeat;
 	}
 }
+.ic_loca_find {
+	width:15px;
+	height:15px;
+	background: {
+		image: url(../images/ico/icon_location_find.png);
+		size:10px;
+		position: center center;
+		repeat:no-repeat;
+	}
+}
 .ic_hide {
 	width:18px;
 	height:18px;
@@ -492,6 +502,16 @@ a, button {
 		repeat:no-repeat;
 	}
 }
+.ic_refresh_blue {
+	width:15px;
+	height:15px;
+	background: {
+		image: url(../images/ico/icon_refresh_blue.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
 .ic_search {
 	width:20px;
 	height:20px;
@@ -527,6 +547,26 @@ a, button {
 	height:20px;
 	background: {
 		image: url(../images/ico/icon_check.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_call {
+	width:16px;
+	height:16px;
+	background: {
+		image: url(../images/ico/icon_call.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
+.ic_mail {
+	width:16px;
+	height:16px;
+	background: {
+		image: url(../images/ico/icon_mail.png);
 		size:cover;
 		position: 0 center;
 		repeat:no-repeat;
