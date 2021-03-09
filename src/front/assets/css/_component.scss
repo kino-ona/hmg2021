@@ -657,7 +657,6 @@ a, button {
 	.btn-type_wrap {
 		// width: 100%;
 		// margin-top:40px;
-		width: 510px;
 		margin: 40px auto 0;
 		display: flex;
 		.btn-type {
@@ -682,6 +681,11 @@ a, button {
 	}
 	&._wide {
 		width:950px;
+	}
+	&:not(._alert) {
+		.btn-type_wrap {
+			width: 510px;
+		}
 	}
 }
 .h-layer_body.is-visible {
