@@ -223,9 +223,11 @@
 		.tablist {
 			&._line {
 				text-align:center;
+				.tab {
+					min-width:180px;
+				}
 			}
 			.tab {
-				min-width:180px;
 				span {
 					color:inherit;
 					font-size:0.813rem;
@@ -364,6 +366,11 @@
 			justify-content:center;
 			background-color:green; // test
 		}
+		&.exterior {
+			figure {
+				padding-top:60px;
+			}
+		}
 	}
 	.color_panel {
 		.select_color {
@@ -432,6 +439,10 @@
 .pop_summary {
 	.h-layer_wrap {
 		width:660px;
+		.btn-type_wrap {
+			width:350px;
+			margin-top:20px;
+		}
 	}
 	.h-layer_cont {
 		font-size:1rem;
@@ -497,10 +508,6 @@
 				text-align: right;
 			}
 		}
-	}
-	.h-layer_wrap .btn-type_wrap {
-		width:350px;
-		margin-top:20px;
 	}
 }
 .footer {
