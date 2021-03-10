@@ -128,7 +128,7 @@
 		@include FontHead;
 	}
 	.opt_summary {
-		display: block;
+		display: flex;
 		margin-top:5px;
 		color: #000;
 		font-size: 0.875rem;
@@ -137,6 +137,9 @@
 			font-size: inherit;
 			font-weight: inherit;
 			font-family: inherit;
+			&:not(:first-child) {
+				margin-left: 10px;
+			}
 		}
 	}
 	.trim_cnt {

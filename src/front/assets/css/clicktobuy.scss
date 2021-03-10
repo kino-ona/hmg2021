@@ -400,6 +400,7 @@
 }
 .option_container {
 	.option_mask {
+		overflow: hidden;
 		margin-left: -32px;
 		&:after {
 			@extend %clearer;
