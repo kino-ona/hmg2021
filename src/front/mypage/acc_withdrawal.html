@@ -85,7 +85,12 @@
 								<dl class="frm">
 									<dt><label for="Password">Password <span class="required"><span class="a11y">required</span></span></label></dt>
 									<dd>
-										<input type="text" id="Password" placeholder="Enter your Password">
+										<!-- password masking-->
+										<div class="masking">
+											<input type="password" id="Password" placeholder="Enter your Password">
+											<button class="btn_masking"><i class="ic_show"></i></button>
+										</div>
+										<!--// password masking-->
 										<p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
 									</dd>
 								</dl>

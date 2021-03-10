@@ -68,7 +68,7 @@
                 <dl class="frm">
                   <dt><label for="CurrentPassword">Current Password <span class="required"><span class="a11y">required</span></span></label></dt>
                   <dd>
-                    <input type="text" id="CurrentPassword" placeholder="Enter 8 + characters with a letter and a number">
+                    <input type="password" id="CurrentPassword" placeholder="Enter 8 + characters with a letter and a number">
                     <p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
                   </dd>
                 </dl>
@@ -77,14 +77,24 @@
                 <dl class="frm">
                   <dt><label for="NewPassword">New Password <span class="required"><span class="a11y">required</span></span></label></dt>
                   <dd>
-                    <input type="text" id="NewPassword" placeholder="Enter 8 + characters with a letter and a number">
+										<!-- password masking-->
+										<div class="masking">
+											<input type="password" id="NewPassword" placeholder="Enter 8 + characters with a letter and a number">
+											<button class="btn_masking"><i class="ic_show"></i></button>
+										</div>
+										<!--// password masking-->
                     <p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
                   </dd>
                 </dl>
                 <dl class="frm">
                   <dt><label for="ConfirmNewPassword">Confirm New Password <span class="required"><span class="a11y">required</span></span></label></dt>
                   <dd>
-                    <input type="text" id="ConfirmNewPassword" placeholder="Enter new password again">
+										<!-- password masking-->
+										<div class="masking">
+											<input type="password" id="ConfirmNewPassword" placeholder="Enter new password again">
+											<button class="btn_masking"><i class="ic_show"></i></button>
+										</div>
+										<!--// password masking-->
                     <p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
                   </dd>
                 </dl>
