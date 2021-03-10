@@ -766,6 +766,7 @@ a, button {
 	&::before {
 		content:'*';
 		display:inline-block;
+		margin-left:-2px;
 		color:#0559F7;
 		line-height:1;
 		vertical-align:middle;
