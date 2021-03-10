@@ -434,6 +434,9 @@ body {
 		margin-left:23.49%;
 		overflow-y: auto;
 		background-color:#F4F4F4;
+		&.build_vehicle {
+			height: 100%;
+		}
 	}
 	.fixed_bottom {
 		position:absolute;
