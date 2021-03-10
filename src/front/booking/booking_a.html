@@ -18,7 +18,7 @@
 
 		<!-- h-contents -->
 		<div id="h-contents" class="h-contents _full">
-			<div class="ctb_booking type_a">
+			<div class="ctb_booking">
 				<!-- key visual -->
 				<section class="section keyvisual">
 					<div class="swiper-container">
@@ -234,7 +234,7 @@
 					</div>
 					<!-- layer test button -->
 					<div class="btn-type_wrap">
-						<button class="btn-type _default" onclick="hlayerOpen('pop_color')">Select Color Layer</button>
+						<button class="btn-type _default" onclick="hlayerOpen('pop_colors')">Select Color Layer</button>
 					</div>
 					<!--// layer test button -->
 				</section>
@@ -384,7 +384,7 @@
 								</dd>
 							</dl>
 							<div class="btn-type_wrap">
-								<button class="btn-type _cancel">Summary</button>
+								<button class="btn-type _cancel"  onclick="hlayerOpen('pop_summary')">Summary</button>
 								<button class="btn-type _default">Book Now</button>
 							</div>
 						</div>
@@ -419,11 +419,11 @@
 		</footer>
 
 		<!-- color layer -->
-		<div class="h-layer_body popup choose_colors" id="pop_color" aria-hidden="true" role="dialog">
+		<div class="h-layer_body popup pop_colors" id="pop_colors" aria-hidden="true" role="dialog">
 			<div class="h-layer_wrap">
 				<div class="h-layer_head">
 					<h2 class="h-layer_title">Colors</h2>
-					<button onclick="hlayerClose('pop_color')" class="h-layer_close">close</button>
+					<button onclick="hlayerClose('pop_colors')" class="h-layer_close">close</button>
 				</div>
 				<div class="h-layer_cont">
 					<div class="tab_wrap" id="color_options">
@@ -581,7 +581,7 @@
 									<p class="noti_txt">The product you see may differ from the actual image</p>
 								</div>
 								<div class="btn-type_wrap">
-									<button onclick="hlayerClose('pop_color')" class="btn-type _default">Apply</button>
+									<button onclick="hlayerClose('pop_colors')" class="btn-type _default">Apply</button>
 								</div>
 							</div>
 						</div>
@@ -590,6 +590,227 @@
 			</div>
 		</div>	
 		<!--// color layer -->
+
+		<!-- summary layer -->
+		<div class="h-layer_body popup pop_summary" id="pop_summary" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Summary</h2>
+					<button onclick="hlayerClose('pop_summary')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="tab_wrap" id="summary_details">
+						<div class="result">
+							<div class="thumb"><img src="../assets/images/dummy/@dummy_car.png" alt=""></div>
+							<div class="info">
+								<h3 class="prd_name">KONA Ultimate 2021</h3>
+								<dl class="total">
+									<dt>Total Amount</dt>
+									<dd>
+										<em class="price">USD 25,000</em>
+										<span class="pm">USD 1,256 pm</span>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<ul class="tablist" role="tablist">
+							<li><button class="tab">Vehicle</button></li>
+							<li><button class="tab">Additional</button></li>
+							<li><button class="tab">Dealership</button></li>
+						</ul>
+						<div class="tab_contents">
+							<section class="tab_panel">
+								<div class="estimate_body">
+									<ul class="estimate_list">
+										<li>
+											<em class="parts">Vehicle</em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Engine type</span>
+													<span>1.2 L Kappa</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Displacement (cc)</span>
+													<span>1,197</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Max. power (ps/rpm)</span>
+													<span>83/6,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Max. torque (kg.m/rpm)</span>
+													<span>11.6/4,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Transmission Type</span>
+													<span>5-Speed Manual</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Fuel Type</span>
+													<span>Petrol</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Wheel</span>
+													<span>R17 Diamond Cut Alloy Wheels</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Color</em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Exterior</span>
+													<span>Earth Brown – Dual tone (+USD 100,000)</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Interior</span>
+													<span>Satin Brown</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Options <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Smart package</span>
+													<span>+USD 100,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Family package</span>
+													<span>+USD 100,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Accessories <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Smart key</span>
+													<span>+USD 100,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Loyal wheel</span>
+													<span>+USD 100,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Warranty <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">4 Yr / 80,000km</span>
+													<span>+USD 100,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Delivery <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Pick-up at dealer</span>
+													<span>+USD 0,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Promotions <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Exchange Special</span>
+													<span>-USD 20,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Family festa sale</span>
+													<span>-USD 20,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Trade-in</em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Trade-in Estimation applied (Name of model)</span>
+													<span>-USD 20,000</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Eco Bonus</span>
+													<span>-USD 10,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Purchasing condition <span class="applied"></span></em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">VAT OWNER</span>
+													<span>-USD 00,000</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Dealer</em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Dealer</span>
+													<span>Berkeley Hyundai</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Address</span>
+													<span>
+														Mairwa road, Near Sutta Factory,<br>
+														Mairwa road-Station road, South<br>
+														gate 823-224
+													</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Contact number</span>
+													<span>2822-1231-1313</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Sales opening hours</span>
+													<span>Mon-Fri 08:30-18:30</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<em class="parts">Consultant</em>
+											<div class="detail">
+												<div class="group">
+													<span class="bullet_square">Dealer</span>
+													<span>Berkeley Hyundai</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Address</span>
+													<span>
+														Mairwa road, Near Sutta Factory,<br>
+														Mairwa road-Station road, South<br>
+														gate 823-224
+													</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Contact number</span>
+													<span>2822-1231-1313</span>
+												</div>
+												<div class="group">
+													<span class="bullet_square">Sales opening hours</span>
+													<span>Mon-Fri 08:30-18:30</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<section class="tab_panel">
+							</section>
+						</div>
+						<div class="btn-type_wrap">
+							<button onclick="hlayerClose('pop_summary')" class="btn-type _default">Procees to Concierge</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--// summary layer -->
 
 		@@include('../inc/footer.inc',{
 			"webroot":".."

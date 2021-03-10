@@ -2,7 +2,7 @@
 
 @import "mixins";
 
-.ctb_booking.type_a {
+.ctb_booking {
 	.inner_wrap,
 	.tit_wrap {
 		max-width:1200px;
@@ -225,6 +225,7 @@
 				text-align:center;
 			}
 			.tab {
+				min-width:180px;
 				span {
 					color:inherit;
 					font-size:0.813rem;
@@ -295,10 +296,10 @@
 			}
 			.total {
 				display:flex;
-				@include FontHead;
 				dt {
 					font-size:1.875rem;
 					font-weight:900;
+					@include FontHead;
 				}
 				dd {
 					margin-left:auto;
@@ -308,11 +309,13 @@
 					font-size:1.875rem;
 					font-weight:900;
 					color:#FF9934;
+					@include FontHead;
 				}
 				.pm {
 					display:block;
 					margin-top:8px;
 					font-size:1rem;
+					@include FontHead;
 				}
 			}
 			.btn-type_wrap {
@@ -331,12 +334,13 @@
 		}
 	}
 }
-.choose_colors {
+.pop_colors {
 	.h-layer_wrap {
 		width:960px;
 	}
 	.h-layer_cont {
 		padding:0;
+		font-size:1rem;
 		&:after {
 			height:0;
 		}
@@ -409,7 +413,6 @@
 			padding:25px;
 			align-items:center;
 			.txt {
-				font-size:1rem;
 				font-weight:900;
 				em {
 					color:#FF9934;
@@ -424,6 +427,80 @@
 				margin:0 0 0 auto;
 			}
 		}
+	}
+}
+.pop_summary {
+	.h-layer_wrap {
+		width:660px;
+	}
+	.h-layer_cont {
+		font-size:1rem;
+	}
+	.result {
+		display:flex;
+		margin-bottom:40px;
+		align-items:center;
+		.thumb {
+			width:42.85714285714%;
+			margin-right:40px;
+		}
+		dd {
+			display:flex;
+			align-items:baseline;
+		}
+		.prd_name {
+			margin-bottom:20px;
+			@include FontHead;
+			font-size:1.875rem;
+			font-weight:900;
+		}
+		.total {
+			font-size:0.875rem;
+		}
+		.price {
+			margin-right:7px;
+			font-size:1.625rem;
+			font-weight:600;
+			color:#FF8D34;
+		}
+		.pm {
+			font-size:0.938rem;
+			font-weight:600;
+			align-items:baseline;
+		}
+	}
+	.estimate_body {
+		max-height:25rem;
+		margin-top:20px;
+		overflow:auto;
+	}
+	.estimate_list {
+		> li {
+			&:not(:first-child) {
+				margin-top: 40px;
+				padding-top: 40px;
+				border-top: 1px dashed #999;
+			}
+		}
+		.parts {
+			font-weight: 900;
+			font-size: 1.625rem;
+		}
+		.detail {
+			margin-top: 15px;
+			> .group {
+				display: flex;
+				justify-content: space-between;
+				line-height: 1.5625rem;
+			}
+			span:last-child {
+				text-align: right;
+			}
+		}
+	}
+	.h-layer_wrap .btn-type_wrap {
+		width:350px;
+		margin-top:20px;
 	}
 }
 .footer {
