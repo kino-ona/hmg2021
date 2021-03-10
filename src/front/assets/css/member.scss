@@ -531,7 +531,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, calc(-50% - 60px));
 	}
 	.title_wrap {
 		margin-bottom: 40px;
