@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@import "global";
 @import "mixins";
 
 // member
@@ -81,7 +80,6 @@
 		padding-bottom: 20px;
 		border-bottom: 3px solid #000;
 		margin-bottom: 40px;
-		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1.5rem;
 	}
@@ -300,7 +298,8 @@
 		}
 	}
 	.chk_terms {
-		margin-top: 20px;
+		margin-top: 5px;
+		border-top: none;
 		label {
 			span {
 				font-weight: 500;
@@ -437,6 +436,70 @@
 	max-width:850px;
 }
 
+
+//membership - account
+.account_wrap {
+	position: relative;
+	margin:0 auto;
+	height: 100vh;
+	text-align: center;
+	.account_container {
+		position: absolute;		
+    width: 100%;
+    max-width: 510px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, calc(-50% - 60px));
+	}
+	.title_wrap {
+		margin-bottom: 40px;
+	}
+	.content_wrap {
+		margin-bottom: 40px;
+	}
+	.content_title {
+		margin-bottom: 20px;
+	}
+	.content_txt {
+		font-weight: 400;
+		line-height: 1.5rem;
+	}
+	.acc-user_icon {
+		margin-bottom: 20px;
+		.user_icon {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			color: #fff;
+			font-size: 2.125rem;
+			font-weight: 900;
+			line-height: 5rem;
+			background-color: #CCCCCC;
+		}
+	}
+	.acc_email {
+		font-size: 1.25rem;
+		font-weight: 900;
+		margin-bottom: 20px;
+	}
+	.btn-type_wrap {
+		width: 100%;
+		margin: 40px auto 0;
+		display: flex;
+		flex-wrap: wrap;
+		.btn-type {
+			flex: 1;
+			margin-right:10px;
+			&:last-of-type {
+				margin-right:0;
+			}
+		}
+		&._single {
+			max-width: 350px;
+		}
+	}
+}
+
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
@@ -519,87 +582,9 @@
 			background-color:#d9d9d9;
 		}
 	}
-}
-
-//membership - account
-.account_wrap {
-	margin:0 auto;
-	position: relative;
-	min-height: 100vh;
-	text-align: center;
-	.account_container {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, calc(-50% - 60px));
-	}
-	.title_wrap {
-		margin-bottom: 40px;
-	}
-	.content_wrap {
-		margin: 0 auto 40px;
-	}
-	.content_title {
-		margin:0 auto 20px;
-	}
-	.content_txt {
-		max-width: 400px;
-		display: inline-block;
-		font-weight: 400;
-		line-height: 1.5rem;
-	}
-	.acc-user_icon {
-		margin-bottom: 20px;
-		width: 100%;
-    text-align: center;		
-		.user_icon {
-			display: inline-block;
-			width: 80px;
-			height: 80px;
-			color: #fff;
-			font-size: 2.125rem;
-			font-weight: 900;
-			line-height: 5rem;
-			background-color: #CCCCCC;
-		}
-	}
-	.acc_email {
-		font-size: 1.25rem;
-		font-weight: 900;
-		margin-bottom: 20px;
-	}
-	.btn-type_wrap {
-		max-width: 510px;
-		margin: 40px auto 0;
-		display: flex;
-		flex-wrap: wrap;
-		.btn-type {
-			flex: 1;
-			margin-right:10px;
-			&:last-of-type {
-				margin-right:0;
-			}
-		}
-		&._single {
-			max-width: 350px;
-		}		
-		&._half {
-			float:left;
-			width:calc((100% / 2) - 5px)!important;
-			margin-right:10px;
-			&:nth-child(2) {margin-top: 0;}
-			&:nth-child(2n) {
-				margin-right: 0;
-			}
-			&:nth-child(2n+1) {
-				clear: left;
-			}
-		}
-	}
-}
-
-@media screen and (max-width:375px){
 	.account_wrap {
-		padding-top:156px;
+		.content_title {
+			width: 100%;
+		}
 	}
 }
