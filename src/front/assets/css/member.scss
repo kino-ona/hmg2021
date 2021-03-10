@@ -119,9 +119,6 @@
 				color: #0559F7;
 				font-weight: 900;
 			}
-			// button {
-			// 	width: 23.214%; //130px;
-			// }
 		}
 	}
 	& + .frm_field,
@@ -155,28 +152,12 @@
 }
 
 .chk_terms {
-	// margin:60px 0;
-	// padding-top:15px;
-	// border-top:3px solid #000;
-	// .chkwrap {
-	// 	display:block;
-	// 	input[type=checkbox] label + span {
-	// 		font-size:1rem;
-	// 		font-weight:600;
-	// 	}
-	// }
+	margin:60px 0;
+	padding-top:15px;
+	border-top:3px solid #000;
 	.chkwrap {
-		display:block;
-		margin-top:20px;
 		&:first-child {
 			margin-top:0;
-		}
-		input[type=checkbox] {
-			&	+ label {
-				height:auto;
-				line-height:1.2;
-				background-position:left top 1px;
-			}
 		}
 	}
 } 
@@ -207,7 +188,6 @@
 		min-height: 30px;
 		font-weight: 900;
 		.find_lnk {
-			font-size:1rem;
 			font-weight:600;
 			line-height:1.875rem;
 			&:not(:last-child) {
@@ -543,10 +523,16 @@
 
 //membership - account
 .account_wrap {
-	padding-top:270px;
-	max-width:560px;
 	margin:0 auto;
+	position: relative;
+	min-height: 100vh;
 	text-align: center;
+	.account_container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, calc(-50% - 60px));
+	}
 	.title_wrap {
 		margin-bottom: 40px;
 	}
@@ -557,9 +543,8 @@
 		margin:0 auto 20px;
 	}
 	.content_txt {
-		max-width: 380px;
+		max-width: 400px;
 		display: inline-block;
-		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.5rem;
 	}
