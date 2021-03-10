@@ -418,18 +418,6 @@ a, button {
 			color: #0E306C;			
 			line-height: 3.938rem; //63px;
 		}
-		&._half {
-			float:left;
-			width:calc((100% / 2) - 5px)!important;
-			margin-right:10px;
-			&:nth-child(2) {margin-top: 0;}
-			&:nth-child(2n) {
-				margin-right: 0;
-			}
-			&:nth-child(2n+1) {
-				clear: left;
-			}
-		}
 	}
 }
 
