@@ -181,21 +181,23 @@
 													<span>Clear All</span>
 												</button>
 											</div>
-											<div class="tab_wrap _subtab" id="DetailTab">
+											<div class="sub_tablist" id="DetailTab">
 												<ul class="tablist" role="tablist">
-													<li><button class="tab">All <span class="current">(45)</span></button></li>
-													<li><button class="tab">Package <span class="current">(4)</span></button></li>
-													<li><button class="tab">Exterior <span class="current">(8)</span></button></li>
-													<li><button class="tab">Inaterior <span class="current">(11)</span></button></li>
-													<li><button class="tab">Convenience <span class="current">(16)</span></button></li>
-													<li><button class="tab">Safety <span class="current">(10)</span></button></li>
+													<li><button class="sub-tab _active">All <span class="current">(45)</span></button></li>
+													<li><button class="sub-tab">Package <span class="current">(4)</span></button></li>
+													<li><button class="sub-tab">Exterior <span class="current">(8)</span></button></li>
+													<li><button class="sub-tab">Inaterior <span class="current">(11)</span></button></li>
+													<li><button class="sub-tab">Convenience <span class="current">(16)</span></button></li>
+													<li><button class="sub-tab">Safety <span class="current">(10)</span></button></li>
 												</ul>
 												<div class="tab_contents">
-													<div class="tab_panel">
+													<div class="sub-tab_panel _active">
 														<div class="option_container">
 															<div class="option_mask">
-																<div class="option_thumnail" role="checkbox" aria-selected="true">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt01">
+																		<label for="opt01"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -207,8 +209,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt02">
+																		<label for="opt02"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -220,8 +224,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt03">
+																		<label for="opt03"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -233,8 +239,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt04">
+																		<label for="opt04"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -246,8 +254,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt05">
+																		<label for="opt05"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -259,8 +269,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt06">
+																		<label for="opt06"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -272,8 +284,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt07">
+																		<label for="opt07"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -285,8 +299,10 @@
 																		<button type="button" class="ic_info">tooltip</button>
 																	</div>
 																</div>
-																<div class="option_thumnail" role="checkbox" aria-selected="false">
+																<div class="option_thumnail">
 																	<div class="option_head">
+																		<input type="checkbox" id="opt08">
+																		<label for="opt08"></label>
 																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																	</div>
 																	<div class="option_body">
@@ -337,11 +353,12 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
-		<script>
+		<script src="../assets/js/build.js"></script>
+		<!-- <script>
 			$(document).ready(function(){
 				actvTabList('DetailTab', 0);
 			});
-		</script>
+		</script> -->
 	</div>
 
 </body>
