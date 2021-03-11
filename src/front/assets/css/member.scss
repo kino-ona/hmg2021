@@ -154,6 +154,12 @@
 	padding-top:15px;
 	border-top:3px solid #000;
 	.chkwrap {
+		input[type=checkbox] + label {
+			font-size: 1rem;
+			span {
+				font-weight: 500;
+			}
+		}
 		&:first-child {
 			margin-top:0;
 		}
@@ -300,12 +306,6 @@
 	.chk_terms {
 		margin-top: 5px;
 		border-top: none;
-		label {
-			span {
-				font-weight: 500;
-				line-height: 1.5;
-			}
-		}
 	}
 }
 
@@ -441,7 +441,7 @@
 .account_wrap {
 	position: relative;
 	margin:0 auto;
-	height: 100vh;
+	height: calc(100vh - 60px);
 	text-align: center;
 	.account_container {
 		position: absolute;		
@@ -484,7 +484,7 @@
 	}
 	.btn-type_wrap {
 		width: 100%;
-		margin: 40px auto 0;
+		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
 		.btn-type {
@@ -585,6 +585,30 @@
 	.account_wrap {
 		.content_title {
 			width: 100%;
+		}
+		.content_title {
+			margin-bottom: 20px;
+		}
+		.content_txt {
+			margin: 0 30px;
+		}
+		.acc-user_icon .user_icon {
+			font-size: 2.429rem;
+			line-height: 5.714rem;
+		}
+		.acc_email {
+			font-size: 1.429rem;
+			line-height: 2rem;
+		}
+		.btn-type_wrap {
+			width: calc(100% - 40px);
+			.btn-type {
+				font-size: 1.286rem;
+				line-height: 3.929rem;
+			}
+			&._single {
+				max-width: 335px;
+			}
 		}
 	}
 }
