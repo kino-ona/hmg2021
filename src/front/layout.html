@@ -2,6 +2,16 @@
 	"pagetitle":"Layout | Element | HYUNDAI",
 	"webroot":"."
 })
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+<style>
+/* .hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700} */
+/* .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:#000}.hljs-comment,.hljs-quote,.hljs-variable{color:green}.hljs-built_in,.hljs-keyword,.hljs-name,.hljs-selector-tag,.hljs-tag{color:#00f}.hljs-addition,.hljs-attribute,.hljs-literal,.hljs-section,.hljs-string,.hljs-template-tag,.hljs-template-variable,.hljs-title,.hljs-type{color:#a31515}.hljs-deletion,.hljs-meta,.hljs-selector-attr,.hljs-selector-pseudo{color:#2b91af}.hljs-doctag{color:grey}.hljs-attr{color:red}.hljs-bullet,.hljs-link,.hljs-symbol{color:#00b0e8}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700} */
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#011627;color:#d6deeb}.hljs-keyword{color:#c792ea;font-style:italic}.hljs-built_in{color:#addb67;font-style:italic}.hljs-type{color:#82aaff}.hljs-literal{color:#ff5874}.hljs-number{color:#f78c6c}.hljs-regexp{color:#5ca7e4}.hljs-string{color:#ecc48d}.hljs-subst{color:#d3423e}.hljs-symbol{color:#82aaff}.hljs-class{color:#ffcb8b}.hljs-function{color:#82aaff}.hljs-title{color:#dcdcaa;font-style:italic}.hljs-params{color:#7fdbca}.hljs-comment{color:#637777;font-style:italic}.hljs-doctag{color:#7fdbca}.hljs-meta{color:#82aaff}.hljs-meta-keyword{color:#82aaff}.hljs-meta-string{color:#ecc48d}.hljs-section{color:#82b1ff}.hljs-builtin-name,.hljs-name,.hljs-tag{color:#7fdbca}.hljs-attr{color:#7fdbca}.hljs-attribute{color:#80cbc4}.hljs-variable{color:#addb67}.hljs-bullet{color:#d9f5dd}.hljs-code{color:#80cbc4}.hljs-emphasis{color:#c792ea;font-style:italic}.hljs-strong{color:#addb67;font-weight:700}.hljs-formula{color:#c792ea}.hljs-link{color:#ff869a}.hljs-quote{color:#697098;font-style:italic}.hljs-selector-tag{color:#ff6363}.hljs-selector-id{color:#fad430}.hljs-selector-class{color:#addb67;font-style:italic}.hljs-selector-attr,.hljs-selector-pseudo{color:#c792ea;font-style:italic}.hljs-template-tag{color:#c792ea}.hljs-template-variable{color:#addb67}.hljs-addition{color:#addb67ff;font-style:italic}.hljs-deletion{color:#ef535090;font-style:italic}
+</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+<script>
+hljs.highlightAll();
+</script>
 
 <link rel="stylesheet" href="./assets/css/member.css">
 </head>
@@ -31,6 +41,7 @@
 					<p class="ti" data-pos-top="guides08">8. Form</p><br>
 					<p class="ti" data-pos-top="guides09">9. ColorChip</p><br>
 					<p class="ti" data-pos-top="guides10">10. Design Pulldown</p><br>
+					<p class="ti" data-pos-top="guides10">11. Tooltip</p><br>
 					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
@@ -41,8 +52,8 @@
 .guides {padding:15px;margin:30px 0 100px;font-size:16px;}
 .guides div:after {content: '';display: block;clear: both;}
 .guides h1 {padding-bottom:30px;font-size: 20px;font-weight: bold;}
-.guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
-.guides pre * {color:#fff}
+/* .guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
+.guides pre * {color:#fff} */
 .guides .half {float:left;width:calc(100%/2 - 30px);margin-right:30px;}
 .guides .half.right {width:calc(100%/2);margin-right:0;}
 .guides p.ti {margin-top:40px;padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
@@ -52,15 +63,17 @@
 <div class="guides">
 
 <p class="ti" id="guides000" style="margin-top:0;">0. Font 단위 규칙</p>
-<pre>
+
+<pre><code class="language-html">	
 font 단위 : rem
 line-height 단위 : rem
-</pre>
+
+</code></pre>
 
 
 <p class="ti" id="guides00" style="margin-top:0;">0. Breakpoint</p>
 
-<pre>
+<pre><code class="language-html">	
 Mobile = ~ 1024; 
 Tablet = 1024 ~ 1240; 
 Desktop = 1240 ~; 
@@ -69,7 +82,8 @@ Desktop = 1240 ~;
 &lt;div class="h-wrap pg-mobile"&gt;&lt;/div&gt;
 &lt;div class="h-wrap pg-tablet"&gt;&lt;/div&gt;
 &lt;div class="h-wrap pg-desktop"&gt;&lt;/div&gt;
-</pre>
+
+</code></pre>
 <br><br>
 <p class="ti" id="guides01">1. Button</p>
 
@@ -86,7 +100,7 @@ Desktop = 1240 ~;
 	<a href="#" class="btn-type _line"><i class="ic_compare"></i>btn +icon</a>
 </div>
 <br><br>
-<pre>
+<pre><code class="language-html">	
 assets/css/_component.scss
 
 &lt;div class="btn-type_wrap"&gt;
@@ -102,7 +116,8 @@ assets/css/_component.scss
 	&lt;a href="#" class="btn-type _line"&gt;btn-type line&lt;/a&gt;
 	&lt;a href="#" class="btn-type _line"&gt;&lt;i class="ic_compare"&gt;btn line&lt;/a&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 
 <br><br>
 <p class="ti" id="guides02">2. Icon</p>
@@ -124,7 +139,7 @@ assets/css/_component.scss
 	<i class="ic_call"></i>
 </div>
 <br><br>
-<pre>
+<pre><code class="language-html">	
 assets/css/_component.scss
 
 &lt;i class="ic_error"&gt;&lt;/i&gt;  
@@ -142,7 +157,8 @@ assets/css/_component.scss
 &lt;i class="ic_show"&gt;&lt;/i&gt;
 &lt;i class="ic_mail"&gt;&lt;/i&gt;
 &lt;i class="ic_call"&gt;&lt;/i&gt;
-</pre>
+
+</code></pre>
 
 <br><br>
 <p class="ti" id="guides03">3. Tab</p>
@@ -165,7 +181,7 @@ assets/css/_component.scss
 	</div>
 </div>
 <br>
-<pre>
+<pre><code class="language-html">	
 assets/css/_component.scss
 assets/js/ui.js
 
@@ -181,7 +197,8 @@ assets/js/ui.js
 		&lt;/section&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <br><br>
 
 <div class="tab_wrap manualfn" id="tabcase02">
@@ -208,7 +225,7 @@ $(document).ready(function(){
 });
 </script>
 <br>
-<pre>
+<pre><code class="language-html">	
 assets/css/_component.scss
 assets/js/ui.js
 
@@ -228,7 +245,8 @@ assets/js/ui.js
 $(document).ready(function(){
 	actvTabList('tabcase02', 1);
 });
-</pre>
+
+</code></pre>
 <br>
 <div class="tab_wrap" id="tabcase03">
 	<ul class="radio_tablist" role="tablist">
@@ -244,7 +262,7 @@ $(document).ready(function(){
 		</section>
 	</div>
 </div>
-<pre>
+<pre><code class="language-html">	
 assets/css/_component.scss
 assets/js/ui.js
 
@@ -261,7 +279,8 @@ assets/js/ui.js
 		&lt;/section&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <br><br>
 <div class="tab_wrap" id="tabcase04">
 	<ul class="radio_tablist _type02" role="tablist">
@@ -277,7 +296,7 @@ assets/js/ui.js
 		</section>
 	</div>
 </div>
-<pre>
+<pre><code class="language-html">	
 &lt;div class="tab_wrap" id="tabcase04"&gt;
 	&lt;ul class="radio_tablist _type02" role="tablist" &gt;
 		&lt;li&gt;&lt;p class="radiowrap" role="tab" aria-selected="true"&gt;&lt;input type="radio" name="tabradio2" id="" checked&gt;&lt;label for=""&gt;radio tab1&lt;/label&gt;&lt;/p&gt;&lt;/li&gt;
@@ -292,7 +311,8 @@ assets/js/ui.js
 		&lt;/section&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <br><br>
 <div class="tab_wrap" id="tabintab">
 	<ul class="tablist _line" role="tablist">
@@ -326,7 +346,7 @@ assets/js/ui.js
 		actvTabList('tabin_sub', 0);
 	});
 </script>
-<pre>
+<pre><code class="language-html">	
 tab in tab sample 
 
 &lt;div class="tab_wrap" id="tabintab"&gt;
@@ -359,13 +379,11 @@ tab in tab sample
 	&lt;/div&gt;
 &lt;/div&gt;	
 
-
 $(document).ready(function(){
 	actvTabList('tabin_sub', 0);
 });
-</pre>
 
-
+</code></pre>
 
 
 <br><br>
@@ -374,21 +392,23 @@ $(document).ready(function(){
 <p class="chkwrap"><input type="checkbox" id="chk02" checked><label for="chk02"><span>Sample text2</span></label></p>
 <p class="chkwrap"><input type="checkbox" id="chk03" disabled><label for="chk03"><span>Sample text2</span></label></p>
 <br>
-<pre>
+<pre><code class="language-html">	
 &lt;p class="chkwrap"&gt;&lt;input type="checkbox" id="" &gt;&lt;label for=""&gt;&lt;span&gt;Sample text1&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p class="chkwrap"&gt;&lt;input type="checkbox" id="" checked&gt;&lt;label for=""&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p class="chkwrap"&gt;&lt;input type="checkbox" id="" disabled&gt;&lt;label for=""&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;	
-</pre>
+
+</code></pre>
 <br>
 <p class="radiowrap"><input type="radio" name="radio" id="radio01"><label for="radio01"><span>Sample text1</span></label></p>
 <p class="radiowrap"><input type="radio" name="radio" id="radio02"><label for="radio02"><span>Sample text2</span></label></p>
 <p class="radiowrap"><input type="radio" name="radio" id="radio03" disabled><label for="radio03"><span>Sample text2</span></label></p>
 <br>
-<pre>
+<pre><code class="language-html">	
 &lt;p class="radiowrap"&gt;&lt;input type="radio" name="radio" id=""&gt;&lt;label for=""&gt;&lt;span&gt;Sample text1&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p class="radiowrap"&gt;&lt;input type="radio" name="radio" id=""&gt;&lt;label for=""&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p class="radiowrap"&gt;&lt;input type="radio" name="radio" id="" disabled&gt;&lt;label for=""&gt;&lt;span&gt;Sample text2&lt;/span&gt;&lt;/label&gt;&lt;/p&gt;	
-</pre>
+
+</code></pre>
 
 
 <br><br>
@@ -413,7 +433,7 @@ $(document).ready(function(){
 			</div>
 		</div>
 	</div>
-<pre>
+<pre><code class="language-html">	
 - Autoset Type
 &lt;div class="accordion_wrap" id="accotype01"&gt;
 	&lt;div class="item" data-status="expanded"&gt;
@@ -431,7 +451,8 @@ $(document).ready(function(){
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
-</pre>
+
+</code></pre>
 </div>
 <div style="width:50%;margin-top:50px;">
 	<p>- Function Type</p>
@@ -458,7 +479,7 @@ $(document).ready(function(){
 			accoSet('accotype02')
 		});
 	</script>
-<pre>
+<pre><code class="language-html">	
 - Function Type
 &lt;div class="accordion_wrap manualfn" id="accotype02"&gt;
 	&lt;div class="item" data-status="disabled"&gt;
@@ -476,19 +497,21 @@ $(document).ready(function(){
 	// sample : accoSet('아코디언 아이디', 'multiple', 'acco_panel')
 	});
 &lt;/script&gt;
-</pre>
+
+</code></pre>
 </div>
 
 <br><br>
 <p class="ti" id="guides06">6. Font Style</p>
 <div style="width:50%;">
-<pre>
+<pre><code class="language-html">	
 기본 : font-family: 'HyundaiSansText'
 
 특정폰트 : 
 @include FontText(); //font-family: 'HyundaiSansText'
 @include FontHead(); //font-family: 'HyundaiSansHead'
-</pre>
+
+</code></pre>
 </div>
 
 <br><br>
@@ -509,7 +532,7 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
-<pre style="width:50%;">
+<pre style="width:50%;"><code class="language-html">	
 - 알럿 팝업
 &lt;div class="h-layer_body popup" id="popup1" aria-hidden="true" role="dialog"&gt;
 	&lt;div class="h-layer_wrap _alert"&gt;
@@ -522,7 +545,8 @@ $(document).ready(function(){
 
 hlayerOpen('팝업아이디')
 hlayerClose('팝업아이디')
-</pre>
+
+</code></pre>
 <div class="btn-type_wrap">
 	<button class="btn-type _default" onclick="hlayerOpen('popup1')">알럿 팝업</button>
 </div>
@@ -543,7 +567,8 @@ hlayerClose('팝업아이디')
 		</div>
 	</div>
 </div>
-<pre style="width:50%;">
+
+<pre style="width:50%;"><code class="language-html">	
 - 타이틀 있는 팝업 - 기본사이즈 (670px)
 &lt;div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog"&gt;
 	&lt;div class="h-layer_wrap"&gt;
@@ -553,7 +578,8 @@ hlayerClose('팝업아이디')
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <div class="btn-type_wrap">
 	<button class="btn-type _default" onclick="hlayerOpen('popup2')">타이틀 있는 팝업 - 기본사이즈 (670px)</button>
 </div>
@@ -577,7 +603,8 @@ hlayerClose('팝업아이디')
 		</div>
 	</div>
 </div>
-<pre style="width:50%;">
+
+<pre style="width:50%;"><code class="language-html">	
 - 타이틀 있는 팝업 - 기본사이즈 (950px)
 &lt;div class="h-layer_body popup" id="popup2" aria-hidden="true" role="dialog"&gt;
 	&lt;div class="h-layer_wrap"&gt;
@@ -587,7 +614,8 @@ hlayerClose('팝업아이디')
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <div class="btn-type_wrap">
 	<button onclick="hlayerOpen('popup3')" class="btn-type _default">타이틀 있는 팝업 - 와이드사이즈 (950px)</button>
 </div>
@@ -642,7 +670,8 @@ hlayerClose('팝업아이디')
 		</dl>
 	</div>
 	<br>
-<pre>
+
+<pre><code class="language-html">	
 - form field default type	
 
 &lt;div class="frm_field"&gt;
@@ -682,7 +711,8 @@ hlayerClose('팝업아이디')
 		&lt;/dd&gt;
 	&lt;/dl&gt;
 &lt;/div&gt;
-</pre>	
+
+</code></pre>	
 	<br><br>
 	<p>- form field half type</p><br>
 	<div class="frm_field field_half">
@@ -744,7 +774,8 @@ hlayerClose('팝업아이디')
 		</dl>
 	</div>
 <br>
-<pre>
+
+<pre><code class="language-html">	
 - form field half type
 
 &lt;div class="frm_field field_half"&gt;
@@ -783,7 +814,8 @@ hlayerClose('팝업아이디')
 		&lt;/dd&gt;
 	&lt;/dl&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 </div>
 
 
@@ -846,7 +878,8 @@ hlayerClose('팝업아이디')
 </div>
 <script src="./assets/js/colorchips.js"></script>
 <br><br>
-<pre>
+
+<pre><code class="language-html">	
 &lt;div class="color_chips"&gt;
 	&lt;ul class="color_list" role="listbox"&gt;
 		&lt;li&gt;
@@ -863,8 +896,8 @@ hlayerClose('팝업아이디')
 	&lt;/ul&gt;
 &lt;/div&gt;	
 &lt;script src="./assets/js/colorchips.js"&gt;&lt;/script&gt;
-</pre>
 
+</code></pre>
 
 <br><br>
 <p class="ti" id="guides10">10. Design Pulldown</p>
@@ -891,7 +924,8 @@ hlayerClose('팝업아이디')
 			</ul>
 		</div>
 	</div>
-<pre>
+
+<pre><code class="language-html">	
 &lt;div class="selectbox"&gt;
 	&lt;div class="dropdown_list"&gt;
 		&lt;div class="dropdown_value" role="combobox" aria-expanded="false"&gt;
@@ -914,7 +948,8 @@ hlayerClose('팝업아이디')
 		&lt;/ul&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>
+
+</code></pre>
 <br><br>
 	<div class="selectbox">
 		<div class="dropdown_list">
@@ -930,7 +965,8 @@ hlayerClose('팝업아이디')
 			</div>
 		</div>
 	</div>
-<pre>
+
+<pre><code class="language-html">	
 &lt;div class="selectbox"&gt;
 	&lt;div class="dropdown_list"&gt;
 		&lt;div class="dropdown_value" role="combobox" aria-expanded="false"&gt;
@@ -945,10 +981,25 @@ hlayerClose('팝업아이디')
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;	
-</pre>	
+
+</code></pre>	
 </div>
 
+<br><br>
+<p class="ti" id="guides06">11. Tooltip</p>
+<div style="width:50%;">
+	<div class="frm_field">
+		<dl class="frm">
+			<dt><label for="frm00">Normal</label></dt>
+			<dd>
+				<input type="text" id="frm00">
+			</dd>
+		</dl>
+	</div>
 
+<pre><code class="language-html">	
+</code></pre>
+</div>
 
 <br><br>
 </div>
