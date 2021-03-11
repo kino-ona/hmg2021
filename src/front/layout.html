@@ -41,8 +41,8 @@ hljs.highlightAll();
 					<p class="ti" data-pos-top="guides08">8. Form</p><br>
 					<p class="ti" data-pos-top="guides09">9. ColorChip</p><br>
 					<p class="ti" data-pos-top="guides10">10. Design Pulldown</p><br>
-					<p class="ti" data-pos-top="guides10">11. Tooltip</p><br>
 					<p class="ti" data-pos-top="guides11">11. Pagenation</p><br>
+					<p class="ti" data-pos-top="guides12">12. Tooltip</p><br>
 					<p class="ti" data-pos-top="guides99">99. Name(미작업)</p><br>
 				</div>
 			</div>
@@ -985,22 +985,7 @@ hlayerClose('팝업아이디')
 
 </code></pre>	
 </div>
-
 <br><br>
-<p class="ti" id="guides06">11. Tooltip</p>
-<div style="width:50%;">
-	<div class="frm_field">
-		<dl class="frm">
-			<dt><label for="frm00">Normal</label></dt>
-			<dd>
-				<input type="text" id="frm00">
-			</dd>
-		</dl>
-	</div>
-
-<pre><code class="language-html">	
-</code></pre>
-</div>
 
 <p class="ti" id="guides11">11. Pagenation</p>
 <div>
@@ -1013,7 +998,7 @@ hlayerClose('팝업아이디')
 		<a href="#">5</a>
 		<a href="#" class="btn btn_next">next<i></i></a>
 	</div>
-<pre>
+<pre><code class="language-html">	
 	&lt;div class="pagination"&gt;
 		&lt;a href="#" class="btn btn_prev"&gt;&lt;i&gt;&lt;/i&gt;prev&lt;/a&gt;
 		&lt;span class="now"&gt;1&lt;/span&gt; &lt;!-- current page --&gt;
@@ -1023,8 +1008,63 @@ hlayerClose('팝업아이디')
 		&lt;a href="#"&gt;5&lt;/a&gt;
 		&lt;a href="#" class="btn btn_next"&gt;next&lt;i&gt;&lt;/i&gt;&lt;/a&gt;
 	&lt;/div&gt;
-</pre>	
+
+</code></pre>	
 </div>
+<br><br>
+
+<style>
+	a[rel=tooltip] {position:relative;}
+	.tooltip {
+		display: none;
+		position: absolute;
+    z-index: 999;	
+		background-color: #fff;
+	}
+</style>
+<p class="ti" id="guides12">12. Tooltip</p>
+<div style="width:50%;">
+	<div class="frm_field">
+		<dl class="frm">
+			<dt><label for="frm00">Normal</label>  
+				<a rel=tooltip><i class="ic_tip"></i></a> 
+				<div class="tooltip"> 
+					아이콘은 추가되면 변경할 예정임<br>
+					If you are part of a protected category please continue the process as a Private Customer and inform your assigned sales consultant in order to have access to purchasing conditions
+				</div>
+			</dt>
+			<dd>
+				<input type="text" id="frm00">
+			</dd>
+		</dl>
+	</div>
+
+<pre><code class="language-html">	
+&lt;div class="frm_field"&gt;
+  &lt;dl class="frm"&gt;
+    &lt;dt&gt;&lt;label for="frm00"&gt;Normal&lt;/label&gt;  
+
+&lt;!-- tootip --&gt;
+      &lt;a rel=tooltip&gt;&lt;i class="ic_tip"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;div class="tooltip"&gt; 
+        If you are part of a protected category please continue the process as a Private Customer and inform your assigned sales consultant in order to have access to purchasing conditions
+      &lt;/div&gt;
+&lt;!--// tootip --&gt;
+
+
+    &lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;input type="text" id="frm00"&gt;
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+<br><br>
+
+
+
+
 
 <br><br>
 </div>
