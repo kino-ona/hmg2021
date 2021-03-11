@@ -90,7 +90,7 @@
 			width:100%;
 		}
 		input {
-			min-width:calc(100% - 180px);
+			flex:1;
 		}
 		button.btn_check {
 			max-width:180px;
@@ -105,7 +105,7 @@
 		&.input-timer {
 			input {
 				width: 75%;
-				min-width:calc(100% - 140px);
+				// min-width:calc(100% - 140px);
 				padding-right: 60px;
 			}
 			.clock {
@@ -451,6 +451,13 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, calc(-50% - 60px));
+		
+		// top: calc(50% - 60px);
+		// @include transform(translate(-50%, -50%));
+		// or
+		// -ms-transform: translateX(-50%) translateY(-50%) translateY(60px);
+		// transform: translateX(-50%) translateY(calc(-50% - 60px));
+
 	}
 	.title_wrap {
 		margin-bottom: 40px;
