@@ -1026,6 +1026,44 @@ a, button {
 	display: block
 }
 
+/* pagination */
+.pagination {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	a:not(.btn), span {
+		width:40px;
+		height:40px;
+		@include FontHead;
+		line-height:2.5rem;
+		text-align:center;
+	}
+	.now {
+		background-color:#0E306C;
+		color:#fff;
+		font-weight:900;
+	}
+	.btn {
+		i {
+			vertical-align:middle;
+		}
+		&.btn_prev {
+			margin-right:20px;
+			i {
+				margin-right:10px;
+				@include iconAngle($direction: 'left', $width: 9px, $height: 20px, $thick: 3px, $color: #000, $display: inline-block, $position: relative)
+			}
+		}
+		&.btn_next {
+			margin-left:20px;
+			i {
+				margin-left:10px;
+				@include iconAngle($direction: 'right', $width: 9px, $height: 20px, $thick: 3px, $color: #000, $display: inline-block, $position: relative)
+			}
+		}
+	}
+}
+
 @media screen and (max-width:1024px){
 }
 .pg-mobile {
