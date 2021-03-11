@@ -8,6 +8,7 @@ var keySwiper = new Swiper('.ctb_booking .keyvisual .swiper-container', {
 var buildSwiper = new Swiper('.ctb_booking .vehicles .swiper-container', {
 	slidesPerView: 5,
 	slidesPerGroup: 5,
+	spaceBetween: 35,
 	watchOverflow: true,
 	allowTouchMove: true,
 	simulateTouch: true,
