@@ -2,6 +2,18 @@
 	"pagetitle":"Layout | Component | HYUNDAI",
 	"webroot":"."
 })
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+<style>
+/* .hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700} */
+/* .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff;color:#000}.hljs-comment,.hljs-quote,.hljs-variable{color:green}.hljs-built_in,.hljs-keyword,.hljs-name,.hljs-selector-tag,.hljs-tag{color:#00f}.hljs-addition,.hljs-attribute,.hljs-literal,.hljs-section,.hljs-string,.hljs-template-tag,.hljs-template-variable,.hljs-title,.hljs-type{color:#a31515}.hljs-deletion,.hljs-meta,.hljs-selector-attr,.hljs-selector-pseudo{color:#2b91af}.hljs-doctag{color:grey}.hljs-attr{color:red}.hljs-bullet,.hljs-link,.hljs-symbol{color:#00b0e8}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700} */
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#011627;color:#d6deeb}.hljs-keyword{color:#c792ea;font-style:italic}.hljs-built_in{color:#addb67;font-style:italic}.hljs-type{color:#82aaff}.hljs-literal{color:#ff5874}.hljs-number{color:#f78c6c}.hljs-regexp{color:#5ca7e4}.hljs-string{color:#ecc48d}.hljs-subst{color:#d3423e}.hljs-symbol{color:#82aaff}.hljs-class{color:#ffcb8b}.hljs-function{color:#82aaff}.hljs-title{color:#dcdcaa;font-style:italic}.hljs-params{color:#7fdbca}.hljs-comment{color:#637777;font-style:italic}.hljs-doctag{color:#7fdbca}.hljs-meta{color:#82aaff}.hljs-meta-keyword{color:#82aaff}.hljs-meta-string{color:#ecc48d}.hljs-section{color:#82b1ff}.hljs-builtin-name,.hljs-name,.hljs-tag{color:#7fdbca}.hljs-attr{color:#7fdbca}.hljs-attribute{color:#80cbc4}.hljs-variable{color:#addb67}.hljs-bullet{color:#d9f5dd}.hljs-code{color:#80cbc4}.hljs-emphasis{color:#c792ea;font-style:italic}.hljs-strong{color:#addb67;font-weight:700}.hljs-formula{color:#c792ea}.hljs-link{color:#ff869a}.hljs-quote{color:#697098;font-style:italic}.hljs-selector-tag{color:#ff6363}.hljs-selector-id{color:#fad430}.hljs-selector-class{color:#addb67;font-style:italic}.hljs-selector-attr,.hljs-selector-pseudo{color:#c792ea;font-style:italic}.hljs-template-tag{color:#c792ea}.hljs-template-variable{color:#addb67}.hljs-addition{color:#addb67ff;font-style:italic}.hljs-deletion{color:#ef535090;font-style:italic}
+
+</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+<script>
+hljs.highlightAll();
+</script>
 </head>
 <body> 
 	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
@@ -18,6 +30,7 @@
 				<div class="guidelist" style="padding:30px;">
 					<strong style="display:block;font-weight: 900;">Component List</strong><br><br>
 					<p class="ti" data-pos-top="guides00">0. Car Select List</p><br>
+					<p class="ti" data-pos-top="guides00">0. Option Select List</p><br>
 					<!-- 
 					<p class="ti" data-pos-top="guides01">1. Button</p><br>
 					<p class="ti" data-pos-top="guides02">2. Icon</p><br>
@@ -39,8 +52,9 @@
 .guides {padding:15px;margin:30px 0 100px;font-size:16px;}
 .guides div:after {content: '';display: block;clear: both;}
 .guides h1 {padding-bottom:30px;font-size: 20px;font-weight: bold;}
-.guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
-.guides pre * {color:#fff}
+.guides pre {border:2px solid #000;background-color: transparent;}
+/* .guides pre {display: block;font-size:14px;padding:15px;margin-bottom:20px;background-color: #000;color:#fff;line-height:1.7;}
+.guides pre * {color:#fff} */
 .guides .half {float:left;width:calc(100%/2 - 30px);margin-right:30px;}
 .guides .half.right {width:calc(100%/2);margin-right:0;}
 .guides p.ti {margin-top:40px;padding-bottom:15px;font-weight: bold;font-size:18px;color:blue}
@@ -53,10 +67,9 @@
 <p class="ti" id="guides00" style="margin-top:0;">0. Car Select List</p>
 <div>
 	<link rel="stylesheet" href="./assets/css/clicktobuy.css"></link>
-
-	<!-- <div class="product_mask" role="radiogroup"> -->
 	<div>
-		<article class="product" role="radio" aria-selected="true">
+
+		<article class="product">
 			<div class="product_head">
 				<span class="product_tag new">new</span>
 				<span class="product_tag popular">Popular</span>
@@ -86,7 +99,7 @@
 				<a href="#" class="btn-type _line">BUILD</a>
 			</div>
 		</article>
-		<article class="product" role="radio" aria-selected="false">
+		<article class="product">
 			<div class="product_head">
 				<span class="product_tag new">new</span>
 				<span class="product_tag popular">Popular</span>
@@ -115,13 +128,17 @@
 				<a href="#" class="btn-type _line">BUILD</a>
 			</div>
 		</article>
+
 	</div>
 <br>
-<pre>
+<!-- <code class="html">	 -->
+<!-- <code class="plaintext">	 -->
+<pre><code class="language-html">	
+
 	&lt;link rel="stylesheet" href="./assets/css/clicktobuy.css"&gt;&lt;/link&gt;
 
-	&lt;div class="product_mask" role="radiogroup"&gt;
-		&lt;article class="product" role="radio" aria-selected="true"&gt;
+	&lt;div class="product_mask"&gt;
+		&lt;article class="product"&gt;
 			&lt;div class="product_head"&gt;
 				&lt;span class="product_tag new"&gt;new&lt;/span&gt;
 				&lt;span class="product_tag popular"&gt;Popular&lt;/span&gt;
@@ -153,13 +170,17 @@
 		&lt;/article&gt;
 		...
 	&lt;/div&gt;
-</pre>
+
+</code></pre>
 <br><br>
+
+
+<p class="ti" id="guides00" style="margin-top:0;">0. Option Select List</p>
 <div class="option_mask">
-	<div class="option_thumnail" role="checkbox" aria-selected="false">
+	<div class="option_thumnail">
 		<div class="option_head">
-			<input type="checkbox" id="opt01">
-			<label for="opt01"><figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure></label>
+			<input type="checkbox" id="opt01"><label for="opt01"></label>
+			<figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure>
 		</div>
 		<div class="option_body">
 			<em class="option_seller">60:40 Split Rear Seat</em>
@@ -170,10 +191,11 @@
 			<button type="button" class="ic_info">tooltip</button>
 		</div>
 	</div>
-	<div class="option_thumnail" role="checkbox" aria-selected="false">
+	<div class="option_thumnail">
 		<div class="option_head">
 			<input type="checkbox" id="opt02">
-			<label for="opt02"><figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure></label>
+			<label for="opt02"></label>
+			<figure class="option_img"><img src="./assets/images/dummy/@dummy_option.png" alt=""></figure>
 		</div>
 		<div class="option_body">
 			<em class="option_seller">60:40 Split Rear Seat</em>
@@ -186,12 +208,16 @@
 	</div>
 </div>
 <script src="./assets/js/build.js"></script>
-<pre>
+<br><br>
+<!-- <code class="html">	 -->
+<!-- <code class="plaintext">	 -->	
+<pre><code class="language-html">	
 &lt;div class="option_mask"&gt;
-	&lt;div class="option_thumnail" role="checkbox" aria-selected="false"&gt;
+	&lt;div class="option_thumnail"&gt;
 		&lt;div class="option_head"&gt;
 			&lt;input type="checkbox" id="opt01"&gt;
-			&lt;label for="opt01"&gt;&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;&lt;/label&gt;
+			&lt;label for="opt01"&gt;&lt;/label&gt;
+			&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;
 		&lt;/div&gt;
 		&lt;div class="option_body"&gt;
 			&lt;em class="option_seller"&gt;60:40 Split Rear Seat&lt;/em&gt;
@@ -202,10 +228,11 @@
 			&lt;button type="button" class="ic_info"&gt;tooltip&lt;/button&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class="option_thumnail" role="checkbox" aria-selected="false"&gt;
+	&lt;div class="option_thumnail"gt;
 		&lt;div class="option_head"&gt;
 			&lt;input type="checkbox" id="opt02"&gt;
-			&lt;label for="opt02"&gt;&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;&lt;/label&gt;
+			&lt;label for="opt02"&gt;&lt;/label&gt;
+			&lt;figure class="option_img"&gt;&lt;img src="./assets/images/dummy/@dummy_option.png" alt=""&gt;&lt;/figure&gt;
 		&lt;/div&gt;
 		&lt;div class="option_body"&gt;
 			&lt;em class="option_seller"&gt;60:40 Split Rear Seat&lt;/em&gt;
@@ -219,17 +246,18 @@
 &lt;/div&gt;	
 
 &lt;script src="./assets/js/build.js"&gt;&lt;/script&gt;
-</pre>
+
+</code></pre>
+<br><br>
 
 
+<!-- <p class="ti" id="guides00" style="margin-top:0;">0. Option Select List</p> -->
 
 
 
 
 
 </div>
-
-
 <br><br>
 </div>
 <!--// guides -->
@@ -248,6 +276,10 @@
 		<script src="./assets/js/build.js"></script>
 	</div>
 
+	<style>
+	.h-contents .select_wrap {width:300px;}
+	.h-contents .stage_wrap {width:calc(100% - 350px);margin-left:300px;}
+	</style>
 	<script>
 	$(document).ready(function(){
 		$('.guidelist p').each(function () {
