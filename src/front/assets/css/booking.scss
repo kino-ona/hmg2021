@@ -241,7 +241,12 @@
 		}
 		.option_mask {
 			padding-bottom:40px;
-			overflow:hidden;
+			// overflow:hidden;
+			&:after {
+				content: '';
+				clear:both;
+				display: block;
+			}
 		}
 		.util_wrap {
 			margin-top:40px;
