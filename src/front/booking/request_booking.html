@@ -141,7 +141,7 @@
 											</div>
 											<div class="group">
 												<em>Base Price</em>
-												<span>+ USD 1,005</sapn>
+												<span>+ USD 1,005</span>
 											</div>
 										</div>
 									</div>
@@ -167,35 +167,222 @@
 							<div class="group">
 								<div class="content_head">
 									<h3 class="content_title">Booking info</h3>
-									<div class="util">
-										<button type="button" class="btn_detail">
-											<i></i>
-											<span>Detail</span>
-										</button>
-										<button type="button" class="btn_share">
-											<i></i>
-											<span>Share</span>
-										</button>
-									</div>
+									<button type="button" class="content_util btn_detail">
+										<i></i>
+										<span>Detail</span>
+									</button>
+									<button type="button" class="content_util btn_share">
+										<i></i>
+										<span>Share</span>
+									</button>
 								</div>
-								<div class="front">
+								<div class="booking_info">
 									<div class="front">
 										<figure class="car_img">
-											<img src="../assets/images/@dummy_car.png" alt="">
+											<img src="../assets/images/dummy/@dummy_car.png" alt="">
 										</figure>
 									</div>
 									<div class="option">
-										<p class="option_title">Vehicle info</p>
-										<div class="info_container">
-											<div class="group">
-												<em class="title">Model</em>
-												<div></div>
-											</div>
-										</div>
+										<p class="content_stitle">Vehicle info</p>
+										<dl class="info">
+											<dt>Model</dt>
+											<dd>2020 VENUE Gasoline 2.0 Single Tone AT</dd>
+											<dt>Exterior</dt>
+											<dd>
+												<div class="color">
+													<span class="circle" style="background-color: #0F3076"></span>
+													<span>Denim</span>
+												</div>
+											</dd>
+											<dt>Interior</dt>
+											<dd>
+												<div class="color">
+													<span class="circle" style="background-color: #000"></span>
+													<span>Black + Red</span>
+												</div>
+											</dd>
+											<dt>Options</dt>
+											<dd></dd>
+											<dt>Accessories</dt>
+											<dd></dd>
+										</dl>
+									</div>
+								</div>
+								<div class="total_container">
+									<div class="group">
+										<span class="desc">Total</span>
+										<em class="price">USD 710,500.00</em>
+									</div>
+									<div class="group">
+										<span class="desc">Booking Amount</span>
+										<em class="price">USD 10,000.00</em>
+									</div>
+									<div class="group">
+										<span class="desc">Balance Amount </span>
+										<em class="price">USD 700,500.00</em>
 									</div>
 								</div>
 							</div>
 							<!-- // Bopoking info -->
+							<!-- Dealer info -->
+							<div class="group">
+								<div class="content_head">
+									<h4 class="content_stitle">Dealer info</h4>
+									<button type="button" class="content_util">
+										<i class="ic_refresh_blue"></i>
+										<span>Dealer Change</span>
+									</button>
+								</div>
+								<ul class="dealer_info">
+									<li class="group">
+										<em class="place">Hyundai Brunswick</em>
+										<address class="address">
+											<ul>
+												<li class="location">
+													<i class="ic_loca"></i>
+													<span>Jl. Brigjen Dharsono No.8, Kota Cirebon, Jawa Barat 45131</span>
+												</li>
+												<li class="tel">
+													<i></i>
+													<a href="tel:+10231231030">(0231) 231 030</a>
+												</li>
+												<li class="mail">
+													<i></i>
+													<a href="mailto:cs@hyundai.com">cs@hyundai.com</a>
+												</li>
+											</ul>
+										</address>
+									</li>
+									<li class="group">
+										<em class="place">Hyundai Brunswick</em>
+										<address class="address">
+											<ul>
+												<li class="location">
+													<i class="ic_loca"></i>
+													<span>Jl. Brigjen Dharsono No.8, Kota Cirebon, Jawa Barat 45131</span>
+												</li>
+												<li class="tel">
+													<i></i>
+													<a href="tel:+10231231030">(0231) 231 030</a>
+												</li>
+												<li class="mail">
+													<i></i>
+													<a href="mailto:cs@hyundai.com">cs@hyundai.com</a>
+												</li>
+											</ul>
+										</address>
+									</li>
+								</ul>
+							</div>
+							<!-- // Dealer info -->
+							<!-- Buyer info -->
+							<div class="group">
+								<div class="content_head">
+									<h4 class="content_stitle">Buyer info</h4>
+									<span class="sub">Required <span class="required"><span class="a11y">Required</span></span></span>
+								</div>
+								<div class="frm_field">
+									<dl class="frm">
+										<dt>Customer Type <span class="required"><span class="a11y">required</span></span></dt>
+										<dd>
+											<p class="radiowrap"><input type="radio" name="CustomerType" id="Personal" checked><label for="Personal"><span>Personal</span></label></p>
+											<p class="radiowrap"><input type="radio" name="CustomerType" id="Company"><label for="Company"><span>Company</span></label></p>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt>Address <span class="required"><span class="a11y">required</span></span></dt>
+										<dd class="field_triple">
+											<div class="group">
+												<label for="Title" class="a11y">Title</label>
+												<select id="Title">
+													<option>Title</option>
+												</select>
+											</div>
+											<div class="group">
+												<label for="FirstName" class="a11y">First Name</label>
+												<input type="text" id="FirstName" placeholder="First Name" disabled>
+											</div>
+											<div class="group">
+												<label for="LastName" class="a11y">Last Name</label>
+												<input type="text" id="LastName" placeholder="Last Name">
+											</div>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt>Contact Info <span class="required"><span class="a11y">required</span></span></dt>
+										<dd class="field_triple">
+											<div class="group">
+												<label for="AreaCode" class="a11y">Area Code</label>
+												<select id="AreaCode">
+													<option>+62</option>
+												</select>
+											</div>
+											<div class="group">
+												<label for="MobilePhone" class="a11y">MobilePhone</label>
+												<input type="text" id="MobilePhone" placeholder="Mobile Phone">
+											</div>
+											<div class="group">
+												<label for="Email" class="a11y">Email</label>
+												<input type="email" id="Email" placeholder="email">
+											</div>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt>Location info <span class="required"><span class="a11y">required</span></span></dt>
+										<dd class="field_triple">
+											<div class="group">
+												<label for="Location" class="a11y">Location</label>
+												<select id="Location">
+													<option>Province</option>
+												</select>
+											</div>
+											<div class="group">
+												<label for="City" class="a11y">City</label>
+												<select id="City" disabled>
+													<option>City</option>
+												</select>
+											</div>
+											<div class="group">
+												<label for="District" class="a11y">District</label>
+												<select id="District" disabled>
+													<option>District</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+									<dl class="frm">
+										<dt>Address <span class="required"><span class="a11y">required</span></span></dt>
+										<dd class="field_triple-variable">
+											<div class="group">
+												<label for="RestAddress" class="a11y">Rest Address</label>
+												<input type="text" id="RestAddress" placeholder="Rest of Address">
+											</div>
+											<div class="group">
+												<label for="PostalCode" class="a11y">Postal Code</label>
+												<input type="text" id="PostalCode" placeholder="Postal Code">
+											</div>
+										</dd>
+									</dl>
+									<div class="agree_container">
+										<div class="group">
+											<p class="chkwrap"><input type="checkbox" id="Agree01" checked><label for="Agree01"><span>I agree with the booking conditions and will proceed with the payment.</span></label></p>
+										</div>
+										<div class="group">
+											<p class="chkwrap"><input type="checkbox" id="Agree02"><label for="Agree02"><span>I accept the Terms &amp; Conditions and Privacy Policy.</span></label></p>
+										</div>
+									</div>
+									<div class="frm_reset">
+										<button type="button">
+											<i class="ic_refresh_blue"></i>
+											<span>Reset</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- // Buyer info -->
+							<div class="booking_confirm">
+								<button type="button" class="btn-type _default">Booking (USD 10,000.00)</button>
+							</div>
 						</div>
 					</div>
 				</div>

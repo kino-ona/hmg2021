@@ -915,34 +915,195 @@
 // 이현우
 .booking_online {
 	height: 100%;
-	.address {
-		margin-top: 20px;
-		li {
-			display: flex;
+	.content_head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		> [class*="title"] {
+			margin-right: auto;
+		}
+		.content_util {
+			display: inline-flex;
+			align-items: center;
+			&:not(:first-of-type) {
+				margin-left: 30px;
+			}
+			i {
+				margin-right: 6px;
+				background: {
+					repeat: no-repeat;
+					position: 0 0;
+					size: cover;
+				};
+			}
+			span {
+				color: #0559F7;
+				font-size: 1rem;
+				@include FontHead;
+			}
+		}
+		.btn_detail {
+			i {
+				width: 14px;
+				height: 14px;
+				background-image: url(../images/ico/icon_review_blue.png);
+			}
+		}
+		.btn_share {
+			i {
+				width: 14px;
+				height: 14px;
+				background-image: url(../images/ico/icon_share_blue.png);
+			}
+		}
+		.sub {
+			flex-shrink: 0;
+			font-weight: 900;
+		}
+	}
+	.dealer_info {
+		display: flex;
+		padding: 40px;
+		border: 1px solid #D9D9D9;
+		> .group {
+			width: 50%;
 			&:not(:first-child) {
-				margin-top: 10px;
-			}
-			&.tel {
-				i {background-image: url(../images/ico/icon_call.png);}
-			}
-			&.mail {
-				i {background-image: url(../images/ico/icon_mail.png);}
+				margin-left: 40px;
+				padding-left: 40px;
+				border-left: 1px dashed #999;
 			}
 		}
-		i {
-			flex: 0 0 auto;
-			width: 16px;
-			height: 16px;
-			margin: 4px 10px 0 0;
-			background: {
-				repeat: no-repeat;
-				position: 0 0;
-				size: cover;
-			};
+		.place {
+			display: block;
+			font-weight: 600;
 		}
-		span,
-		a {
-			line-height: 1.5rem;
+		.near {
+			margin-top: 2px;
+			color: #FF9934;
+			font-weight: 600;
+			font-size: .875rem;
+		}
+		.address {
+			margin-top: 20px;
+			li {
+				display: flex;
+				&:not(:first-child) {
+					margin-top: 10px;
+				}
+				&.tel {
+					i {background-image: url(../images/ico/icon_call.png);}
+				}
+				&.mail {
+					i {background-image: url(../images/ico/icon_mail.png);}
+				}
+			}
+			i {
+				flex: 0 0 auto;
+				width: 16px;
+				height: 16px;
+				margin: 4px 10px 0 0;
+				background: {
+					repeat: no-repeat;
+					position: 0 0;
+					size: cover;
+				};
+			}
+			span,
+			a {
+				line-height: 1.5rem;
+			}
+		}
+	}
+	.booking_info {
+		display: flex;
+		align-items: flex-end;
+		margin-top: 30px;
+		.front {
+			width: 55%;
+		}
+		.option {
+			width: 45%;
+			padding-left: 5%;
+			.content_stitle {
+				margin-bottom: 15px;
+			}
+			.info {
+				display: flex;
+				flex-wrap: wrap;
+				border-top: 3px solid #000;
+				dt,
+				dd {
+					padding: 20px 0;
+					border-bottom: 1px dashed #999;
+					line-height: 1.75rem;
+				}
+				dt {
+					width: 30%;
+					font-weight: 900;
+				}
+				dd {
+					width: 70%;
+					text-align: right;
+				}
+				.color {
+					display: inline-flex;
+					align-items: center;
+					.circle {
+						width: 20px;
+						height: 20px;
+						border-radius: 100%;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.total_container {
+		display: flex;
+		margin-top: 60px;
+		padding-top: 30px;
+		border-top: 3px solid #000;
+		> .group {
+			width: calc(100% / 3);
+			&:not(:first-child) {
+				margin-left: 20px;
+				padding-left: 20px;
+				border-left: 1px solid #D9D9D9;
+			}
+		}
+		.desc {
+			display: block;
+			color: #999;
+			font-size: 14px;
+		}
+		.price {
+			display: block;
+			margin-top: 6px;
+			font-weight: 900;
+			font-size: 1.625rem;
+			text-align: right;
+		}
+	}
+	.frm_field {
+		.frm_reset {
+			margin-bottom: -125px;
+			margin-top: 97px;
+			text-align: right;
+			button {
+				display: inline-flex;
+				align-items: center;
+				span {
+					color: #0559F7;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.booking_confirm {
+		margin-top: 80px;
+		text-align: center;
+		.btn-type {
+			padding: 0 47px;
 		}
 	}
 }
@@ -996,33 +1157,30 @@
 		width: 38.1%;
 		border-right: 1px solid #D9D9D9;
 		.dealer_info {
+			display: block;
+			padding: 0;
+			border: 0;
 			> .group {
+				width: 100%;
 				padding: 30px 35px;
+				border-left: 0;
 				cursor: pointer;
 				&:not(:first-child) {
+					margin-left: 0;
 					border-top: 1px solid #D9D9D9;
 				}
+				&._active,
 				&:hover,
 				&:focus {
 					background-color: #F4F4F4;
 				}
 			}
 			.place {
-				display: block;
-				font-weight: 600;
 				font-size: 1.375rem;
 				line-height: 1.625rem;
 			}
-			.near {
-				margin-top: 2px;
-				color: #FF9934;
-				font-weight: 600;
-				font-size: .875rem;
-			}
-			.address {
-				margin-top: 20px;
-			}
 		}
+		
 	}
 	.map {
 		flex: 1;
