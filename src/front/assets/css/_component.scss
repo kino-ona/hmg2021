@@ -815,7 +815,7 @@ a, button {
 	dd {
 		position:relative;
 		margin-top:10px;
-		font-family: inherit;
+		// font-family: inherit;
 	}
 	.warn + [class*='ic_']{
 		position:absolute;
@@ -852,6 +852,7 @@ a, button {
 			}
 			button {
 				flex: .4;
+				min-width:inherit;
 				margin-left:10px;
 			}
 			input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not(:first-child),
@@ -859,7 +860,7 @@ a, button {
 				margin-left: 10px;
 			}
 			.warn + [class*='ic_']{
-				right:calc(20% + 20px);
+				right:calc(20% + 40px);
 			}
 			.masking {
 				display: inherit;
