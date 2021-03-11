@@ -154,10 +154,10 @@
 	padding-top:15px;
 	border-top:3px solid #000;
 	.chkwrap {
-		input[type=checkbox] + label {
+		label {
 			font-size: 1rem;
 			span {
-				font-weight: 500;
+				font-weight: 600;
 			}
 		}
 		&:first-child {
@@ -179,7 +179,7 @@
 	position: relative;
 	.chkwrap {
 		label {
-			input[type=checkbox] + span {
+			span {
 				font-weight: 600;
 			}
 		}
@@ -314,7 +314,8 @@
 	display:flex;
 	min-height:100%;
 	.btn-type_wrap {
-		width: 510px;
+		max-width: 510px;
+		width: 100%;
 		margin: 60px auto 0;
 		display: flex;
 		flex-wrap:wrap;
@@ -483,12 +484,11 @@
 		margin-bottom: 20px;
 	}
 	.btn-type_wrap {
-		width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
 		.btn-type {
-			flex: 1;
+		flex: 1;
 			margin-right:10px;
 			&:last-of-type {
 				margin-right:0;
@@ -505,7 +505,7 @@
 .pg-mobile {
 	.title_wrap {
 		.content_title {
-			width:50%;
+			width:55%;
 			margin-bottom:40px;
 			font-size:2.143rem;
 			line-height:1.2;
@@ -514,10 +514,66 @@
 			bottom:3px;
 		}
 	}
+	.btn-type_wrap {
+		.btn-type {
+			height: 55px;
+			font-size: 1.286rem;
+			line-height: 3.929rem;
+		}
+	}
+	.frm_field {
+		._mix._fix {
+			button.btn_check {
+				max-width: 180px;
+				width: 100%;
+				font-size: 1.143rem;
+			}
+			&.input-timer {
+				input {
+					width: 100%;
+				}
+				.clock {
+					right: 20px;
+				}
+			}
+		}
+	}
+	.chk_terms {
+		padding-top: 23px;
+		margin-bottom: 50px;
+		.chkwrap {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			input[type=checkbox] + label {
+				height: auto;
+				background-position: left 3px;
+				font-size: 1.143rem;
+				line-height: 1.714rem;
+			}
+		}
+	}
+	.sns_wrap {
+		.txt {
+			font-size: 1rem;
+			&:before,
+			&:after {
+				width:55px;
+				margin-top:0;
+			}		
+		}
+	}
 	.mypage {
 		display:block;
 		.btn-type_wrap {
-			width:100%;
+			margin: 40px auto 0;
+		}
+		.content_wrap {
+			padding-bottom: 40px;
+		}
+		.readbox {
+			margin-bottom: 50px;
 		}
 	}
 	.lnb_wrap, 
@@ -582,11 +638,14 @@
 			background-color:#d9d9d9;
 		}
 	}
+	// member
+	.member_wrap {
+		margin:0 20px auto;
+	}
+	//membership - account
 	.account_wrap {
 		.content_title {
 			width: 100%;
-		}
-		.content_title {
 			margin-bottom: 20px;
 		}
 		.content_txt {
@@ -602,10 +661,6 @@
 		}
 		.btn-type_wrap {
 			width: calc(100% - 40px);
-			.btn-type {
-				font-size: 1.286rem;
-				line-height: 3.929rem;
-			}
 			&._single {
 				max-width: 335px;
 			}
