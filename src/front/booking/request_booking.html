@@ -18,7 +18,7 @@
 		<!-- h-contents -->
 		<div id="h-contents" class="h-contents">
 
-			<div class="booking_online">
+			<div class="booking_online not_floating">
 				<!-- left select -->
 				<div class="select_wrap">
 					<!-- build_option -->
@@ -179,7 +179,7 @@
 								<div class="booking_info">
 									<div class="front">
 										<figure class="car_img">
-											<img src="../assets/images/dummy/@dummy_car.png" alt="">
+											<img src="../assets/images/dummy/@dummy_car_bg.png" alt="">
 										</figure>
 									</div>
 									<div class="option">
@@ -202,9 +202,25 @@
 												</div>
 											</dd>
 											<dt>Options</dt>
-											<dd></dd>
+											<dd>
+												<div class="my_items">
+													<span class="selected">
+														<em class="current">2</em>
+														items are selected
+													</span>
+													<button type="button" class="more">more</button>
+												</div>
+											</dd>
 											<dt>Accessories</dt>
-											<dd></dd>
+											<dd>
+												<div class="my_items">
+													<span class="selected">
+														<em class="current">3</em>
+														items are selected
+													</span>
+													<button type="button" class="more">more</button>
+												</div>
+											</dd>
 										</dl>
 									</div>
 								</div>
@@ -365,10 +381,10 @@
 									</dl>
 									<div class="agree_container">
 										<div class="group">
-											<p class="chkwrap"><input type="checkbox" id="Agree01" checked><label for="Agree01"><span>I agree with the booking conditions and will proceed with the payment.</span></label></p>
+											<p class="chkwrap"><input type="checkbox" id="Agree01" checked><label for="Agree01"><span>I agree with the booking conditions and will proceed with the payment.</span></label> <span class="highline">View Details</span></p>
 										</div>
 										<div class="group">
-											<p class="chkwrap"><input type="checkbox" id="Agree02"><label for="Agree02"><span>I accept the Terms &amp; Conditions and Privacy Policy.</span></label></p>
+											<p class="chkwrap"><input type="checkbox" id="Agree02"><label for="Agree02"><span>I accept the <span class="highline">Terms &amp; Conditions</span> and <span class="highline">Privacy Policy</span>.</span></label></p>
 										</div>
 									</div>
 									<div class="frm_reset">

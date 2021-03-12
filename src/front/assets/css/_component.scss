@@ -919,12 +919,29 @@ a, button {
 	.agree_container {
 		margin-top: 20px;
 		.chkwrap {
+			font-weight: 600;
+			font-size: 1rem;
 			input[type="checkbox"] + label {
 				height: auto;
 				background-position: left 2px;
-				font-weight: 600;
-				font-size: 1rem;
+				font-weight: inherit;
+				font-size: inherit;
 				line-height: 1.5rem;
+			}
+			label {
+				> span {
+					font-weight: inherit;
+					line-height: inherit;
+				}
+			}
+			> .highline {
+				margin-left: 15px;
+				line-height: 1.5rem;
+			}
+			.highline {
+				color: #1063FF;
+				font-weight: inherit;
+				text-decoration: underline;
 			}
 		}
 	}

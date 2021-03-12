@@ -1074,6 +1074,11 @@
 // 이현우
 .booking_online {
 	height: 100%;
+	&.not_floating {
+		.stage_wrap {
+			height: 100%;
+		}
+	}
 	.content_head {
 		display: flex;
 		align-items: baseline;
@@ -1212,6 +1217,46 @@
 						height: 20px;
 						border-radius: 100%;
 						margin-right: 10px;
+					}
+				}
+				.my_items {
+					display: inline-flex;
+					align-items: center;
+					.selected {
+						color: #999;
+					}
+					.current {
+						font-weight: 900;
+					}
+					.more {
+						overflow: hidden;
+						position: relative;
+						width: 10px;
+						height: 10px;
+						margin-left: 10px;
+						text-indent: 100%;
+						white-space: normal;
+						&:before,
+						&:after {
+							content: '';
+							display: block;
+							position: absolute;
+							background-color: #000;
+						}
+						&:before {
+							left: 50%;
+							top: 0;
+							width: 2px;
+							height: 10px;
+							margin-left: -1px;
+						}
+						&:after {
+							left: 0;
+							top: 50%;
+							width: 10px;
+							height: 2px;
+							margin-top: -1px;
+						}
 					}
 				}
 			}
