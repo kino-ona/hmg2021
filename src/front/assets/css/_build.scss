@@ -1243,7 +1243,7 @@
 			padding:10px 20px;
 			margin-bottom:0;
 			h2 {
-				font-size:1.857rem;
+				font-size:1.625rem;
 			}
 		}
 		.vehicles-model {
@@ -1254,6 +1254,7 @@
 					position:relative;
 					padding:13px 15px;
 					font-weight: normal;
+					font-size:1rem;
 					&[aria-selected="true"] {
 						background-color:#fff;
 						color:#0E306C;
@@ -1279,8 +1280,8 @@
 			text-align: right;
 			.btn_find {
 				padding:0 20px;
-				font-size:1.143rem;
-				font-weight: 600;
+				font-size:1rem;
+				font-weight: normal;
 				line-height:3.6;
 			}
 		}
@@ -1296,7 +1297,7 @@
 				.menu_head {
 					padding-top:10px;
 					.opt_title {
-						font-size:1.857rem;
+						font-size:1.625rem;
 					}
 				}
 			}
@@ -1313,7 +1314,7 @@
 					right:0;
 					top:6px;
 					margin-top:0;
-					font-size: 1rem;
+					font-size: 0.875rem;
 				}
 			}
 			.opt_title {

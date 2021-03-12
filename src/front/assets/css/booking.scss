@@ -1362,7 +1362,7 @@
 		}
 		.place {
 			display: block;
-			font-weight: 600;
+			font-weight: 900;
 		}
 		.near {
 			margin-top: 2px;
@@ -1583,41 +1583,37 @@
 		z-index: 10;
 		width: 38.1%;
 		border-right: 1px solid #D9D9D9;
-		.dealer_info {
-			display: block;
-			padding: 0;
-			border: 0;
-			> .group {
-				width: 100%;
-				padding: 30px 35px;
-				border-left: 0;
-				cursor: pointer;
-				&:not(:first-child) {
-					margin-left: 0;
-					border-top: 1px solid #D9D9D9;
-				}
-				&._active,
-				&:hover,
-				&:focus {
-					background-color: #F4F4F4;
-				}
-			}
-			.place {
-				font-size: 1.375rem;
-				line-height: 1.625rem;
-			}
-		}
-		
 	}
 	.map {
 		flex: 1;
 	}
-	.fixed_bottom {
-		justify-content: flex-end;
-		.btn-type {
-			flex: none;
-			width: 22.1%;
+	.dealer_info {
+		display: block;
+		padding: 0;
+		border: 0;
+		> .group {
+			width: 100%;
+			padding: 30px 35px;
+			cursor: pointer;
+			&:not(:first-child) {
+				margin-left: 0;
+				border-left: 0;
+				border-top: 1px solid #D9D9D9;
+			}
+			&._active,
+			&:hover,
+			&:focus {
+				background-color: #F4F4F4;
+			}
 		}
+		.place {
+			font-size: 1.375rem;
+			line-height: 1.625rem;
+		}
+	}
+	.fixed_bottom {
+		left: auto;
+		width: calc(38.41% / 2);
 	}
 }
 
