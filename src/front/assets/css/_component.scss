@@ -884,6 +884,23 @@ a, button {
 				font-size: 1rem;
 			}
 		}
+		[class^="field_triple"] {
+			display: flex;
+			> .group {
+				position: relative;
+				width: calc(100% / 3);
+				&:not(:first-child) {
+					margin-left: 10px;
+				}
+			}
+		}
+		.field_triple-variable {
+			> .group {
+				&:first-child {
+					width: calc((100% / 3) + (100% / 3) + 10px);
+				}
+			}
+		}
 	}
 	&.field_half {
 		.frm {
@@ -896,6 +913,18 @@ a, button {
 			}
 			&:nth-child(2n+1) {
 				clear: left;
+			}
+		}
+	}
+	.agree_container {
+		margin-top: 20px;
+		.chkwrap {
+			input[type="checkbox"] + label {
+				height: auto;
+				background-position: left 2px;
+				font-weight: 600;
+				font-size: 1rem;
+				line-height: 1.5rem;
 			}
 		}
 	}

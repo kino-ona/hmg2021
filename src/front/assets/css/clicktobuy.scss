@@ -201,6 +201,12 @@
 			&:not(:first-child) {
 				margin-top: 114px;
 			}
+			.content_head + .frm_field {
+				margin-top: 20px;
+			}
+			[class^="content_"][class*="title"] + .frm_field {
+				margin-top: 40px;
+			}
 		}
 	}
 	.content_title {
@@ -209,6 +215,12 @@
 		font-weight: 900;
 		font-size: 2.5rem;
 		line-height: 3.125rem;
+		@include FontHead;
+	}
+	.content_stitle {
+		margin-bottom: 20px;
+		font-weight: 900;
+		font-size: 1.875rem;
 		@include FontHead;
 	}
 	.content_desc {
