@@ -2,6 +2,78 @@
 
 @import "mixins";
 
+.select_dealer {
+	.result {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-top: 40px;
+		border: 1px solid #D9D9D9;
+		.contact,
+		.map {
+			flex: 1 0 50%;
+		}
+		.contact {
+			overflow-y: auto;
+			height: 50vh;
+			border-left: 1px solid #D9D9D9;
+		}
+		.dealer_info {
+			> .group {
+				padding: 20px;
+				cursor: pointer;
+				&:not(:first-child) {
+					border-top: 1px solid #D9D9D9;
+				}
+				&._active,
+				&:hover,
+				&:focus {
+					background-color: #F4F4F4;
+				}
+			}
+			.place {
+				display: block;
+				font-weight: 900;
+			}
+			.near {
+				margin-top: 5px;
+				color: #FF9934;
+				font-weight: 600;
+				font-size: .875rem;
+			}
+			.address {
+				margin-top: 20px;
+				li {
+					display: flex;
+					&:not(:first-child) {
+						margin-top: 10px;
+					}
+					&.tel {
+						i {background-image: url(../images/ico/icon_call.png);}
+					}
+					&.mail {
+						i {background-image: url(../images/ico/icon_mail.png);}
+					}
+				}
+				i {
+					flex: 0 0 auto;
+					width: 16px;
+					height: 16px;
+					margin: 4px 10px 0 0;
+					background: {
+						repeat: no-repeat;
+						position: 0 0;
+						size: cover;
+					};
+				}
+				span,
+				a {
+					font-size: .875rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
+}
 .trims {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -529,8 +601,10 @@
 		}
 	}
 }
-
 .h-layer_cont {
+	> p:first-child + .frm_field {
+		margin-top: 20px;
+	}
 	.frm_field {
 		.frm {
 			._mix {
