@@ -1245,4 +1245,58 @@ a[rel=tooltip] {
 			line-height: 1.571rem;
 		}
 	}
+
+	/** tab **/
+	.tablist {
+		display:block;
+		&:not(._line) {
+			li {
+				&:not(:first-child) {
+					margin-left: 0;
+				}
+				.tab {
+					text-align:left;
+					&[aria-selected="true"]:before {
+						display:none;
+					}
+				}
+			}
+		}
+		li {
+			height: 60px;
+			line-height:60px;
+			.tab {
+				padding:0 20px;
+				&:after {
+					display: none;
+				}
+				&[aria-selected="true"] {
+					color:#000;
+				}
+			}
+		}
+		&._line {
+			display:flex;
+			li {
+				flex:1;
+			}
+			.tab {
+				width:100%;
+				min-width:auto;
+			}
+			li {
+				height: auto;
+				line-height:55px;
+				.tab {
+					height:55px;
+					border-color:#fff;
+					font-size:1rem;
+					&[aria-selected="true"] {
+						border-color:#0E306C;
+						color:#0E306C;
+					}
+				}
+			}
+		}
+	}
 }
