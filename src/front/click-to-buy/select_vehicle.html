@@ -51,6 +51,13 @@
 				<!-- section stage -->
 				<div class="stage_wrap build_vehicle">
 					<div class="product_container">
+						<div class="product_filter">
+							<p class="total">Total <span class="current">12</span> vehicles</p>
+							<button type="button" class="btn_filter" onclick="hlayerOpen('VehicleFilter')">
+								<i class="ic_filter_blue"></i>
+								<span>Filter</span>
+							</button>
+						</div>
 						<div class="product_mask" role="radiogroup">
 							<article class="product" role="radio" aria-selected="true">
 								<div class="product_head">
@@ -187,8 +194,21 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+		<!-- Vehicle filter -->
+		<div class="h-layer_body popup filter_vehicle" id="VehicleFilter" aria-hidden="true" role="dialog" style="display:block !important">
+			<div class="h-layer_wrap _wide" style="opacity:1 !important">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Filter</h2>
+					<button onclick="hlayerClose('VehicleFilter')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="btn-type_wrap item_one">
+						<button onclick="hlayerClose('VehicleFilter')" class="btn-type _default">Select</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Vehicle filter -->
 	</div>
-
-
 </body>
 </html>

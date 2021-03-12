@@ -774,11 +774,31 @@
 .product_container {
 	max-width:1150px;
 	margin:0 auto;
+	padding:100px 0;
 	.product_mask {
 		margin-left:-35px;
-		padding:100px 0;
 		&:after {
 			@extend %clearer;
+		}
+	}
+	.product_filter {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		.total {
+			color: #999;
+			.current {
+				font-weight: 600;
+			}
+		}
+		.btn_filter {
+			display: flex;
+			align-items: center;
+			span {
+				color: #0559F7;
+				font-size: 1rem;
+				@include FontHead;
+			}
 		}
 	}
 }

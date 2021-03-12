@@ -45,7 +45,7 @@
 											<i class="ic_search"></i>
 											<span>Trim Finder</span>
 										</button>
-										<button type="button">
+										<button type="button" onclick="hlayerOpen('TrimComparison')">
 											<i class="ic_compare"></i>
 											<span>Compare Trims</span>
 										</button>
@@ -398,8 +398,92 @@
 		})
 		<!-- //footer -->
 		<script src="../assets/js/build.js"></script>
+
+		<!-- Trim comparison -->
+		<div class="h-layer_body popup trims_compare" id="TrimComparison" aria-hidden="true" role="dialog" style="display:block !important">
+			<div class="h-layer_wrap _wide" style="opacity:1 !important">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Trim comparison</h2>
+					<button onclick="hlayerClose('TrimComparison')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="controls">
+						<p class="desc">
+							<span>Trim information of</span>
+							<em class="highlight">Model A</em>
+						</p>
+						<div class="comparing">
+							<div class="group">
+								<label for="CompareTrims01" class="a11y">Compare Trims</label>
+								<select id="CompareTrims01">
+									<option>Limited</option>
+								</select>
+								<figure class="trim_img">
+									<img src="../assets/images/dummy/@dummy_compare01.png" alt="">
+								</figure>
+							</div>
+							<div class="group">
+								<label for="CompareTrims02" class="a11y">Compare Trims</label>
+								<select id="CompareTrims02">
+									<option>Night</option>
+								</select>
+								<div class="empty">
+									<span>Select a Trim</span>
+								</div>
+								<figure class="trim_img">
+									<img src="../assets/images/dummy/@dummy_compare02.png" alt="">
+								</figure>
+							</div>
+						</div>
+					</div>
+					<ul class="result">
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+						<li class="item">
+							<div class="group">
+								<em class="title">Featire A</em>
+								<p class="desc">Description</p>
+								<p class="desc">Description</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- // Trim comparison -->
 	</div>
-
-
 </body>
 </html>
