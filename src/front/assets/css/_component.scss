@@ -677,6 +677,7 @@ a, button {
 		.h-layer_title {
 			font-size:1.875rem;
 			font-weight: 900;
+			@include FontHead;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 		}
