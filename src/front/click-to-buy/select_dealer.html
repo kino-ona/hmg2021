@@ -1,0 +1,99 @@
+@@include('../inc/pagehead.inc',{
+	"pagetitle":"Bulid | Intro | HYUNDAI",
+	"webroot":"../"
+})
+<link rel="stylesheet" href="../assets/css/clicktobuy.css">
+</head>
+<body> 
+	<div class="skipnavigation"><a href="#h-contents">skip to container</a></div>
+
+	<div class="h-wrap">
+		<!-- header -->
+		@@include('../inc/header.inc',{
+			"webroot":"../"
+		})
+		<!-- //header -->
+
+		<!-- h-contents -->
+		<div id="h-contents" class="h-contents">
+			<!-- select stage back -->
+			<div class="page_back">
+				<a href="#"><i></i>Select Vehicle</a>
+			</div>
+			<!--// select stage back -->
+
+			<div class="click-to-buy">
+				<!-- left select -->
+				<div class="select_wrap">
+					<!-- build_vehicles -->
+					<div class="build_vehicles">
+						<div class="vehicles-head">
+							<h2>VEICLES TO BUILD</h2>
+						</div>
+
+						<div class="tab-pagination">
+							<div class="vehicles-model tab-row">
+								<p class="v_item"><button role="tab" aria-label="All" aria-selected="false">All</button></p>
+								<p class="v_item"><button role="tab" aria-label="SUV" aria-selected="false">SUV</button></p>
+								<p class="v_item"><button role="tab" aria-label="hatchback" aria-selected="false">hatchback</button></p>
+								<p class="v_item"><button role="tab" aria-label="Electric" aria-selected="false">Electric</button></p>
+								<p class="v_item"><button role="tab" aria-label="Sedan" aria-selected="false">Sedan</button></p>
+							</div>
+						</div>
+						<button type="button" class="find_car">
+							<i class="ic_search"></i>
+							<span>Find my Car?</span>
+						</button>
+					</div>
+				</div>
+				<!--// left select -->
+	
+				<!-- section stage -->
+				<div class="stage_wrap">
+					<button type="button" class="btn-type _default" onclick="hlayerOpen('SelectDelaer')">Select a Dealer</button>
+				</div>
+				<!--// section stage -->
+
+				<!-- <div class="fixed_bottom">
+						next 
+				</div> -->
+			</div>
+
+		</div>
+		<!--// h-contents -->
+
+		<!-- footer -->
+		@@include('../inc/footer.inc',{
+			"webroot":"../"
+		})
+		<!-- //footer -->
+
+		<div class="h-layer_body popup select_dealer" id="SelectDelaer" aria-hidden="true" role="dialog" style="display:block !important">
+			<div class="h-layer_wrap _wide" style="opacity:1 !important">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Select a Dealer</h2>
+					<button onclick="hlayerClose('SelectDelaer')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<p>Enter a Location.</p>
+					<div class="frm_field">
+						<div class="frm">
+							<dt class="a11y"><label for="CityPostcode">City or Postcode</label></dt>
+							<dd class="_mix">
+								<input type="text" id="CityPostcode" placeholder="City or Postcode">
+								<button type="button" class="btn_search">Search</button>
+								<p class="inp_txt warn">The location is incorrect</p>
+							</dd>
+						</div>
+					</div>
+					<div class="btn-type_wrap item_one">
+						<button onclick="hlayerClose('SelectDelaer')" class="btn-type _default">Select</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

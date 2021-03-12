@@ -1054,6 +1054,28 @@
 		}
 	}
 }
+.h-layer_cont {
+	.frm_field {
+		.frm {
+			._mix {
+				input[type="text"] {
+					flex: none;
+					width: calc(70% - 10px);
+				}
+				.btn_check {
+					flex: none;
+					width: 30%;
+					border: 1px solid #d9d9d9;
+					background: #f4f4f4;
+					color: #000;
+					font-size: 1rem;
+					font-weight: 600;
+					@include FontHead;
+				}
+			}
+		}
+	}
+}
 .popular_colors {
 	.h-layer_wrap {
 		left: 15px;
@@ -1221,20 +1243,7 @@
 	}
 	.frm_field {
 		.frm {
-			input[type="text"] {
-				flex: 1;
-			}
-			.btn_check {
-				flex: .3;
-				border: 1px solid #d9d9d9;
-				background: #f4f4f4;
-				color: #000;
-				font-size: 16px;
-				font-weight: 600;
-				@include FontHead;
-			}
 			.applied_coupon {
-				width: 100%;
 				margin-top: 10px;
 				color: #000;
 				font-size: 1rem;

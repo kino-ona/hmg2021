@@ -773,7 +773,9 @@ a, button {
 	}
 	&:not(._alert) {
 		.btn-type_wrap {
-			width: 510px;
+			&.item_one {
+				width: 350px;
+			}
 		}
 	}
 }
