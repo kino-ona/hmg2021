@@ -19,19 +19,17 @@
 		}
 		.desc {
 			margin-top:10px;
+			font-size:16px;
 			line-height:1.5rem;
 		}
 		button, a {
 			position:absolute;
-			top:0;
+			top:50%;
 			right:0;
-			height:50px;
-			padding:0 34px;
+			transform:translateY(-50%);
 			@include FontHead;
-			font-size:0.875rem;
-			font-weight:600;
-			background-color:#f4f4f4;
-			border:1px solid #d9d9d9;
+			color:#0559F7;
+			line-height:1.25rem;
 		}
 	}
 	.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -60,7 +58,7 @@
 	&.keyvisual {
 		.thumb {
 			position:relative;
-			height:500px;
+			min-height:500px;
 			overflow:hidden;
 			img {
 				position:absolute;
@@ -78,25 +76,25 @@
 			position:absolute;
 			top:50%;
 			left:50%;
-			width:1200px;
+			width:100%;
+			max-width:1200px;
 			transform:translate(-50%, -50%);
-			> div {
-				max-width:485px;
-			}
 			em {
 				@include FontHead;
 				font-size:4.375rem;
 				font-weight:900;
 				color:#fff;
+				text-transform:uppercase;
 			}
 			p {
 				margin-top:20px;
+				font-size:16px;
 				line-height:1.5rem;
 				color:rgba(255,255,255,.6);
 			}
 		}
 		.swiper-pagination {
-			bottom:12%;
+			bottom:60px;
 			left:50%;
 			max-width:1200px;
 			text-align:right;
@@ -122,9 +120,10 @@
 			padding-bottom:100px;
 			.frm_field {
 				display:flex;
+				flex-wrap:wrap;
 			}
 			.frm {
-				width:calc(100% / 3 );
+				width:calc((100% / 3 ) - 20px);
 				margin:0;
 				&:nth-of-type(2) {
 					margin:0 10px;
@@ -133,7 +132,8 @@
 			.btn-type_wrap {
 				margin-top:60px;
 				.btn-type {
-					min-width:350px;
+					width:100%;
+					max-width:350px;
 				}
 			}
 		}
@@ -227,47 +227,139 @@
 		.tab-pagination {
 			position: relative;
 			width: 100%;
+			margin-bottom:70px;
 			overflow: hidden;
 			.tab-row {
 				display: flex;
+				flex-wrap:nowrap;
+				margin:0 95px;
 				overflow-x: scroll;
 				-webkit-overflow-scrolling: touch;
 			}
 			p {
-				float: left;
-				width: auto;
-				height: auto;
-				margin: 0 10px 0 0 !important;
-				background-color: #fff;
-				opacity: 1;
-				white-space: nowrap;
-				cursor: pointer;
-				outline: none;
+				flex:none;
+				float:left;
+				width:auto;
+				height:auto;
+				min-width:calc((100% / 3) - 7px);
+				margin: 0 10px 0 0;
 				button {
-					display: block;
-					padding-bottom: 10px;
+					position:relative;
+					display: flex;
+					align-items: center;
+					width:100%;
+					min-height:70px;
+					padding:7.335% 32% 6.725% 9.17%;
 					font-size: 1rem;
 					font-weight: 350;
 					line-height: 1;
 					color: #999999;
-					text-transform: uppercase;
-				}
-				&.active {
-					button {
-						margin-top: -2px;
-						&:after {
-							content: '';
-							margin-top: 4px;
-							display: block;
-							width: 100%;
-							height: 2px;
-							background-color: rgba(21, 144, 224, 0.89);
+					border: 1px solid #d9d9d9;
+					.name {
+						color: #000;
+						font-weight: 600;
+						font-size: 1.125rem;
+						@include FontHead;
+					}
+					.price {
+						margin-left: 10px;
+						color: #999;
+						font-size: .875rem;
+						@include FontHead;
+					}
+					.tag {
+						position:absolute;
+						top:50%;
+						right:20px;
+						@include transform(translate(0, -50%));
+						margin-left: auto;
+						padding: 0 8px;
+						font-weight: 600;
+						font-size: 12px;
+						line-height: 20px;
+						&.new {
+							background-color: #E2E9FF;
+							color: #0559F7;
+						}
+						&.popular {
+							background-color: #F1E7F8;
+							color: #7A4DF5;
+						}
+						&.best {
+							background-color: #F8EADC;
+							color: #FF9934;
+						}
+					}
+					.flag {
+						position:absolute;
+						right:0;
+						top:50%;
+						@include transform(translate(0, -50%));
+						padding:0 10px 0 15px;
+						font-weight:600;
+						font-size:12px;
+						line-height:25px;
+						@include FontHead;
+						&:before {
+							content:'';
+							display:inline-block;
+							position:absolute;
+							left:-8px;
+							top:0;
+							border-bottom:29px solid #fff;
+							border-right:8px solid transparent;
+							border-left:8px solid transparent;
+						}
+						&.promotion {
+							background-color:#FF8D34;
+							color:#fff;
+						}
+					}
+					.arrow {
+						right:20px;
+						@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+						display: none;
+					}
+					&.active {
+						border: 0;
+						background-color: #0E306C;
+						box-shadow: 5px 10px 20px rgba(0,0,0,.2);
+						.name,
+						.price {
+							color: #fff;
+						}
+						.name {
+							font-weight: 900;
+						}
+						.price {
+							font-weight: 600;
+						}
+						.flag {
+							&:before {
+								border-bottom-color: #0E306C;
+							}
 						}
 					}
 				}
 			}
-			a {
-				display: inline-block;
+			> button {
+				position:absolute;
+				top:0;
+				width:70px;
+				height:70px;
+				border:1px solid #d9d9d9;
+				&.btn-prev {
+					left:0;
+					i {
+						@include iconAngle($direction: 'left', $width: 10px, $height: 24px, $thick: 3px, $color: #000, $position: relative);
+					}
+				}
+				&.btn-next {
+					right:0;
+					i {
+						@include iconAngle($direction: 'right', $width: 10px, $height: 24px, $thick: 3px, $color: #000, $position: relative);
+					}
+				}
 			}
 		}
 		.front {
@@ -276,7 +368,7 @@
 			.car_img {
 				position:relative;
 				padding-top:58.28125%;
-				background-color:green;
+				background-color:green; // temporary
 				img {
 					position:absolute;
 					top:50%;
@@ -879,6 +971,73 @@
 		}
 	}
 }
+
+@media screen and (max-width:1024px){
+}
+.pg-mobile {
+	.ctb_booking {
+		.inner_wrap {
+			margin:0 20px;
+		}
+		.tit_wrap {
+			.tit {
+				font-size:2.143rem;
+				line-height:2.857rem;
+			}
+		}
+	}
+	.section {
+		&.keyvisual {
+			.thumb {
+				min-height:375px;
+				background-color:#000; // temporary
+				&._mo { display:block; }
+				&._pc { display:none; }
+			}
+			.desc {
+				padding:0 20px;
+				em {
+					font-size:2.857rem;
+				}
+				p {
+					margin-top:10px;
+				}
+			}
+			.swiper-pagination {
+				bottom:25px;
+				text-align:center;
+			}
+		}
+		&.nearby {
+			padding-top:40px;
+			.util_wrap {
+				margin:40px 0;
+				justify-content:flex-start;
+			}
+			.search_box {
+				.frm {
+					width:100%;
+					&:nth-of-type(2) {
+						margin:0;
+					}
+				}
+			}
+		}
+
+		// temporary
+		&.vehicles,
+		&.trim_color,
+		&.opt_acc,
+		&.confirm {
+			display:none;
+		}
+		// temporary
+	}
+	.footer {
+		display:none;
+	}
+}
+
 
 
 
