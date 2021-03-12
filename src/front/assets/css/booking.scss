@@ -1186,6 +1186,51 @@
 				&.only_pc { display:none; }
 				&.only_mo { display:block; }
 			}
+			.tab-pagination {
+				max-height:none;
+				.tab-row {
+					display:block;
+					margin:0;
+				}
+				p {
+					float:none;
+					margin:0 !important;
+					button {
+						min-height:auto;
+						padding:20px;
+						background-color:#fff;
+						border-left-width:0;
+						border-right-width:0;
+						box-shadow:none;
+						.arrow {
+							display:block;
+						}
+						.tag {
+							position:relative;
+							top:auto;
+							right:auto;
+							display:inline-block;
+							margin-left:10px;
+							transform:translate(0);
+						}
+						&.active {
+							border-top:1px solid #d9d9d9;
+							border-bottom:1px solid #d9d9d9;
+							.name {
+								color:#000;
+							}
+							.price {
+								padding:0;
+								font-weight:400;
+								color:#999;
+							}
+						}
+					}
+				}
+				> button {
+					display:none;
+				}
+			}
 		}
 		&.opt_acc {
 			.tablist._line {
