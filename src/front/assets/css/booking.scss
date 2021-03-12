@@ -1212,9 +1212,6 @@
 						border-left-width:0;
 						border-right-width:0;
 						box-shadow:none;
-						.arrow {
-							display:block;
-						}
 						.tag {
 							position:relative;
 							top:auto;
@@ -1226,6 +1223,9 @@
 						&.active {
 							border-top:1px solid #d9d9d9;
 							border-bottom:1px solid #d9d9d9;
+							.arrow {
+								display:block;
+							}
 							.name {
 								color:#000;
 							}
