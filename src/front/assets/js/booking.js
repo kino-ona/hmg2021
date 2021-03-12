@@ -18,8 +18,8 @@ var buildSwiper = new Swiper('.ctb_booking .vehicles .swiper-container', {
 	},
 	breakpoints: {
 		1240: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
+				slidesPerView: 1,
+				slidesPerGroup: 1,
 				spaceBetween: 8
 		}
 	}
