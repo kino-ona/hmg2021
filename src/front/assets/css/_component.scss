@@ -1264,8 +1264,16 @@ a[rel=tooltip] {
 		li {
 			height: 60px;
 			line-height:60px;
+			border-left-width:0;
+			border-right-width:0;
 			.tab {
 				padding:0 20px;
+				.arrow {
+					top:50%;
+					right:20px;
+					transform:translateY(-50%);
+					@include iconAngle($direction: 'down', $width: 14px, $height: 7px, $thick: 2px, $color: #000, $display: inline-block, $position: absolute);
+				}
 				&:after {
 					display: none;
 				}
