@@ -1060,11 +1060,11 @@
 			._mix {
 				input[type="text"] {
 					flex: none;
-					width: calc(70% - 10px);
+					width: calc(75% - 10px);
 				}
-				.btn_check {
+				.btn_gray {
 					flex: none;
-					width: 30%;
+					width: 25%;
 					border: 1px solid #d9d9d9;
 					background: #f4f4f4;
 					color: #000;
@@ -1072,6 +1072,9 @@
 					font-weight: 600;
 					@include FontHead;
 				}
+			}
+			.inp_txt {
+				font-size: 1rem;
 			}
 		}
 	}
@@ -1233,7 +1236,6 @@
 			}
 		}
 	}
-
 }
 .edit_coupon {
 	.desc {
