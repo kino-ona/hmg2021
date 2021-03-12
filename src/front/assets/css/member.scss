@@ -13,7 +13,7 @@
 .member_wrap {
 	max-width:560px;
 	margin:0 auto;
-	padding-top:66px;
+	padding-top:40px;//66px;
 	.btn-type_wrap {
 		.btn-type {
 			width:100%;
@@ -154,7 +154,7 @@
 	padding-top:15px;
 	border-top:3px solid #000;
 	.chkwrap {
-		label {
+		input[type=checkbox] + label {
 			font-size: 1rem;
 			span {
 				font-weight: 600;
@@ -164,7 +164,7 @@
 			margin-top:0;
 		}
 	}
-} 
+}
 .sns_wrap {
 	.txt {
 		&:before, &:after {
@@ -178,7 +178,8 @@
 	border-top: none;
 	position: relative;
 	.chkwrap {
-		label {
+		input[type=checkbox] + label {
+			font-size: 1rem;
 			span {
 				font-weight: 600;
 			}
@@ -448,16 +449,9 @@
 		position: absolute;		
     width: 100%;
     max-width: 510px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, calc(-50% - 60px));
-		
-		// top: calc(50% - 60px);
-		// @include transform(translate(-50%, -50%));
-		// or
-		// -ms-transform: translateX(-50%) translateY(-50%) translateY(60px);
-		// transform: translateX(-50%) translateY(calc(-50% - 60px));
-
+		left: 50%;		
+		top: calc(50% - 60px);
+		@include transform(translate(-50%, -50%));
 	}
 	.title_wrap {
 		margin-bottom: 40px;
@@ -544,6 +538,12 @@
 				}
 			}
 		}
+		.noti_txt {
+			p {
+				font-size: 1rem;
+				line-height: 1.571rem;
+			}
+		}
 	}
 	.chk_terms {
 		padding-top: 23px;
@@ -581,6 +581,22 @@
 		}
 		.readbox {
 			margin-bottom: 50px;
+			.chk_terms {
+				padding-top: 15px;
+				margin-bottom: 50px;
+				.chkwrap {
+					margin-bottom: 20px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					input[type=checkbox] + label {
+						height: auto;
+						background-position: left 3px;
+						font-size: 1.143rem;
+						line-height: 1.714rem;
+					}
+				}
+			}
 		}
 	}
 	.lnb_wrap, 
@@ -588,7 +604,7 @@
 		width:100%;
 	}
 	.mypage_wrap {
-		padding:20px;
+		padding:40px 20px 20px;
 	}
 	.lnb_wrap {
 		position:relative;
