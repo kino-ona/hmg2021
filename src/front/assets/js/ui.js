@@ -187,19 +187,21 @@ $(document).ready(function() {
 $(document).ready(function() {
 	if($('.tab-pagination .tab-row p').length > 0) tabposSet();
 });
+
+var $bookingTrim = $('.trim_color .tab-row');
 var tabposSet = function(){
 	$('.tab-pagination').each(function() {
-		var $tablist = $(this).find('.tab-row');
+		var $tablist = $(this).find('.tab-row'),
+				$tabWidth = $tablist.outerWidth(true);
+				console.log($tabWidth)
 		
 		$(this).find('.tab-row p').each(function() {
 			$(this).find('button').on('click', function(e){
-
 				$tablist.find('button').attr('aria-selected', false);
 				if(!$(this).attr('aria-selected', true)){
 					var $element = $(this);
 					$element.attr('aria-selected', true);
 				}
-				
 				
 				$tablist.find('button').removeClass('active');
 				if(!$(this).hasClass('active')){
@@ -207,21 +209,41 @@ var tabposSet = function(){
 					$tablist.find('p').removeClass('active');
 					$element.addClass('active');
 
-					if(winW < 1024) {
+					if(winW < 1024 || $element.parents('section').hasClass('trim_color')) {
 						var hashOffset = $element.offset().left;
 						var hashWidth = $element.outerWidth(true);
 						var menuScrollLeft = $tablist.scrollLeft();
 						var menuWidth = $tablist.width();
 	
 						var myScrollPos = hashOffset + (hashWidth / 2) + menuScrollLeft - (menuWidth / 2);
-						$tablist.stop().animate({
-							scrollLeft: myScrollPos - (menuWidth / 9)
-						}, 300);
+
+						if($element.parents('section').hasClass('trim_color')) {
+							$tablist.stop().animate({
+								scrollLeft: (myScrollPos - 20) - (menuWidth / 3)
+							}, 300);
+						}else{
+							$tablist.stop().animate({
+								scrollLeft: myScrollPos - (menuWidth / 9)
+							}, 300);
+						}
 					}
 				}
-
 			});
 		});
+
+		if(winW > 1024) {
+			$('.trim_color .btn-prev').on('click', function () {
+				$bookingTrim.animate({
+					scrollLeft: $bookingTrim.scrollLeft() - ($tabWidth - 183)
+				}, 200);
+			});
+			$('.trim_color .btn-next').on('click', function () {
+				$bookingTrim.animate({
+					scrollLeft: $bookingTrim.scrollLeft() + ($tabWidth - 183)
+				}, 200);
+			});
+		}
+
 	});
 }
 

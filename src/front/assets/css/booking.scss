@@ -52,6 +52,29 @@
 			}
 		}
 	}
+
+	/* icon */
+	.ic_search {
+		background: {
+			image:url('../images/ico/icon_search_blue.png');
+			size:15px;
+			position:center center;
+		}
+	}
+	.ic_compare {
+		background: {
+			image:url('../images/ico/icon_compare_blue.png');
+			size:15px;
+			position:center center;
+		}
+	}
+	.ic_check {
+		background: {
+			image:url('../images/ico/icon_check_blue.png');
+			size:15px;
+			position:center center;
+		}
+	}
 }
 .section {
 	&.keyvisual {
@@ -67,7 +90,7 @@
 				height:100%;
 				transform:translate(-50%,-50%);
 			}
-			&._mo {
+			&.only_mo {
 				display:none;
 			}
 		}
@@ -228,18 +251,21 @@
 	&.trim_color {
 		padding:100px 0 120px;
 		.trims {
+			position:relative;
 			display:flex;
 			flex-wrap:wrap;
 		}
 		.tab-pagination {
 			position: relative;
 			width: 100%;
+			max-height:70px;
 			margin-bottom:70px;
 			overflow: hidden;
 			.tab-row {
 				display: flex;
 				flex-wrap:nowrap;
 				margin:0 95px;
+				padding-bottom:20px;
 				overflow-x: scroll;
 				-webkit-overflow-scrolling: touch;
 			}
@@ -384,76 +410,6 @@
 					width: 100%;
 				}
 			}
-			> .group {
-				margin-top:30px;
-				padding-left:10px;
-			}
-			.title {
-				color: #000;
-				font-weight: 900;
-				font-size: 1.375rem;
-				@include FontHead;
-			}
-			.bullet_square {
-				display:flex;
-				flex-wrap:wrap;
-				margin-top:20px;
-				> li {
-					position: relative;
-					width:50%;
-					padding-left: 8px;
-					font-size: 1rem;
-					line-height: 1.5rem;
-					&:before {
-						content: '';
-						display: block;
-						position: absolute;
-						left: 0;
-						top: 10px;
-						width: 3px;
-						height: 3px;
-						border-radius: 100%;
-						background-color: #000;
-					}
-				}
-			}
-			.promotion {
-				display:flex;
-				.title {
-					margin-right:40px;
-				}
-			}
-			.tags {
-				display: flex;
-				flex-wrap: wrap;
-				margin:-5px 0 0 -5px;
-				[class^="tag_"] {
-					display: inline-block;
-					min-width:100px;
-					margin:5px 0 0 5px;
-					padding: 7px 20px;
-					font-weight: 900;
-					font-size: 0.9375rem;
-					line-height: 1.438rem;
-					text-align:center;
-					border: {
-						width: 1.5px;
-						style: solid;
-					};
-					&[class*="finance"] {
-						border-color: #0055B9;
-						color: #0055B9;
-					}
-					&[class*="tradein"] {
-						border-color: #B248B2;
-						color: #B248B2;
-					}
-					&[class*="corp"] {
-						border-color: #00AF87;
-						color: #00AF87;
-					}
-				}
-			}
 		}
 		.options {
 			width: 35.6%;
@@ -581,6 +537,79 @@
 				}
 			}
 		}
+		.infos {
+			> div {
+				margin-top:30px;
+				padding-left:10px;
+			}
+			.title {
+				color: #000;
+				font-weight: 900;
+				font-size: 1.375rem;
+				@include FontHead;
+			}
+			.bullet_square {
+				display:flex;
+				flex-wrap:wrap;
+				margin-top:20px;
+				> li {
+					position: relative;
+					width:50%;
+					padding-left: 8px;
+					font-size: 1rem;
+					line-height: 1.5rem;
+					&:before {
+						content: '';
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 10px;
+						width: 3px;
+						height: 3px;
+						border-radius: 100%;
+						background-color: #000;
+					}
+				}
+			}
+			.promotion {
+				display:flex;
+				.title {
+					margin-right:40px;
+				}
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				margin:-5px 0 0 -5px;
+				[class^="tag_"] {
+					display: inline-block;
+					min-width:100px;
+					margin:5px 0 0 5px;
+					padding: 7px 20px;
+					font-weight: 900;
+					font-size: 0.9375rem;
+					line-height: 1.438rem;
+					text-align:center;
+					border: {
+						width: 1.5px;
+						style: solid;
+					};
+					&[class*="finance"] {
+						border-color: #0055B9;
+						color: #0055B9;
+					}
+					&[class*="tradein"] {
+						border-color: #B248B2;
+						color: #B248B2;
+					}
+					&[class*="corp"] {
+						border-color: #00AF87;
+						color: #00AF87;
+					}
+				}
+			}
+			&.only_mo { display:none; }
+		}
 	}
 	&.opt_acc {
 		padding:120px 0;
@@ -610,6 +639,9 @@
 		}
 		.util_wrap {
 			margin-top:40px;
+			button {
+				color:#0559F7;
+			}
 		}
 	}
 	&.confirm {
@@ -813,13 +845,13 @@
 		width:660px;
 		.btn-type_wrap {
 			width:350px;
-			margin-top:20px;
+			margin-top:40px;
+			padding-bottom:50px;
 		}
 	}
 	.h-layer_cont {
 		display:flex;
 		height:100%;
-		padding-bottom:50px;
 		font-size:1rem;
 		flex-direction:column;
 		&:after {
@@ -828,9 +860,9 @@
 	}
 	.result {
 		display:flex;
+		min-height:160px;
 		margin-bottom:40px;
 		align-items:center;
-		overflow:hidden;
 		.thumb {
 			width:42.85714285714%;
 			margin-right:40px;
@@ -875,9 +907,9 @@
 		}
 	}
 	.estimate_body {
-		margin-left:-17px\9;
+		padding-right:17px\9;
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-			margin-left:-17px;
+			padding-right:17px;
 		}
 	}
 	.estimate_list {
@@ -901,6 +933,16 @@
 			}
 			span:last-child {
 				text-align: right;
+			}
+		}
+	}
+	@media screen and (max-height:1080px){
+		.h-layer_cont {
+			display: block;
+		}
+		.tab_wrap {
+			.tab_contents {
+				max-height:inherit;
 			}
 		}
 	}
@@ -1005,16 +1047,23 @@
 	.ctb_booking {
 		.inner_wrap {
 			margin:0 20px;
+			.tit_wrap {
+				.tit {
+					padding:0;
+				}
+			}
 		}
 		.tit_wrap {
 			.tit {
-				// font-size:2.143rem;
-				// line-height:2.857rem;
+				padding:0 20px;
+				font-size:1.875rem;
+				line-height:2.5rem;
 			}
 			button, a {
 				position:relative;
 				top:auto;
 				width:100%;
+				margin-top:20px;
 				padding:14px 20px;
 				background-color:#f4f4f4;
 				border: {
@@ -1025,17 +1074,27 @@
 				transform:translateY(0);
 			}
 		}
+		[class*='ic_'] {
+			margin-right:6px;
+		}
+		.pagination {
+			display:none;
+		}
 	}
 	.section {
 		&.keyvisual {
 			.thumb {
 				min-height:375px;
+				padding-top:100%;
 				background-color:#000; // temporary
 				&._mo { display:block; }
 				&._pc { display:none; }
 			}
 			.desc {
 				padding:0 20px;
+				em {
+					font-size:2.5rem;
+				}
 				p {
 					margin-top:10px;
 				}
@@ -1073,6 +1132,7 @@
 				}
 			}
 			.result_box {
+				padding-bottom:80px;
 				.dealer {
 					&_info {
 						padding:30px 0;
@@ -1088,6 +1148,9 @@
 						li {
 							margin-top:10px;
 						}
+						.ic_loca {
+							background-size:10px;
+						}
 					}
 				}
 				.btn_scroll {
@@ -1095,9 +1158,9 @@
 				}
 			}
 		}
-		&.vehicles {
+		// &.vehicles {
 
-		}
+		// }
 		&.trim_color{
 			.front,
 			.options {
@@ -1108,12 +1171,6 @@
 				.bullet_square {
 					> li {
 						width:100%;
-					}
-				}
-				.promotion {
-					display:block;
-					.tags {
-						margin-top:20px;
 					}
 				}
 			}
@@ -1131,15 +1188,65 @@
 					}
 				}
 			}
+			.infos {
+				.promotion {
+					display:block;
+					.tags {
+						margin-top:20px;
+					}
+				}
+				&.only_pc { display:none; }
+				&.only_mo { display:block; }
+			}
+			.tab-pagination {
+				max-height:none;
+				.tab-row {
+					display:block;
+					margin:0;
+				}
+				p {
+					float:none;
+					margin:0 !important;
+					button {
+						min-height:auto;
+						padding:20px;
+						background-color:#fff;
+						border-left-width:0;
+						border-right-width:0;
+						box-shadow:none;
+						.tag {
+							position:relative;
+							top:auto;
+							right:auto;
+							display:inline-block;
+							margin-left:10px;
+							transform:translate(0);
+						}
+						&.active {
+							border-top:1px solid #d9d9d9;
+							border-bottom:1px solid #d9d9d9;
+							.arrow {
+								display:block;
+							}
+							.name {
+								color:#000;
+							}
+							.price {
+								padding:0;
+								font-weight:400;
+								color:#999;
+							}
+						}
+					}
+				}
+				> button {
+					display:none;
+				}
+			}
 		}
 		&.opt_acc {
 			.tablist._line {
-				display:flex;
-				li {
-					width:50%;
-				}
 				.tab {
-					width:100%;
 					min-width:auto;
 				}
 			}
