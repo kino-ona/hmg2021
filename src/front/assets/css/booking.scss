@@ -843,13 +843,13 @@
 		width:660px;
 		.btn-type_wrap {
 			width:350px;
-			margin-top:20px;
+			margin-top:40px;
+			padding-bottom:50px;
 		}
 	}
 	.h-layer_cont {
 		display:flex;
 		height:100%;
-		padding-bottom:50px;
 		font-size:1rem;
 		flex-direction:column;
 		&:after {
@@ -861,7 +861,6 @@
 		min-height:160px;
 		margin-bottom:40px;
 		align-items:center;
-		// overflow:hidden;
 		.thumb {
 			width:42.85714285714%;
 			margin-right:40px;
@@ -932,6 +931,16 @@
 			}
 			span:last-child {
 				text-align: right;
+			}
+		}
+	}
+	@media screen and (max-height:1100px){
+		.h-layer_cont {
+			display: block;
+		}
+		.tab_wrap {
+			.tab_contents {
+				max-height:inherit;
 			}
 		}
 	}
