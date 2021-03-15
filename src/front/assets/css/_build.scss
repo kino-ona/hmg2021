@@ -4,8 +4,11 @@
 
 .build_container {
 	min-height: 100%;
-	padding: 54px 0 114px;
+	padding: 60px 0 114px;
 	background-color: #fff;
+	&.buy_options {
+		padding-top: 40px;
+	}
 	.content_wrap {
 		max-width: 1200px;
 		margin: 0 auto;
