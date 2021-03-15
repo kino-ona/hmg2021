@@ -519,9 +519,10 @@
 				color: #000;
 				font-weight: 900;
 				font-size: 1.625rem;
+				@include FontHead;
 			}
 			.car_number {
-				color: #FF9934;
+				color: #0559F7;
 			}
 		}
 	}

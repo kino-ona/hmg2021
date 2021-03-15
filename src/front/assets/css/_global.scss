@@ -514,12 +514,86 @@ body {
 			padding-right:20px;
 		}
 		.fixed_bottom {
+			flex-wrap:wrap;
 			position:fixed;
 			bottom:0;
 			left:0;
 			right:0;
 			width:100%;
-			border-top:1px solid #999999;
+			height:auto;
+			.result {
+				flex: none;
+				width: calc(100% - 60px);
+				padding: 19px 20px 16px;
+				.product_name {
+					font-size: 1.75rem;
+					line-height: inherit;
+				}
+				.total_price {
+					margin-left: 12px;
+					padding-left: 12px;
+					&:before {
+						height: 25px;
+						margin-top: -12.5px;
+					}
+					.price {
+						font-weight: 600;
+						font-size: 1.125rem;
+					}
+					.pm {
+						font-size: .6875rem;
+						line-height: 1.125rem;
+					}
+				}
+			}
+			.review {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex: none;
+				position: relative;
+				width: 60px;
+				border-left: 0;
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					width: 1px;
+					height: 25px;
+					margin-top: -12.5px;
+					border-left: 1px dashed #999;
+				}
+				span {
+					display: block;
+					overflow: hidden;
+					width: 20px;
+					height: 20px;
+					padding-left: 0;
+					text-indent: 100%;
+					white-space: nowrap;
+					&:before {
+						top: 0;
+						width: 20px;
+						height: 20px;
+						margin-top: 0;
+						background-image: url(../images/ico/icon_review_m.png);
+					}
+				}
+			}
+			.btn-type {
+				flex: none;
+				width: 100%;
+				height: 65px;
+				span {
+					font-size: 1.125rem;
+				}
+				i {
+					margin-left: 10px;
+					@include iconAngle($direction: 'right', $width: 6px, $height: 14px, $thick: 2.5px, $color: #fff, $display: inline-block);
+				}
+			}
 		}
 	}
 }
