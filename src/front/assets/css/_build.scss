@@ -115,19 +115,27 @@
 			align-items: center;
 			margin-left: 40px;
 			span {
+				color: #285BEE;
+				font-size: 1rem;
 				line-height: 1.5rem;
+				@include FontHead;
 			}
 		}
 	}
 }
 
 .build_vehicles {
-	padding:13.365% 13.365%;
-	
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-top:13.365%;
 	.vehicles-head {
+		margin-left: 13.365%;
 		max-width:190px;
 		margin-bottom:40px;
+		
 		h2 {
+
 			font-size:2.5rem;
 			font-weight: 900;
 			@include FontHead;
@@ -135,6 +143,8 @@
 	}
 
 	.vehicles-model {
+		margin-bottom: 40px;
+		padding: 0 13.365%;
 		.v_item {
 			margin-bottom:15px;
 			border:1px solid #D9D9D9;
@@ -161,17 +171,13 @@
 		}
 	}
 	.vehicles_util {
-		position:fixed;
-		bottom:0;
-		left:0;
-		width: calc(23.49% - 1px);
 		height:90px;
+		margin-top: auto;
 		border-top:1px solid #D9D9D9;
 		.btn_find {
-			display: inline-block;
-			width:100%;
+			display: block;
 			height:100%;
-			padding:0 3.75rem;
+			padding: 0 13.365%;
 			font-size:1.25rem;
 			font-weight: 900;
 			line-height:4.5;
@@ -179,21 +185,6 @@
 				margin-top:-3px;
 			}
 		}	
-	}
-	.find_car {
-		display: flex;
-		align-items: center;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 101px;
-		padding: 0 13.365%;
-		border-top: 1px solid #D9D9D9;
-		span {
-			font-weight: 900;
-			font-size: 1.25rem;
-		}
 	}
 }
 
@@ -683,17 +674,33 @@
 					margin-top: -1px;
 				}
 			}
-			.bar {
+			.result {
 				display: flex;
-				margin-top: 15px;
-				height: 25px;
-				background-color: #f4f4f4;
-				.color,
-				.percent {
+				align-items: center;
+				margin-top: 22px;
+				.color {
+					width: 72px;
+					font-weight: 900;
+					font-size: .875rem;
+				}
+				.bar {
 					display: flex;
+					justify-content: flex-end;
 					align-items: center;
-					height: 100%;
-					padding-left: 10px;
+					flex: 1;
+					position: relative;
+					height: 23px;
+					padding-right: 9px;
+					border: 1px solid #D9D9D9;
+					background-color: #F4F4F4;
+				}
+				.gauge {
+					position: absolute;
+					left: -1px;
+					top: -1px;
+					bottom: -1px;
+				}
+				.percent {
 					font-weight: 600;
 					font-size: .875rem;
 				}
@@ -1357,9 +1364,17 @@
 			text-align: right;
 			.btn_find {
 				padding:0 20px;
+				color: #0559F7;
 				font-size:1rem;
 				font-weight: normal;
 				line-height:3.6;
+				@include FontHead;
+				.ic_search {
+					width: 15px;
+					height: 15px;
+					background-image: url(../images/ico/icon_search_blue.png);
+					background-size: cover;
+				}
 			}
 		}
 	}
@@ -1480,6 +1495,7 @@
 	}
 	//.build_option
 	.product_container {
+		padding: 0;
 		.product_mask {
 			margin-left:0;
 		}
@@ -1488,9 +1504,23 @@
 		float:none;
 		width:100%;
 		margin-left:0;
-		margin-top:35px;
+		margin-top:20px;
 		&:first-child {
 			margin-top:0;
+		}
+		.product_name {
+			padding: 0 35px;
+			h3 {
+				font-size: 28px;
+			}
+		}
+		.product_price {
+			padding: 0 35px;
+			> .group {
+				> span {
+					font-size: .75rem;
+				}
+			}
 		}
 	}
 
