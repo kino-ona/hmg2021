@@ -193,7 +193,6 @@ var tabposSet = function(){
 	$('.tab-pagination').each(function() {
 		var $tablist = $(this).find('.tab-row'),
 				$tabWidth = $tablist.outerWidth(true);
-				console.log($tabWidth)
 		
 		$(this).find('.tab-row p').each(function() {
 			$(this).find('button').on('click', function(e){
