@@ -630,6 +630,7 @@
 		}
 		.option_mask {
 			padding-bottom:40px;
+			margin-left:-32px;
 			// overflow:hidden;
 			&:after {
 				content: '';
@@ -948,6 +949,7 @@
 	}
 }
 .footer {
+	margin-top:150px;
 	padding:40px 0;
 	border-top:1px solid #d9d9d9;
 	.inner_wrap {
@@ -1249,6 +1251,9 @@
 				.tab {
 					min-width:auto;
 				}
+			}
+			.option_mask {
+				margin-left:0;
 			}
 		}
 		&.confirm {
