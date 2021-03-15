@@ -100,7 +100,7 @@
 							<div class="item color_item">
 								<div class="menu_head">
 									<a href="#" class="heading" tabindex="0">
-										<p class="opt_title">2. Color</p>
+										<p class="opt_title">2. Colors</p>
 										<p class="opt_summary">
 											<span>Exterior : Denim</span>
 											<span>Interior : Sand Leather</span>
@@ -192,9 +192,12 @@
 												<p class="most_color">Which color is most popular?</p>
 												<button type="button" class="btn_more"></button>
 											</div>
-											<div class="bar">
-												<span class="color" style="width:38%; background-color: #0F3076; color: #fff;">Denim</span>
-												<span class="percent">38%</span>
+											<div class="result">
+												<span class="color">Denim</span>
+												<div class="bar">
+													<span class="gauge" style="width:38%; background-color: #0F3076; color: #fff;"></span>
+													<span class="percent">38%</span>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -291,166 +294,164 @@
 	
 				<!-- section stage -->
 				<div class="stage_wrap">
-					<div class="build_container">
+					<div class="build_container buy_options">
 						<div class="content_wrap">
-							<div class="buy_options">
-								<div class="tab_wrap" id="ComponentTab">
-									<ul class="tablist _line" role="tablist">
-										<li><button class="tab">Option</button></li>
-										<li><button class="tab">Accessories</button></li>
-									</ul>
-									<div class="tab_contents">
-										<section class="tab_panel">
-											<div class="options_controls">
-												<p class="selected_sum">
-													<em class="currunt">3</em>
-													<span>Items are Selected</span>
-												</p>
-												<button type="button" class="btn_clear">
-													<i class="ic_refresh"></i>
-													<span>Clear All</span>
-												</button>
-											</div>
-											<div class="sub_tablist" id="DetailTab">
-												<ul class="tablist" role="tablist">
-													<li><button class="sub-tab _active">All <span class="current">(45)</span></button></li>
-													<li><button class="sub-tab">Package <span class="current">(4)</span></button></li>
-													<li><button class="sub-tab">Exterior <span class="current">(8)</span></button></li>
-													<li><button class="sub-tab">Inaterior <span class="current">(11)</span></button></li>
-													<li><button class="sub-tab">Convenience <span class="current">(16)</span></button></li>
-													<li><button class="sub-tab">Safety <span class="current">(10)</span></button></li>
-												</ul>
-												<div class="tab_contents">
-													<div class="sub-tab_panel _active">
-														<div class="option_container">
-															<div class="option_mask">
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt01">
-																		<label for="opt01"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+							<div class="tab_wrap" id="ComponentTab">
+								<ul class="tablist _line" role="tablist">
+									<li><button class="tab">Options</button></li>
+									<li><button class="tab">Accessories</button></li>
+								</ul>
+								<div class="tab_contents">
+									<section class="tab_panel">
+										<div class="options_controls">
+											<p class="selected_sum">
+												<em class="currunt">3</em>
+												<span>Items are Selected</span>
+											</p>
+											<button type="button" class="btn_clear">
+												<i class="ic_refresh_blue"></i>
+												<span>Clear All</span>
+											</button>
+										</div>
+										<div class="sub_tablist" id="DetailTab">
+											<ul class="tablist" role="tablist">
+												<li><button class="sub-tab _active">All <span class="current">(45)</span></button></li>
+												<li><button class="sub-tab">Package <span class="current">(4)</span></button></li>
+												<li><button class="sub-tab">Exterior <span class="current">(8)</span></button></li>
+												<li><button class="sub-tab">Inaterior <span class="current">(11)</span></button></li>
+												<li><button class="sub-tab">Convenience <span class="current">(16)</span></button></li>
+												<li><button class="sub-tab">Safety <span class="current">(10)</span></button></li>
+											</ul>
+											<div class="tab_contents">
+												<div class="sub-tab_panel _active">
+													<div class="option_container">
+														<div class="option_mask">
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt01">
+																	<label for="opt01"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt02">
-																		<label for="opt02"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt03">
-																		<label for="opt03"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt04">
-																		<label for="opt04"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt02">
+																	<label for="opt02"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt05">
-																		<label for="opt05"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt06">
-																		<label for="opt06"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt07">
-																		<label for="opt07"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt03">
+																	<label for="opt03"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
 																</div>
-																<div class="option_thumnail">
-																	<div class="option_head">
-																		<input type="checkbox" id="opt08">
-																		<label for="opt08"></label>
-																		<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
-																	</div>
-																	<div class="option_body">
-																		<em class="option_seller">60:40 Split Rear Seat</em>
-																		<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
-																	</div>
-																	<div class="option_bottom">
-																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
-																	</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
+																</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt04">
+																	<label for="opt04"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
+																</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
+																</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt05">
+																	<label for="opt05"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
+																</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
+																</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt06">
+																	<label for="opt06"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
+																</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
+																</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt07">
+																	<label for="opt07"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
+																</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
+																</div>
+															</div>
+															<div class="option_thumnail">
+																<div class="option_head">
+																	<input type="checkbox" id="opt08">
+																	<label for="opt08"></label>
+																	<figure class="option_img"><img src="../assets/images/dummy/@dummy_option.png" alt=""></figure>
+																</div>
+																<div class="option_body">
+																	<em class="option_seller">60:40 Split Rear Seat</em>
+																	<p class="option_desc">60:40 Split rear seats provides the flexibility to create more space for 60:40 Split rear seats provides the flexibility to create more space for</p>
+																</div>
+																<div class="option_bottom">
+																	<em class="option_price">+ USD 500</em>
+																	<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</section>
-									</div>
+										</div>
+									</section>
 								</div>
 							</div>
 						</div>
@@ -467,7 +468,7 @@
 							<span class="pm">USD 1,256 pm</span>
 						</div>
 					</div>
-					<button type="button" class="review"><span>Review</span></button>
+					<button type="button" class="review"><span>Summary</span></button>
 					<a href="concierge.html" class="btn-type _default">
 						<span>Select Concierge</span>
 						<i></i>
