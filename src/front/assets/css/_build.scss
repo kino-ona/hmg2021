@@ -1565,8 +1565,10 @@
 	overflow:hidden;
 }
 .option-vr360-cont {
-	> div{display:none}
-	> .is-active{display:block}
+	.progress-complete {
+		.vr-dimmed{display:none}
+		.progress{display:none}
+	}
 	.vr360-wrap {
 		display:none;
 		position:relative;
@@ -1574,15 +1576,14 @@
 		height:100%;
 		&.is-active{
 			display:block;
-			&.progress-complete {
-				.vr-dimmed{display:none}
-				.progress{display:none}
-			}
 		}
+	}
+	.vr-dimmed {position:absolute;top:20px;right:0;left:0;padding-top:41.9%}
+	.vr-car-wrap {
 		.inner {
 			position:relative;
 			padding-top:61.9%;
-			z-index:1;
+			z-index:-1;
 		}
 		.sequence {
 			visibility:hidden;
@@ -1599,10 +1600,7 @@
 				transform:translate(-50%, -50%);
 			}
 		}
-		.on {visibility:visible}
-	}
-	.vr-dimmed {position:absolute;top:20px;right:0;left:0;padding-top:41.9%}
-	.vr-car-wrap {
+		.on {visibility:visible;}
 		&.e-start{cursor:ew-resize}
 	}
 	.vr-car-no-img{
@@ -1657,11 +1655,3 @@
 		}
 	}
 }
-
-
-
-// .option-vr360-tab{display:flex;justify-content:center;margin-top:20px}
-// .option-vr360-tab > .vr-tab{position:relative}
-// .option-vr360-tab > .vr-tab + .vr-tab{margin-left:40px}
-// .option-vr360-tab > .vr-tab + .vr-tab::before{content:"";position:absolute;top:4px;left:-20px;width:1px;height:16px;background-color:#b5b5b5}
-// .option-vr360-tab > .vr-tab.is-active{text-decoration:underline;color:#00aad2;font-weight:600;font-family:'HyundaiSansHead'}

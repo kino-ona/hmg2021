@@ -1,8 +1,6 @@
 $(document).ready(function() {
 	if( $('.dropdown_list').length > 0 ) { dropdownControl(); }
 });
-$(window).resize( function() {
-});
 
 var $window = $(window);
 var winW = $(window).outerWidth();
@@ -74,6 +72,7 @@ function layoutSizeInit() {
 }
 
 $(function () {   
+	browserChk();
 	layoutSizeInit();
 
 	(function(){        
@@ -93,6 +92,33 @@ $(function () {
 
 	});
 });
+
+var browser = "";
+function browserChk() {
+    var agent = navigator.userAgent;
+
+    if (agent.match(/Chrome/)) {
+    	if (agent.match(/Chrome/) && agent.match(/Edge/)) {
+    		browser = 'Edge';
+    	} else if (agent.match(/Chrome/) && agent.match(/Linux/)) {
+            browser = 'Opera';
+        } else if (agent.match(/Safari/) && !agent.match(/Chrome/)) {
+            browser = 'Safari';
+        } else if (agent.match(/Chrome/)) {
+            browser = 'Chrome';
+        }
+    } else if (agent.match(/Firefox/)) {
+        browser = 'Firefox';
+    } else if (agent.match(/MSIE/)) { //IE8, IE9, IE10
+        browser = 'IE';
+    } else if (agent.match(/Trident/)) { //IE11
+    	browser = 'IE';
+    } else {
+        browser = 'Unknown';
+    }
+
+    return browser
+}
 
 // accordion fn
 $('.accordion_wrap').each(function () { // default
