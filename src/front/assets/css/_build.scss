@@ -978,7 +978,13 @@
 		}
 	}
 }
-
+.option_mask {
+	overflow: hidden;
+	margin-left: -32px;
+	&:after {
+		@extend %clearer;
+	}
+}
 .option_thumnail {
 	float: left;
 	position: relative;
@@ -1008,13 +1014,19 @@
 				border-color: #fff;
 			}
 		}
-		.option_bottom {
-			.option_price {
-				color: #EA9000;
-			}
-			.ic_info {
-				background-image: url(../images/ico/icon_info-select.png);
-			}
+		// .option_bottom {
+		// 	.option_price {
+		// 		color: #EA9000;
+		// 	}
+		// 	.ic_info {
+		// 		background-image: url(../images/ico/icon_info-select.png);
+		// 	}
+		// }
+		.option_price {
+			color: #EA9000;
+		}
+		.ic_info {
+			background-image: url(../images/ico/icon_info-select.png);
 		}
 	}
 	.option_head {
@@ -1069,21 +1081,36 @@
 	.option_body {
 		position: relative;
 		padding: 13px 5px 0;
-		.option_seller {
-			display: block;
-			color: #000;
-			font-weight: 600;
-			font-size: 1.125rem;
-			line-height: 1.625rem;
-			@include ellipse(1);
-		}
-		.option_desc {
-			margin-top: 11px;
-			color: #999;
-			font-size: 0.875rem;
-			line-height: 1.375rem;
-			@include ellipse(2);
-		}
+		// .option_seller {
+		// 	display: block;
+		// 	color: #000;
+		// 	font-weight: 600;
+		// 	font-size: 1.125rem;
+		// 	line-height: 1.625rem;
+		// 	@include ellipse(1);
+		// }
+		// .option_desc {
+		// 	margin-top: 11px;
+		// 	color: #999;
+		// 	font-size: 0.875rem;
+		// 	line-height: 1.375rem;
+		// 	@include ellipse(2);
+		// }
+	}
+	.option_seller {
+		display: block;
+		color: #000;
+		font-weight: 600;
+		font-size: 1.125rem;
+		line-height: 1.625rem;
+		@include ellipse(1);
+	}
+	.option_desc {
+		margin-top: 11px;
+		color: #999;
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+		@include ellipse(2);
 	}
 	.option_bottom {
 		display: flex;
@@ -1091,18 +1118,30 @@
 		align-items: center;
 		position: relative;
 		padding: 11px 5px 0;
-		.option_price {
-			color: #000;
-			font-weight: 600;
-			font-size: 1rem;
-			line-height: 1.5rem;
-		}
-		.ic_info {
-			overflow: hidden;
-			margin-right: 0;
-			text-indent: 100%;
-			white-space: nowrap;
-		}
+		// .option_price {
+		// 	color: #000;
+		// 	font-weight: 600;
+		// 	font-size: 1rem;
+		// 	line-height: 1.5rem;
+		// }
+		// .ic_info {
+		// 	overflow: hidden;
+		// 	margin-right: 0;
+		// 	text-indent: 100%;
+		// 	white-space: nowrap;
+		// }
+	}
+	.option_price {
+		color: #000;
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	.ic_info {
+		overflow: hidden;
+		margin-right: 0;
+		text-indent: 100%;
+		white-space: nowrap;
 	}
 }
 

@@ -811,17 +811,17 @@ a, button {
 	&._wide {
 		width:950px;
 	}
-	&:not(._alert) {
-		&._wide {
-			.btn-type_wrap {
-				&.item_one {
-					.btn-type {
-						width: 350px;
-					}
-				}
-			}
-		}
-	}
+	// &:not(._alert) {
+	// 	&._wide {
+	// 		.btn-type_wrap {
+	// 			&.item_one {
+	// 				.btn-type {
+	// 					width: 350px;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 .h-layer_body.is-visible {
 	visibility: visible;

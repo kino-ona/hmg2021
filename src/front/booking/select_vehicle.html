@@ -179,6 +179,67 @@
 			"webroot":"../"
 		})
 		<!-- //footer -->
+		
+		<!-- Vehicle filter -->
+		<div class="h-layer_body popup filter_vehicle" id="VehicleFilter" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Filter</h2>
+					<button onclick="hlayerClose('VehicleFilter')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="filter_item">
+						<div class="group">
+							<em class="title">Fuel type</em>
+							<div class="radio_group">
+								<p class="radiowrap _boxing"><input type="radio" name="FeulType" id="Diesel" checked><label for="Diesel"><span>Diesel</span></label></p>
+								<p class="radiowrap _boxing"><input type="radio" name="FeulType" id="Gasoline"><label for="Gasoline"><span>Gasoline</span></label></p>
+								<p class="radiowrap _boxing"><input type="radio" name="FeulType" id="Electric"><label for="Electric"><span>Diesel</span></label></p>
+							</div>
+						</div>
+						<div class="group">
+							<em class="title">Transmisstion</em>
+							<div class="radio_group">
+								<p class="radiowrap _boxing"><input type="radio" name="Transmisstion" id="Auto" checked><label for="Auto"><span>Diesel</span></label></p>
+								<p class="radiowrap _boxing"><input type="radio" name="Transmisstion" id="Manual"><label for="Manual"><span>Gasoline</span></label></p>
+							</div>
+						</div>
+						<div class="group">
+							<em class="title">Traction</em>
+							<div class="radio_group">
+								<p class="radiowrap _boxing"><input type="radio" name="Traction" id="Two" checked><label for="Two"><span>2WD</span></label></p>
+								<p class="radiowrap _boxing"><input type="radio" name="Traction" id="Four"><label for="Four"><span>4WD</span></label></p>
+							</div>
+						</div>
+						<div class="group">
+							<em class="title">Key feature</em>
+							<div class="checkbox_group">
+								<p class="chkwrap"><input type="checkbox" id="Feature01" ><label for="Feature01"><span>Key feature A</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature02" ><label for="Feature02"><span>Key feature B</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature03" ><label for="Feature03"><span>Key feature C</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature04" ><label for="Feature04"><span>Key feature D</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature05" ><label for="Feature05"><span>Key feature E</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature06" ><label for="Feature06"><span>Key feature F</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature07" ><label for="Feature07"><span>Key feature G</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature08" ><label for="Feature08"><span>Key feature H</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature09" ><label for="Feature09"><span>Key feature J</span></label></p>
+								<p class="chkwrap"><input type="checkbox" id="Feature10" ><label for="Feature10"><span>Key feature K</span></label></p>
+							</div>
+						</div>
+					</div>
+					<div class="reset">
+						<button type="button">
+							<i class="ic_refresh_blue"></i>
+							<span>Reset</span>
+						</button>
+					</div>
+					<div class="btn-type_wrap">
+						<button onclick="hlayerClose('VehicleFilter')" class="btn-type _default">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // Vehicle filter -->
 	</div>
 
 

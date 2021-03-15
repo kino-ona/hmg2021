@@ -357,7 +357,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -372,7 +372,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -387,7 +387,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -402,7 +402,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -417,7 +417,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -432,7 +432,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -447,7 +447,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 																<div class="option_thumnail">
@@ -462,7 +462,7 @@
 																	</div>
 																	<div class="option_bottom">
 																		<em class="option_price">+ USD 500</em>
-																		<button type="button" class="ic_info">tooltip</button>
+																		<button type="button" class="ic_info" onclick="hlayerOpen('OptionDetail')">tooltip</button>
 																	</div>
 																</div>
 															</div>
@@ -504,11 +504,115 @@
   <script type="text/javascript" src="..//assets/js/ui.js"></script>
 		<!-- //footer -->
 		<script src="../assets/js/build.js"></script>
-		<!-- <script>
+		<script>
 			$(document).ready(function(){
 				actvTabList('DetailTab', 0);
+				actvTabList('OptionDetailTab', 0);
 			});
-		</script> -->
+		</script>
+
+		<!-- multi type -->
+		<div class="h-layer_body popup option_detail-multi" id="OptionDetail" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Option detail</h2>
+					<button onclick="hlayerClose('OptionDetail')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="tab_wrap option_container" id="OptionDetailTab">
+						<ul class="tablist" role="tablist">
+							<li><button class="tab">Cargo tray</button></li>
+							<li><button class="tab">Cargo net</button></li>
+							<li><button class="tab">Cargo blocks</button></li>
+						</ul>
+						<div class="tab_contents">
+							<section class="tab_panel">
+								<div class="option_thumnail">
+									<div class="option_head">
+										<figure class="option_img">
+											<img src="../assets/images/dummy/@dummy_option_detail02.png" alt="">
+										</figure>
+									</div>
+									<div class="option_body">
+										<em class="option_seller">Fabric Rear Bumper Protector</em>
+										<span class="option_price">+ USD 595</span>
+									</div>
+									<div class="option_bottom">
+										<p class="option_desc">Controls the movement of loose items in the cargo area to help minimize spilling, breakage and noise.</p>
+									</div>
+								</div>
+							</section>
+							<section class="tab_panel">
+								<div class="option_thumnail">
+									<div class="option_head">
+										<figure class="option_img">
+											<img src="../assets/images/dummy/@dummy_option_detail01.png" alt="">
+										</figure>
+									</div>
+									<div class="option_body">
+										<em class="option_seller">Cargo package</em>
+										<span class="option_price">+ USD 595</span>
+									</div>
+									<div class="option_bottom">
+										<p class="option_desc">second tab</p>
+									</div>
+								</div>
+							</section>
+							<section class="tab_panel">
+								<div class="option_thumnail">
+									<div class="option_head">
+										<figure class="option_img">
+											<img src="../assets/images/dummy/@dummy_option_detail02.png" alt="">
+										</figure>
+									</div>
+									<div class="option_body">
+										<em class="option_seller">third tab</em>
+										<span class="option_price">+ USD 595</span>
+									</div>
+									<div class="option_bottom">
+										<p class="option_desc">third tab</p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="btn-type_wrap">
+						<button onclick="hlayerClose('OptionDetail')" class="btn-type _default">Add to vehicle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // multi type -->
+
+		<!-- single type -->
+		<div class="h-layer_body popup option_detail" id="OptionDetail" aria-hidden="true" role="dialog">
+			<div class="h-layer_wrap">
+				<div class="h-layer_head">
+					<h2 class="h-layer_title">Option detail</h2>
+					<button onclick="hlayerClose('OptionDetail')" class="h-layer_close">close</button>
+				</div>
+				<div class="h-layer_cont">
+					<div class="option_thumnail">
+						<div class="option_head">
+							<figure class="option_img">
+								<img src="../assets/images/dummy/@dummy_option_detail02.png" alt="">
+							</figure>
+						</div>
+						<div class="option_body">
+							<em class="option_seller">Fabric Rear Bumper Protector</em>
+							<span class="option_price">+ USD 595</span>
+						</div>
+						<div class="option_bottom">
+							<p class="option_desc">Controls the movement of loose items in the cargo area to help minimize spilling, breakage and noise.</p>
+						</div>
+					</div>
+					<div class="btn-type_wrap">
+						<button onclick="hlayerClose('OptionDetail')" class="btn-type _default">Add to vehicle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // multi type -->
 	</div>
 
 </body>
