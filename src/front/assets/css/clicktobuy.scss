@@ -180,7 +180,6 @@
 		}
 	}
 }
-
 .option_container {
 	.option_mask {
 		overflow: hidden;
@@ -200,7 +199,6 @@
 		}
 	}
 }
-
 .delivery_container {
 	.radio_tablist {
 		margin-bottom: 40px;
@@ -629,6 +627,62 @@
 		}
 	}
 }
+.filter_vehicle {
+	.filter_item {
+		> .group {
+			&:not(:first-child) {
+				margin-top: 30px;
+				padding-top: 30px;
+				border-top: 1px dashed #999;
+			}
+			> .title {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: 900;
+			}
+		}
+		.radio_group {
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: -15px;
+			.radiowrap {
+				width: calc(100% / 3 - 15px);
+				min-width: auto;
+				margin-right: 15px;
+				&:nth-child(3n) {
+					margin-right: 0;
+					& ~ .radiowrap {
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+		.checkbox_group {
+			display: flex;
+			flex-wrap: wrap;
+			.chkwrap {
+				width: 50%;
+				margin-right: 0;
+				&:nth-child(2) ~ .chkwrap {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	.reset {
+		display: flex;
+		justify-content: flex-end;
+		margin: 60px 0 -80px;
+		button {
+			display: flex;
+			align-items: center;
+			span {
+				color: #0559F7;
+				font-size: 1rem;
+			}
+		}
+	}
+}
 .popular_colors {
 	.h-layer_wrap {
 		left: 15px;
@@ -935,7 +989,6 @@
 		}
 	}
 }
-
 .upload_file {
 	> .group {
 		display: flex;
