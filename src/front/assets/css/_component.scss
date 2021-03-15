@@ -651,6 +651,16 @@ a, button {
 		repeat:no-repeat;
 	}
 }
+.ic_drag {
+	width:30px;
+	height:30px;
+	background: {
+		image: url(../images/ico/icon_drag.png);
+		size:cover;
+		position: 0 center;
+		repeat:no-repeat;
+	}
+}
 
 /* layer popup */
 .h-layer_body {
