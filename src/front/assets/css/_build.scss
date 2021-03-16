@@ -80,50 +80,6 @@
 	}
 }
 
-.buy_options {
-	.tab_wrap {
-		.tablist._line {
-			text-align: center;
-			> li {
-				width: 180px;
-			}
-			button {
-				width: 100%;
-			}
-		}
-	}
-	.options_controls {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		margin: 40px 0 15px;
-		.selected_sum {
-			line-height: 1.125rem;
-			.currunt,
-			span {
-				font-size: inherit;
-			}
-			.currunt {
-				font-weight: 600;
-			}
-			span {
-				color: #999;
-			}
-		}
-		.btn_clear {
-			display: flex;
-			align-items: center;
-			margin-left: 40px;
-			span {
-				color: #285BEE;
-				font-size: 1rem;
-				line-height: 1.5rem;
-				@include FontHead;
-			}
-		}
-	}
-}
-
 .build_vehicles {
 	display: flex;
 	flex-direction: column;
@@ -1516,6 +1472,11 @@
 					}
 				}
 			}
+			&:not(.trim_item) {
+				.menu_panel {
+					display: none;
+				}
+			}
 		}
 		.menu_head {
 			padding: 10px 20px 20px;
@@ -1650,7 +1611,6 @@
 	.option_mask {
 		margin-left: -15px;
 	}
-
 	.option_thumnail {
 		width:calc(50% - 15px);
 		margin: 0 0 0 15px;
@@ -1666,7 +1626,24 @@
 	}
 
 	.build_container {
-		padding: 0 20px 185px;
+		padding: 65px 20px 185px;
+		
+		.content_wrap {
+			> .group {
+				&:not(:first-child) {
+					margin-top: 80px;
+				}
+			}
+
+		}
+		.content_title {
+			margin-bottom: 10px;
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+		}
+		.content_desc {
+			margin-bottom: 30px;
+		}
 	}
 
 }
