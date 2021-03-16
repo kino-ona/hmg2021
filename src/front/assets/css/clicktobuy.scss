@@ -185,17 +185,51 @@
 		}
 	}
 }
-.option_container {
-	&._concierge {
-		margin-top: -32px;
-		.option_thumnail {
-			&[aria-selected="true"] {
-				&:before {
-					display: none;
-				}
+.buy_options {
+	.tab_wrap {
+		.tablist._line {
+			text-align: center;
+			> li {
+				width: 180px;
+			}
+			button {
+				width: 100%;
 			}
 		}
 	}
+	.options_controls {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 40px 0 15px;
+		.selected_sum {
+			line-height: 1.125rem;
+			.currunt,
+			span {
+				font-size: inherit;
+			}
+			.currunt {
+				font-weight: 600;
+			}
+			span {
+				color: #999;
+			}
+		}
+		.btn_clear {
+			display: flex;
+			align-items: center;
+			margin-left: 40px;
+			span {
+				color: #285BEE;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				@include FontHead;
+			}
+		}
+	}
+}
+._concierge {
+	margin-top: -32px;
 }
 .delivery_container {
 	.radio_tablist {
@@ -341,6 +375,7 @@
 		> .group {
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 		}
 		.event_info {
 			margin-right: auto;
@@ -392,6 +427,8 @@
 			}
 		}
 		.applied_result {
+			flex: none;
+			width: 100%;
 			margin-top: 29px;
 			color: #000;
 			font-size: 1rem;
@@ -410,14 +447,9 @@
 			}
 			.bullet_square {
 				> li {
-					&:before {
-						top: 8px;
+					&:not(:first-child) {
+						margin-top: 10px;
 					}
-				}
-			}
-			.bullet_square:not(ul):not(ol) {
-				&:before {
-					top: 8px;
 				}
 			}
 			.separated {
@@ -425,7 +457,6 @@
 				align-items: center;
 				.price {
 					margin-left: 12px;
-					color: #FF8D34;
 					font-weight: 900;
 				}
 				.etc {
@@ -1140,6 +1171,76 @@
 		font-size: 1rem;
 	}
 	.msg_error {color: #E80710;}
+}
+
+.pg-mobile {
+	.buy_options {
+		padding-top: 0;
+	}
+	._concierge {
+		margin-top: 0;
+	}
+	.event_container {
+		.event_item {
+			padding: 30px 30px 20px;
+			> .group {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.event_info {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				width: 100%;
+				.event_title {
+					display: block;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+				.event_applied {
+					margin-left: 0;
+				}
+				.event_discount {
+					display: inline-flex;
+					margin: 0 0 0 10px;
+					em {
+						margin-left: 10px;
+					}
+				}
+				.msg_info {
+					width: 100%;
+					margin-top: 20px;
+				}
+			}
+			.applied_result {
+				margin-top: 20px;
+				&.back {
+					width: calc(100% + 20px);
+					margin-left: -10px;
+				}
+				.separated {
+					display: block;
+					.price {
+						margin-left: 0;
+					}
+					.etc {
+						display: block;
+						margin: 10px 0 0 0;
+					}
+				}
+			}
+			.event_date {
+				margin-top: 20px;
+				em {
+					margin-left: 10px;
+				}
+			}
+			.event_button {
+				order: 1;
+				margin: 20px 0 0 0;
+			}
+		}
+	}
 }
 
 [class^="bullet_"]:not(ul):not(ol),
