@@ -506,12 +506,17 @@ body {
 		.select_wrap {
 			position:relative;
 			width:100%;
+			border-right: 0;
 		}
 		.stage_wrap {
 			width:100%;
 			margin-left:0;
-			padding-left:20px;
-			padding-right:20px;
+			// padding-left:20px;
+			// padding-right:20px;
+			&.build_vehicle {
+				height: 100%;
+				padding: 0 20px;
+			}
 		}
 		.fixed_bottom {
 			flex-wrap:wrap;
@@ -519,12 +524,14 @@ body {
 			bottom:0;
 			left:0;
 			right:0;
+			z-index: 100;
 			width:100%;
 			height:auto;
 			.result {
 				flex: none;
 				width: calc(100% - 60px);
-				padding: 19px 20px 16px;
+				padding-left: 20px;
+				height: 70px;
 				.product_name {
 					font-size: 1.75rem;
 					line-height: inherit;

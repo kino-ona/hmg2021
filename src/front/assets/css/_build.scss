@@ -1524,11 +1524,15 @@
 		}
 	}
 
+	.option_mask {
+		margin-left: -15px;
+	}
+
 	.option_thumnail {
-		width:calc((100%/2) - 8px);
-		margin:26px 15px 0 0;
-		&:nth-child(2n) {
-			margin-right:0;
+		width:calc(50% - 15px);
+		margin: 0 0 0 15px;
+		&:nth-child(2) ~ .option_thumnail {
+			margin-top: 26px;
 		}
 		&:nth-child(2n + 1) {
 			clear:left;
@@ -1536,6 +1540,10 @@
 		&:before {
 			display: none;
 		}
+	}
+
+	.build_container {
+		padding: 0 20px 185px;
 	}
 
 }
