@@ -38,7 +38,7 @@
 						<li>
 							<span class="depth1">Account</span>
 							<ul class="depth2">
-								<li><a href="#">My Profile</a></li>
+								<li><a href="#">Edit Profile</a></li>
 								<li class="_active"><a href="#">Change Password</a></li> <!-- lnb menu 활성화 : _active -->
 							</ul>
 						</li>
@@ -61,7 +61,12 @@
                 <dl class="frm">
                   <dt><label for="CurrentPassword">Current Password <span class="required"><span class="a11y">required</span></span></label></dt>
                   <dd>
-                    <input type="password" id="CurrentPassword" placeholder="Enter 8 + characters with a letter and a number">
+										<!-- password masking-->
+										<div class="masking">
+                    	<input type="password" id="CurrentPassword" placeholder="Enter your password">
+											<button class="btn_masking"><i class="ic_show"></i></button>
+										</div>
+										<!--// password masking-->
                     <p class="inp_txt warn">This field is required.</p> <!-- Alert Message -->
                   </dd>
                 </dl>
@@ -72,7 +77,7 @@
                   <dd>
 										<!-- password masking-->
 										<div class="masking">
-											<input type="password" id="NewPassword" placeholder="Enter 8 + characters with a letter and a number">
+											<input type="password" id="NewPassword" placeholder="8 characters(letter+number)">
 											<button class="btn_masking"><i class="ic_show"></i></button>
 										</div>
 										<!--// password masking-->
@@ -84,7 +89,7 @@
                   <dd>
 										<!-- password masking-->
 										<div class="masking">
-											<input type="password" id="ConfirmNewPassword" placeholder="Enter new password again">
+											<input type="password" id="ConfirmNewPassword" placeholder="Enter password again">
 											<button class="btn_masking"><i class="ic_show"></i></button>
 										</div>
 										<!--// password masking-->

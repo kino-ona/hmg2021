@@ -1,7 +1,7 @@
+
 $(document).ready(function() {
 	if( $('.trims_list .trims_item').length > 0 ) { trimItemSel(); }
 });
-
 var trimItemSel = function(){
 	$('.trims_list .trims_item').each(function(){  
 		var selbtn = $(this).find('.group');
@@ -21,6 +21,7 @@ var trimItemSel = function(){
 		});
 	});
 }
+
 
 $(document).ready(function() {
 	if( $('.option_mask').length > 0 ) { optionSelect(); }

@@ -284,30 +284,6 @@ $('.masking .btn_masking').on('click', function() {
 	}
 });
 
-$(document).ready(function() {
-	if( $('.trims_list .trims_item').length > 0 ) { trimItemSel(); }
-});
-
-var trimItemSel = function(){
-	$('.trims_list .trims_item').each(function(){  
-		var selbtn = $(this).find('.group');
-		selbtn.click(function(){
-			$('.trims_list .trims_item').removeClass('_active');
-			if(!selbtn.hasClass('_active')) {
-				if ($('html').hasClass('is-mobile')) {
-					if(!selbtn.parents('.trims_list').hasClass('_pulldown')) {
-						selbtn.parents('.trims_list').addClass('_pulldown')
-					}else{
-						selbtn.parents('.trims_list').removeClass('_pulldown')
-					}
-					
-				}
-				selbtn.parents('.trims_item').addClass('_active');
-			}
-		});
-	});
-}
-
 // Memeber Function
 // forgot id
 $('.forgot_id ._find').on('click', function() {
